@@ -1714,6 +1714,10 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
+.primary-checkbox input:checked+label {
+  /* background: url(../images/elements/primary-check.png) no-repeat center center/cover; */
+  border: none;
+}
 
 .confirm-checkbox {
   width: 16px;
@@ -1746,6 +1750,11 @@ h6 {
   border-radius: 3px;
   cursor: pointer;
   border: 1px solid #f1f1f1;
+}
+
+.confirm-checkbox input:checked+label {
+  /* background: url(../images/elements/success-check.png) no-repeat center center/cover; */
+  border: none;
 }
 
 .disabled-checkbox {
@@ -1786,6 +1795,11 @@ h6 {
   z-index: 3;
 }
 
+.disabled-checkbox input:checked+label {
+  /* background: url(../images/elements/disabled-check.png) no-repeat center center/cover; */
+  border: none;
+}
+
 .primary-radio {
   width: 16px;
   height: 16px;
@@ -1819,6 +1833,11 @@ h6 {
   border: 1px solid #f1f1f1;
 }
 
+.primary-radio input:checked+label {
+  /* background: url(../images/elements/primary-radio.png) no-repeat center center/cover; */
+  border: none;
+}
+
 .confirm-radio {
   width: 16px;
   height: 16px;
@@ -1850,6 +1869,11 @@ h6 {
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid #f1f1f1;
+}
+
+.confirm-radio input:checked+label {
+  /* background: url(../images/elements/success-radio.png) no-repeat center center/cover; */
+  border: none;
 }
 
 .disabled-radio {
@@ -1888,6 +1912,11 @@ h6 {
 .disabled-radio input:disabled {
   cursor: not-allowed;
   z-index: 3;
+}
+
+.disabled-radio input:checked+label {
+  /* background: url(../images/elements/disabled-radio.png) no-repeat center center/cover; */
+  border: none;
 }
 
 .default-select {
@@ -2213,9 +2242,24 @@ h6 {
   }
 }
 
+#mobile-nav-menu-sidebar {
+  width: fit-content;
+  margin: 0;
+}
+
+
+#mobile-nav-menu-sidebar .modal-dialog {
+  margin: 0px !important;
+}
+
+#mobile-nav-menu-sidebar .modal-content {
+  background-color: transparent !important;
+}
+
+
 /* Mobile Nav Styling */
 #mobile-nav {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   padding-top: 18px;
   bottom: 0;
@@ -2345,6 +2389,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .primary-btn {
   background: #0378b8;
+  background: -webkit-linear-gradient(0deg, #0378b8 0%, #62bdfc 100%);
   line-height: 42px;
   padding-left: 30px;
   padding-right: 30px;
