@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import FigmaFrame from "../layouts/FigmaFrame/FigmaFrame";
@@ -14,7 +14,7 @@ import Footer from "../layouts/Footer/Footer";
 
 const UiUxProjectPage = () => {
   const { id } = useParams();
-  const location = useLocation();
+  // const location = useLocation();
 
   // console.log("Loc URL", location.pathname.split("/")[1]);
 

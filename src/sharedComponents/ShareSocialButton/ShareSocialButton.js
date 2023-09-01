@@ -17,7 +17,7 @@ const ShareSocialButton = ({ icon, platform, url }) => {
 
   return (
     <>
-      {platform == "copy" ? (
+      {platform === "copy" ? (
         <div
           className="ShareSocialButton"
           onClick={(url) => copyToClipboard(url)}

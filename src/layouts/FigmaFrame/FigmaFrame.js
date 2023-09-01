@@ -9,6 +9,7 @@ const FigmaFrame = ({ url }) => {
         height="550px"
         src={url}
         allowFullScreen
+        title={url}
       ></iframe>
     </div>
   );

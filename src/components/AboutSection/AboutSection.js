@@ -1,5 +1,4 @@
 import React from "react";
-import ImageHelper from "../../Helpers/ImageHelper";
 import PrimaryButton from "../../sharedComponents/PrimaryButton";
 import { AboutSectionData } from "./AboutSectionData";
 
