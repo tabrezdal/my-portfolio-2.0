@@ -56,7 +56,7 @@ const Header = () => {
 
   useEffect(() => {
     NavigationView();
-  }, [location.pathname]);
+  });
 
   return (
     <div className="">
