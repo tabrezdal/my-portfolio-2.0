@@ -4808,3 +4808,17 @@ dl.accordion.time-line:before {
   color: #191919;
   cursor: pointer;
 }
+
+
+.back-button i::before {
+  margin-left: 0px;
+  padding-right: 0px;
+  transition: 0.3s all 0s;
+}
+
+.back-button:hover i::before {
+  margin-left: -6px;
+  padding-right: 5px;
+  transition: 0.3s all 0s;
+  font-size: 15px;
+}

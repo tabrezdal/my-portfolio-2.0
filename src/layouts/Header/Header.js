@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
+import { Link, useLocation } from "react-router-dom";
+import IconHelper from "../../Helpers/IconHelper";
 import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
@@ -22,6 +24,41 @@ const Header = () => {
     }
   }, []);
 
+  const location = useLocation();
+
+  const NavigationView = () => {
+    if (location.pathname === "/") {
+      return (
+        <nav id="nav-menu-container">
+          <ul className="nav-menu">
+            {NavLinkData?.map((item) => (
+              <NavigationLink
+                key={item.id}
+                linkTo={item.linkTo}
+                name={item.name}
+              />
+            ))}
+          </ul>
+        </nav>
+      );
+    } else {
+      return (
+        <nav id="nav-menu-container">
+          <ul className="nav-menu align-items-centre back-button">
+            <Link to="/">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;
+              {SectionTitleHelper.backButton}
+            </Link>
+          </ul>
+        </nav>
+      );
+    }
+  };
+
+  useEffect(() => {
+    NavigationView();
+  }, [location.pathname]);
+
   return (
     <div className="">
       <Button variant="primary" id="mobile-nav-toggle" onClick={handleShow}>
@@ -31,24 +68,14 @@ const Header = () => {
       <header id="header" className={`${headerShadow ? "headerShadow" : ""}`}>
         <div className="container main-menu">
           <div className="align-items-center justify-content-between d-flex">
-            <nav id="nav-menu-container">
-              <ul className="nav-menu">
-                {NavLinkData?.map((item) => (
-                  <NavigationLink
-                    key={item.id}
-                    linkTo={item.linkTo}
-                    name={item.name}
-                  />
-                ))}
-              </ul>
-            </nav>
+            {NavigationView()}
 
             <div id="logo">
-              <a href="/">
+              <Link to="/">
                 <h2 style={{ color: "#04091e" }}>
                   {SectionTitleHelper.headerSectionTitle}
                 </h2>
-              </a>
+              </Link>
             </div>
 
             <nav id="nav-menu-container">

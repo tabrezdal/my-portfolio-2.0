@@ -6,4 +6,5 @@ export const SectionTitleHelper = {
   technologies: "Technologies",
   projects: "Projects",
   footerSectionTitle: "Connect with me",
+  backButton: "Back to homepage",
 };

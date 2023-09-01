@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// import IconHelper from "../../../Helpers/IconHelper";
 
 const ProjectsTab = (props) => {
   const navigate = useNavigate();
-  const openInnerPage = (urlSuffix) => {
+  const redirectToUiUxProjectPage = (urlSuffix) => {
     navigate(`/ui-ux-project/${urlSuffix}`);
   };
 
@@ -20,7 +21,7 @@ const ProjectsTab = (props) => {
           key={index}
           onClick={
             item?.hasInnerPage === true
-              ? () => openInnerPage(item.urlSuffix)
+              ? () => redirectToUiUxProjectPage(item.urlSuffix)
               : undefined
           }
         >
@@ -30,7 +31,7 @@ const ProjectsTab = (props) => {
               {item.fullWebSS === true ? (
                 <div className="screen">
                   <img
-                    className=" image-prop img-fluid"
+                    className="image-prop img-fluid"
                     src={item.image}
                     alt={item.caption}
                   />
@@ -46,7 +47,7 @@ const ProjectsTab = (props) => {
             {/* <a href={item.image} className="img-pop-up">
               <div className="middle">
                 <div className="text align-self-center d-flex">
-                  <img src="img/preview.png" alt={item.caption} />
+                  <img src={IconHelper.expand} alt={item.caption} />
                 </div>
               </div>
             </a> */}
