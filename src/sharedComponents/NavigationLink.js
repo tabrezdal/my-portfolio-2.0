@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const NavigationLink = ({ linkTo, name }) => {
+const NavigationLink = ({ linkTo, name, handleClose }) => {
   return (
     <li className="navlink">
-      <Link to={linkTo} smooth={true} offset={-70} duration={1000} delay={300}>
+      <Link
+        to={linkTo}
+        smooth={true}
+        offset={-70}
+        duration={1000}
+        delay={300}
+        onSetActive={() => handleClose}
+      >
         {name}
       </Link>
     </li>

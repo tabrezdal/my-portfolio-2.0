@@ -60,9 +60,6 @@ const Header = () => {
 
   return (
     <div className="">
-      <Button variant="primary" id="mobile-nav-toggle" onClick={handleShow}>
-        <i className="lnr lnr-menu"></i>
-      </Button>
       <MobileMenuModal handleClose={handleClose} show={show} />
       <header id="header" className={`${headerShadow ? "headerShadow" : ""}`}>
         <div className="container main-menu">
@@ -76,6 +73,14 @@ const Header = () => {
                 </h2>
               </Link>
             </div>
+
+            <Button
+              variant="primary"
+              id="mobile-nav-toggle"
+              onClick={handleShow}
+            >
+              <i className="lnr lnr-menu"></i>
+            </Button>
 
             <nav id="nav-menu-container">
               <ul className="nav-menu nav-menu-right">

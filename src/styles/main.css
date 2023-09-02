@@ -2044,8 +2044,8 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 .main-menu {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 8px;
+  padding-top: 8px;
 }
 
 #header {
@@ -2069,7 +2069,7 @@ h6 {
 
 @media (max-width: 673px) {
   #logo {
-    margin-left: 20px;
+    margin-left: 8px;
   }
 }
 
@@ -2218,10 +2218,7 @@ h6 {
 
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
-  position: fixed;
-  right: 15px;
   z-index: 999;
-  top: 22px;
   border: 0;
   background: none;
   font-size: 24px;
@@ -2561,7 +2558,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 767px) {
   .banner-right {
     max-width: 500px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -4715,9 +4712,11 @@ dl.accordion.time-line:before {
   background-color: #ffffff;
   text-align: center;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 20px;
   border-radius: 50%;
+  border: 0px;
+  outline: none;
   transition: background-color .3s,
     opacity .5s, visibility .5s, box-shadow 1s;
   opacity: 0;
@@ -4729,6 +4728,11 @@ dl.accordion.time-line:before {
 
 #back-to-top svg path {
   fill: rgb(0, 0, 0);
+}
+
+#back-to-top svg {
+  border: 0px;
+  outline: none;
 }
 
 #back-to-top:hover {

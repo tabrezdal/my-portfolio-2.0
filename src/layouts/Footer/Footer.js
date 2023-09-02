@@ -8,14 +8,11 @@ const Footer = () => {
   return (
     <>
       <BackToTopButton />
-      <footer className="footer-area section-gap" align="Center">
+      <footer className="footer-area py-2" align="Center">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
-              <div className="single-footer-widget">
-                <h4>{SectionTitleHelper.footerSectionTitle}</h4>
-              </div>
-              <div className="d-flex justify-content-center">
+              <div className="d-flex space-between">
                 {FooterSocialMediaLinksData?.map((item) => (
                   <SocialMediaLinks
                     url={item.url}

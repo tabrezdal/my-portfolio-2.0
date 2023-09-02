@@ -26,6 +26,7 @@ const BackToTopButton = () => {
       smooth={true}
       duration={500}
       delay={300}
+      to=""
       className={`${showBackToTop ? "show" : null}`}
     >
       <svg
