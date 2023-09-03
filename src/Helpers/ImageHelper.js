@@ -1,9 +1,11 @@
 // Hero Section
-import HeroImage from "../Assets/Images/me/TZ.webp";
+import HeroImage from "../Assets/Images/me/TZ-bw.webp";
 
 // //About Section
-import AboutImage from "../Assets/Images/me/tbz.webp";
+import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
 // import locationMap from "../Assets/Images/About/locationMap.webp";
+
+import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
 
 // Tools Section
 import PhotoshopLogo from "../Assets/Images/tools-icons/adobe-photoshop.svg";
@@ -288,6 +290,7 @@ const ImageHelper = {
   // //About Section
   AboutImage,
   // locationMap,
+  TzInSuit,
 
   PhotoshopLogo,
   IllustratorLogo,

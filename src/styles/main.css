@@ -2519,6 +2519,36 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+/* Boxed Button Style Starts */
+.boxed-btn-02.blank {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.boxed-btn-02 {
+  background-color: #500ade;
+  border: 2px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  height: auto;
+  line-height: auto;
+  padding: 8px 20px;
+  text-align: center;
+  text-transform: capitalize;
+  transition: all .3s ease-in;
+}
+
+.boxed-btn-02.blank:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Boxed Button Style ends */
+
 .overlay {
   position: absolute;
   left: 0;

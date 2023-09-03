@@ -7,6 +7,7 @@ import ToolsSection from "../components/ToolsSection/ToolsSection";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+import CtaSection from "../components/CtaSection/CtaSection";
 
 const Home = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
       <SkillsSection />
       <ToolsSection />
       <TechnologiesSection />
+      <CtaSection />
       <ProjectsSection />
       <Footer />
     </div>
