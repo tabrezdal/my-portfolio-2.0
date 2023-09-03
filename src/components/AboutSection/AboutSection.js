@@ -28,6 +28,7 @@ const AboutSection = () => {
             <PrimaryButton
               name={AboutSectionData?.buttonData?.name}
               url={AboutSectionData?.buttonData?.url}
+              iconClass="fa fa-linkedin"
             />
           </div>
         </div>

@@ -19,6 +19,7 @@ const HeroSection = () => {
             <PrimaryButton
               name={HeroSectionData?.buttonData.name}
               url={HeroSectionData?.buttonData.url}
+              iconClass="fa fa-download"
             />
           </div>
           <div className="col-lg-1 col-md-1"></div>

@@ -18,7 +18,7 @@ const CtaSection = () => {
               </p>
 
               <a href="mailto:tabrez.dal@gmail.com" class="boxed-btn-02 blank">
-                Contact me
+                Contact me &nbsp;<i class="fa fa-envelope"></i>
               </a>
             </div>
           </div>
