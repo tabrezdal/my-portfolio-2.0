@@ -763,7 +763,7 @@ const UiUxProjectPageData = {
     id: "u23",
     pageName: "FamilyOffice360",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "family-office-360",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/U8iJ98CkIeuUfx2Z8gODvR/360FamilyOffice?type=design&node-id=0%3A1&mode=design&t=R81Znbi1TbQPVH3K-1",
@@ -800,7 +800,7 @@ const UiUxProjectPageData = {
     id: "u24",
     pageName: "A1 Visas Passport Photo Service Landing Page",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "a1-visas-passport-photo-service-landing-page",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/GP3XBvWHv60gniVIEslUDB/A1-Visas-Passport-Photo-Service-Landing-Page?type=design&node-id=0%3A1&mode=design&t=Z5mQr4jvO92aLwqt-1",
@@ -843,7 +843,7 @@ const UiUxProjectPageData = {
     id: "u25",
     pageName: "Artyss",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "artyss",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/GVMlNLbc0a7nlteT4mYhgi/Artyss?type=design&node-id=0%3A1&mode=design&t=IVjFjXScZF8NYC1n-1",
@@ -886,7 +886,7 @@ const UiUxProjectPageData = {
     id: "u26",
     pageName: "GRM Website Design",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "grm-website-design",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/3npgTrAOpAlGxfITpOOUOs/GRM-Website-Design?type=design&node-id=2%3A2208&mode=design&t=tTC1tu15J1jFxuIK-1",
@@ -929,7 +929,7 @@ const UiUxProjectPageData = {
     id: "u27",
     pageName: "Saish H & F",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "saish-h-f",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/YQov31t54lyAyoEvYdRczB/Saish-H-%26-F?type=design&node-id=0%3A1&mode=design&t=gebrGTcB7OaWw5LB-1",
@@ -972,7 +972,7 @@ const UiUxProjectPageData = {
     id: "u28",
     pageName: "Sundesh Solar Website Revamp",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "sundesh-solar-website-revamp",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/KMqHhUfaWwFEGJuQftQzi1/Sundesh-Solar-Website-Revamp?type=design&node-id=0%3A1&mode=design&t=JqB80ZKzAkBHbXCD-1",
@@ -1015,7 +1015,7 @@ const UiUxProjectPageData = {
     id: "u29",
     pageName: "UpStreamLife",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "upstreamlife",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/OvY18KpXOgWRu6wG3JkQIE/UpStreamLife?type=design&node-id=2%3A227&mode=design&t=etUiB8z9M1YuJB3g-1",
@@ -1058,7 +1058,7 @@ const UiUxProjectPageData = {
     id: "u30",
     pageName: "ZeroZilla Profile",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "zerozilla-profile",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/OvY18KpXOgWRu6wG3JkQIE/UpStreamLife?type=design&node-id=2%3A227&mode=design&t=etUiB8z9M1YuJB3g-1",
@@ -1095,7 +1095,7 @@ const UiUxProjectPageData = {
     id: "u31",
     pageName: "TeachersIndia UI Revamped",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "teachersindia-ui-revamped",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/1maPgSagYx0XVlgfqfDRvf/TeachersIndia-UI-Revamped?type=design&node-id=0%3A1&mode=design&t=OU8eJG9J22ogmkuz-1",
@@ -1138,7 +1138,7 @@ const UiUxProjectPageData = {
     id: "u32",
     pageName: "FMSCI Homepage Revamp",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "fmsci-homepage-revamp",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/fSzjRKATh8CHeWe5qqvFs9/FMSCI-Homepage-Revamp?type=design&node-id=0%3A1&mode=design&t=4Pxxi1LxWI03hUPq-1",
@@ -1175,7 +1175,7 @@ const UiUxProjectPageData = {
     id: "u33",
     pageName: "Hotel & Resort Management",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "hotel-and-resort-management",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/mnhx8mn78DZByk1jIVfdG9/Hotel-%26-Resort-Management?type=design&node-id=2%3A2&mode=design&t=GwoNfQcYYcekQc6j-1",
@@ -1218,7 +1218,7 @@ const UiUxProjectPageData = {
     id: "u34",
     pageName: "SkillMine [India]",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "skillmine-india",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/yPs7QfEvl19V3ztD0e0UEr/SkillMine-%5BIndia%5D?type=design&node-id=0%3A1&mode=design&t=IrXsFLOZk8IgXP5w-1",
@@ -1259,7 +1259,7 @@ const UiUxProjectPageData = {
     id: "u35",
     pageName: "SkillMine [UK]",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "skillmine-uk",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/ShlQvDHCX99zbYWlSDV2zH/SkillMine-%5BUK%5D?type=design&node-id=124%3A12438&mode=design&t=MOLtkMu4Vpsz33sj-1",
@@ -1301,7 +1301,7 @@ const UiUxProjectPageData = {
     id: "u36",
     pageName: "SkillMine [KSA]",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "skillmine-ksa",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/IR4Frc7niFlrrDWLJINipU/SkillMine-%5BKSA%5D?type=design&node-id=64%3A2623&mode=design&t=rjGyPm2mPBkSAIyM-1",
@@ -1343,7 +1343,7 @@ const UiUxProjectPageData = {
     id: "u37",
     pageName: "SkillMine Auth",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "skillmine-auth",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/qW3ikxRNbGPZ9vYuldfTJt/SkillMine-Auth?type=design&node-id=233%3A4671&mode=design&t=pHlNYFh94hjOn7um-1",
@@ -1385,7 +1385,7 @@ const UiUxProjectPageData = {
     id: "u38",
     pageName: "EdXplore Admin Panel",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "edxplore-admin-panel",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/SlofBkzRyGfy7lMBB0CaQc/EdXplore-Admin-Panel?type=design&node-id=0%3A1&mode=design&t=vqoFr3c4I7uqGycb-1",
@@ -1427,7 +1427,7 @@ const UiUxProjectPageData = {
     id: "u39",
     pageName: "EdXplore Admin Panel [Mobile Version]",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "edxplore-admin-panel-mobile-version",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/ofBvY7bsfgUJG2lKyjFrYU/EdXplore-Admin-Panel-%5BMobile-Version%5D?type=design&node-id=1054%3A27194&mode=design&t=HQDz2ME6icyBv64q-1",
@@ -1469,7 +1469,7 @@ const UiUxProjectPageData = {
     id: "u40",
     pageName: "EdXplore Header Revamp",
     menuName: "Ui/Ux Projects",
-    slug: "uiux-project-slug",
+    slug: "edxplore-header-revamp",
     ProjectLinks: {
       FigmaDesignLink:
         "https://www.figma.com/file/HnvvMCCbBKIWPOV2PrTdsy/EdXplore-Header-Revamp?type=design&node-id=123%3A1367&mode=design&t=S9ikM8RY1uxcaUJa-1",
