@@ -4728,6 +4728,8 @@ dl.accordion.time-line:before {
   height: 500px;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 .screen img {
@@ -4751,6 +4753,9 @@ dl.accordion.time-line:before {
   width: 100%;
   transition: 2.5s ease;
   backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 
