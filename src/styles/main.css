@@ -4938,3 +4938,40 @@ dl.accordion.time-line:before {
   transition: 0.3s all 0s;
   font-size: 15px;
 }
+
+
+.aboutImage {
+  background-image: url("../Assets/Images/me/Tabrez-at-dubai-mall.webp");
+  background-position-x: center;
+  background-position-y: center;
+  min-height: 700px;
+  width: auto;
+  object-fit: cover;
+  background-size: cover;
+}
+
+@media (min-width: 912px) and (max-width: 1280px) {
+  .aboutImage {
+    min-height: 750px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 912px) {
+  .aboutImage {
+    min-height: 820px;
+  }
+}
+
+
+@media (min-width: 460px) and (max-width: 768px) {
+  .aboutImage {
+    min-height: 900px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .aboutImage {
+    /* min-height: 900px; */
+    margin-right: 80px;
+  }
+}

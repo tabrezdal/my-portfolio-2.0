@@ -1,5 +1,5 @@
 // Hero Section
-import HeroImage from "../Assets/Images/me/TZ-bw.webp";
+import HeroImage from "../Assets/Images/me/TZ-at-old-house.webp";
 
 // //About Section
 import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";

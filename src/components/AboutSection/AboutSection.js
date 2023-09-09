@@ -7,13 +7,14 @@ const AboutSection = () => {
     <section className="home-about-area pt-30" id="about">
       <div className="container">
         <div className="row align-items-center justify-content-between">
-          <div className="col-lg-4 col-md-4 home-about-left">
-            <img
+          <div className="col-lg-5 col-md-5 home-about-left">
+            <div className="aboutImage"></div>
+            {/* <img
               draggable="false"
-              className="img-fluid"
+              className="img-fluid aboutImage"
               src={AboutSectionData?.sectionImage}
               alt=""
-            />
+            /> */}
           </div>
           <div className="col-lg-7 col-md-7 home-about-right">
             <h1 className="text-uppercase mb-2">
