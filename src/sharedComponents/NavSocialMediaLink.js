@@ -3,9 +3,12 @@ import React from "react";
 const NavSocialMediaLink = ({ url, iconClass }) => {
   return (
     <li>
-      <a href={url}>
+      <div
+        onClick={() => window.open(url, "_blank")}
+        style={{ cursor: "pointer" }}
+      >
         <i className={iconClass}></i>
-      </a>
+      </div>
     </li>
   );
 };

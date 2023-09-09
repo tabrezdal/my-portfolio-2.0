@@ -646,6 +646,10 @@ th {
   color: #000;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .transition {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;

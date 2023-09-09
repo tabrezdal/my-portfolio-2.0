@@ -15,9 +15,9 @@ const Footer = () => {
               <div className="d-flex space-between">
                 {FooterSocialMediaLinksData?.map((item) => (
                   <SocialMediaLinks
-                    url={item.url}
-                    icon={item.iconClass}
                     key={item.id}
+                    url={item.url}
+                    iconClass={item.iconClass}
                   />
                 ))}
               </div>
