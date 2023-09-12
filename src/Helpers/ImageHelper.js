@@ -42,21 +42,18 @@ import JqueryIcon from "../Assets/Images/technologies-icons/jquery-icon.svg";
 //Portfolio Images
 
 // Webistes Portfolio
-import Web2 from "../Assets/Images/Portfolio/Web/Bidroid Web.webp";
-import Web3 from "../Assets/Images/Portfolio/Web/BRDG Commerce.webp";
-import Web4 from "../Assets/Images/Portfolio/Web/Bridge Honey.webp";
-import Web5 from "../Assets/Images/Portfolio/Web/Bridge Ice-cream.webp";
-import Web6 from "../Assets/Images/Portfolio/Web/Coffee Shop.webp";
-import Web7 from "../Assets/Images/Portfolio/Web/GD Portfolio Website.webp";
-import Web8 from "../Assets/Images/Portfolio/Web/Golden.webp";
-import Web9 from "../Assets/Images/Portfolio/Web/pokemon-1.webp";
-import Web10 from "../Assets/Images/Portfolio/Web/pokemon-2.webp";
-import Web12 from "../Assets/Images/Portfolio/Web/TEZ Crypto Tracker.webp";
-import Web13 from "../Assets/Images/Portfolio/Web/Topclues.webp";
-import Web14 from "../Assets/Images/Portfolio/Web/TZ Creation.jpg";
-import Web16 from "../Assets/Images/Portfolio/Web/TZ-Portfolio.webp";
-import Web17 from "../Assets/Images/Portfolio/Web/Indie ESports.webp";
-import Web18 from "../Assets/Images/Portfolio/Web/Bidroid.webp";
+import Web1 from "../Assets/Images/Portfolio/Web/TEZTigerNFT.webp";
+import Web2 from "../Assets/Images/Portfolio/Web/TZ Creation.webp";
+import Web3 from "../Assets/Images/Portfolio/Web/TheZaika.webp";
+import Web4 from "../Assets/Images/Portfolio/Web/Bidroid Web.webp";
+import Web5 from "../Assets/Images/Portfolio/Web/IndieSports.webp";
+import Web6 from "../Assets/Images/Portfolio/Web/GD Portfolio Website.webp";
+import Web7 from "../Assets/Images/Portfolio/Web/EdXplore Frontend.webp";
+import Web8 from "../Assets/Images/Portfolio/Web/Mobiotics - Homepage.webp";
+import Web9 from "../Assets/Images/Portfolio/Web/GRM - Homepage.webp";
+import Web10 from "../Assets/Images/Portfolio/Web/pokemon-1.webp";
+import Web11 from "../Assets/Images/Portfolio/Web/CryptoTracker.webp";
+import Web12 from "../Assets/Images/Portfolio/Web/pokemon-2.webp";
 
 // Logo Design Portfolio
 import Logo1 from "../Assets/Images/Portfolio/Logo-Design/TZ Creation Logo 1.webp";
@@ -344,6 +341,7 @@ const ImageHelper = {
 
   //Portfolio Images
   //Website Portfolio
+  Web1,
   Web2,
   Web3,
   Web4,
@@ -353,12 +351,8 @@ const ImageHelper = {
   Web8,
   Web9,
   Web10,
+  Web11,
   Web12,
-  Web13,
-  Web14,
-  Web16,
-  Web17,
-  Web18,
 
   //Logo Portfolio
   Logo1,

@@ -1054,8 +1054,8 @@ const UiUxProjectPageData = {
       { tag: "UI/UX Design" },
     ],
   },
-  uiux29: {
-    id: "u29",
+  uiux30: {
+    id: "u30",
     pageName: "TeachersIndia UI Revamped",
     menuName: "Ui/Ux Projects",
     slug: "teachersindia-ui-revamped",
@@ -1088,7 +1088,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux29",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux30",
     tags: [
       { tag: "Educational Excellence" },
       { tag: "Training Website" },
@@ -1097,8 +1097,8 @@ const UiUxProjectPageData = {
       { tag: "Programs" },
     ],
   },
-  uiux30: {
-    id: "u30",
+  uiux31: {
+    id: "u31",
     pageName: "FMSCI Homepage Revamp",
     menuName: "Ui/Ux Projects",
     slug: "fmsci-homepage-revamp",
@@ -1125,7 +1125,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux30",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux31",
     tags: [
       { tag: "Homepage Revamp" },
       { tag: "Road Safety" },
@@ -1134,8 +1134,8 @@ const UiUxProjectPageData = {
       { tag: "UI/UX Design" },
     ],
   },
-  uiux31: {
-    id: "u31",
+  uiux32: {
+    id: "u32",
     pageName: "Meco Web UiUx Design",
     menuName: "Ui/Ux Projects",
     slug: "uiux-project-slug",
@@ -1167,7 +1167,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux31",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux32",
     tags: [
       { tag: "Motorsports" },
       { tag: "Racing Events" },
@@ -1176,8 +1176,8 @@ const UiUxProjectPageData = {
       { tag: "UI/UX Design" },
     ],
   },
-  uiux32: {
-    id: "u32",
+  uiux33: {
+    id: "u33",
     pageName: "Meco Web UiUx Final Design",
     menuName: "Ui/Ux Projects",
     slug: "uiux-project-slug",
@@ -1209,7 +1209,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux32",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux33",
     tags: [
       { tag: "Motorsports" },
       { tag: "Racing Events" },
@@ -1218,8 +1218,8 @@ const UiUxProjectPageData = {
       { tag: "UI/UX Design" },
     ],
   },
-  uiux33: {
-    id: "u33",
+  uiux34: {
+    id: "u34",
     pageName: "EdXplore Admin Panel",
     menuName: "Ui/Ux Projects",
     slug: "edxplore-admin-panel",
@@ -1251,7 +1251,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux33",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux34",
     tags: [
       { tag: "Admin Panel" },
       { tag: "Admin Panel Design" },
@@ -1260,8 +1260,8 @@ const UiUxProjectPageData = {
       { tag: "Education" },
     ],
   },
-  uiux34: {
-    id: "u34",
+  uiux35: {
+    id: "u35",
     pageName: "EdXplore Admin Panel [Mobile Version]",
     menuName: "Ui/Ux Projects",
     slug: "edxplore-admin-panel-mobile-version",
@@ -1293,7 +1293,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux34",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux35",
     tags: [
       { tag: "Admin Panel" },
       { tag: "Admin Panel Design" },
@@ -1302,8 +1302,8 @@ const UiUxProjectPageData = {
       { tag: "Education" },
     ],
   },
-  uiux35: {
-    id: "u35",
+  uiux36: {
+    id: "u36",
     pageName: "EdXplore Header Revamp",
     menuName: "Ui/Ux Projects",
     slug: "edxplore-header-revamp",
@@ -1335,7 +1335,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux35",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux36",
     tags: [
       { tag: "Header Revamp" },
       { tag: "Revamp Design" },
@@ -1344,8 +1344,8 @@ const UiUxProjectPageData = {
       { tag: "Education" },
     ],
   },
-  uiux36: {
-    id: "u36",
+  uiux37: {
+    id: "u37",
     pageName: "SkillMine [UK]",
     menuName: "Ui/Ux Projects",
     slug: "skillmine-uk",
@@ -1377,7 +1377,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux36",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux37",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1386,8 +1386,8 @@ const UiUxProjectPageData = {
       { tag: "United Kingdom" },
     ],
   },
-  uiux37: {
-    id: "u37",
+  uiux38: {
+    id: "u38",
     pageName: "SkillMine [India]",
     menuName: "Ui/Ux Projects",
     slug: "skillmine-india",
@@ -1418,7 +1418,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux37",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux38",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1427,8 +1427,8 @@ const UiUxProjectPageData = {
       { tag: "UI/UX Design" },
     ],
   },
-  uiux38: {
-    id: "u38",
+  uiux39: {
+    id: "u39",
     pageName: "SkillMine [KSA]",
     menuName: "Ui/Ux Projects",
     slug: "skillmine-ksa",
@@ -1460,7 +1460,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux38",
+    socialShareUrl: "https://tzcreation.in/ui-ux-project/uiux39",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1469,8 +1469,8 @@ const UiUxProjectPageData = {
       { tag: "Kingdom of Saudi Arabia" },
     ],
   },
-  uiux39: {
-    id: "u39",
+  uiux40: {
+    id: "u40",
     pageName: "SkillMine Auth",
     menuName: "Ui/Ux Projects",
     slug: "skillmine-auth",
