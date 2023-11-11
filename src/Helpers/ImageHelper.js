@@ -19,6 +19,9 @@ import GithubLogo from "../Assets/Images/tools-icons/github.svg";
 import ReactIcon from "../Assets/Images/technologies-icons/react-js-icon.svg";
 import ReduxIcon from "../Assets/Images/technologies-icons/redux-icon.svg";
 import GraphQLIcon from "../Assets/Images/technologies-icons/graphql-icon.svg";
+import NodeJsIcon from "../Assets/Images/technologies-icons/nodejs-icon.svg";
+import ChatGPTIcon from "../Assets/Images/technologies-icons/chatgpt-icon.svg";
+import GoogleBardIcon from "../Assets/Images/technologies-icons/google-bard-icon.svg";
 import HtmlIcon from "../Assets/Images/technologies-icons/html-icon.svg";
 import CssIcon from "../Assets/Images/technologies-icons/css-icon.svg";
 import SaasIcon from "../Assets/Images/technologies-icons/sass-icon.svg";
@@ -320,6 +323,9 @@ const ImageHelper = {
   ReactIcon,
   ReduxIcon,
   GraphQLIcon,
+  NodeJsIcon,
+  ChatGPTIcon,
+  GoogleBardIcon,
   HtmlIcon,
   CssIcon,
   SaasIcon,

@@ -17,6 +17,21 @@ export const TechnologiesSectionData = {
       techIcon: ImageHelper.GraphQLIcon,
       techName: "Graph QL",
     },
+    {
+      id: 4,
+      techIcon: ImageHelper.NodeJsIcon,
+      techName: "Node Js",
+    },
+    {
+      id: 5,
+      techIcon: ImageHelper.GoogleBardIcon,
+      techName: "Google Bard",
+    },
+    {
+      id: 6,
+      techIcon: ImageHelper.ChatGPTIcon,
+      techName: "ChatGPT",
+    },
   ],
   NormalTech: [
     {
@@ -32,7 +47,7 @@ export const TechnologiesSectionData = {
     {
       id: 3,
       techIcon: ImageHelper.SaasIcon,
-      techName: "SASS",
+      techName: "Sass",
     },
     {
       id: 4,

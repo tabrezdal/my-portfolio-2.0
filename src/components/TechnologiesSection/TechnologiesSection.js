@@ -15,7 +15,7 @@ const TechnologiesSection = () => {
               key={item.id}
               techName={item.techName}
               techLogo={item.techIcon}
-              featured={true}
+              featured={false}
             />
           ))}
           {TechnologiesSectionData?.NormalTech.map((item) => (
