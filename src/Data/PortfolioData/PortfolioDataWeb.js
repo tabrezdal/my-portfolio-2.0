@@ -55,24 +55,24 @@ const PortfolioDataWeb = [
     image: ImageHelper.Web9,
     fullWebSS: true,
   },
-  {
-    title: "Pokemon Natural",
-    caption: "Personal Project",
-    image: ImageHelper.Web10,
-    fullWebSS: false,
-  },
-  {
-    title: "TEZ Crypto Tracker",
-    caption: "Personal Project",
-    image: ImageHelper.Web11,
-    fullWebSS: false,
-  },
-  {
-    title: "Pokemon Futuristic",
-    caption: "Personal Project",
-    image: ImageHelper.Web12,
-    fullWebSS: false,
-  },
+  // {
+  //   title: "Pokemon Natural",
+  //   caption: "Personal Project",
+  //   image: ImageHelper.Web10,
+  //   fullWebSS: false,
+  // },
+  // {
+  //   title: "TEZ Crypto Tracker",
+  //   caption: "Personal Project",
+  //   image: ImageHelper.Web11,
+  //   fullWebSS: false,
+  // },
+  // {
+  //   title: "Pokemon Futuristic",
+  //   caption: "Personal Project",
+  //   image: ImageHelper.Web12,
+  //   fullWebSS: false,
+  // },
 ];
 
 export default PortfolioDataWeb;

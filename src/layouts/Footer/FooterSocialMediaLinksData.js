@@ -6,7 +6,7 @@ export const FooterSocialMediaLinksData = [
   },
   {
     id: 2,
-    url: "https://www.instagram.com/zerbatz/",
+    url: "https://www.instagram.com/tabrezdal/",
     iconClass: "fa fa-instagram fa-2x fa-fw",
   },
   {
