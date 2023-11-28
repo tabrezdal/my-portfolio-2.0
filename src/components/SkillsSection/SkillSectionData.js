@@ -3,7 +3,7 @@ import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 export const SkillSectionData = {
   sectionTitle: SectionTitleHelper.skills,
   skillsCategories: {
-    categoryTitle1: "Skill-set",
+    categoryTitle1: "Skillset",
     skills: [
       {
         id: 1,
