@@ -34,17 +34,17 @@ export const NavLinkData = [
 export const NavSocialMediaLinkData = [
   {
     id: 1,
-    url: "https://www.facebook.com/tabrezdal/",
+    url: "https://www.facebook.com/tabrezdal",
     iconClass: "fa fa-facebook fa-2x fa-fw",
   },
   {
     id: 2,
-    url: "https://www.instagram.com/tabrezdal/",
+    url: "https://www.instagram.com/tabrezdal",
     iconClass: "fa fa-instagram fa-2x fa-fw",
   },
   {
     id: 3,
-    url: "https://twitter.com/TabrezDal",
+    url: "https://twitter.com/tabrezdal",
     iconClass: "fa fa-twitter fa-2x fa-fw",
   },
   {
@@ -59,7 +59,7 @@ export const NavSocialMediaLinkData = [
   },
   {
     id: 6,
-    url: "https://www.pinterest.com/tabrezdal/",
+    url: "https://www.pinterest.com/tabrezdal",
     iconClass: "fa fa-pinterest fa-2x fa-fw",
   },
   {
@@ -69,7 +69,7 @@ export const NavSocialMediaLinkData = [
   },
   {
     id: 7,
-    url: "https://www.linkedin.com/in/tabrezdal/",
+    url: "https://www.linkedin.com/in/tabrezdal",
     iconClass: "fa fa-linkedin fa-2x fa-fw",
   },
 ];
