@@ -13,6 +13,10 @@ const ConstantHelper = {
     "https://www.linkedin.com/shareArticle?mini=true&amp;url==",
   shareOnInstagramUrl: "https://www.instagram.com/tabrezdal/",
   copyLink: "https://www.instagram.com/tabrezdal/",
+
+  TestimonialSectionTitle: "What my clients says",
+  WriteReviewButton: "Write your review",
+  goolgeReviewUrl: "https://g.page/r/CU2hmjyiPOGXEBM/review",
 };
 
 export default ConstantHelper;

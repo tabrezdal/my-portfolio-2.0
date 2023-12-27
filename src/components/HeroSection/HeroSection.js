@@ -15,7 +15,9 @@ const HeroSection = () => {
             <br />
             <h6>{HeroSectionData?.introStatingLine}</h6>
             <h1>{HeroSectionData?.name}</h1>
-            <p className="text-justify">{HeroSectionData?.introLine}</p>
+            <p className="text-justify intro-line">
+              {HeroSectionData?.introLine}
+            </p>
             <PrimaryButton
               name={HeroSectionData?.buttonData.name}
               url={HeroSectionData?.buttonData.url}
