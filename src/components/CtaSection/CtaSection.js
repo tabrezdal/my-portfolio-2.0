@@ -9,7 +9,7 @@ const CtaSection = () => {
   return (
     <section class="ftco-hireme">
       <div class="container">
-        <div class="row justify-content-between overflow-hidden">
+        <div class="row justify-content-between">
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -100 },
