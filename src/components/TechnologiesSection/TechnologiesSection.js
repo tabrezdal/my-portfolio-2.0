@@ -10,20 +10,22 @@ const TechnologiesSection = () => {
       <div className="container">
         <SectionTitle sectionTitleText={SectionTitleHelper.technologies} />
         <div className="row">
-          {TechnologiesSectionData?.FeatureTech.map((item) => (
+          {TechnologiesSectionData?.FeatureTech.map((item, index) => (
             <SingleTechnologySection
               key={item.id}
               techName={item.techName}
               techLogo={item.techIcon}
               featured={false}
+              index={index}
             />
           ))}
-          {TechnologiesSectionData?.NormalTech.map((item) => (
+          {TechnologiesSectionData?.NormalTech.map((item, index) => (
             <SingleTechnologySection
               key={item.id}
               techName={item.techName}
               techLogo={item.techIcon}
               featured={false}
+              index={index}
             />
           ))}
         </div>

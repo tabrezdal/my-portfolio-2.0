@@ -2,12 +2,24 @@ import React from "react";
 import ImageHelper from "../../Helpers/ImageHelper";
 import "./style.css";
 
+// FramerMotion
+import { motion } from "framer-motion";
+
 const CtaSection = () => {
   return (
     <section class="ftco-hireme">
       <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-md-8 col-lg-8 d-flex align-items-center">
+        <div class="row justify-content-between overflow-hidden">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            class="col-md-8 col-lg-8 d-flex align-items-center"
+          >
             <div class="w-100 py-4">
               <h2>Let's take the next step towards excellence!</h2>
               <p>
@@ -21,14 +33,23 @@ const CtaSection = () => {
                 Contact me &nbsp;<i class="fa fa-envelope"></i>
               </a>
             </div>
-          </div>
-          <div class="col-md-3 col-lg-3 d-flex align-items-end">
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            class="col-md-3 col-lg-3 d-flex align-items-end"
+          >
             <img
               src={ImageHelper.TzInSuit}
               class="img-fluid"
               alt="Tabrez in Black Suit"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -7,6 +7,9 @@ import "./TestimonialSlider.css";
 import TestimonialData from "./TestimonialData";
 import ConstantHelper from "../../Helpers/ConstantHelper";
 
+// FramerMotion
+import { motion } from "framer-motion";
+
 const TestimonialSlider = () => {
   useEffect(() => {
     const swiper = new Swiper(".swiper-container", {
@@ -41,7 +44,16 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div className="testimonial-main">
+    <motion.div
+      variants={{
+        hidden: { scale: 0 },
+        visible: { scale: 1 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="testimonial-main"
+    >
       <div className="row d-flex justify-content-center title">
         <div className="menu-content col-lg-12">
           <div className="title text-center">
@@ -76,7 +88,7 @@ const TestimonialSlider = () => {
         </a>
         {/* <div className="swiper-pagination"></div> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

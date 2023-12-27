@@ -13,11 +13,12 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12">
               <div className="d-flex space-between">
-                {FooterSocialMediaLinksData?.map((item) => (
+                {FooterSocialMediaLinksData?.map((item, index) => (
                   <SocialMediaLinks
                     key={item.id}
                     url={item.url}
                     iconClass={item.iconClass}
+                    index={index}
                   />
                 ))}
               </div>

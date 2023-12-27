@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 // import IconHelper from "../../../Helpers/IconHelper";
 
+// FramerMotion
+import { motion } from "framer-motion";
+
 const ProjectsTab = (props) => {
   const navigate = useNavigate();
   const redirectToUiUxProjectPage = (urlSuffix) => {
@@ -12,7 +15,14 @@ const ProjectsTab = (props) => {
   return (
     <div className="row grid">
       {data.map((item, index) => (
-        <div
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5, delay: 0.2 * index }}
           className={
             item.fullWidth === true
               ? "single-portfolio col-sm-12 all web mb-3"
@@ -58,7 +68,7 @@ const ProjectsTab = (props) => {
               <div className="cat">{item.caption}</div>
             </div>
           )}
-        </div>
+        </motion.div>
       ))}
     </div>
   );

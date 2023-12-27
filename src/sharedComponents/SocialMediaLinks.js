@@ -1,14 +1,24 @@
 import React from "react";
 
-const SocialMediaLinks = ({ url, iconClass }) => {
+// FramerMotion
+import { motion } from "framer-motion";
+
+const SocialMediaLinks = ({ url, iconClass, index }) => {
   return (
     <>
-      <div
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -100 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5, delay: index * 0.1 }}
         onClick={() => window.open(url, "_blank")}
         style={{ cursor: "pointer" }}
       >
         <i className={iconClass} style={{ color: "white" }}></i>
-      </div>
+      </motion.div>
     </>
   );
 };

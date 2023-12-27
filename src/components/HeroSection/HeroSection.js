@@ -2,12 +2,22 @@ import React from "react";
 import PrimaryButton from "../../sharedComponents/PrimaryButton";
 import { HeroSectionData } from "./HeroSectionData";
 
+// FramerMotion
+import { motion } from "framer-motion";
+
 const HeroSection = () => {
   return (
     <section className="banner-area pb-40" id="intro">
       <div className="container">
         <div className="row align-items-center justify-content-between">
-          <div
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: -100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="col-lg-6 col-md-6 banner-left"
             style={{ textAlign: "left" }}
           >
@@ -23,16 +33,26 @@ const HeroSection = () => {
               url={HeroSectionData?.buttonData.url}
               iconClass="fa fa-download"
             />
-          </div>
+          </motion.div>
           <div className="col-lg-1 col-md-1"></div>
-          <div className="col-lg-5 col-md-5 banner-right d-flex align-self-end">
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: -60 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="col-lg-5 col-md-5 banner-right d-flex align-self-end"
+          >
             <img
               draggable="false"
               className="img-fluid"
               src={HeroSectionData?.heroImage}
               alt="Hero"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

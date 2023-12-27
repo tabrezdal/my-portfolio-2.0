@@ -806,7 +806,7 @@ th {
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .overlay {
