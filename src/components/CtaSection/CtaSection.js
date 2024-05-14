@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const CtaSection = () => {
   return (
-    <section class="ftco-hireme">
-      <div class="container">
-        <div class="row justify-content-between">
+    <section className="ftco-hireme">
+      <div className="container">
+        <div className="row justify-content-between">
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -100 },
@@ -18,9 +18,9 @@ const CtaSection = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
-            class="col-md-8 col-lg-8 d-flex align-items-center"
+            className="col-md-8 col-lg-8 d-flex align-items-center"
           >
-            <div class="w-100 py-4">
+            <div className="w-100 py-4">
               <h2>Let's take the next step towards excellence!</h2>
               <p>
                 I'm excited to explore new opportunities and collaborate on
@@ -29,8 +29,8 @@ const CtaSection = () => {
                 connect, I'd love to hear from you.
               </p>
 
-              <a href="mailto:tabrez.dal@gmail.com" class="boxed-btn-02 blank">
-                Contact me &nbsp;<i class="fa fa-envelope"></i>
+              <a href="mailto:tabrez.dal@gmail.com" className="boxed-btn-02 blank">
+                Contact me &nbsp;<i className="fa fa-envelope"></i>
               </a>
             </div>
           </motion.div>
@@ -42,11 +42,11 @@ const CtaSection = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.4 }}
-            class="col-md-3 col-lg-3 d-flex align-items-end"
+            className="col-md-3 col-lg-3 d-flex align-items-end"
           >
             <img
               src={ImageHelper.TzInSuit}
-              class="img-fluid"
+              className="img-fluid"
               alt="Tabrez in Black Suit"
             />
           </motion.div>

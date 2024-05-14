@@ -23,6 +23,7 @@ const ToolsSection = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="col-lg-2 col-md-6 col-sm-6 col-6"
+              key={index}
             >
               <SingleToolSection
                 key={item.id}

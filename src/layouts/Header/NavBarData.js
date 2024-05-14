@@ -68,7 +68,7 @@ export const NavSocialMediaLinkData = [
     iconClass: "fa fa-github fa-2x fa-fw",
   },
   {
-    id: 7,
+    id: 8,
     url: "https://www.linkedin.com/in/tabrezdal",
     iconClass: "fa fa-linkedin fa-2x fa-fw",
   },

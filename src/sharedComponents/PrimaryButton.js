@@ -14,8 +14,8 @@ const PrimaryButton = ({ url, name, iconClass }) => {
       whileInView="visible"
       transition={{ duration: 0.5, delay: 0.5 }}
     >
-      <a href={url} className="primary-btn" target="_blank">
-        {name} &nbsp;<i class={iconClass}></i>
+      <a href={url} className="primary-btn" target="_blank" rel="noopener noreferrer">
+        {name} &nbsp;<i className={iconClass }></i>
       </a>
     </motion.div>
   );
