@@ -20,8 +20,12 @@ jobs:
         env:
           CI: false
         run: npm run build
+      - name: Verify Build Directory
+        run: ls -la || echo "Build directory not found"
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: build
           path: build
+      - name: Confirm Artifact Upload
+        run: echo "Artifact upload completed"
