@@ -26,6 +26,12 @@ jobs:
           path: build
       - name: Verify Downloaded Artifact
         run: ls -la build || echo "Build artifact not found after download"
+      - name: Debug Deployment Directory
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Build directory contents:"
+          ls -la build || echo "Build directory not found"
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
