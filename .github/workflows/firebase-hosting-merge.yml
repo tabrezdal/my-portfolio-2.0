@@ -9,6 +9,7 @@ name: Deploy to Firebase Hosting on sucessful build
       - completed
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
