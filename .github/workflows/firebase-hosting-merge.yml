@@ -4,7 +4,7 @@
 name: Deploy to Firebase Hosting on sucessful build
 'on':
   workflow_run:
-    workflows: [Build]
+    workflows: [Firebase Deployment Build]
     types:
       - completed
 jobs:
