@@ -2524,9 +2524,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .boxed-btn-02 {
-  background-color: #500ade;
-  border: 2px solid transparent;
-  color: #fff;
+  background-color: transparent;
+  border: 2px solid #006BFF ;
+  color: #006BFF;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;

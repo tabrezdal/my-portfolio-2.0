@@ -1,5 +1,6 @@
 import React from "react";
 import PrimaryButton from "../../sharedComponents/PrimaryButton";
+import BoxedButton from "../../sharedComponents/BoxedButton";
 import { AboutSectionData } from "./AboutSectionData";
 
 // FramerMotion
@@ -47,11 +48,18 @@ const AboutSection = () => {
               </p>
             ))}
 
-            <PrimaryButton
-              name={AboutSectionData?.buttonData?.name}
-              url={AboutSectionData?.buttonData?.url}
-              iconClass="fa fa-linkedin"
-            />
+            <div className="d-flex justify-content-md-start align-items-md-start justify-content-center align-items-center flex-wrap gap-3">
+              <PrimaryButton
+                name={AboutSectionData?.buttonData?.name}
+                url={AboutSectionData?.buttonData?.url}
+                iconClass="fa fa-linkedin"
+              />
+              <BoxedButton
+                name={AboutSectionData?.buttonData2?.name}
+                url={AboutSectionData?.buttonData2?.url}
+                iconClass="fa fa-calendar"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

@@ -1,0 +1,24 @@
+import React from "react";
+
+// FramerMotion
+import { motion } from "framer-motion";
+
+const BoxedButton = ({ url, name, iconClass }) => {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 60 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
+      <a href={url} className="boxed-btn-02" target="_blank" rel="noopener noreferrer">
+        {name} &nbsp;<i className={iconClass }></i>
+      </a>
+    </motion.div>
+  );
+};
+
+export default BoxedButton;

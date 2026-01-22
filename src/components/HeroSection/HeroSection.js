@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="banner-area pb-40" id="intro">
+    <section className="banner-area pb-40" id="intro" style={{ paddingBottom: "0px"}}>
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <motion.div
