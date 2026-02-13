@@ -4985,4 +4985,9 @@ dl.accordion.time-line:before {
     font-weight: 500;
     line-height: 2.4vw;
   }
+    .location-line {
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: auto;
+  }
 }

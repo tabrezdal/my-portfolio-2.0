@@ -28,6 +28,9 @@ const HeroSection = () => {
             <p className="text-justify intro-line">
               {HeroSectionData?.introLine}
             </p>
+            <p className="text-justify location-line">
+              <i className="fa fa-map-pin" style={{color: "#555"}}></i> {HeroSectionData.location}
+            </p>
             <PrimaryButton
               name={HeroSectionData?.buttonData.name}
               url={HeroSectionData?.buttonData.url}
