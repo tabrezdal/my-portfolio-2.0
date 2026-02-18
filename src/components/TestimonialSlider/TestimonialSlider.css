@@ -32,6 +32,16 @@
         font-size: 18px;
     }
 }
+
+.reviewer-name-text{
+    margin-bottom: -8px;
+    text-align: center;
+}
+.location-text{
+    margin-bottom: 0px;
+    text-align: center;
+}
+
 .swiper-container {
     border-radius: 5px;
     width: 70vw;

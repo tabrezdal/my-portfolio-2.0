@@ -73,7 +73,8 @@ const TestimonialSlider = () => {
                 href={item.sourceUrl}
                 target="_blank"
               >
-                <h3>{item.name}</h3>
+                <h3 className="reviewer-name-text">{item.name}</h3>
+                <p className="location-text">{item.location}</p>
                 <p className="review-text">{item.review}</p>
               </a>
             </div>
