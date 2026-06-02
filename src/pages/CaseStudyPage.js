@@ -8,6 +8,8 @@ import CaseStudyProcess from "../components/CaseStudyComps/CaseStudyProcess/Case
 import CaseStudyOutcome from "../components/CaseStudyComps/CaseStudyOutcome/CaseStudyOutcome";
 import CaseStudyGallery from "../components/CaseStudyComps/CaseStudyGallery/CaseStudyGallery";
 import CaseStudyNav from "../components/CaseStudyComps/CaseStudyNav/CaseStudyNav";
+import CaseStudyVisualShowcase from "../components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase";
+import CaseStudyTechStack from "../components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack";
 import FeaturedProjectsData from "../Data/FeaturedProjectsData";
 
 const CaseStudyPage = () => {
@@ -23,7 +25,6 @@ const CaseStudyPage = () => {
     }
   }, [slug, project]);
 
-  // 404 guard — redirect to home if slug not found
   if (!project) {
     navigate("/");
     return null;
@@ -32,12 +33,31 @@ const CaseStudyPage = () => {
   return (
     <div>
       <Header />
+
+      {/* 1. Hero — dark cinematic opener */}
       <CaseStudyHero project={project} />
+
+      {/* 2. Overview — problem statement + meta */}
       <CaseStudyOverview project={project} />
+
+      {/* 3. Process — how I approached it */}
       <CaseStudyProcess project={project} />
+
+      {/* 4. Visual Showcase — before/after, screens, features, design system, mobile, flow */}
+      <CaseStudyVisualShowcase project={project} />
+
+      {/* 5. Tech Stack — pills, role breakdown, code snippets, perf metrics, timeline */}
+      <CaseStudyTechStack project={project} />
+
+      {/* 6. Outcome — key results + metrics */}
       <CaseStudyOutcome project={project} />
+
+      {/* 7. Figma embed + image gallery */}
       <CaseStudyGallery project={project} />
+
+      {/* 8. Prev / Next navigation */}
       <CaseStudyNav project={project} />
+
       <Footer />
     </div>
   );
