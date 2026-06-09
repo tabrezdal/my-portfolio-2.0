@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "./CaseStudyTechStack.css";
 
-const TechStackPills = ({ groups }) => {
+/* ─────────────────────────────────────────
+   B1. Tech Stack Pills
+───────────────────────────────────────── */
+const TechStackPills = ({ groups, title, subtitle }) => {
   if (!groups || groups.length === 0) return null;
 
   return (
@@ -15,10 +18,8 @@ const TechStackPills = ({ groups }) => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p className="cts-eyebrow">Tech Stack</p>
-          <h2 className="cts-heading">Technologies used</h2>
-          <p className="cts-subtext">
-            A quick overview of the tools, frameworks and libraries that enabled the product.
-          </p>
+          <h2 className="cts-heading">{title || "Technologies used"}</h2>
+          {subtitle && <p className="cts-subtext">{subtitle}</p>}
         </motion.div>
 
         {groups.map((group, gi) => (
@@ -35,13 +36,23 @@ const TechStackPills = ({ groups }) => {
                   className="cts-pill"
                 >
                   {item.icon && !item.faIcon && (
-                    <img src={item.icon} alt={item.name} className="cts-pill__icon" draggable="false" />
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className="cts-pill__icon"
+                      draggable="false"
+                    />
                   )}
                   {item.faIcon && (
-                    <i className={`${item.faIcon} cts-pill__icon--fa`} aria-hidden="true" />
+                    <i
+                      className={`${item.faIcon} cts-pill__icon--fa`}
+                      aria-hidden="true"
+                    />
                   )}
                   <span>{item.name}</span>
-                  {item.category && <span className="cts-pill__category">{item.category}</span>}
+                  {item.category && (
+                    <span className="cts-pill__category">{item.category}</span>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -52,7 +63,10 @@ const TechStackPills = ({ groups }) => {
   );
 };
 
-const RoleBreakdown = ({ roles }) => {
+/* ─────────────────────────────────────────
+   B2. Role & Architecture Breakdown
+───────────────────────────────────────── */
+const RoleBreakdown = ({ roles, title, subtitle }) => {
   if (!roles || roles.length === 0) return null;
 
   return (
@@ -65,10 +79,8 @@ const RoleBreakdown = ({ roles }) => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p className="cts-eyebrow">My Contribution</p>
-          <h2 className="cts-heading">What I owned end-to-end</h2>
-          <p className="cts-subtext">
-            The responsibilities I owned while shaping the product experience.
-          </p>
+          <h2 className="cts-heading">{title || "What I owned end-to-end"}</h2>
+          {subtitle && <p className="cts-subtext">{subtitle}</p>}
         </motion.div>
 
         <div className="cts-role-grid">
@@ -81,7 +93,9 @@ const RoleBreakdown = ({ roles }) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="cts-role-card"
             >
-              <p className="cts-role-card__number">0{index + 1}</p>
+              <p className="cts-role-card__number">
+                0{index + 1}
+              </p>
               <h4 className="cts-role-card__title">{role.title}</h4>
               <p className="cts-role-card__body">{role.body}</p>
               {role.tags && role.tags.length > 0 && (
@@ -99,51 +113,55 @@ const RoleBreakdown = ({ roles }) => {
   );
 };
 
+/* ─────────────────────────────────────────
+   B3. Code Snippet Viewer (tabbed)
+   Renders syntax-highlighted JSX/React code
+   using simple token-class spans — no lib needed
+───────────────────────────────────────── */
+
+// Minimal tokeniser — handles JSX well enough for portfolio display
 const tokenise = (code) => {
+  // Order matters — more specific patterns first
   const patterns = [
-    { type: "cmt", re: /\/\*[\s\S]*?\*\/|\/\/.*$/gm },
-    { type: "str", re: /(["'`])(?:(?!\1)[^\\]|\\.)*\1/g },
-    { type: "num", re: /\b\d+(?:\.\d+)?\b/g },
-    { type: "kw", re: /\b(?:import|export|default|from|const|let|var|return|if|else|function|async|await|true|false|null|undefined|new|class|extends|this|typeof|useState|useEffect|useRef|useCallback|useMemo|switch|case|break|continue)\b/g },
-    { type: "fn", re: /\b([a-zA-Z_$][a-zA-Z0-9_$]*)\s*(?=\()/g },
-    { type: "tag", re: /<\/?[A-Za-z][A-Za-z0-9]*|<\/?[A-Za-z][A-Za-z0-9-]*/g },
-    { type: "attr", re: /\b[a-zA-Z-]+(?=\=)/g },
+    { type: "cmt",   re: /\/\*[\s\S]*?\*\/|\/\/.*/g },
+    { type: "str",   re: /(["'`])(?:(?!\1)[^\\]|\\.)*\1/g },
+    { type: "num",   re: /\b\d+(\.\d+)?\b/g },
+    { type: "kw",    re: /\b(import|export|default|from|const|let|var|return|if|else|function|arrow|async|await|true|false|null|undefined|new|class|extends|this|typeof|useState|useEffect|useRef|useCallback|useMemo)\b/g },
+    { type: "fn",    re: /\b([a-zA-Z_$][a-zA-Z0-9_$]*)\s*(?=\()/g },
+    { type: "tag",   re: /<\/?[A-Z][a-zA-Z0-9.]*|<\/?[a-z][a-zA-Z0-9-]*/g },
+    { type: "attr",  re: /\b[a-zA-Z-]+(?==)/g },
     { type: "punct", re: /[{}[\]()=><;,.:]/g },
   ];
 
+  // Build a flat list of [start, end, type] spans
   const spans = [];
   patterns.forEach(({ type, re }) => {
+    re.lastIndex = 0;
     let m;
     while ((m = re.exec(code)) !== null) {
       spans.push({ start: m.index, end: m.index + m[0].length, type, text: m[0] });
-      if (m.index === re.lastIndex) re.lastIndex += 1;
     }
   });
 
+  // Sort & de-overlap (first-come wins)
   spans.sort((a, b) => a.start - b.start);
   const merged = [];
   let cursor = 0;
-
   for (const span of spans) {
-    if (span.start >= cursor) {
-      merged.push(span);
-      cursor = span.end;
-    }
+    if (span.start < cursor) continue; // overlapping, skip
+    merged.push(span);
+    cursor = span.end;
   }
 
+  // Build output segments
   const result = [];
   cursor = 0;
   for (const { start, end, type, text } of merged) {
-    if (cursor < start) {
-      result.push({ type: "plain", text: code.slice(cursor, start) });
-    }
+    if (cursor < start) result.push({ type: "plain", text: code.slice(cursor, start) });
     result.push({ type, text });
     cursor = end;
   }
-  if (cursor < code.length) {
-    result.push({ type: "plain", text: code.slice(cursor) });
-  }
-
+  if (cursor < code.length) result.push({ type: "plain", text: code.slice(cursor) });
   return result;
 };
 
@@ -173,8 +191,9 @@ const HighlightedCode = ({ code }) => {
   );
 };
 
-const CodeSnippetViewer = ({ snippets }) => {
+const CodeSnippetViewer = ({ snippets, title, subtitle }) => {
   const [active, setActive] = useState(0);
+
   if (!snippets || snippets.length === 0) return null;
 
   return (
@@ -187,10 +206,12 @@ const CodeSnippetViewer = ({ snippets }) => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p className="cts-eyebrow cts-eyebrow--light">Engineering</p>
-          <h2 className="cts-heading cts-heading--light">Notable code contributions</h2>
-          <p className="cts-subtext cts-subtext--light">
-            Live examples of the code patterns and interface components I shipped.
-          </p>
+          <h2 className="cts-heading cts-heading--light">
+            {title || "Notable code contributions"}
+          </h2>
+          {subtitle && (
+            <p className="cts-subtext cts-subtext--light">{subtitle}</p>
+          )}
         </motion.div>
 
         <motion.div
@@ -200,20 +221,22 @@ const CodeSnippetViewer = ({ snippets }) => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="cts-code-wrapper"
         >
+          {/* Tab bar */}
           {snippets.length > 1 && (
             <div className="cts-code-tabs">
-              {snippets.map((snippet, i) => (
+              {snippets.map((s, i) => (
                 <button
                   key={i}
                   className={`cts-code-tab ${active === i ? "cts-code-tab--active" : ""}`}
                   onClick={() => setActive(i)}
                 >
-                  {snippet.filename || `Snippet ${i + 1}`}
+                  {s.filename || `snippet-${i + 1}`}
                 </button>
               ))}
             </div>
           )}
 
+          {/* Chrome bar */}
           <div className="cts-code-header">
             <span className="cts-code-header__dot cts-code-header__dot--red" />
             <span className="cts-code-header__dot cts-code-header__dot--yellow" />
@@ -226,6 +249,7 @@ const CodeSnippetViewer = ({ snippets }) => {
             </span>
           </div>
 
+          {/* Code */}
           <div className="cts-code-body">
             <HighlightedCode code={snippets[active]?.code || ""} />
           </div>
@@ -235,20 +259,25 @@ const CodeSnippetViewer = ({ snippets }) => {
   );
 };
 
-const PerformanceMetrics = ({ bars, stats }) => {
+/* ─────────────────────────────────────────
+   B4. Performance / Impact Metrics
+───────────────────────────────────────── */
+const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
   const [animate, setAnimate] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setAnimate(true),
-      { threshold: 0.4 }
+      ([entry]) => { if (entry.isIntersecting) setAnimate(true); },
+      { threshold: 0.3 }
     );
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  if ((!bars || bars.length === 0) && (!stats || stats.length === 0)) return null;
+  if (!bars && !stats) return null;
 
   return (
     <div className="cts-section cts-section--white" ref={ref}>
@@ -259,114 +288,173 @@ const PerformanceMetrics = ({ bars, stats }) => {
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <p className="cts-eyebrow">Impact</p>
-          <h2 className="cts-heading">Performance metrics</h2>
-          <p className="cts-subtext">
-            Measured improvements and product gains achieved through this case study.
-          </p>
+          <p className="cts-eyebrow">Impact & Performance</p>
+          <h2 className="cts-heading">{title || "Measurable results"}</h2>
+          {subtitle && <p className="cts-subtext">{subtitle}</p>}
         </motion.div>
 
         <div className="cts-perf-grid">
-          <div className="cts-perf-bars">
-            {bars?.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
-                <div className="cts-perf-bar-row__label">
-                  <span className="cts-perf-bar-row__name">{item.label}</span>
-                  <span className="cts-perf-bar-row__value">{item.value}</span>
-                </div>
-                <div className="cts-perf-bar-track">
-                  <div
-                    className="cts-perf-bar-fill"
-                    style={{ width: animate ? `${item.percentage || 90}%` : "0%" }}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* Bars */}
+          {bars && bars.length > 0 && (
+            <div className="cts-perf-bars">
+              {bars.map((bar, i) => (
+                <motion.div
+                  key={i}
+                  variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                >
+                  <div className="cts-perf-bar-row__label">
+                    <span className="cts-perf-bar-row__name">{bar.label}</span>
+                    <span className="cts-perf-bar-row__value">{bar.display || `${bar.value}%`}</span>
+                  </div>
+                  <div className="cts-perf-bar-track">
+                    <div
+                      className="cts-perf-bar-fill"
+                      style={{ width: animate ? `${bar.value}%` : "0%" }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
 
-          <div className="cts-stat-cards">
-            {stats?.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="cts-stat-card"
-              >
-                <p className="cts-stat-card__value">
-                  {stat.value} {stat.highlight ? <span>{stat.highlight}</span> : null}
-                </p>
-                <p className="cts-stat-card__label">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
+          {/* Stat cards */}
+          {stats && stats.length > 0 && (
+            <div className="cts-stat-cards">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={i}
+                  variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="cts-stat-card"
+                >
+                  <p className="cts-stat-card__value">
+                    {stat.prefix && <span>{stat.prefix}</span>}
+                    {stat.value}
+                    {stat.suffix && <span>{stat.suffix}</span>}
+                  </p>
+                  <p className="cts-stat-card__label">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-const ProjectTimeline = ({ items }) => {
+/* ─────────────────────────────────────────
+   B5. Project Timeline
+───────────────────────────────────────── */
+const ProjectTimeline = ({ items, title, subtitle }) => {
   if (!items || items.length === 0) return null;
 
   return (
     <div className="cts-section cts-section--light">
       <div className="container">
-        <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <p className="cts-eyebrow">Timeline</p>
-          <h2 className="cts-heading">Delivery plan</h2>
-          <p className="cts-subtext">
-            The milestones and product moments that defined the project delivery.
-          </p>
-        </motion.div>
-
-        <div className="cts-timeline">
-          {items.map((item, index) => (
+        <div className="row">
+          <div className="col-lg-5 col-md-5" style={{ marginBottom: 40 }}>
             <motion.div
-              key={index}
-              variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+              variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="cts-timeline-item"
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <span className="cts-timeline-item__dot" />
-              <p className="cts-timeline-item__date">{item.date}</p>
-              <h4 className="cts-timeline-item__title">{item.title}</h4>
-              <p className="cts-timeline-item__body">{item.body}</p>
+              <p className="cts-eyebrow">Timeline</p>
+              <h2 className="cts-heading">{title || "Project progression"}</h2>
+              {subtitle && <p className="cts-subtext">{subtitle}</p>}
             </motion.div>
-          ))}
+          </div>
+
+          <div className="col-lg-7 col-md-7">
+            <div className="cts-timeline">
+              {items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="cts-timeline-item"
+                >
+                  <div className="cts-timeline-item__dot" />
+                  <p className="cts-timeline-item__date">{item.date}</p>
+                  <h5 className="cts-timeline-item__title">{item.title}</h5>
+                  <p className="cts-timeline-item__body">{item.body}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
+/* ─────────────────────────────────────────
+   MASTER EXPORT — CaseStudyTechStack
+───────────────────────────────────────── */
 const CaseStudyTechStack = ({ project }) => {
-  const showcase = project?.techShowcase;
-  if (!showcase) return null;
+  const tech = project?.techShowcase;
+  if (!tech) return null;
 
   return (
     <>
-      <TechStackPills groups={showcase.groups} />
-      <RoleBreakdown roles={showcase.roles} />
-      <CodeSnippetViewer snippets={showcase.snippets} />
-      <PerformanceMetrics bars={showcase.bars} stats={showcase.stats} />
-      <ProjectTimeline items={showcase.timeline} />
+      {tech.stackGroups && (
+        <TechStackPills
+          groups={tech.stackGroups}
+          title={tech.stackTitle}
+          subtitle={tech.stackSubtitle}
+        />
+      )}
+
+      {tech.roles && (
+        <RoleBreakdown
+          roles={tech.roles}
+          title={tech.rolesTitle}
+          subtitle={tech.rolesSubtitle}
+        />
+      )}
+
+      {tech.snippets && (
+        <CodeSnippetViewer
+          snippets={tech.snippets}
+          title={tech.snippetsTitle}
+          subtitle={tech.snippetsSubtitle}
+        />
+      )}
+
+      {(tech.perfBars || tech.perfStats) && (
+        <PerformanceMetrics
+          bars={tech.perfBars}
+          stats={tech.perfStats}
+          title={tech.perfTitle}
+          subtitle={tech.perfSubtitle}
+        />
+      )}
+
+      {tech.timeline && (
+        <ProjectTimeline
+          items={tech.timeline}
+          title={tech.timelineTitle}
+          subtitle={tech.timelineSubtitle}
+        />
+      )}
     </>
   );
 };
 
 export default CaseStudyTechStack;
+
+export {
+  TechStackPills,
+  RoleBreakdown,
+  CodeSnippetViewer,
+  PerformanceMetrics,
+  ProjectTimeline,
+};

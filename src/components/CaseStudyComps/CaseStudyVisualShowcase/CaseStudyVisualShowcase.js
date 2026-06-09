@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./CaseStudyVisualShowcase.css";
 
+/* ─────────────────────────────────────────
+   A1. Before / After Comparison
+───────────────────────────────────────── */
 const BeforeAfter = ({ items }) => {
   if (!items || items.length === 0) return null;
-
   return (
     <div className="csv-section csv-section--dark">
       <div className="container">
@@ -21,8 +23,8 @@ const BeforeAfter = ({ items }) => {
           </p>
         </motion.div>
 
-        {items.map((pair, index) => (
-          <div key={index} style={{ marginTop: index === 0 ? 0 : 48 }}>
+        {items.map((pair, pairIndex) => (
+          <div key={pairIndex} style={{ marginTop: pairIndex === 0 ? 0 : 48 }}>
             {pair.context && (
               <motion.p
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
@@ -42,8 +44,8 @@ const BeforeAfter = ({ items }) => {
                 {pair.context}
               </motion.p>
             )}
-
             <div className="baf-grid">
+              {/* Before */}
               <motion.div
                 variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}
                 initial="hidden"
@@ -65,6 +67,7 @@ const BeforeAfter = ({ items }) => {
                 )}
               </motion.div>
 
+              {/* After */}
               <motion.div
                 variants={{ hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } }}
                 initial="hidden"
@@ -93,15 +96,22 @@ const BeforeAfter = ({ items }) => {
   );
 };
 
-const ScreenGallery = ({ screens }) => {
+/* ─────────────────────────────────────────
+   A2. Screen Gallery with Lightbox
+───────────────────────────────────────── */
+const ScreenGallery = ({ screens, title, subtitle }) => {
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
   if (!screens || screens.length === 0) return null;
 
   return (
     <>
+      {/* Lightbox */}
       {lightboxSrc && (
-        <div className="csv-lightbox" onClick={() => setLightboxSrc(null)}>
+        <div
+          className="csv-lightbox"
+          onClick={() => setLightboxSrc(null)}
+        >
           <button
             className="csv-lightbox__close"
             onClick={() => setLightboxSrc(null)}
@@ -113,7 +123,7 @@ const ScreenGallery = ({ screens }) => {
             src={lightboxSrc}
             alt="Full screen preview"
             className="csv-lightbox__img"
-            onClick={(event) => event.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
             draggable="false"
           />
         </div>
@@ -128,10 +138,8 @@ const ScreenGallery = ({ screens }) => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="csv-eyebrow">UI Screens</p>
-            <h2 className="csv-heading">Screen showcase</h2>
-            <p className="csv-subtext">
-              High-fidelity screens that show how the product experience scales across device types.
-            </p>
+            <h2 className="csv-heading">{title || "Screen showcase"}</h2>
+            {subtitle && <p className="csv-subtext">{subtitle}</p>}
           </motion.div>
 
           <div className="csv-gallery">
@@ -162,7 +170,10 @@ const ScreenGallery = ({ screens }) => {
   );
 };
 
-const FeatureHighlights = ({ features }) => {
+/* ─────────────────────────────────────────
+   A3. Feature Highlights
+───────────────────────────────────────── */
+const FeatureHighlights = ({ features, title, subtitle }) => {
   if (!features || features.length === 0) return null;
 
   return (
@@ -175,10 +186,8 @@ const FeatureHighlights = ({ features }) => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p className="csv-eyebrow">Feature Highlights</p>
-          <h2 className="csv-heading">Key design decisions</h2>
-          <p className="csv-subtext">
-            What made this product feel polished, intuitive, and easy to adopt.
-          </p>
+          <h2 className="csv-heading">{title || "Key design decisions"}</h2>
+          {subtitle && <p className="csv-subtext">{subtitle}</p>}
         </motion.div>
 
         <div className="csv-features-grid">
@@ -196,7 +205,9 @@ const FeatureHighlights = ({ features }) => {
               </div>
               <h4 className="csv-feature-card__title">{feature.title}</h4>
               <p className="csv-feature-card__body">{feature.body}</p>
-              {feature.tag && <span className="csv-feature-card__tag">{feature.tag}</span>}
+              {feature.tag && (
+                <span className="csv-feature-card__tag">{feature.tag}</span>
+              )}
             </motion.div>
           ))}
         </div>
@@ -205,8 +216,13 @@ const FeatureHighlights = ({ features }) => {
   );
 };
 
+/* ─────────────────────────────────────────
+   A4. Design System Preview
+───────────────────────────────────────── */
 const DesignSystemPreview = ({ systemData }) => {
   if (!systemData) return null;
+
+  const { colors, typography, components, projectName } = systemData;
 
   return (
     <div className="csv-section csv-section--light">
@@ -217,64 +233,239 @@ const DesignSystemPreview = ({ systemData }) => {
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <p className="csv-eyebrow">Design system</p>
-          <h2 className="csv-heading">Visual identity & UI toolkit</h2>
+          <p className="csv-eyebrow">Design System</p>
+          <h2 className="csv-heading">Tokens, typography & components</h2>
           <p className="csv-subtext">
-            Design tokens, type hierarchy, and reusable components that kept the interface consistent.
+            A shared token-based system built to ensure consistency across every screen and state.
           </p>
         </motion.div>
 
-        <div className="csv-ds-wrapper">
+        <motion.div
+          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="csv-ds-wrapper"
+        >
+          {/* macOS-style chrome bar */}
           <div className="csv-ds-header">
             <span className="csv-ds-header__dot csv-ds-header__dot--red" />
             <span className="csv-ds-header__dot csv-ds-header__dot--yellow" />
             <span className="csv-ds-header__dot csv-ds-header__dot--green" />
-            <span className="csv-ds-header__title">{systemData.projectName || "Design system preview"}</span>
+            <span className="csv-ds-header__title">
+              {projectName ? `${projectName} — Design System` : "Design System"}
+            </span>
           </div>
+
           <div className="csv-ds-body">
-            <div>
-              <p className="csv-ds-panel__label">Colors</p>
-              <div className="csv-ds-colors">
-                {systemData.colors?.map((color) => (
-                  <div key={color.hex} className="csv-ds-swatch" style={{ background: color.hex }}>
-                    <span className="csv-ds-swatch__hex">{color.hex}</span>
-                  </div>
-                ))}
+            {/* Color tokens */}
+            {colors && colors.length > 0 && (
+              <div>
+                <p className="csv-ds-panel__label">Color Tokens</p>
+                <div className="csv-ds-colors">
+                  {colors.map((swatch, i) => (
+                    <div
+                      key={i}
+                      className="csv-ds-swatch"
+                      style={{ background: swatch.hex }}
+                      title={`${swatch.name} · ${swatch.hex}`}
+                    >
+                      <span className="csv-ds-swatch__hex">{swatch.hex}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* Token names below swatches */}
+                <div style={{ marginTop: 28 }}>
+                  {colors.map((swatch, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 10,
+                        marginBottom: 7,
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 12,
+                          height: 12,
+                          borderRadius: "50%",
+                          background: swatch.hex,
+                          flexShrink: 0,
+                          border: "1px solid rgba(0,0,0,0.08)",
+                        }}
+                      />
+                      <span style={{ fontSize: 11, color: "#555", fontWeight: 500 }}>
+                        {swatch.name}
+                      </span>
+                      <span style={{ fontSize: 10, color: "#bbb", marginLeft: "auto" }}>
+                        {swatch.hex}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="csv-ds-panel__label">Typography</p>
-              <div className="csv-ds-type-scale">
-                {systemData.typography?.map((type) => (
-                  <div key={type.label} className="csv-ds-type-row">
-                    <span className="csv-ds-type-row__label">{type.label}</span>
-                    <span className="csv-ds-type-row__sample">{type.sample}</span>
-                  </div>
-                ))}
+            )}
+
+            {/* Typography scale */}
+            {typography && typography.length > 0 && (
+              <div>
+                <p className="csv-ds-panel__label">Type Scale</p>
+                <div className="csv-ds-type-scale">
+                  {typography.map((row, i) => (
+                    <div key={i} className="csv-ds-type-row">
+                      <span className="csv-ds-type-row__label">{row.label}</span>
+                      <span
+                        className="csv-ds-type-row__sample"
+                        style={{
+                          fontSize: row.size,
+                          fontWeight: row.weight || 400,
+                        }}
+                      >
+                        {row.sample || "The quick brown fox"}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="csv-ds-panel__label">Components</p>
-              <div className="csv-ds-components">
-                {systemData.components?.map((component) => (
-                  <button
-                    key={component.label}
-                    className={`csv-ds-comp-btn csv-ds-comp-btn--${component.variant || "ghost"}`}
-                  >
-                    {component.label}
+            )}
+
+            {/* Component samples */}
+            {components !== false && (
+              <div>
+                <p className="csv-ds-panel__label">Components</p>
+                <div className="csv-ds-components">
+                  <button className="csv-ds-comp-btn csv-ds-comp-btn--primary">
+                    Primary Action
                   </button>
-                ))}
+                  <button className="csv-ds-comp-btn csv-ds-comp-btn--outline">
+                    Secondary Action
+                  </button>
+                  <button className="csv-ds-comp-btn csv-ds-comp-btn--ghost">
+                    Tertiary Ghost
+                  </button>
+
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 4 }}>
+                    <span className="csv-ds-comp-badge csv-ds-comp-badge--blue">Active</span>
+                    <span className="csv-ds-comp-badge csv-ds-comp-badge--green">Completed</span>
+                    <span className="csv-ds-comp-badge csv-ds-comp-badge--red">Error</span>
+                  </div>
+
+                  <input
+                    className="csv-ds-comp-input"
+                    placeholder="Input field"
+                    readOnly
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+/* ─────────────────────────────────────────
+   A5. Mobile Responsiveness Showcase
+───────────────────────────────────────── */
+const MobileShowcase = ({ screens, title, subtitle }) => {
+  if (!screens || screens.length === 0) return null;
+
+  const sizes = ["large", "medium", "small"];
+
+  return (
+    <div className="csv-section csv-section--dark">
+      <div className="container">
+        <motion.div
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <p className="csv-eyebrow csv-eyebrow--light">Mobile Experience</p>
+          <h2 className="csv-heading csv-heading--light">
+            {title || "Responsive & mobile-first"}
+          </h2>
+          {subtitle && (
+            <p className="csv-subtext csv-subtext--light">{subtitle}</p>
+          )}
+        </motion.div>
+
+        <div className="csv-mobile-wrap" style={{ marginTop: 48 }}>
+          {screens.slice(0, 3).map((screen, index) => (
+            <motion.div
+              key={index}
+              variants={{ hidden: { opacity: 0, y: 60 }, visible: { opacity: 1, y: 0 } }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.55, delay: index * 0.15 }}
+              className={`csv-phone-frame csv-phone-frame--${sizes[index] || "medium"}`}
+            >
+              <div className="csv-phone-frame__notch" />
+              <div className="csv-phone-frame__screen">
+                <img src={screen.image} alt={screen.label || `Screen ${index + 1}`} />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Screen labels */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 40,
+            marginTop: 48,
+            flexWrap: "wrap",
+          }}
+        >
+          {screens.slice(0, 3).map((screen, index) => (
+            <motion.div
+              key={index}
+              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+              style={{ textAlign: "center" }}
+            >
+              <p
+                style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.8)",
+                  margin: 0,
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                }}
+              >
+                {screen.label || `Screen ${index + 1}`}
+              </p>
+              {screen.sublabel && (
+                <p
+                  style={{
+                    fontSize: 10,
+                    color: "rgba(255,255,255,0.35)",
+                    margin: "4px 0 0",
+                  }}
+                >
+                  {screen.sublabel}
+                </p>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-const MobileShowcase = ({ screens }) => {
-  if (!screens || screens.length === 0) return null;
+/* ─────────────────────────────────────────
+   A6. User Flow Diagram
+───────────────────────────────────────── */
+const UserFlow = ({ steps, title, subtitle }) => {
+  if (!steps || steps.length === 0) return null;
 
   return (
     <div className="csv-section csv-section--white">
@@ -285,66 +476,42 @@ const MobileShowcase = ({ screens }) => {
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <p className="csv-eyebrow">Mobile experience</p>
-          <h2 className="csv-heading">Responsive screens</h2>
-          <p className="csv-subtext">
-            Mobile-first layouts and handoff-ready screens that kept the experience polished on smaller devices.
-          </p>
-        </motion.div>
-
-        <div className="csv-mobile-wrap">
-          {screens.map((screen, index) => (
-            <motion.div
-              key={index}
-              variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`csv-phone-frame csv-phone-frame--${index === 0 ? "large" : index === 1 ? "medium" : "small"}`}
-            >
-              <div className="csv-phone-frame__notch" />
-              <div className="csv-phone-frame__screen">
-                <img src={screen.image} alt={screen.label || `Mobile screen ${index + 1}`} draggable="false" />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const UserFlow = ({ steps }) => {
-  if (!steps || steps.length === 0) return null;
-
-  return (
-    <div className="csv-section csv-section--light">
-      <div className="container">
-        <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <p className="csv-eyebrow">User journey</p>
-          <h2 className="csv-heading">How people move through the product</h2>
-          <p className="csv-subtext">
-            An intentional flow that guides users from discovery to task completion with clear signposts.
-          </p>
+          <p className="csv-eyebrow">User Flow</p>
+          <h2 className="csv-heading">{title || "Key user journey"}</h2>
+          {subtitle && <p className="csv-subtext">{subtitle}</p>}
         </motion.div>
 
         <div className="csv-flow-container">
           <div className="csv-flow">
             {steps.map((step, index) => (
               <React.Fragment key={index}>
-                <div className="csv-flow-step">
-                  <div className={`csv-flow-step__circle ${step.variant ? `csv-flow-step__circle--${step.variant}` : ""}`}>
-                    {index + 1}
+                <motion.div
+                  variants={{ hidden: { opacity: 0, scale: 0.7 }, visible: { opacity: 1, scale: 1 } }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="csv-flow-step"
+                >
+                  <div
+                    className={`csv-flow-step__circle ${
+                      step.type === "pain"
+                        ? "csv-flow-step__circle--pain"
+                        : "csv-flow-step__circle--active"
+                    }`}
+                  >
+                    <i
+                      className={step.icon || "fa fa-circle"}
+                      style={{ fontSize: 16 }}
+                      aria-hidden="true"
+                    />
                   </div>
-                  <div className="csv-flow-step__label">{step.title}</div>
-                  <div className="csv-flow-step__sub">{step.subtitle}</div>
-                </div>
-                {index < steps.length - 1 && <div className="csv-flow-arrow" aria-hidden="true" />}
+                  <p className="csv-flow-step__label">{step.label}</p>
+                  {step.sub && <p className="csv-flow-step__sub">{step.sub}</p>}
+                </motion.div>
+
+                {index < steps.length - 1 && (
+                  <div className="csv-flow-arrow" />
+                )}
               </React.Fragment>
             ))}
           </div>
@@ -354,20 +521,63 @@ const UserFlow = ({ steps }) => {
   );
 };
 
+/* ─────────────────────────────────────────
+   MASTER EXPORT — CaseStudyVisualShowcase
+   Renders all sub-sections from one prop object
+───────────────────────────────────────── */
 const CaseStudyVisualShowcase = ({ project }) => {
   const showcase = project?.showcase;
   if (!showcase) return null;
 
   return (
     <>
-      <BeforeAfter items={showcase.beforeAfter} />
-      <ScreenGallery screens={showcase.screens} />
-      <FeatureHighlights features={showcase.features} />
-      <DesignSystemPreview systemData={showcase.designSystem} />
-      <MobileShowcase screens={showcase.mobileScreens} />
-      <UserFlow steps={showcase.userFlow} />
+      {showcase.beforeAfter && (
+        <BeforeAfter items={showcase.beforeAfter} />
+      )}
+
+      {showcase.screens && (
+        <ScreenGallery
+          screens={showcase.screens}
+          title={showcase.screensTitle}
+          subtitle={showcase.screensSubtitle}
+        />
+      )}
+
+      {showcase.features && (
+        <FeatureHighlights
+          features={showcase.features}
+          title={showcase.featuresTitle}
+          subtitle={showcase.featuresSubtitle}
+        />
+      )}
+
+      {showcase.designSystem && (
+        <DesignSystemPreview systemData={showcase.designSystem} />
+      )}
+
+      {showcase.mobileScreens && (
+        <MobileShowcase
+          screens={showcase.mobileScreens}
+          title={showcase.mobileTitle}
+          subtitle={showcase.mobileSubtitle}
+        />
+      )}
+
+      {showcase.userFlow && (
+        <UserFlow
+          steps={showcase.userFlow}
+          title={showcase.userFlowTitle}
+          subtitle={showcase.userFlowSubtitle}
+        />
+      )}
     </>
   );
 };
 
 export default CaseStudyVisualShowcase;
+
+/* ─────────────────────────────────────────
+   Named exports so you can use sections
+   individually if needed
+───────────────────────────────────────── */
+export { BeforeAfter, ScreenGallery, FeatureHighlights, DesignSystemPreview, MobileShowcase, UserFlow };

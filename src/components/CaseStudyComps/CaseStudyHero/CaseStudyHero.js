@@ -1,154 +1,181 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./CaseStudyHero.css";
 
+/* ─────────────────────────────────────────
+   Stagger helper — children animate in sequence
+───────────────────────────────────────── */
+const fadeUp = (delay = 0) => ({
+  variants: {
+    hidden:  { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0  },
+  },
+  initial:    "hidden",
+  animate:    "visible",
+  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1], delay },
+});
+
+const fadeIn = (delay = 0) => ({
+  variants: {
+    hidden:  { opacity: 0 },
+    visible: { opacity: 1 },
+  },
+  initial:    "hidden",
+  animate:    "visible",
+  transition: { duration: 0.7, delay },
+});
+
+/* ─────────────────────────────────────────
+   CaseStudyHero
+   Props come from FeaturedProjectsData entry
+───────────────────────────────────────── */
 const CaseStudyHero = ({ project }) => {
+  if (!project) return null;
+
+  const {
+    title,
+    category,
+    year,
+    duration,
+    role,
+    tags,
+    shortDescription,
+    coverImage,
+    metrics,   // [{ label, value }]
+    tools,
+  } = project;
+
+  /* Split title at last word for accent colouring */
+  const titleWords = (title || "").trim().split(" ");
+  const titleMain  = titleWords.slice(0, -1).join(" ");
+  const titleLast  = titleWords[titleWords.length - 1];
+
   return (
-    <section
-      style={{
-        background: "#000",
-        paddingTop: "100px",
-        paddingBottom: "0",
-        overflow: "hidden",
-      }}
-    >
-      <div className="container">
-        {/* Meta row */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: -30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.2 }}
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "10px",
-            marginBottom: "20px",
-            alignItems: "center",
-          }}
-        >
-          <span
-            style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              color: "#62bdfc",
-            }}
-          >
-            {project.category}
-          </span>
-          <span style={{ color: "rgba(255,255,255,0.2)", fontSize: "12px" }}>
-            /
-          </span>
-          <span
-            style={{
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.5)",
-              fontWeight: 400,
-            }}
-          >
-            {project.year} · {project.duration}
-          </span>
-        </motion.div>
+    <section className="csh-root">
+      {/* Decorative glow */}
+      <div className="csh-glow" aria-hidden="true" />
 
-        {/* Title */}
-        <motion.h1
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6, delay: 0.3 }}
-          style={{
-            color: "#fff",
-            fontSize: "clamp(32px, 5vw, 56px)",
-            fontWeight: 700,
-            lineHeight: "1.1",
-            maxWidth: "760px",
-            marginBottom: "20px",
-          }}
-        >
-          {project.title}
-        </motion.h1>
+      {/* Header spacer — matches fixed header height */}
+      <div className="csh-spacer" />
 
-        {/* Short description */}
-        <motion.p
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.45 }}
-          style={{
-            color: "rgba(255,255,255,0.65)",
-            fontSize: "16px",
-            maxWidth: "600px",
-            lineHeight: "1.7",
-            marginBottom: "32px",
-          }}
-        >
-          {project.shortDescription}
-        </motion.p>
+      {/* ── Main copy ── */}
+      <div className="csh-content">
+        <div className="container">
 
-        {/* Tags */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.55 }}
-          style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "40px" }}
-        >
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              style={{
-                fontSize: "10px",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                padding: "4px 12px",
-                border: "1px solid rgba(255,255,255,0.25)",
-                borderRadius: "20px",
-                color: "rgba(255,255,255,0.7)",
-              }}
-            >
-              {tag}
-            </span>
-          ))}
-        </motion.div>
+          {/* Breadcrumb / meta */}
+          <motion.div className="csh-meta" {...fadeUp(0.1)}>
+            {category && (
+              <span className="csh-meta__category">{category}</span>
+            )}
+            <span className="csh-meta__divider" aria-hidden="true">/</span>
+            {year && <span className="csh-meta__year">{year}</span>}
+            {duration && (
+              <>
+                <span className="csh-meta__divider" aria-hidden="true">·</span>
+                <span className="csh-meta__duration">{duration}</span>
+              </>
+            )}
+          </motion.div>
+
+          {/* Display headline */}
+          <motion.h1 className="csh-title" {...fadeUp(0.2)}>
+            {titleMain && <>{titleMain} </>}
+            <span className="csh-title__accent">{titleLast}</span>
+          </motion.h1>
+
+          {/* Sub-headline */}
+          {shortDescription && (
+            <motion.p className="csh-subtitle" {...fadeUp(0.3)}>
+              {shortDescription}
+            </motion.p>
+          )}
+
+          {/* Tag pills */}
+          {tags && tags.length > 0 && (
+            <motion.div className="csh-tags" {...fadeUp(0.35)}>
+              {tags.map((tag) => (
+                <span className="csh-tag" key={tag}>{tag}</span>
+              ))}
+            </motion.div>
+          )}
+
+          {/* Quick-facts strip */}
+          <motion.div className="csh-facts" {...fadeIn(0.45)}>
+            {role && (
+              <div className="csh-fact">
+                <p className="csh-fact__label">My Role</p>
+                <p className="csh-fact__value">{role}</p>
+              </div>
+            )}
+            {duration && (
+              <div className="csh-fact">
+                <p className="csh-fact__label">Duration</p>
+                <p className="csh-fact__value">{duration}</p>
+              </div>
+            )}
+            {year && (
+              <div className="csh-fact">
+                <p className="csh-fact__label">Year</p>
+                <p className="csh-fact__value">{year}</p>
+              </div>
+            )}
+            {tools && tools.length > 0 && (
+              <div className="csh-fact">
+                <p className="csh-fact__label">Tools</p>
+                <p className="csh-fact__value">{tools.join(" · ")}</p>
+              </div>
+            )}
+          </motion.div>
+
+          {/* Impact metrics strip */}
+          {metrics && metrics.length > 0 && (
+            <motion.div className="csh-metrics" {...fadeIn(0.55)}>
+              {metrics.map((m, i) => (
+                <React.Fragment key={i}>
+                  <div className="csh-metric">
+                    <span
+                      className={`csh-metric__value${
+                        i === 0 ? " csh-metric__value--accent" : ""
+                      }`}
+                    >
+                      {m.value}
+                    </span>
+                    <span className="csh-metric__label">{m.label}</span>
+                  </div>
+                  {i < metrics.length - 1 && (
+                    <div className="csh-metric__divider" aria-hidden="true" />
+                  )}
+                </React.Fragment>
+              ))}
+            </motion.div>
+          )}
+
+        </div>
       </div>
 
-      {/* Cover image */}
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 60 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.7, delay: 0.6 }}
-        style={{ overflow: "hidden" }}
-      >
-        <img
-          src={project.coverImage}
-          alt={project.title}
-          draggable="false"
-          style={{
-            width: "100%",
-            maxHeight: "560px",
-            objectFit: "cover",
-            display: "block",
-          }}
-        />
-      </motion.div>
+      {/* ── Cover image ── */}
+      {coverImage && (
+        <motion.div
+          className="csh-cover-wrap"
+          variants={{ hidden: { opacity: 0, y: 60 }, visible: { opacity: 1, y: 0 } }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+        >
+          <img
+            src={coverImage}
+            alt={`${title} — cover`}
+            className="csh-cover-img"
+            draggable="false"
+          />
+        </motion.div>
+      )}
+
+      {/* Scroll cue */}
+      <div className="csh-scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <i className="fa fa-chevron-down" />
+      </div>
     </section>
   );
 };
