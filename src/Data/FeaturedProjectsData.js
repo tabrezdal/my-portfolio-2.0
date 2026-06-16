@@ -10,6 +10,120 @@ const FeaturedProjectsData = [
     year: "2023",
     role: "Lead UI/UX Designer",
     duration: "4 months",
+    TezHub_additions : {
+      engagementType: "Direct Client",
+      clientGeography: "Canada",
+      domain: "Hospitality SaaS",
+      deploymentStatus: "Milestone",
+      totalScreens: 253,
+      teamComposition: "Solo — Design + Engineering",
+      liveUrl: null,
+      mandate:
+        "Build a white-label SaaS platform unifying guest WiFi, SMS/email marketing, loyalty programs, and POS integration for restaurant and hotel operators across North America — from design system to production code.",
+
+      /* ── Platform Scope ── */
+      platformScopeTitle:
+        "5 surfaces. 3 repositories. 1 design system.",
+      platformScopeSubtitle:
+        "White-label hospitality SaaS covering every touchpoint between operators and their guests — all governed by a single token-based design system.",
+
+      platformSurfaces: [
+        {
+          name: "Operator Admin Dashboard",
+          audience: "Restaurant & Hotel Operators",
+          screens: 120,
+          designOwnership: "Full",
+          devOwnership: "Full",
+          badge: "Primary",
+          note: "Main platform — sole designer and primary frontend developer",
+        },
+        {
+          name: "Smart WiFi Module",
+          audience: "Operators configuring guest WiFi",
+          screens: 50,
+          designOwnership: "Full",
+          devOwnership: "Full",
+          badge: "Primary",
+          note: "Separate repository — complete design and engineering ownership",
+        },
+        {
+          name: "Guest WiFi Splash Pages",
+          audience: "In-venue guests",
+          screens: 18,
+          designOwnership: "Full",
+          devOwnership: "Full",
+          badge: "Supporting",
+          note: "White-label, operator-branded mobile web experience",
+        },
+        {
+          name: "Loyalty Check-in Kiosk",
+          audience: "In-venue customers",
+          screens: 25,
+          designOwnership: "Full",
+          devOwnership: "Contributed",
+          badge: "Supporting",
+          note: "Tablet-first experience for loyalty point check-in",
+        },
+        {
+          name: "Email & SMS Campaign Templates",
+          audience: "Campaign recipients",
+          screens: 40,
+          designOwnership: "Full",
+          devOwnership: "Contributed",
+          badge: "Supporting",
+          note: "Branded templates with live two-panel preview in campaign builder",
+        },
+      ],
+
+      ownershipMatrix: {
+        design: { value: 100, note: "Full design system + all 5 surfaces, built from scratch" },
+        development: { value: 75, note: "Primary contributor across 3 repos — full ownership on admin dashboard and WiFi module" },
+        research: { value: 100, note: "Sole discovery, competitive analysis, and UX strategy" },
+      },
+
+      /* ── Complexity Signals ── */
+      complexitySignals: [
+        {
+          icon: "fa fa-paint-brush",
+          title: "White-label architecture",
+          body:
+            "Every UI element needed to support operator-level brand customisation — colours, logos, copy — without rebuilding screens. Token-driven from the foundation up.",
+        },
+        {
+          icon: "fa fa-th",
+          title: "5 distinct design surfaces",
+          body:
+            "Operator dashboard, WiFi module, customer splash pages, loyalty kiosk, and email/SMS templates — all sharing one design system across 3 separate codebases.",
+        },
+        {
+          icon: "fa fa-code-fork",
+          title: "3 simultaneous DnD libraries",
+          body:
+            "@dnd-kit, react-beautiful-dnd, and react-nestable coexisted in one frontend — each serving a different builder surface with incompatible interaction models.",
+        },
+        {
+          icon: "fa fa-eye",
+          title: "Live two-panel preview wizards",
+          body:
+            "Campaign builders across email, SMS, and WiFi all required a live right-panel render that updated in real time as the operator configured settings on the left — no save required.",
+        },
+        {
+          icon: "fa fa-table",
+          title: "AG Grid Enterprise at operator scale",
+          body:
+            "Data-dense tables managing thousands of guest records required AG Grid Enterprise with custom cell renderers, virtual scrolling, and multi-column sort — all consistent with the design system.",
+        },
+        {
+          icon: "fa fa-plug",
+          title: "Production integration stack",
+          body:
+            "Twilio (SMS/MMS), Stripe (subscriptions), AWS S3 (assets), Firebase (real-time), and Redis (caching) — each reflected in the design through async UX patterns and loading/error states.",
+        },
+      ],
+
+      complexityCallout:
+        "One designer. Five surfaces. Three codebases. Six months. North American operators depending on it in production.",
+    },
     shortDescription:
       "Unified 7–8 fragmented restaurant products into a single, cohesive SaaS platform spanning POS, digital signage, and loyalty.",
     problem:
@@ -310,29 +424,29 @@ const FeaturedProjectsData = [
         {
           category: "Design & Prototyping",
           items: [
-            { name: "Figma",     faIcon: "fa fa-pencil-square-o" },
-            { name: "FigJam",    faIcon: "fa fa-comments" },
-            { name: "Maze",      faIcon: "fa fa-flask" },
-            { name: "Lottie",    faIcon: "fa fa-film" },
+            { name: "Figma", faIcon: "fa fa-pencil-square-o" },
+            { name: "FigJam", faIcon: "fa fa-comments" },
+            { name: "Maze", faIcon: "fa fa-flask" },
+            { name: "Lottie", faIcon: "fa fa-film" },
           ],
         },
         {
           category: "Frontend Implementation",
           items: [
-            { name: "React.js",    icon: ImageHelper.ReactIcon },
-            { name: "Redux",       icon: ImageHelper.ReduxIcon },
-            { name: "TypeScript",  icon: ImageHelper.TypescriptIcon },
+            { name: "React.js", icon: ImageHelper.ReactIcon },
+            { name: "Redux", icon: ImageHelper.ReduxIcon },
+            { name: "TypeScript", icon: ImageHelper.TypescriptIcon },
             { name: "Sass / Less", icon: ImageHelper.SaasIcon },
-            { name: "Bootstrap",   icon: ImageHelper.BootstrapIcon },
+            { name: "Bootstrap", icon: ImageHelper.BootstrapIcon },
           ],
         },
         {
           category: "APIs & Data",
           items: [
-            { name: "GraphQL",  icon: ImageHelper.GraphQLIcon },
-            { name: "Axios",    icon: ImageHelper.AxiosIcon },
-            { name: "Node.js",  icon: ImageHelper.NodeJsIcon },
-            { name: "MySQL",    icon: ImageHelper.MySqlIcon },
+            { name: "GraphQL", icon: ImageHelper.GraphQLIcon },
+            { name: "Axios", icon: ImageHelper.AxiosIcon },
+            { name: "Node.js", icon: ImageHelper.NodeJsIcon },
+            { name: "MySQL", icon: ImageHelper.MySqlIcon },
           ],
         },
       ],
@@ -507,6 +621,105 @@ export const useTokens = () => useContext(TokenContext);`,
     year: "2023",
     role: "UI/UX Designer",
     duration: "3 months",
+    EdXplore_additions : {
+      engagementType: "Agency",
+      clientGeography: "India",
+      domain: "EdTech / B2B SaaS",
+      deploymentStatus: "Archived",
+      totalScreens: 93,
+      teamComposition: "Solo Design — Led 5 Dev Engineers",
+      liveUrl: null,
+      mandate:
+        "Design the EdXplore admin panel end-to-end and lead a 5-person junior development team — building a multi-role platform for institute management, course publishing, and skills analytics across India's leading EdTech skilling platform.",
+
+      /* ── Platform Scope ── */
+      platformScopeTitle:
+        "4 portals. 1 engineering team. Dual-role ownership.",
+      platformScopeSubtitle:
+        "Sole designer on both admin panels. Frontend engineering lead across the full 4-portal system.",
+
+      platformSurfaces: [
+        {
+          name: "Admin Panel (Desktop)",
+          audience: "Platform Administrators",
+          screens: 73,
+          designOwnership: "Full",
+          devOwnership: "Full",
+          badge: "Primary",
+          note: "End-to-end solo ownership — design, code, and QA",
+        },
+        {
+          name: "Admin Panel (Mobile)",
+          audience: "Field Officers — on-site institute approvals",
+          screens: 20,
+          designOwnership: "Full",
+          devOwnership: "Full",
+          badge: "Primary",
+          note: "Mobile-first experience designed for one-handed field use",
+        },
+        {
+          name: "User-Facing Portal",
+          audience: "Students discovering institutes & courses",
+          screens: 16,
+          designOwnership: "None",
+          devOwnership: "Led Team",
+          badge: "Led Team",
+          note: "Design by another Zerozilla designer — Tabrez led 5 devs on implementation",
+        },
+        {
+          name: "Platform Homepage",
+          audience: "New platform visitors",
+          screens: 1,
+          designOwnership: "None",
+          devOwnership: "Led Team",
+          badge: "Led Team",
+          note: "Design by another Zerozilla designer — Tabrez led team implementation",
+        },
+      ],
+
+      ownershipMatrix: {
+        design: { value: 85, note: "Admin panels (93 screens) fully owned — user portal designed by another team member" },
+        development: { value: 90, note: "Admin panel: sole developer. User portal + homepage: led 5-person junior dev team" },
+        research: { value: 100, note: "8 administrator user interviews, competitive audit, and 8-step onboarding UX research" },
+      },
+
+      /* ── Complexity Signals ── */
+      complexitySignals: [
+        {
+          icon: "fa fa-users",
+          title: "First confirmed engineering leadership",
+          body:
+            "Sole designer on the admin panels, and simultaneously frontend engineering lead directing 5 junior developers on the user portal — context-switching between design critique and code review daily.",
+        },
+        {
+          icon: "fa fa-shield",
+          title: "Multi-role RBAC system",
+          body:
+            "Super Admin, Admin, Content Admin, and Partner — each received a different sidebar navigation and set of visible actions. A single mis-permission was a live platform risk.",
+        },
+        {
+          icon: "fa fa-list-ol",
+          title: "8-step institute onboarding wizard",
+          body:
+            "Profile → Business Details → Staff → Centres → Financials → Documents → Institute Listing → Consent — each step with independent validation, partial-save state, and resumable progress.",
+        },
+        {
+          icon: "fa fa-refresh",
+          title: "5-state content lifecycle",
+          body:
+            "Published → Approval Pending → Verification Pending → Update Pending → Drafts — designing state transitions, audit trail visibility, and notification triggers for each path.",
+        },
+        {
+          icon: "fa fa-upload",
+          title: "Bulk CSV import with error-row preview",
+          body:
+            "Importing 500+ institute records required a 3-step upload flow: parse → highlight error rows inline → confirm clean rows — in a single drag-and-drop interface with real-time feedback.",
+        },
+      ],
+
+      complexityCallout:
+        "Solo designer. Engineering team lead. Four portals. Three months. Shipped to a live B2B SaaS platform.",
+    },
     shortDescription:
       "Designed the desktop and mobile admin panel for India's leading skilling platform — enabling institutes to manage courses and enrollments at scale.",
     problem:
@@ -726,11 +939,11 @@ export const useTokens = () => useContext(TokenContext);`,
         "Field officers use mobile; platform managers use desktop — both share the same design token system.",
 
       userFlow: [
-        { icon: "fa fa-sign-in",    label: "Admin Login",    sub: "Role: Super Admin", type: "active" },
-        { icon: "fa fa-university", label: "Institute List",  sub: "500+ records",      type: "active" },
-        { icon: "fa fa-eye",        label: "Review Details",  sub: "Docs + KYC",        type: "active" },
-        { icon: "fa fa-check",      label: "Approve / Reject", sub: "Instant update",  type: "active" },
-        { icon: "fa fa-envelope",   label: "Auto Notify",    sub: "Email triggered",    type: "active" },
+        { icon: "fa fa-sign-in", label: "Admin Login", sub: "Role: Super Admin", type: "active" },
+        { icon: "fa fa-university", label: "Institute List", sub: "500+ records", type: "active" },
+        { icon: "fa fa-eye", label: "Review Details", sub: "Docs + KYC", type: "active" },
+        { icon: "fa fa-check", label: "Approve / Reject", sub: "Instant update", type: "active" },
+        { icon: "fa fa-envelope", label: "Auto Notify", sub: "Email triggered", type: "active" },
       ],
       userFlowTitle: "Institute approval flow",
     },
@@ -741,18 +954,18 @@ export const useTokens = () => useContext(TokenContext);`,
         {
           category: "Design",
           items: [
-            { name: "Figma",   faIcon: "fa fa-pencil-square-o" },
-            { name: "Notion",  faIcon: "fa fa-book" },
-            { name: "Zeplin",  faIcon: "fa fa-code" },
+            { name: "Figma", faIcon: "fa fa-pencil-square-o" },
+            { name: "Notion", faIcon: "fa fa-book" },
+            { name: "Zeplin", faIcon: "fa fa-code" },
           ],
         },
         {
           category: "Frontend",
           items: [
-            { name: "React.js",   icon: ImageHelper.ReactIcon },
+            { name: "React.js", icon: ImageHelper.ReactIcon },
             { name: "JavaScript", icon: ImageHelper.JavaScriptIcon },
-            { name: "Bootstrap",  icon: ImageHelper.BootstrapIcon },
-            { name: "CSS3",       icon: ImageHelper.CssIcon },
+            { name: "Bootstrap", icon: ImageHelper.BootstrapIcon },
+            { name: "CSS3", icon: ImageHelper.CssIcon },
           ],
         },
       ],
@@ -779,15 +992,15 @@ export const useTokens = () => useContext(TokenContext);`,
       perfStats: [
         { value: "30", suffix: "+", label: "Screens designed" },
         { value: "55", suffix: "%", label: "Faster task time" },
-        { value: "2",  suffix: "",  label: "Platforms covered" },
-        { value: "8",  suffix: "",  label: "Users interviewed" },
+        { value: "2", suffix: "", label: "Platforms covered" },
+        { value: "8", suffix: "", label: "Users interviewed" },
       ],
       perfTitle: "Measurable impact",
 
       timeline: [
-        { date: "Month 1", title: "Research & Wireframes",    body: "8 admin interviews, IA mapping, 30+ low-fi wireframes." },
-        { date: "Month 2", title: "High-Fidelity Design",     body: "Full desktop + mobile design with shared token system and interactive Figma prototype." },
-        { date: "Month 3", title: "Dev Handoff & Build",      body: "Annotated spec delivery, React implementation, and QA against Figma." },
+        { date: "Month 1", title: "Research & Wireframes", body: "8 admin interviews, IA mapping, 30+ low-fi wireframes." },
+        { date: "Month 2", title: "High-Fidelity Design", body: "Full desktop + mobile design with shared token system and interactive Figma prototype." },
+        { date: "Month 3", title: "Dev Handoff & Build", body: "Annotated spec delivery, React implementation, and QA against Figma." },
       ],
     },
   },
@@ -803,6 +1016,50 @@ export const useTokens = () => useContext(TokenContext);`,
     year: "2023",
     role: "UI/UX Designer",
     duration: "2 months",
+    MECO_additions : {
+      engagementType: "Agency",
+      clientGeography: "India",
+      domain: "Motorsports",
+      deploymentStatus: "Live",
+      totalScreens: 33,
+      teamComposition: "Solo — Design + Engineering",
+      liveUrl: "https://www.mecomotorsports.co.in/",
+      mandate:
+        "Design and build the complete digital presence for India's premier motorsport organisation from scratch — visual identity system, 33 production screens, and full React.js frontend implementation shipped to a live domain.",
+
+      /* No platformSurfaces — single site, no multi-surface architecture */
+
+      /* ── Complexity Signals ── */
+      complexitySignals: [
+        {
+          icon: "fa fa-users",
+          title: "Multi-audience single-site architecture",
+          body:
+            "Racing enthusiasts, parents of junior drivers, corporate event bookers, and media representatives all land on the same site — requiring IA that serves each without fragmenting the experience.",
+        },
+        {
+          icon: "fa fa-flag-checkered",
+          title: "Greenfield with no domain precedent",
+          body:
+            "No existing site, no design system, no brand assets, and no motorsport domain precedent at the agency. Every visual decision — tyre tread motifs, chevron CTAs, racing flag grid elements — came from domain research.",
+        },
+        {
+          icon: "fa fa-code",
+          title: "Design-to-production in one role",
+          body:
+            "Sole designer and sole React.js engineer. Figma and the codebase had to stay in sync with no handoff gap — every component-level design decision mapped directly to implementation.",
+        },
+        {
+          icon: "fa fa-refresh",
+          title: "V1 to V2 client iteration without scope extension",
+          body:
+            "Client brief evolved mid-project. V1 was delivered and then revised into V2 with refined typography, an enhanced animation system, and restructured event pages — without extending the original timeline.",
+        },
+      ],
+
+      complexityCallout:
+        "One person. No brief precedent. 33 screens designed and shipped to a live production domain.",
+    },
     shortDescription:
       "End-to-end website design for India's premier motorsports management company — from initial concept through final production-ready prototype.",
     problem:
@@ -958,10 +1215,10 @@ export const useTokens = () => useContext(TokenContext);`,
       ],
 
       screens: [
-        { image: ImageHelper.MecoWebUi,      label: "Concept Homepage" },
+        { image: ImageHelper.MecoWebUi, label: "Concept Homepage" },
         { image: ImageHelper.MecoFinalWebUi, label: "Final Homepage" },
         { image: ImageHelper.MecoFinalWebUi, label: "Events Page" },
-        { image: ImageHelper.MecoWebUi,      label: "Tracks Page" },
+        { image: ImageHelper.MecoWebUi, label: "Tracks Page" },
         { image: ImageHelper.MecoFinalWebUi, label: "Championships" },
         { image: ImageHelper.MecoFinalWebUi, label: "Sponsorship" },
       ],
@@ -1009,19 +1266,19 @@ export const useTokens = () => useContext(TokenContext);`,
         ],
         typography: [
           { label: "Hero", size: "52px", weight: 800, sample: "INDIA RACING SERIES" },
-          { label: "H2",   size: "32px", weight: 700, sample: "Championship 2023" },
-          { label: "H3",   size: "22px", weight: 600, sample: "Event Details" },
+          { label: "H2", size: "32px", weight: 700, sample: "Championship 2023" },
+          { label: "H3", size: "22px", weight: 600, sample: "Event Details" },
           { label: "Body", size: "15px", weight: 400, sample: "MECO manages premier tracks..." },
         ],
         components: true,
       },
 
       userFlow: [
-        { icon: "fa fa-home",        label: "Homepage",     sub: "Brand intro",      type: "active" },
-        { icon: "fa fa-calendar",    label: "Events",       sub: "Browse races",     type: "active" },
-        { icon: "fa fa-map",         label: "Tracks",       sub: "Circuit details",  type: "active" },
-        { icon: "fa fa-trophy",      label: "Championships", sub: "Standings",       type: "active" },
-        { icon: "fa fa-handshake-o", label: "Sponsorship",  sub: "Get in touch",     type: "active" },
+        { icon: "fa fa-home", label: "Homepage", sub: "Brand intro", type: "active" },
+        { icon: "fa fa-calendar", label: "Events", sub: "Browse races", type: "active" },
+        { icon: "fa fa-map", label: "Tracks", sub: "Circuit details", type: "active" },
+        { icon: "fa fa-trophy", label: "Championships", sub: "Standings", type: "active" },
+        { icon: "fa fa-handshake-o", label: "Sponsorship", sub: "Get in touch", type: "active" },
       ],
       userFlowTitle: "Sponsor acquisition flow",
     },
@@ -1032,16 +1289,16 @@ export const useTokens = () => useContext(TokenContext);`,
         {
           category: "Design",
           items: [
-            { name: "Figma",   faIcon: "fa fa-pencil-square-o" },
-            { name: "FigJam",  faIcon: "fa fa-comments" },
+            { name: "Figma", faIcon: "fa fa-pencil-square-o" },
+            { name: "FigJam", faIcon: "fa fa-comments" },
           ],
         },
         {
           category: "Frontend (handoff-ready)",
           items: [
-            { name: "React.js",   icon: ImageHelper.ReactIcon },
-            { name: "HTML5",      icon: ImageHelper.HtmlIcon },
-            { name: "CSS3",       icon: ImageHelper.CssIcon },
+            { name: "React.js", icon: ImageHelper.ReactIcon },
+            { name: "HTML5", icon: ImageHelper.HtmlIcon },
+            { name: "CSS3", icon: ImageHelper.CssIcon },
             { name: "JavaScript", icon: ImageHelper.JavaScriptIcon },
           ],
         },
@@ -1062,17 +1319,17 @@ export const useTokens = () => useContext(TokenContext);`,
       rolesTitle: "What I delivered",
 
       perfStats: [
-        { value: "2",  suffix: "",  label: "Design phases" },
-        { value: "8",  suffix: "+", label: "Pages designed" },
-        { value: "3",  suffix: "",  label: "Visual directions explored" },
-        { value: "1",  suffix: "",  label: "Unified brand system" },
+        { value: "2", suffix: "", label: "Design phases" },
+        { value: "8", suffix: "+", label: "Pages designed" },
+        { value: "3", suffix: "", label: "Visual directions explored" },
+        { value: "1", suffix: "", label: "Unified brand system" },
       ],
       perfTitle: "Project scope",
 
       timeline: [
         { date: "Week 1–2", title: "Brand Immersion & Concept Exploration", body: "3 visual directions explored; team aligned on dark, speed-kinetic aesthetic." },
-        { date: "Week 3–5", title: "Concept Phase Delivery",                body: "Full concept website (MecoWebUi) — 8 pages, interactive prototype." },
-        { date: "Week 6–8", title: "Final Production Design",               body: "Refined to final production-ready Figma (MecoFinalWebUi) with developer annotations." },
+        { date: "Week 3–5", title: "Concept Phase Delivery", body: "Full concept website (MecoWebUi) — 8 pages, interactive prototype." },
+        { date: "Week 6–8", title: "Final Production Design", body: "Refined to final production-ready Figma (MecoFinalWebUi) with developer annotations." },
       ],
     },
   },

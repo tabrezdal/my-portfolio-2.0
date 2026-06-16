@@ -1,0 +1,214 @@
+/* ═══════════════════════════════════════════════
+   CaseStudyComplexitySignals
+   "Why this was hard" — signal cards grid
+   that surface domain-specific complexity for
+   technical reviewers and senior hiring managers
+   CONDITIONAL — only renders when
+   project.complexitySignals exists + length > 0
+═══════════════════════════════════════════════ */
+
+.ccmp-root {
+  background: #f9f9ff;
+  padding: 100px 0;
+}
+
+/* ── Header ── */
+.ccmp-header {
+  margin-bottom: 56px;
+}
+
+.ccmp-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0378b8;
+  margin-bottom: 16px;
+}
+
+.ccmp-heading {
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: 800;
+  color: #111;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  max-width: 440px;
+}
+
+.ccmp-subtext {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 0;
+}
+
+/* ── Signal Card Grid ── */
+.ccmp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+/* Signal card */
+.ccmp-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 14px;
+  padding: 28px 24px 24px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: box-shadow    0.28s ease,
+              transform     0.28s ease,
+              border-color  0.28s ease;
+}
+
+/* Left-edge accent — only visible on hover */
+.ccmp-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #0378b8 0%, #62bdfc 100%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.ccmp-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08),
+              0 2px 8px  rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+  border-color: rgba(3, 120, 184, 0.2);
+}
+
+.ccmp-card:hover::before {
+  opacity: 1;
+}
+
+/* Ghost index watermark */
+.ccmp-card__watermark {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 52px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -2px;
+}
+
+/* Icon box */
+.ccmp-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(3, 120, 184, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #0378b8;
+  flex-shrink: 0;
+  transition: background 0.28s ease;
+}
+
+.ccmp-card:hover .ccmp-card__icon {
+  background: rgba(3, 120, 184, 0.13);
+}
+
+/* Card title */
+.ccmp-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+/* Card body */
+.ccmp-card__body {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.72;
+  margin: 0;
+}
+
+/* ── Bottom Callout Bar ── */
+.ccmp-callout {
+  background: #000;
+  border-radius: 14px;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow inside callout */
+.ccmp-callout::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    rgba(3, 120, 184, 0.18) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.ccmp-callout__quote {
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.07);
+  font-family: Georgia, "Times New Roman", serif;
+  flex-shrink: 0;
+  margin-top: -10px;
+  user-select: none;
+}
+
+.ccmp-callout__text {
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  flex: 1;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .ccmp-root { padding: 72px 0; }
+  .ccmp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .ccmp-root { padding: 56px 0; }
+  .ccmp-header { margin-bottom: 36px; }
+  .ccmp-grid { grid-template-columns: 1fr; gap: 12px; }
+  .ccmp-callout { padding: 24px 26px; gap: 16px; }
+  .ccmp-callout__quote { display: none; }
+  .ccmp-card { padding: 22px 20px 20px; }
+}
+
+@media (max-width: 480px) {
+  .ccmp-card__watermark { font-size: 40px; }
+}
