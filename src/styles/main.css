@@ -4991,3 +4991,126 @@ dl.accordion.time-line:before {
     line-height: auto;
   }
 }
+
+/* ─────────────────────────────────────────
+   A6. User Flow / Journey Diagram
+───────────────────────────────────────── */
+.csv-flow-container {
+  margin-top: 48px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.csv-flow {
+  display: flex;
+  align-items: flex-start;       /* was: align-items: center; — flex-start lets us pin the arrow to the circle's center via margin-top, independent of label height below it */
+  justify-content: center;
+  gap: 0;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.csv-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.csv-flow-step__circle {
+  width: 96px;                    /* was: 52px */
+  height: 96px;                   /* was: 52px */
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #e0e0e0;      /* was: 2px solid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  cursor: default;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);  /* NEW — subtle lift since circle is now a focal element */
+}
+
+.csv-flow-step__circle i {
+  font-size: 36px !important;     /* NEW — overrides the inline fontSize:16 from JS; !important is required here to beat the inline style */
+}
+
+.csv-flow-step__circle:hover {
+  transform: translateY(-3px);    /* NEW — small interactive affordance now that circles are a primary visual element */
+}
+
+.csv-flow-step__circle--active {
+  border-color: #0378b8;
+  background: rgba(3, 120, 184, 0.06);
+}
+
+.csv-flow-step__circle--pain {
+  border-color: #CB202D;
+  background: rgba(203, 32, 45, 0.06);
+}
+
+.csv-flow-step__label {
+  font-size: 13px;                /* was: 11px */
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  margin-top: 14px;               /* was: 10px */
+  max-width: 110px;                /* was: 80px */
+  line-height: 1.4;
+}
+
+.csv-flow-step__sub {
+  font-size: 11px;                /* was: 9px */
+  color: #aaa;
+  text-align: center;
+  margin-top: 5px;                /* was: 4px */
+  max-width: 110px;                /* was: 80px */
+}
+
+.csv-flow-arrow {
+  width: 64px;                    /* was: 40px */
+  height: 3px;                    /* was: 2px */
+  background: linear-gradient(to right, #e0e0e0, #0378b8);
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 48px;               /* NEW — exactly half of the 96px circle, pins the arrow to circle-center regardless of label length below */
+}
+
+.csv-flow-arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;                      /* was: -3px — recalculated for the thicker 3px line */
+  border-left: 9px solid #0378b8; /* was: 7px */
+  border-top: 5px solid transparent;   /* was: 4px */
+  border-bottom: 5px solid transparent; /* was: 4px */
+}
+
+/* Responsive galleries */
+@media (max-width: 575px) {
+  .csv-gallery { columns: 2 140px; }
+  .csv-features-grid { grid-template-columns: 1fr; }
+  .csv-phone-frame--medium,
+  .csv-phone-frame--small { transform: none; }
+
+  /* NEW — scale down the user-flow circles on small screens */
+  .csv-flow-step__circle {
+    width: 68px;
+    height: 68px;
+  }
+  .csv-flow-step__circle i {
+    font-size: 26px !important;
+  }
+  .csv-flow-arrow {
+    width: 40px;
+    margin-top: 34px; /* half of 68px */
+  }
+  .csv-flow-step__label,
+  .csv-flow-step__sub {
+    max-width: 84px;
+  }
+}
