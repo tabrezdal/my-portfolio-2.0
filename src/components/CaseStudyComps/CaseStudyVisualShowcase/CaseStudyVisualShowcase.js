@@ -221,7 +221,6 @@ const FeatureHighlights = ({ features, title, subtitle }) => {
 ───────────────────────────────────────── */
 const DesignSystemPreview = ({ systemData }) => {
   if (!systemData) return null;
-
   const { colors, typography, components, projectName } = systemData;
 
   return (
@@ -241,112 +240,104 @@ const DesignSystemPreview = ({ systemData }) => {
         </motion.div>
 
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+          variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="csv-ds-wrapper"
         >
-          {/* macOS-style chrome bar */}
+          {/* Chrome bar */}
           <div className="csv-ds-header">
-            <span className="csv-ds-header__dot csv-ds-header__dot--red" />
-            <span className="csv-ds-header__dot csv-ds-header__dot--yellow" />
-            <span className="csv-ds-header__dot csv-ds-header__dot--green" />
+            <div className="csv-ds-header__dots">
+              <span className="csv-ds-header__dot csv-ds-header__dot--red" />
+              <span className="csv-ds-header__dot csv-ds-header__dot--yellow" />
+              <span className="csv-ds-header__dot csv-ds-header__dot--green" />
+            </div>
             <span className="csv-ds-header__title">
               {projectName ? `${projectName} — Design System` : "Design System"}
+            </span>
+            <span className="csv-ds-header__live">
+              <span className="csv-ds-header__live-dot" />
+              Live tokens
             </span>
           </div>
 
           <div className="csv-ds-body">
-            {/* Color tokens */}
+
+            {/* 01 — Color tokens */}
             {colors && colors.length > 0 && (
-              <div>
-                <p className="csv-ds-panel__label">Color Tokens</p>
-                <div className="csv-ds-colors">
-                  {colors.map((swatch, i) => (
-                    <div
-                      key={i}
-                      className="csv-ds-swatch"
-                      style={{ background: swatch.hex }}
-                      title={`${swatch.name} · ${swatch.hex}`}
-                    >
-                      <span className="csv-ds-swatch__hex">{swatch.hex}</span>
-                    </div>
-                  ))}
+              <div className="csv-ds-panel">
+                <div className="csv-ds-panel__head">
+                  <span className="csv-ds-panel__num">01</span>
+                  <p className="csv-ds-panel__label">Color Tokens</p>
                 </div>
-                {/* Token names below swatches */}
-                <div style={{ marginTop: 28 }}>
+                <div className="csv-ds-swatch-row">
                   {colors.map((swatch, i) => (
-                    <div
+                    <motion.div
                       key={i}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        marginBottom: 7,
-                      }}
+                      className="csv-ds-swatch-card"
+                      variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ duration: 0.4, delay: 0.05 * i }}
                     >
                       <span
-                        style={{
-                          width: 12,
-                          height: 12,
-                          borderRadius: "50%",
-                          background: swatch.hex,
-                          flexShrink: 0,
-                          border: "1px solid rgba(0,0,0,0.08)",
-                        }}
+                        className="csv-ds-swatch-card__fill"
+                        style={{ background: swatch.hex }}
                       />
-                      <span style={{ fontSize: 11, color: "#555", fontWeight: 500 }}>
-                        {swatch.name}
-                      </span>
-                      <span style={{ fontSize: 10, color: "#bbb", marginLeft: "auto" }}>
-                        {swatch.hex}
-                      </span>
-                    </div>
+                      <span className="csv-ds-swatch-card__name">{swatch.name}</span>
+                      <span className="csv-ds-swatch-card__hex">{swatch.hex}</span>
+                    </motion.div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Typography scale */}
+            {/* 02 — Type scale */}
             {typography && typography.length > 0 && (
-              <div>
-                <p className="csv-ds-panel__label">Type Scale</p>
-                <div className="csv-ds-type-scale">
+              <div className="csv-ds-panel">
+                <div className="csv-ds-panel__head">
+                  <span className="csv-ds-panel__num">02</span>
+                  <p className="csv-ds-panel__label">Type Scale</p>
+                </div>
+                <div className="csv-ds-type-ramp">
                   {typography.map((row, i) => (
-                    <div key={i} className="csv-ds-type-row">
-                      <span className="csv-ds-type-row__label">{row.label}</span>
+                    <motion.div
+                      key={i}
+                      className="csv-ds-type-ramp__row"
+                      variants={{ hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x: 0 } }}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ duration: 0.4, delay: 0.05 * i }}
+                    >
+                      <span className="csv-ds-type-ramp__meta">
+                        <span className="csv-ds-type-ramp__label">{row.label}</span>
+                        <span className="csv-ds-type-ramp__specs">
+                          {row.size} · {row.weight || 400}
+                        </span>
+                      </span>
                       <span
-                        className="csv-ds-type-row__sample"
-                        style={{
-                          fontSize: row.size,
-                          fontWeight: row.weight || 400,
-                        }}
+                        className="csv-ds-type-ramp__sample"
+                        style={{ fontSize: row.size, fontWeight: row.weight || 400 }}
                       >
                         {row.sample || "The quick brown fox"}
                       </span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Component samples */}
+            {/* 03 — Component sandbox */}
             {components !== false && (
-              <div>
-                <p className="csv-ds-panel__label">Components</p>
-                <div className="csv-ds-components">
-                  <button className="csv-ds-comp-btn csv-ds-comp-btn--primary">
-                    Primary Action
-                  </button>
-                  <button className="csv-ds-comp-btn csv-ds-comp-btn--outline">
-                    Secondary Action
-                  </button>
-                  <button className="csv-ds-comp-btn csv-ds-comp-btn--ghost">
-                    Tertiary Ghost
-                  </button>
+              <div className="csv-ds-panel">
+                <div className="csv-ds-panel__head">
+                  <span className="csv-ds-panel__num">03</span>
+                  <p className="csv-ds-panel__label">Components</p>
+                </div>
 
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 4 }}>
+                <div className="csv-ds-component-frame">
+                  <div className="csv-ds-component-frame__top">
                     <span className="csv-ds-comp-badge csv-ds-comp-badge--blue">Active</span>
                     <span className="csv-ds-comp-badge csv-ds-comp-badge--green">Completed</span>
                     <span className="csv-ds-comp-badge csv-ds-comp-badge--red">Error</span>
@@ -354,12 +345,19 @@ const DesignSystemPreview = ({ systemData }) => {
 
                   <input
                     className="csv-ds-comp-input"
-                    placeholder="Input field"
+                    placeholder="Search or enter a value…"
                     readOnly
                   />
+
+                  <div className="csv-ds-component-frame__actions">
+                    <button className="csv-ds-comp-btn csv-ds-comp-btn--primary">Primary Action</button>
+                    <button className="csv-ds-comp-btn csv-ds-comp-btn--outline">Secondary</button>
+                    <button className="csv-ds-comp-btn csv-ds-comp-btn--ghost">Ghost</button>
+                  </div>
                 </div>
               </div>
             )}
+
           </div>
         </motion.div>
       </div>

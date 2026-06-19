@@ -55,7 +55,7 @@ const styles = {
   },
   metricsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", // was auto-fill
     gap: 1,
     border: "1px solid rgba(255,255,255,0.07)",
     borderRadius: 16,
@@ -113,7 +113,7 @@ const styles = {
   },
   learningsRow: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", // was auto-fill
     gap: 16,
     marginTop: 40,
   },

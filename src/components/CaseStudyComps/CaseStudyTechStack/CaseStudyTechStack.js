@@ -279,6 +279,8 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
 
   if (!bars && !stats) return null;
 
+  const hasBars = bars && bars.length > 0;
+
   return (
     <div className="cts-section cts-section--white" ref={ref}>
       <div className="container">
@@ -293,9 +295,8 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
           {subtitle && <p className="cts-subtext">{subtitle}</p>}
         </motion.div>
 
-        <div className="cts-perf-grid">
-          {/* Bars */}
-          {bars && bars.length > 0 && (
+        <div className={`cts-perf-grid${!hasBars ? " cts-perf-grid--stats-only" : ""}`}>
+          {hasBars && (
             <div className="cts-perf-bars">
               {bars.map((bar, i) => (
                 <motion.div
@@ -320,7 +321,6 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
             </div>
           )}
 
-          {/* Stat cards */}
           {stats && stats.length > 0 && (
             <div className="cts-stat-cards">
               {stats.map((stat, i) => (
@@ -354,11 +354,16 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
 const ProjectTimeline = ({ items, title, subtitle }) => {
   if (!items || items.length === 0) return null;
 
+  const useGridLayout = items.length <= 2; // NEW
+
   return (
     <div className="cts-section cts-section--light">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5 col-md-5" style={{ marginBottom: 40 }}>
+          <div
+            className={useGridLayout ? "col-lg-12" : "col-lg-5 col-md-5"}
+            style={{ marginBottom: 40 }}
+          >
             <motion.div
               variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}
               initial="hidden"
@@ -371,24 +376,43 @@ const ProjectTimeline = ({ items, title, subtitle }) => {
             </motion.div>
           </div>
 
-          <div className="col-lg-7 col-md-7">
-            <div className="cts-timeline">
-              {items.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="cts-timeline-item"
-                >
-                  <div className="cts-timeline-item__dot" />
-                  <p className="cts-timeline-item__date">{item.date}</p>
-                  <h5 className="cts-timeline-item__title">{item.title}</h5>
-                  <p className="cts-timeline-item__body">{item.body}</p>
-                </motion.div>
-              ))}
-            </div>
+          <div className={useGridLayout ? "col-lg-12" : "col-lg-7 col-md-7"}>
+            {useGridLayout ? (
+              <div className="cts-timeline-grid">
+                {items.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.5, delay: index * 0.12 }}
+                    className="cts-timeline-card"
+                  >
+                    <span className="cts-timeline-card__date">{item.date}</span>
+                    <h5 className="cts-timeline-card__title">{item.title}</h5>
+                    <p className="cts-timeline-card__body">{item.body}</p>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <div className="cts-timeline">
+                {items.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="cts-timeline-item"
+                  >
+                    <div className="cts-timeline-item__dot" />
+                    <p className="cts-timeline-item__date">{item.date}</p>
+                    <h5 className="cts-timeline-item__title">{item.title}</h5>
+                    <p className="cts-timeline-item__body">{item.body}</p>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
