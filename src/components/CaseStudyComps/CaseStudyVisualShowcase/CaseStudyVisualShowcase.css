@@ -558,18 +558,18 @@
 ───────────────────────────────────────── */
 .csv-flow-container {
   margin-top: 48px;
-  overflow-x: auto;
+  overflow-x: auto;     /* horizontal scroll fallback for long flows on small screens */
   padding-bottom: 16px;
 }
 
 .csv-flow {
   display: flex;
-  align-items: center;
-  justify-content: center; /* NEW */
-  gap: 0;
-  width: max-content;      /* was min-width: max-content */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
   max-width: 100%;
-  margin: 0 auto;          /* NEW — centers when content is narrower than container */
+  margin: 0 auto;
   padding: 8px 0;
 }
 
@@ -581,19 +581,29 @@
 }
 
 .csv-flow-step__circle {
-  width: 52px;
-  height: 52px;
+  width: 10vw;                                  /* was: 96px */
+  height: 10vw;                                 /* was: 96px */
   border-radius: 50%;
   background: #fff;
-  border: 2px solid #e0e0e0;
+  border: 4px solid #e0e0e0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   position: relative;
   z-index: 1;
-  transition: border-color 0.25s ease, background 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
   cursor: default;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+}
+
+.csv-flow-step__circle i {
+  font-size: 5vw !important; 
+  color: #0378b8;  /* overrides JS inline fontSize:16 — ~44% of circle diameter, leaves ~70px breathing room each side */
+}
+
+
+.csv-flow-step__circle:hover {
+  transform: translateY(-4px);
 }
 
 .csv-flow-step__circle--active {
@@ -607,45 +617,112 @@
 }
 
 .csv-flow-step__label {
-  font-size: 11px;
+  font-size: 17px;               /* was: 11px */
   font-weight: 600;
   color: #222;
   text-align: center;
-  margin-top: 10px;
-  max-width: 80px;
+  margin-top: 22px;              /* was: 10px */
+  max-width: 200px;               /* was: 80px */
   line-height: 1.4;
 }
 
 .csv-flow-step__sub {
-  font-size: 9px;
+  font-size: 13px;                /* was: 9px */
   color: #aaa;
   text-align: center;
-  margin-top: 4px;
-  max-width: 80px;
+  margin-top: 6px;                /* was: 4px */
+  max-width: 200px;                /* was: 80px */
 }
 
 .csv-flow-arrow {
-  width: 40px;
-  height: 2px;
+  width: 64px;                    /* was: 40px */
+  height: 4px;                    /* was: 2px */
   background: linear-gradient(to right, #e0e0e0, #0378b8);
   flex-shrink: 0;
   position: relative;
-  top: -28px;
+  margin-top: 5vw;              /* exactly half of 250px circle — keeps arrow centered on the circle regardless of label height below it */
 }
 .csv-flow-arrow::after {
   content: "";
   position: absolute;
-  right: -1px;
-  top: -3px;
-  border-left: 7px solid #0378b8;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
+  right: -8px;
+  border-left: 13px solid #0378b8;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
 }
 
 /* Responsive galleries */
+@media (max-width: 991px) {
+  .csv-flow-step__circle {
+    width: 60px;
+    height: 60px;
+    border-width: 3px;
+  }
+  .csv-flow-step__circle i {
+    font-size: 32px !important;
+  }
+  .csv-flow-arrow {
+    width: 40px;
+    height: 3px;
+    margin-top: 30px;   /* half of 170px */
+  }
+  .csv-flow-step__label,
+  .csv-flow-step__sub {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .csv-flow {
+   flex-direction: column;
+  }
+
+  .csv-flow-step__circle {
+    width: 100px;
+    height: 100px;
+  }
+  .csv-flow-step__circle i {
+    font-size: 48px !important;
+  }
+  .csv-flow-arrow {
+    width: 50px;
+    margin:auto;
+    margin-top: 50px;   /* half of 100px */
+    transform: rotate(90deg) translateX(-3.5vh);  /* rotates the arrow to vertical and nudges it down to align with the next step */
+  }
+  .csv-flow-step__label,
+  .csv-flow-step__sub {
+    max-width: 120px;
+  }
+}
+
 @media (max-width: 575px) {
   .csv-gallery { columns: 2 140px; }
   .csv-features-grid { grid-template-columns: 1fr; }
   .csv-phone-frame--medium,
   .csv-phone-frame--small { transform: none; }
+
+  .csv-flow {
+   flex-direction: column;
+  }
+
+  .csv-flow-step__circle {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+  .csv-flow-step__circle i {
+    font-size: 40px !important;
+  }
+  .csv-flow-arrow {
+    width: 36px;
+    height: 2px;
+    margin:auto;
+    margin-top: 12px;   /* half of 100px */
+    transform: rotate(90deg) translateX(-5vw);  /* rotates the arrow to vertical and nudges it down to align with the next step */
+  }
+  .csv-flow-step__label,
+  .csv-flow-step__sub {
+    max-width: 100px;
+  }
 }

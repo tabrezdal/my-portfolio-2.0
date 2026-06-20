@@ -153,20 +153,25 @@
 
 /* ── Quick-facts strip ── */
 .csh-facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.08);   /* was: border-top/border-bottom only — full enclosure removes the "open" trailing space look */
+  border-radius: 10px;
+  overflow: hidden;
   margin-bottom: 64px;
 }
 
 .csh-fact {
-  flex: 1;
-  min-width: 130px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
   padding: 20px 24px;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* NEW — vertically centers short vs wrapped content so row heights read as balanced */
 }
 
 .csh-fact:last-child {
@@ -350,11 +355,7 @@
   .csh-title {
     letter-spacing: -1px;
   }
-  .csh-facts {
-    gap: 0;
-  }
   .csh-fact {
-    min-width: 120px;
     padding: 16px 16px;
   }
   .csh-metrics {
@@ -368,14 +369,16 @@
     padding: 40px 0 0;
   }
   .csh-facts {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
   }
   .csh-fact {
-    flex: 0 0 50%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
-  .csh-fact:nth-child(even) {
+  .csh-fact:nth-child(2n) {
     border-right: none;
+  }
+  .csh-fact:nth-last-child(-n+2) {
+    border-bottom: none;    /* NEW — removes trailing bottom border on the final row of 2 */
   }
   .csh-metric__divider {
     display: none;
@@ -389,8 +392,13 @@
   .csh-title {
     letter-spacing: -0.5px;
   }
+  .csh-facts {
+    grid-template-columns: 1fr;
+  }
   .csh-fact {
-    flex: 0 0 100%;
     border-right: none;
+  }
+  .csh-fact:last-child {
+    border-bottom: none;    /* NEW — clean close on the final stacked item */
   }
 }
