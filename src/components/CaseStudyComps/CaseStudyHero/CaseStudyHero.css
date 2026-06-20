@@ -196,9 +196,9 @@
 
 /* ── Impact metrics strip ── */
 .csh-metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  display: grid;                                          /* was: display: flex; flex-wrap: wrap; */
+  grid-template-columns: repeat(var(--csh-metric-count, 4), 1fr); /* NEW — forces equal columns, count driven by data */
+  column-gap: 32px;
   margin-bottom: 64px;
   padding: 32px;
   background: rgba(255, 255, 255, 0.03);
@@ -224,6 +224,14 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;                                           /* NEW — lets long values shrink within the grid track instead of overflowing */
+  padding-right: 32px; 
+  border-right: 1px solid rgba(255, 255, 255, 0.08);       /* replaces the old manually-rendered .csh-metric__divider div */
+}
+
+.csh-metric:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
 .csh-metric__value {
@@ -247,12 +255,6 @@
   font-weight: 400;
   max-width: 120px;
   line-height: 1.4;
-}
-
-.csh-metric__divider {
-  width: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  align-self: stretch;
 }
 
 /* ── Cover image ── */
@@ -378,13 +380,17 @@
     border-right: none;
   }
   .csh-fact:nth-last-child(-n+2) {
-    border-bottom: none;    /* NEW — removes trailing bottom border on the final row of 2 */
-  }
-  .csh-metric__divider {
-    display: none;
+    border-bottom: none;
   }
   .csh-metrics {
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);   /* NEW — collapses to 2 columns on mobile */
+    column-gap: 20px;                                     /* was: gap: 20px 0; */
+    row-gap: 20px;
+    padding: 24px;
+  }
+  .csh-metric {
+    border-right: none;                       /* NEW — 2-col layout doesn't need the divider */
+    padding-right: 0;
   }
 }
 

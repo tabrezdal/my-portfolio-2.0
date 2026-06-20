@@ -129,23 +129,22 @@ const CaseStudyHero = ({ project }) => {
 
           {/* Impact metrics strip */}
           {metrics && metrics.length > 0 && (
-            <motion.div className="csh-metrics" {...fadeIn(0.55)}>
+            <motion.div
+              className="csh-metrics"
+              style={{ "--csh-metric-count": metrics.length }}
+              {...fadeIn(0.55)}
+            >
               {metrics.map((m, i) => (
-                <React.Fragment key={i}>
-                  <div className="csh-metric">
-                    <span
-                      className={`csh-metric__value${
-                        i === 0 ? " csh-metric__value--accent" : ""
-                      }`}
-                    >
-                      {m.value}
-                    </span>
-                    <span className="csh-metric__label">{m.label}</span>
-                  </div>
-                  {i < metrics.length - 1 && (
-                    <div className="csh-metric__divider" aria-hidden="true" />
-                  )}
-                </React.Fragment>
+                <div className="csh-metric" key={i}>
+                  <span
+                    className={`csh-metric__value${
+                      i === 0 ? " csh-metric__value--accent" : ""
+                    }`}
+                  >
+                    {m.value}
+                  </span>
+                  <span className="csh-metric__label">{m.label}</span>
+                </div>
               ))}
             </motion.div>
           )}
