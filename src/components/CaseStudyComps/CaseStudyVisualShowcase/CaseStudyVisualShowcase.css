@@ -7,13 +7,13 @@
   padding: 80px 0;
 }
 .csv-section--dark {
-  background: #000;
+  background: var(--color-surface-darker);
 }
 .csv-section--light {
-  background: #f9f9ff;
+  background: var(--color-surface-light);
 }
 .csv-section--white {
-  background: #fff;
+  background: var(--color-surface);
 }
 
 .csv-eyebrow {
@@ -21,27 +21,27 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #0378b8;
+  color: var(--color-brand);
   margin-bottom: 12px;
 }
 .csv-eyebrow--light {
-  color: #62bdfc;
+  color: var(--color-brand-light);
 }
 
 .csv-heading {
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 600;
-  color: #222;
+  color: var(--color-text-primary);
   margin-bottom: 0;
   line-height: 1.3;
 }
 .csv-heading--light {
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .csv-subtext {
   font-size: 14px;
-  color: #777;
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-top: 12px;
   max-width: 520px;
@@ -91,8 +91,8 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .baf-card__label--after {
-  background: #0378b8;
-  color: #fff;
+  background: var(--color-brand);
+  color: var(--color-surface);
 }
 
 .baf-card__img {
@@ -160,7 +160,7 @@
 .csv-gallery__item-overlay span {
   font-size: 11px;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-surface);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -194,7 +194,7 @@
   height: 40px;
   border-radius: 50%;
   font-size: 18px;
-  color: #fff;
+  color: var(--color-surface);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -222,7 +222,7 @@
 }
 
 .csv-feature-card {
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 12px;
   padding: 28px 24px;
@@ -244,19 +244,19 @@
   justify-content: center;
   margin-bottom: 18px;
   font-size: 20px;
-  color: #0378b8;
+  color: var(--color-brand);
 }
 
 .csv-feature-card__title {
   font-size: 15px;
   font-weight: 600;
-  color: #222;
+  color: var(--color-text-primary);
   margin-bottom: 10px;
 }
 
 .csv-feature-card__body {
   font-size: 13px;
-  color: #777;
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin: 0;
 }
@@ -268,7 +268,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #0378b8;
+  color: var(--color-brand);
   background: rgba(3, 120, 184, 0.08);
   padding: 3px 10px;
   border-radius: 20px;
@@ -282,12 +282,12 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .csv-ds-header {
-  background: #0a0a0a;
+  background: var(--color-surface-black);
   padding: 16px 24px;
   display: flex;
   align-items: center;
@@ -348,7 +348,7 @@
 .csv-ds-panel__num {
   font-size: 11px;
   font-weight: 800;
-  color: #0378b8;
+  color: var(--color-brand);
   letter-spacing: 1px;
 }
 .csv-ds-panel__label {
@@ -356,7 +356,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #aaa;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -391,7 +391,7 @@
 }
 .csv-ds-swatch-card__hex {
   font-size: 10px;
-  color: #aaa;
+  color: var(--color-text-muted);
   letter-spacing: 0.3px;
 }
 
@@ -419,7 +419,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #0378b8;
+  color: var(--color-brand);
 }
 .csv-ds-type-ramp__specs {
   font-size: 9px;
@@ -468,18 +468,18 @@
 }
 .csv-ds-comp-btn:hover { transform: translateY(-2px); }
 .csv-ds-comp-btn--primary {
-  background: linear-gradient(0deg, #0378b8 0%, #62bdfc 100%);
-  color: #fff;
+  background: linear-gradient(0deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
+  color: var(--color-surface);
   box-shadow: 0 6px 16px rgba(3, 120, 184, 0.25);
 }
 .csv-ds-comp-btn--outline {
   background: transparent;
-  color: #0378b8;
-  border: 1.5px solid #0378b8;
+  color: var(--color-brand);
+  border: 1.5px solid var(--color-brand);
 }
 .csv-ds-comp-btn--ghost {
   background: rgba(3, 120, 184, 0.07);
-  color: #0378b8;
+  color: var(--color-brand);
 }
 
 .csv-ds-comp-badge {
@@ -502,7 +502,7 @@
   color: #999;
   outline: none;
   font-family: "Poppins", sans-serif;
-  background: #fff;
+  background: var(--color-surface);
 }
 
 /* ─────────────────────────────────────────
@@ -531,7 +531,7 @@
 .csv-phone-frame--small  { width: 150px; transform: translateY(40px); }
 
 .csv-phone-frame__screen {
-  background: #000;
+  background: var(--color-surface-darker);
   border-radius: 28px;
   overflow: hidden;
   width: 100%;
@@ -584,8 +584,8 @@
   width: 10vw;                                  /* was: 96px */
   height: 10vw;                                 /* was: 96px */
   border-radius: 50%;
-  background: #fff;
-  border: 4px solid #e0e0e0;
+  background: var(--color-surface);
+  border: 4px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -598,7 +598,7 @@
 
 .csv-flow-step__circle i {
   font-size: 5vw !important; 
-  color: #0378b8;  /* overrides JS inline fontSize:16 — ~44% of circle diameter, leaves ~70px breathing room each side */
+  color: var(--color-brand);  /* overrides JS inline fontSize:16 — ~44% of circle diameter, leaves ~70px breathing room each side */
 }
 
 
@@ -607,19 +607,19 @@
 }
 
 .csv-flow-step__circle--active {
-  border-color: #0378b8;
+  border-color: var(--color-brand);
   background: rgba(3, 120, 184, 0.06);
 }
 
 .csv-flow-step__circle--pain {
-  border-color: #CB202D;
+  border-color: var(--color-error);
   background: rgba(203, 32, 45, 0.06);
 }
 
 .csv-flow-step__label {
   font-size: 17px;               /* was: 11px */
   font-weight: 600;
-  color: #222;
+  color: var(--color-text-primary);
   text-align: center;
   margin-top: 22px;              /* was: 10px */
   max-width: 200px;               /* was: 80px */
@@ -628,7 +628,7 @@
 
 .csv-flow-step__sub {
   font-size: 13px;                /* was: 9px */
-  color: #aaa;
+  color: var(--color-text-muted);
   text-align: center;
   margin-top: 6px;                /* was: 4px */
   max-width: 200px;                /* was: 80px */
@@ -637,7 +637,7 @@
 .csv-flow-arrow {
   width: 64px;                    /* was: 40px */
   height: 4px;                    /* was: 2px */
-  background: linear-gradient(to right, #e0e0e0, #0378b8);
+  background: linear-gradient(to right, var(--color-border), var(--color-brand));
   flex-shrink: 0;
   position: relative;
   margin-top: 5vw;              /* exactly half of 250px circle — keeps arrow centered on the circle regardless of label height below it */
@@ -646,7 +646,7 @@
   content: "";
   position: absolute;
   right: -8px;
-  border-left: 13px solid #0378b8;
+  border-left: 13px solid var(--color-brand);
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
 }

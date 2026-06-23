@@ -5,7 +5,7 @@
 
 .csh-root {
   position: relative;
-  background: #000;
+  background: var(--color-surface-darker);
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -72,7 +72,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #62bdfc;
+  color: var(--color-brand-light);
   padding: 5px 14px;
   border: 1px solid rgba(98, 189, 252, 0.3);
   border-radius: 20px;
@@ -102,7 +102,7 @@
 .csh-title {
   font-size: clamp(40px, 7vw, 80px);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-surface);
   line-height: 1.0;
   letter-spacing: -2px;
   margin-bottom: 24px;
@@ -110,7 +110,7 @@
 }
 
 .csh-title__accent {
-  background: linear-gradient(90deg, #0378b8 0%, #62bdfc 100%);
+  background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -148,7 +148,7 @@
 
 .csh-tag:hover {
   border-color: rgba(98, 189, 252, 0.5);
-  color: #62bdfc;
+  color: var(--color-brand-light);
 }
 
 /* ── Quick-facts strip ── */
@@ -237,13 +237,13 @@
 .csh-metric__value {
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 800;
-  color: #fff;
+  color: var(--color-surface);
   line-height: 1;
   letter-spacing: -1px;
 }
 
 .csh-metric__value--accent {
-  background: linear-gradient(90deg, #0378b8 0%, #62bdfc 100%);
+  background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -323,12 +323,12 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .csh-scroll-cue i {
   font-size: 14px;
-  color: #fff;
+  color: var(--color-surface);
 }
 
 @keyframes csh-bounce {

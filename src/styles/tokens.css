@@ -1,0 +1,205 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Single source of truth for all design constants.
+   Import this file once in index.css — never import it per-component.
+   ========================================================================== */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+     COLORS — Brand
+  -------------------------------------------------------------------------- */
+  --color-brand:           #0378b8;   /* Primary blue */
+  --color-brand-hover:     #025d8f;   /* Darkened brand for hover states */
+  --color-brand-light:     #62bdfc;   /* Light accent */
+  --color-brand-secondary: #006BFF;   /* Secondary blue */
+  --color-brand-purple:    #8490ff;   /* Purple accent */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Neutral / Text
+  -------------------------------------------------------------------------- */
+  --color-text-primary:    #222222;   /* Main body text */
+  --color-text-secondary:  #777777;   /* Muted / subtext */
+  --color-text-tertiary:   #555555;   /* Medium gray text */
+  --color-text-inverse:    #ffffff;   /* Text on dark backgrounds */
+  --color-text-dark:       #000000;   /* Nearly black text */
+  --color-text-muted:      #aaaaaa;   /* Very light gray text */
+  --color-text-border:     #bbbbbb;   /* Border text color */
+  --color-text-heading:    #111111;   /* Very dark heading text */
+  --color-text-body:       #333333;   /* Medium dark body text */
+  --color-text-near-black: #191919;   /* Nearly black */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Surface / Background
+  -------------------------------------------------------------------------- */
+  --color-surface:         #ffffff;
+  --color-surface-alt:     #f5f5f5;   /* Alternate section bg */
+  --color-surface-light:   #f9f9ff;   /* Very light blue-gray */
+  --color-surface-purple:  #f5f5fe;   /* Light purple-gray */
+  --color-surface-off:     #fafafa;   /* Off-white */
+  --color-surface-gray:    #eeeeee;   /* Light gray */
+  --color-surface-dark:    #1b1b1b;   /* Dark section bg */
+  --color-surface-darker:  #000000;   /* Nearly black bg */
+  --color-surface-code:    #1a1a1a;   /* Code background */
+  --color-surface-deep:    #0d0d0d;   /* Very dark background */
+  --color-surface-black:   #0a0a0a;   /* Nearly black */
+
+  /* --------------------------------------------------------------------------
+     COLORS — Border / Divider
+  -------------------------------------------------------------------------- */
+  --color-border:          #e0e0e0;   /* Border gray */
+  --color-border-light:    #cccccc;   /* Light border */
+
+  /* --------------------------------------------------------------------------
+     COLORS — State
+  -------------------------------------------------------------------------- */
+  --color-success:         #28c840;
+  --color-success-light:  #ff5f57;   /* Light red (used as success indicator in some contexts) */
+  --color-error:           #CB202D;
+  --color-error-light:    #ff5f57;   /* Light red */
+  --color-warning:         #febc2e;
+  --color-warning-dark:    #d4930a;   /* Dark yellow */
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font families
+  -------------------------------------------------------------------------- */
+  --font-primary:   'Poppins', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+  --font-mono:      'SFMono-Regular', 'Consolas', 'Monaco', monospace;
+  --font-serif:     Georgia, 'Times New Roman', serif;
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font sizes (type scale)
+  -------------------------------------------------------------------------- */
+  --text-xs:    0.5625rem;  /* 9px */
+  --text-xxs:   0.625rem;   /* 10px */
+  --text-sm:    0.6875rem;  /* 11px */
+  --text-base:  0.75rem;    /* 12px */
+  --text-md:    0.8125rem;  /* 13px */
+  --text-lg:    0.875rem;   /* 14px */
+  --text-xl:    0.9375rem;  /* 15px */
+  --text-2xl:   1rem;       /* 16px */
+  --text-3xl:   1.0625rem;  /* 17px */
+  --text-4xl:   1.125rem;   /* 18px */
+  --text-5xl:   1.25rem;    /* 20px */
+  --text-6xl:   1.5rem;     /* 24px */
+  --text-7xl:   1.375rem;   /* 22px */
+  --text-8xl:   1.625rem;   /* 26px */
+  --text-9xl:   1.875rem;   /* 30px */
+  --text-10xl:  2rem;       /* 32px */
+  --text-11xl:  2.125rem;   /* 34px */
+  --text-12xl:  2.1875rem;  /* 35px */
+  --text-13xl:  2.25rem;    /* 36px */
+  --text-14xl:  2.375rem;   /* 38px */
+  --text-15xl:  2.5rem;     /* 40px */
+  --text-16xl:  2.625rem;   /* 42px */
+  --text-17xl:  3rem;       /* 48px */
+  --text-18xl:  3.75rem;    /* 60px */
+  --text-19xl:  5rem;       /* 80px */
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Font weights
+  -------------------------------------------------------------------------- */
+  --font-light:     300;
+  --font-regular:   400;
+  --font-medium:    500;
+  --font-semibold:  600;
+  --font-bold:      700;
+  --font-extrabold: 800;
+  --font-black:     900;
+
+  /* --------------------------------------------------------------------------
+     TYPOGRAPHY — Line heights
+  -------------------------------------------------------------------------- */
+  --leading-none:    1.0;
+  --leading-tight:   1.1;
+  --leading-snug:    1.2;
+  --leading-normal:  1.3;
+  --leading-relaxed: 1.4;
+  --leading-loose:   1.5;
+  --leading-spread:  1.6;
+  --leading-wide:    1.7;
+  --leading-wider:   1.75;
+  --leading-widest:  1.8;
+  --leading-double:  2.0;
+
+  /* --------------------------------------------------------------------------
+     SPACING — Base scale (8pt grid)
+  -------------------------------------------------------------------------- */
+  --space-0:   0px;
+  --space-1:   2px;
+  --space-2:   4px;
+  --space-3:   5px;
+  --space-4:   6px;
+  --space-5:   8px;
+  --space-6:   10px;
+  --space-7:   12px;
+  --space-8:   14px;
+  --space-9:   16px;
+  --space-10:  18px;
+  --space-11:  20px;
+  --space-12:  22px;
+  --space-13:  24px;
+  --space-14:  26px;
+  --space-15:  28px;
+  --space-16:  30px;
+  --space-17:  32px;
+  --space-18:  36px;
+  --space-19:  40px;
+  --space-20:  48px;
+  --space-21:  56px;
+  --space-22:  64px;
+  --space-23:  70px;
+  --space-24:  72px;
+  --space-25:  80px;
+  --space-26:  96px;
+  --space-27:  100px;
+  --space-28:  500px;
+
+  /* --------------------------------------------------------------------------
+     BORDER RADIUS
+  -------------------------------------------------------------------------- */
+  --radius-none:    0px;
+  --radius-sm:     2px;
+  --radius-md:     3px;
+  --radius-base:   4px;
+  --radius-lg:     5px;
+  --radius-xl:     7px;
+  --radius-2xl:    8px;
+  --radius-3xl:    10px;
+  --radius-4xl:    12px;
+  --radius-5xl:    14px;
+  --radius-6xl:    16px;
+  --radius-7xl:    18px;
+  --radius-8xl:    20px;
+  --radius-9xl:    28px;
+  --radius-10xl:   36px;
+  --radius-11xl:   40px;
+  --radius-full:   50%;
+
+  /* --------------------------------------------------------------------------
+     SHADOWS
+  -------------------------------------------------------------------------- */
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg:  0 8px 24px rgba(0, 0, 0, 0.20);
+
+  /* --------------------------------------------------------------------------
+     TRANSITIONS
+  -------------------------------------------------------------------------- */
+  --transition-fast:    150ms ease;
+  --transition-base:    250ms ease;
+  --transition-slow:    400ms ease;
+
+  /* --------------------------------------------------------------------------
+     Z-INDEX SCALE
+  -------------------------------------------------------------------------- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+}

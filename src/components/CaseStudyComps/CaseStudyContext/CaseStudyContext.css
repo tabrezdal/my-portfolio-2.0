@@ -6,7 +6,7 @@
 ═══════════════════════════════════════════════ */
 
 .cctx-root {
-  background: #fff;
+  background: var(--color-surface);
   padding: 88px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -17,14 +17,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #0378b8;
+  color: var(--color-brand);
   margin-bottom: 20px;
 }
 
 .cctx-mandate {
   font-size: clamp(18px, 2.4vw, 26px);
   font-weight: 700;
-  color: #111;
+  color: var(--color-text-heading);
   line-height: 1.38;
   letter-spacing: -0.3px;
   margin-bottom: 24px;
@@ -34,14 +34,14 @@
 .cctx-divider {
   width: 48px;
   height: 3px;
-  background: linear-gradient(90deg, #0378b8 0%, #62bdfc 100%);
+  background: linear-gradient(90deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
   border-radius: 2px;
   margin-bottom: 24px;
 }
 
 .cctx-context {
   font-size: 14px;
-  color: #777;
+  color: var(--color-text-secondary);
   line-height: 1.8;
   max-width: 520px;
   margin-bottom: 28px;
@@ -56,7 +56,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #0378b8;
+  color: var(--color-brand);
   background: rgba(3, 120, 184, 0.06);
   border: 1px solid rgba(3, 120, 184, 0.18);
   padding: 6px 16px;
@@ -71,7 +71,7 @@
   gap: 8px;
   font-size: 11px;
   font-weight: 700;
-  color: #0378b8;
+  color: var(--color-brand);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -85,7 +85,7 @@
 
 .cctx-live-link:hover {
   background: #0378b8;
-  color: #fff;
+  color: var(--color-surface);
   text-decoration: none;
 }
 
@@ -94,7 +94,7 @@
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 16px;
   overflow: hidden;
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06),
               0 1px 4px rgba(0, 0, 0, 0.04);
 }
@@ -138,7 +138,7 @@
 .cctx-status-label {
   font-size: 11px;
   font-weight: 700;
-  color: #222;
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -155,7 +155,7 @@
 .cctx-screens-hero__count {
   font-size: 30px;
   font-weight: 800;
-  color: #0378b8;
+  color: var(--color-brand);
   line-height: 1;
   letter-spacing: -1px;
 }
@@ -197,7 +197,7 @@
 .cctx-meta-row__value {
   font-size: 12px;
   font-weight: 600;
-  color: #222;
+  color: var(--color-text-primary);
   text-align: right;
   max-width: 62%;
   line-height: 1.4;
@@ -219,7 +219,7 @@
   text-transform: uppercase;
   letter-spacing: 0.4px;
   padding: 4px 10px;
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   color: #555;
@@ -227,7 +227,7 @@
 }
 
 .cctx-tool-pill--more {
-  color: #0378b8;
+  color: var(--color-brand);
   border-color: rgba(3, 120, 184, 0.28);
   background: rgba(3, 120, 184, 0.04);
 }

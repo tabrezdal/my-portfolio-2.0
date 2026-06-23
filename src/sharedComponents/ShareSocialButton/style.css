@@ -11,21 +11,21 @@
 }
 
 .ShareSocialButton:hover {
-    background-color: #000;
+    background-color: var(--color-surface-darker);
 }
 
 
 .ShareSocialButton:hover .social-platform,
 .ShareSocialButton:hover .fa {
-    color: #fff;
+    color: var(--color-surface);
 }
 
 .ShareSocialButton .fa {
-    color: #000;
+    color: var(--color-text-dark);
 }
 
 .social-platform {
     font-size: 10px;
     margin: 0px;
-    color: #000;
+    color: var(--color-text-dark);
 }

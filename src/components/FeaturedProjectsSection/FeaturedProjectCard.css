@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: pointer;
@@ -73,7 +73,7 @@
 }
 
 .fp-card__overlay-cta {
-  color: #fff;
+  color: var(--color-surface);
   border: 2px solid #fff;
   padding: 9px 26px;
   font-size: 11px;
@@ -86,8 +86,8 @@
 }
 
 .fp-card__overlay-cta:hover {
-  background: #fff;
-  color: #0378b8;
+  background: var(--color-surface);
+  color: var(--color-brand);
   text-decoration: none;
 }
 
@@ -111,7 +111,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #0378b8;
+  color: var(--color-brand);
 }
 
 .fp-card__year {
@@ -123,14 +123,14 @@
 .fp-card__title {
   font-size: 17px;
   font-weight: 600;
-  color: #222;
+  color: var(--color-text-primary);
   margin-bottom: 8px;
   line-height: 1.35;
 }
 
 .fp-card__desc {
   font-size: 13px;
-  color: #777;
+  color: var(--color-text-secondary);
   line-height: 1.65;
   margin-bottom: 16px;
   display: -webkit-box;

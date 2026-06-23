@@ -4,7 +4,7 @@
 ═══════════════════════════════════════════════ */
 
 .cdp-root {
-  background: #000;
+  background: var(--color-surface-darker);
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -53,14 +53,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #62bdfc;
+  color: var(--color-brand-light);
   margin-bottom: 16px;
 }
 
 .cdp-title {
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
-  color: #fff;
+  color: var(--color-surface);
   line-height: 1.1;
   letter-spacing: -1px;
   max-width: 540px;
@@ -140,14 +140,14 @@
 .cdp-item__title {
   font-size: clamp(16px, 2vw, 22px);
   font-weight: 700;
-  color: #fff;
+  color: var(--color-surface);
   margin-bottom: 8px;
   line-height: 1.3;
   transition: color 0.25s ease;
 }
 
 .cdp-item:hover .cdp-item__title {
-  color: #62bdfc;
+  color: var(--color-brand-light);
 }
 
 .cdp-item__desc {
@@ -176,7 +176,7 @@
 
 .cdp-item:hover .cdp-item__tag {
   border-color: rgba(98, 189, 252, 0.4);
-  color: #62bdfc;
+  color: var(--color-brand-light);
 }
 
 /* ── Closing statement ── */
