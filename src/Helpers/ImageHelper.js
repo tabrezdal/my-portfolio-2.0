@@ -3,7 +3,6 @@ import HeroImage from "../Assets/Images/me/portfolio_hero_image.webp";
 
 // //About Section
 import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
-// import locationMap from "../Assets/Images/About/locationMap.webp";
 
 import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
 
@@ -34,13 +33,6 @@ import JavaScriptIcon from "../Assets/Images/technologies-icons/javascript-icon.
 import TypescriptIcon from "../Assets/Images/technologies-icons/typescript-icon.svg";
 import AxiosIcon from "../Assets/Images/technologies-icons/axios-icon.svg";
 import JqueryIcon from "../Assets/Images/technologies-icons/jquery-icon.svg";
-
-// // Brands Section
-// import brand1 from "../Assets/Images/Brands/tzapp.webp";
-// import brand2 from "../Assets/Images/Brands/tzseo.webp";
-// import brand3 from "../Assets/Images/Brands/tzsmm.webp";
-// import brand4 from "../Assets/Images/Brands/tzvfx.webp";
-// import brand5 from "../Assets/Images/Brands/tzweb.webp";
 
 //Portfolio Images
 
@@ -257,52 +249,7 @@ import Other10 from "../Assets/Images/Portfolio/Other/TZ Certi 1.webp";
 import Other11 from "../Assets/Images/Portfolio/Other/TZ Certi 2.webp";
 import Other12 from "../Assets/Images/Portfolio/Other/TZ Vouchers.webp";
 
-// import AirHmeInnerWork from "../Assets/Images/CaseStudies/airHmeInnerWork.webp";
-// import BalleyInnerWork from "../Assets/Images/CaseStudies/balleyInnerWork.webp";
-// import ColorJumper from "../Assets/Images/CaseStudies/color-jumper.webp";
-// import DragonForceNinja from "../Assets/Images/CaseStudies/dragon-force-ninja.webp";
-// import RideoInnerWork from "../Assets/Images/CaseStudies/RideoInnerWork.webp";
-// import StackerCracker from "../Assets/Images/CaseStudies/stacker-cracker.webp";
-// import TamkeenCare from "../Assets/Images/CaseStudies/tamkeen-care.webp";
-// import WishInnerWork from "../Assets/Images/CaseStudies/wishInnerWork.webp";
-
 // // Service Portfolio Banner Images
-
-// import Branding from "../Assets/Images/ServicePortfolio/banner/branding-img.webp";
-// import CustomWebDesign from "../Assets/Images/ServicePortfolio/banner/Custom-Web-Design-Services.webp";
-// import DomainHosting from "../Assets/Images/ServicePortfolio/banner/domain-hosting-img.webp";
-// import EcommerceDesign1 from "../Assets/Images/ServicePortfolio/banner/ecommerce-design1.webp";
-// import EcommerceDesign2 from "../Assets/Images/ServicePortfolio/banner/ecommerce-design2.webp";
-// import EcommerceDesign3 from "../Assets/Images/ServicePortfolio/banner/ecommerce-design3.webp";
-// import Ecommerce from "../Assets/Images/ServicePortfolio/banner/e-commerce-img.webp";
-// import LogoDesigning from "../Assets/Images/ServicePortfolio/banner/logo-designing-img.webp";
-// import MobileAppDevelopment from "../Assets/Images/ServicePortfolio/banner/mobile-app-development-img.webp";
-// import PsdToHtml from "../Assets/Images/ServicePortfolio/banner/psd-to-html.webp";
-// import SEO from "../Assets/Images/ServicePortfolio/banner/seo-img.webp";
-// import SSL from "../Assets/Images/ServicePortfolio/banner/ssl.webp";
-// import videoAnimation from "../Assets/Images/ServicePortfolio/banner/video-animation-img.webp";
-// import WebAppDevelopment from "../Assets/Images/ServicePortfolio/banner/web-app-development-img.webp";
-// import webDesign from "../Assets/Images/ServicePortfolio/banner/web-design-img.webp";
-// import websiteMaintenance from "../Assets/Images/ServicePortfolio/banner/website-maintenance-img.webp";
-// import WeOffer from "../Assets/Images/ServicePortfolio/banner/we-offer-img.webp";
-
-// import WebBanner1 from "../Assets/Images/ServiceSlider/Web/webBanner1.webp";
-// import WebBanner2 from "../Assets/Images/ServiceSlider/Web/webBanner2.webp";
-// import WebBanner3 from "../Assets/Images/ServiceSlider/Web/webBanner3.webp";
-// import WebBanner4 from "../Assets/Images/ServiceSlider/Web/webBanner4.webp";
-
-// import ECommerce1 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce1.webp";
-// import ECommerce2 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce2.webp";
-// import ECommerce3 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce3.webp";
-// import ECommerce4 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce4.webp";
-// import ECommerce5 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce5.webp";
-// import ECommerce6 from "../Assets/Images/ServiceSlider/ECommerce/ECommerce6.webp";
-
-// import AppBanner1 from "../Assets/Images/ServiceSlider/App/appBanner1.webp";
-// import AppBanner2 from "../Assets/Images/ServiceSlider/App/appBanner2.webp";
-// import AppBanner3 from "../Assets/Images/ServiceSlider/App/appBanner3.webp";
-// import AppBanner4 from "../Assets/Images/ServiceSlider/App/appBanner4.webp";
-// import AppBanner5 from "../Assets/Images/ServiceSlider/App/appBanner5.webp";
 
 const ImageHelper = {
   // Hero Section

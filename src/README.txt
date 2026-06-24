@@ -1,2 +1,2 @@
 My Porfolio - Tabrez Dal
-Live Link - https://tabrez.tzcreation.in/
+Live Link - https://tabrezdal.com/

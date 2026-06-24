@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import IconHelper from "../../../Helpers/IconHelper";
 
 // FramerMotion
 import { motion } from "framer-motion";

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
 
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import FigmaFrame from "../layouts/FigmaFrame/FigmaFrame";
@@ -14,9 +13,6 @@ import Footer from "../layouts/Footer/Footer";
 
 const UiUxProjectPage = () => {
   const { id } = useParams();
-  // const location = useLocation();
-
-  // console.log("Loc URL", location.pathname.split("/")[1]);
 
   const [pageContentProps, setPageContentProps] = useState(null);
   const [breadcrumbProps, setBreadcrumbProps] = useState(null);
@@ -49,7 +45,7 @@ const UiUxProjectPage = () => {
 
   // console.log("+++++", pageContentProps?.FigmaDesignLink);
   useEffect(() => {
-    document.title = "Ui/Ux Project | TZ Creation";
+    document.title = "Ui/Ux Project | Tabrez Dal";
     window.scrollTo(0, 0);
   }, [id]);
 
