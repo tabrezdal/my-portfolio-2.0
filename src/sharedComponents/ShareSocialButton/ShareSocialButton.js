@@ -26,13 +26,16 @@ const ShareSocialButton = ({ icon, platform, url }) => {
           <p className="social-platform">{platform}</p>
         </div>
       ) : (
-        <div
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
           className="ShareSocialButton"
-          onClick={() => window.open(url, "_blank")}
+          aria-label={`Share on ${platform}`}
         >
           <i className={iconClass}></i>
           <p className="social-platform">{platform}</p>
-        </div>
+        </a>
       )}
     </>
   );

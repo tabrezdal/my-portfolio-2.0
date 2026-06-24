@@ -3,12 +3,14 @@ import React from "react";
 const NavSocialMediaLink = ({ url, iconClass }) => {
   return (
     <li>
-      <div
-        onClick={() => window.open(url, "_blank")}
-        style={{ cursor: "pointer" }}
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${iconClass.replace('fa-', '').replace(' ', ' ')} profile`}
       >
         <i className={iconClass}></i>
-      </div>
+      </a>
     </li>
   );
 };

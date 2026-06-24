@@ -2,12 +2,14 @@ import React from "react";
 
 const UiUxPageButton = ({ url, name }) => {
   return (
-    <button
-      onClick={() => window.open(url, "_blank")}
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="primary-btn black-btn text-uppercase"
     >
       {name}
-    </button>
+    </a>
   );
 };
 
