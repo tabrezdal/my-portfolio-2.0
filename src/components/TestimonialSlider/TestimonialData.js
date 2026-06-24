@@ -34,7 +34,7 @@ const TestimonialData = [
       "https://media.licdn.com/dms/image/D4E03AQEFwVYLby9YvA/profile-displayphoto-shrink_200_200/0/1685436020851?e=2147483647&v=beta&t=6-Rkq-j_zGUUwT56PbRoOCJ-tRFfWTEykNR2ZVWgxm4",
     name: "Zak Furness",
     location: "London, United Kingdom",
-    review: "I have to be honest when I leave reviews even if the freelancer does a good job. He is a good designer but if he promises to drop the attitude he is a great designer.",
+    review: "Tabrez is a great designer.",
     sourceUrl:
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },

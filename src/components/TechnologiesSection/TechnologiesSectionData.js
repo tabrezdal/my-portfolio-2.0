@@ -24,11 +24,6 @@ export const TechnologiesSectionData = {
     },
     {
       id: 5,
-      techIcon: ImageHelper.GoogleBardIcon,
-      techName: "Google Bard",
-    },
-    {
-      id: 6,
       techIcon: ImageHelper.ChatGPTIcon,
       techName: "ChatGPT",
     },

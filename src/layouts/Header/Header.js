@@ -45,7 +45,7 @@ const Header = () => {
         <nav id="nav-menu-container">
           <ul className="nav-menu align-items-centre back-button">
             <Link to="/">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;
+              <i className="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;
               {SectionTitleHelper.backButton}
             </Link>
           </ul>

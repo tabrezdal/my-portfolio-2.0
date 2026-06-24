@@ -1,10 +1,10 @@
 const ConstantHelper = {
   CTACall: "tel:+1 (217) 339-9455",
   CTAChat:
-    "https://api.whatsapp.com/send/?phone=+12173399455&text=*Hello+TZ+Creation+Team*,+I+have+some+queries,+regarding+project+/+service+/+pricing+such+as",
+    "https://api.whatsapp.com/send/?phone=+12173399455&text=Hi+Tabrez,+I+came+across+your+portfolio+and+would+love+to+connect.",
 
   RefundRequestWhatsppMessage:
-    "https://api.whatsapp.com/send/?phone=+12173399455&text=*Hello+TZ+Creation+Team*,+I+want+to+raise+the+refund+request.",
+    "https://api.whatsapp.com/send/?phone=+12173399455&text=Hi+Tabrez,+I+want+to+raise+the+refund+request.",
 
   shareOnPinterestUrl: "https://www.pinterest.com/pin/create/button/?url=",
   shareOnTwitterUrl: "https://twitter.com/intent/tweet?url=",
