@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeLeftVariants } from "../../../utils/animationVariants";
 import "./CaseStudyPlatformScope.css";
 
 /* ─────────────────────────────────────────
@@ -81,7 +82,7 @@ const CaseStudyPlatformScope = ({ project }) => {
           {/* ── Header ── */}
           <motion.div
             className="cplat-header"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+            variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

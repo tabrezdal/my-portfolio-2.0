@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { fadeLeftVariants, fadeInVariants } from "../../../utils/animationVariants";
 import FeaturedProjectsData from "../../../Data/FeaturedProjectsData";
 
 const CaseStudyNav = ({ project }) => {
@@ -28,7 +29,7 @@ const CaseStudyNav = ({ project }) => {
         >
           {/* Back to homepage */}
           <motion.div
-            variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
+            variants={fadeLeftVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.4, delay: 0.1 }}
@@ -59,7 +60,7 @@ const CaseStudyNav = ({ project }) => {
           <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
             {prevProject && (
               <motion.button
-                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                variants={fadeInVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.4, delay: 0.2 }}
@@ -96,7 +97,7 @@ const CaseStudyNav = ({ project }) => {
 
             {nextProject && (
               <motion.button
-                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                variants={fadeInVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.4, delay: 0.3 }}

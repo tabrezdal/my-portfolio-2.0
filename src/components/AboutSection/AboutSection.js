@@ -5,6 +5,7 @@ import { AboutSectionData } from "./AboutSectionData";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeUpLargeVariants, fadeLeftExtraLargeVariants } from "../../utils/animationVariants";
 
 const AboutSection = () => {
   return (
@@ -12,10 +13,7 @@ const AboutSection = () => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -100 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={fadeLeftExtraLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -30,10 +28,7 @@ const AboutSection = () => {
             /> */}
           </motion.div>
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 60 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={fadeUpLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}

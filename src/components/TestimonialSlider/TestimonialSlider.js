@@ -9,6 +9,7 @@ import ConstantHelper from "../../Helpers/ConstantHelper";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { scaleUpNoOpacityVariants } from "../../utils/animationVariants";
 
 const TestimonialSlider = () => {
   useEffect(() => {
@@ -45,10 +46,7 @@ const TestimonialSlider = () => {
 
   return (
     <motion.div
-      variants={{
-        hidden: { scale: 0 },
-        visible: { scale: 1 },
-      }}
+      variants={scaleUpNoOpacityVariants}
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5, delay: 0.3 }}

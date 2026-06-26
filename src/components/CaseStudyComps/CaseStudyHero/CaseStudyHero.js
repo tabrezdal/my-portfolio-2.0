@@ -1,29 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUp, fadeIn, fadeUpLargeVariants } from "../../../utils/animationVariants";
 import "./CaseStudyHero.css";
-
-/* ─────────────────────────────────────────
-   Stagger helper — children animate in sequence
-───────────────────────────────────────── */
-const fadeUp = (delay = 0) => ({
-  variants: {
-    hidden:  { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0  },
-  },
-  initial:    "hidden",
-  animate:    "visible",
-  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1], delay },
-});
-
-const fadeIn = (delay = 0) => ({
-  variants: {
-    hidden:  { opacity: 0 },
-    visible: { opacity: 1 },
-  },
-  initial:    "hidden",
-  animate:    "visible",
-  transition: { duration: 0.7, delay },
-});
 
 /* ─────────────────────────────────────────
    CaseStudyHero
@@ -156,7 +134,7 @@ const CaseStudyHero = ({ project }) => {
       {coverImage && (
         <motion.div
           className="csh-cover-wrap"
-          variants={{ hidden: { opacity: 0, y: 60 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpLargeVariants}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}

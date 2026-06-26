@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeLeftVariants } from "../../../utils/animationVariants";
 import "./CaseStudyDesignPrinciples.css";
 
 const CaseStudyDesignPrinciples = ({ project }) => {
@@ -20,7 +21,7 @@ const CaseStudyDesignPrinciples = ({ project }) => {
         {/* Header */}
         <motion.div
           className="cdp-header"
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -41,7 +42,7 @@ const CaseStudyDesignPrinciples = ({ project }) => {
             <motion.div
               key={index}
               className="cdp-item"
-              variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
+              variants={fadeLeftVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -76,7 +77,7 @@ const CaseStudyDesignPrinciples = ({ project }) => {
         {closingQuote && (
           <motion.div
             className="cdp-closing"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+            variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

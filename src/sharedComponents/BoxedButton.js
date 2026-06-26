@@ -2,14 +2,12 @@ import React from "react";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeUpLargeVariants } from "../utils/animationVariants";
 
 const BoxedButton = ({ url, name, iconClass }) => {
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 60 },
-        visible: { opacity: 1, y: 0 },
-      }}
+      variants={fadeUpLargeVariants}
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5, delay: 0.5 }}

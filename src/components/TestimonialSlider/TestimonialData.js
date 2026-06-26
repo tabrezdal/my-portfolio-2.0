@@ -1,7 +1,15 @@
+import AkshayShetty from '../../Assets/Images/testimonials/akshay-shetty.jpg';
+import ShahzaibArshad from '../../Assets/Images/testimonials/shahzaib-arshad.jpg';
+import MalvikaSingh from '../../Assets/Images/testimonials/malvika-singh.jpg';
+import ZakFurness from '../../Assets/Images/testimonials/zak-furness.webp';
+import ViralPatel from '../../Assets/Images/testimonials/viral-patel.jpg';
+import LeeAnthonyPinn from '../../Assets/Images/testimonials/lee-anthony-pinn.jpg';
+import MohammedOmerFarooq from '../../Assets/Images/testimonials/mohammed-omer-farooq.jpg';
+import KishanMajeethiya from '../../Assets/Images/testimonials/kishan-majeethiya.jpg';
+
 const TestimonialData = [
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQGcRQd4XNaoZw/profile-framedphoto-shrink_800_800/B56ZvUZ8.xJ8Ao-/0/1768795132059?e=1771992000&v=beta&t=ezX8z_s3apYaskOkpeo_5CsCyByh5Vc_rLQD9EMb_5U",
+    avatar:AkshayShetty,
     name: "Akshay Shetty",
     location: "Bangalore, India",
     review:
@@ -10,8 +18,7 @@ const TestimonialData = [
       "https://www.upwork.com/freelancers/tabrezdal",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQGfOQvoHgMDIw/profile-framedphoto-shrink_800_800/B56Zs7ER7lIYAg-/0/1766222536670?e=1771992000&v=beta&t=huiybuKjjcIYKMwQGBQbgni00mQZKD0cS-NbJxuqDXM",
+    avatar:ShahzaibArshad,
     name: "Shahzaib Arshad",
     location: "Dubai, United Arab Emirates",
     review:
@@ -20,8 +27,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4E03AQEwp6ei8NSelw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707323308566?e=1771459200&v=beta&t=FPonxpOC4ZlRrethXHyRJsL96GdzqUfMXNQrwIDzldI",
+    avatar:MalvikaSingh,
     name: "Malvika Singh",
     location: "New York, United States",
     review:
@@ -30,8 +36,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/D4E03AQEFwVYLby9YvA/profile-displayphoto-shrink_200_200/0/1685436020851?e=2147483647&v=beta&t=6-Rkq-j_zGUUwT56PbRoOCJ-tRFfWTEykNR2ZVWgxm4",
+    avatar:ZakFurness,
     name: "Zak Furness",
     location: "London, United Kingdom",
     review: "Tabrez is a great designer.",
@@ -39,8 +44,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5635AQGcRQd4XNaoZw/profile-framedphoto-shrink_800_800/B56ZvUZ8.xJ8Ao-/0/1768795132059?e=1771992000&v=beta&t=ezX8z_s3apYaskOkpeo_5CsCyByh5Vc_rLQD9EMb_5U",
+    avatar:AkshayShetty,
     name: "Akshay Shetty",
     location: "Bangalore, India",
     review:
@@ -49,8 +53,7 @@ const TestimonialData = [
       "https://www.upwork.com/freelancers/tabrezdal",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/C5103AQFP2uiAMnCEog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1580806984766?e=1771459200&v=beta&t=0fNivxpgKk5-vpMd4RGNaTkQFPPtdABdLLzUvv9CWMk",
+    avatar:ViralPatel,
     name: "Viral Patel",
     location: "Surat, India",
     review:
@@ -59,8 +62,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D5603AQHWZMUayQUfrA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1675251692358?e=1771459200&v=beta&t=4ktwRWUcNynCFtdXALSQlUgdIYPrI5GgqwALghLop5A",
+    avatar:MohammedOmerFarooq,
     name: "Mohammed Omer Farooq",
     location: "Muscat, Oman",
     review:
@@ -69,8 +71,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4D03AQElgtpz9r0SAg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1673880834197?e=1771459200&v=beta&t=xKD6xi0biCZNalwoOBceIWQD7M2ZYpBQkQl9OeatyZw",
+    avatar:LeeAnthonyPinn,
     name: "Lee-Anthony Pinn",
     location: "Cape Town, South Africa",
     review:
@@ -79,8 +80,7 @@ const TestimonialData = [
       "https://www.linkedin.com/in/tabrezdal/details/recommendations/?detailScreenTabIndex=0",
   },
   {
-    avatar:
-      "https://media.licdn.com/dms/image/v2/C4E03AQEH_rP45WNdKQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1592461133540?e=1771459200&v=beta&t=IyauOaa2TJqebyUnUH93PN0W07yk-J06YahU-qNa1T0",
+    avatar:KishanMajeethiya,
     name: "Kishan Majeethiya",
     location: "Junagadh, India",
     review:

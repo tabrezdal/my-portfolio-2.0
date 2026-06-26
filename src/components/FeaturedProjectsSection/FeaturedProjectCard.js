@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { fadeUpLargeVariants } from "../../utils/animationVariants";
 import "./FeaturedProjectCard.css";
 
 const FeaturedProjectCard = ({ project, index }) => {
@@ -12,10 +13,7 @@ const FeaturedProjectCard = ({ project, index }) => {
 
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 60 },
-        visible: { opacity: 1, y: 0 },
-      }}
+      variants={fadeUpLargeVariants}
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5, delay: index * 0.15 }}

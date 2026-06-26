@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants } from "../../../utils/animationVariants";
 import "./CaseStudyComplexitySignals.css";
 
 /* ─────────────────────────────────────────
@@ -21,7 +22,7 @@ const CaseStudyComplexitySignals = ({ project }) => {
         {/* ── Header ── */}
         <motion.div
           className="ccmp-header"
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

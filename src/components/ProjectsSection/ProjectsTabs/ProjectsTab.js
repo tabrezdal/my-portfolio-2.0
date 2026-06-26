@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeUpMassiveVariants } from "../../../utils/animationVariants";
 
 const ProjectsTab = (props) => {
   const navigate = useNavigate();
@@ -15,10 +16,7 @@ const ProjectsTab = (props) => {
     <div className="row grid">
       {data.map((item, index) => (
         <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 200 },
-            visible: { opacity: 1, y: 0 },
-          }}
+          variants={fadeUpMassiveVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.2 * index }}

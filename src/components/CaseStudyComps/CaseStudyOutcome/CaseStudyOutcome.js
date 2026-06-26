@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeLeftVariants, fadeRightVariants } from "../../../utils/animationVariants";
 
 const styles = {
   root: {
@@ -159,7 +160,7 @@ const CaseStudyOutcome = ({ project }) => {
 
         {/* Header */}
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -217,7 +218,7 @@ const CaseStudyOutcome = ({ project }) => {
         {outcome && (
           <motion.div
             style={styles.outcomeStatement}
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+            variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -269,7 +270,7 @@ const CaseStudyOutcome = ({ project }) => {
                 <motion.div
                   key={i}
                   style={styles.learningCard}
-                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                  variants={fadeUpVariants}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}

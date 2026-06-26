@@ -5,6 +5,7 @@ import { SkillSectionData } from "./SkillSectionData";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeUpLargeVariants } from "../../utils/animationVariants";
 
 const SkillsSection = () => {
   return (
@@ -13,10 +14,7 @@ const SkillsSection = () => {
         <SectionTitle sectionTitleText={SkillSectionData?.sectionTitle} />
         <div className="row skillbar-wraps">
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 60 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={fadeUpLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -34,10 +32,7 @@ const SkillsSection = () => {
             ))}
           </motion.div>
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 60 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={fadeUpLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.5 }}

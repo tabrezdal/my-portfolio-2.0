@@ -4,6 +4,7 @@ import "./style.css";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeLeftExtraLargeVariants, fadeUpExtraLargeVariants } from "../../utils/animationVariants";
 
 const CtaSection = () => {
   return (
@@ -11,10 +12,7 @@ const CtaSection = () => {
       <div className="container">
         <div className="row justify-content-between">
           <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -100 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={fadeLeftExtraLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -35,10 +33,7 @@ const CtaSection = () => {
             </div>
           </motion.div>
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={fadeUpExtraLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.4 }}

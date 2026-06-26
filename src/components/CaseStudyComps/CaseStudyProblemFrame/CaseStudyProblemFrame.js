@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants } from "../../../utils/animationVariants";
 import "./CaseStudyProblemFrame.css";
 
 const fadeUp = (delay = 0) => ({
@@ -103,10 +104,7 @@ const CaseStudyProblemFrame = ({ project }) => {
               {auditItems.map((item, index) => (
                 <motion.div
                   key={index}
-                  variants={{
-                    hidden:  { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0  },
-                  }}
+                  variants={fadeUpVariants}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}

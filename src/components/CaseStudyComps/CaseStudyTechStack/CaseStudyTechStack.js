@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeLeftVariants, fadeRightVariants, fadeInVariants } from "../../../utils/animationVariants";
 import "./CaseStudyTechStack.css";
 
 /* ─────────────────────────────────────────
@@ -12,7 +13,7 @@ const TechStackPills = ({ groups, title, subtitle }) => {
     <div className="cts-section cts-section--white">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -73,7 +74,7 @@ const RoleBreakdown = ({ roles, title, subtitle }) => {
     <div className="cts-section cts-section--light">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -200,7 +201,7 @@ const CodeSnippetViewer = ({ snippets, title, subtitle }) => {
     <div className="cts-section cts-section--dark">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -285,7 +286,7 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
     <div className="cts-section cts-section--white" ref={ref}>
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -301,7 +302,7 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
               {bars.map((bar, i) => (
                 <motion.div
                   key={i}
-                  variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
+                  variants={fadeLeftVariants}
                   initial="hidden"
                   whileInView="visible"
                   transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -382,7 +383,7 @@ const ProjectTimeline = ({ items, title, subtitle }) => {
                 {items.map((item, index) => (
                   <motion.div
                     key={index}
-                    variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                    variants={fadeUpVariants}
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.5, delay: index * 0.12 }}
@@ -399,7 +400,7 @@ const ProjectTimeline = ({ items, title, subtitle }) => {
                 {items.map((item, index) => (
                   <motion.div
                     key={index}
-                    variants={{ hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0 } }}
+                    variants={fadeRightVariants}
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.5, delay: index * 0.1 }}

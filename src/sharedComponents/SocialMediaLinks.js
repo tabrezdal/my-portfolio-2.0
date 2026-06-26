@@ -2,6 +2,7 @@ import React from "react";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeDownLargeVariants } from "../utils/animationVariants";
 
 const SocialMediaLinks = ({ url, iconClass, index }) => {
   return (
@@ -10,10 +11,7 @@ const SocialMediaLinks = ({ url, iconClass, index }) => {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        variants={{
-          hidden: { opacity: 0, y: -100 },
-          visible: { opacity: 1, y: 0 },
-        }}
+        variants={fadeDownLargeVariants}
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5, delay: index * 0.1 }}

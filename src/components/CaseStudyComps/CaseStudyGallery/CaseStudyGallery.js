@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeUpLargeVariants } from "../../../utils/animationVariants";
 import FigmaFrame from "../../../layouts/FigmaFrame/FigmaFrame";
 
 const CaseStudyGallery = ({ project }) => {
@@ -8,7 +9,7 @@ const CaseStudyGallery = ({ project }) => {
       <div className="container">
         {/* Label */}
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -39,7 +40,7 @@ const CaseStudyGallery = ({ project }) => {
 
         {/* Figma embed — reuses existing FigmaFrame component */}
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -53,10 +54,7 @@ const CaseStudyGallery = ({ project }) => {
             {project.gallery.map((img, index) => (
               <motion.div
                 key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 60 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                variants={fadeUpLargeVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.5, delay: index * 0.15 }}

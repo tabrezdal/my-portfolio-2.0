@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeUpLargeVariants } from "../../../utils/animationVariants";
 
 const CaseStudyProcess = ({ project }) => {
   return (
@@ -7,7 +8,7 @@ const CaseStudyProcess = ({ project }) => {
       <div className="container">
         {/* Section label */}
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -43,10 +44,7 @@ const CaseStudyProcess = ({ project }) => {
           {project.process.map((step, index) => (
             <motion.div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 60 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              variants={fadeUpLargeVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5, delay: index * 0.12 }}

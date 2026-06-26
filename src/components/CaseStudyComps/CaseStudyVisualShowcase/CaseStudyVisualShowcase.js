@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { fadeUpVariants, fadeInVariants, fadeLeftVariants, fadeRightVariants, scaleUpSmallVariants } from "../../../utils/animationVariants";
 import "./CaseStudyVisualShowcase.css";
 
 /* ─────────────────────────────────────────
@@ -11,7 +12,7 @@ const BeforeAfter = ({ items }) => {
     <div className="csv-section csv-section--dark">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -27,7 +28,7 @@ const BeforeAfter = ({ items }) => {
           <div key={pairIndex} style={{ marginTop: pairIndex === 0 ? 0 : 48 }}>
             {pair.context && (
               <motion.p
-                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                variants={fadeInVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.4, delay: 0.15 }}
@@ -47,7 +48,7 @@ const BeforeAfter = ({ items }) => {
             <div className="baf-grid">
               {/* Before */}
               <motion.div
-                variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}
+                variants={fadeLeftVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -69,7 +70,7 @@ const BeforeAfter = ({ items }) => {
 
               {/* After */}
               <motion.div
-                variants={{ hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0 } }}
+                variants={fadeRightVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -132,7 +133,7 @@ const ScreenGallery = ({ screens, title, subtitle }) => {
       <div className="csv-section csv-section--light">
         <div className="container">
           <motion.div
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+            variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -146,7 +147,7 @@ const ScreenGallery = ({ screens, title, subtitle }) => {
             {screens.map((screen, index) => (
               <motion.div
                 key={index}
-                variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 0.45, delay: index * 0.07 }}
@@ -180,7 +181,7 @@ const FeatureHighlights = ({ features, title, subtitle }) => {
     <div className="csv-section csv-section--white">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -194,7 +195,7 @@ const FeatureHighlights = ({ features, title, subtitle }) => {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
+              variants={fadeUpVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -227,7 +228,7 @@ const DesignSystemPreview = ({ systemData }) => {
     <div className="csv-section csv-section--light">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -240,7 +241,7 @@ const DesignSystemPreview = ({ systemData }) => {
         </motion.div>
 
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -276,7 +277,7 @@ const DesignSystemPreview = ({ systemData }) => {
                     <motion.div
                       key={i}
                       className="csv-ds-swatch-card"
-                      variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+                      variants={fadeUpVariants}
                       initial="hidden"
                       whileInView="visible"
                       transition={{ duration: 0.4, delay: 0.05 * i }}
@@ -305,7 +306,7 @@ const DesignSystemPreview = ({ systemData }) => {
                     <motion.div
                       key={i}
                       className="csv-ds-type-ramp__row"
-                      variants={{ hidden: { opacity: 0, x: -16 }, visible: { opacity: 1, x: 0 } }}
+                      variants={fadeLeftVariants}
                       initial="hidden"
                       whileInView="visible"
                       transition={{ duration: 0.4, delay: 0.05 * i }}
@@ -377,7 +378,7 @@ const MobileShowcase = ({ screens, title, subtitle }) => {
     <div className="csv-section csv-section--dark">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -395,7 +396,7 @@ const MobileShowcase = ({ screens, title, subtitle }) => {
           {screens.slice(0, 3).map((screen, index) => (
             <motion.div
               key={index}
-              variants={{ hidden: { opacity: 0, y: 60 }, visible: { opacity: 1, y: 0 } }}
+              variants={fadeUpVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.55, delay: index * 0.15 }}
@@ -422,7 +423,7 @@ const MobileShowcase = ({ screens, title, subtitle }) => {
           {screens.slice(0, 3).map((screen, index) => (
             <motion.div
               key={index}
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              variants={fadeInVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
@@ -469,7 +470,7 @@ const UserFlow = ({ steps, title, subtitle }) => {
     <div className="csv-section csv-section--white">
       <div className="container">
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -484,7 +485,7 @@ const UserFlow = ({ steps, title, subtitle }) => {
             {steps.map((step, index) => (
               <React.Fragment key={index}>
                 <motion.div
-                  variants={{ hidden: { opacity: 0, scale: 0.7 }, visible: { opacity: 1, scale: 1 } }}
+                  variants={scaleUpSmallVariants}
                   initial="hidden"
                   whileInView="visible"
                   transition={{ duration: 0.4, delay: index * 0.1 }}

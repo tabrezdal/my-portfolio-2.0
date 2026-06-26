@@ -4,6 +4,7 @@ import { HeroSectionData } from "./HeroSectionData";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { fadeDownVariants, fadeLeftExtraLargeVariants } from "../../utils/animationVariants";
 
 const HeroSection = () => {
   return (
@@ -11,10 +12,7 @@ const HeroSection = () => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -100 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={fadeLeftExtraLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -40,10 +38,7 @@ const HeroSection = () => {
           <div className="col-lg-1 col-md-1"></div>
 
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: -60 },
-              visible: { opacity: 1, y: 0 },
-            }}
+            variants={fadeDownVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.3 }}

@@ -2,6 +2,7 @@ import React from "react";
 
 // FramerMotion
 import { motion } from "framer-motion";
+import { scaleUpFadeUpVariants } from "../../../utils/animationVariants";
 
 const SingleTechnologySection = ({ techName, techLogo, featured, index }) => {
   const FeaturedTechClass = "col-lg-4 col-md-4 col-sm-4 col-4";
@@ -11,10 +12,7 @@ const SingleTechnologySection = ({ techName, techLogo, featured, index }) => {
   }`;
   return (
     <motion.div
-      variants={{
-        hidden: { scale: 0, y: 60 },
-        visible: { scale: 1, y: 0 },
-      }}
+      variants={scaleUpFadeUpVariants}
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5, delay: index * 0.1 }}

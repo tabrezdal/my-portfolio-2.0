@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeLeftLargeVariants, fadeRightLargeVariants } from "../../../utils/animationVariants";
 
 const overviewItem = (label, value) => (
   <div
@@ -34,10 +35,7 @@ const CaseStudyOverview = ({ project }) => {
         <div className="row align-items-start">
           {/* Left — problem statement */}
           <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -60 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={fadeLeftLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -71,10 +69,7 @@ const CaseStudyOverview = ({ project }) => {
 
           {/* Right — meta grid */}
           <motion.div
-            variants={{
-              hidden: { opacity: 0, x: 60 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={fadeRightLargeVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5, delay: 0.35 }}
