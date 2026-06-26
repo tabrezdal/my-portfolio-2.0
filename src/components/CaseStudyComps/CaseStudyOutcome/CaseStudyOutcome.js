@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeUpVariants, fadeLeftVariants, fadeRightVariants } from "../../../utils/animationVariants";
+import { fadeUpVariants, fadeLeftVariants, fadeRightVariants, fadeInVariants } from "../../../utils/animationVariants";
 
 const styles = {
   root: {
