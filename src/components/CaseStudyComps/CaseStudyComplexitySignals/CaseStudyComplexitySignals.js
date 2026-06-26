@@ -43,10 +43,7 @@ const CaseStudyComplexitySignals = ({ project }) => {
             <motion.div
               key={i}
               className="ccmp-card"
-              variants={{
-                hidden:  { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0  },
-              }}
+              variants={{ hidden:  { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0  } }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -72,7 +69,7 @@ const CaseStudyComplexitySignals = ({ project }) => {
         {complexityCallout && (
           <motion.div
             className="ccmp-callout"
-            variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0 } }}
+            variants={fadeUpVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

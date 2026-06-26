@@ -188,7 +188,7 @@ const CaseStudyOutcome = ({ project }) => {
               <motion.div
                 key={i}
                 style={styles.metricCell}
-                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                variants={fadeInVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -241,7 +241,7 @@ const CaseStudyOutcome = ({ project }) => {
                 marginTop: 64,
                 marginBottom: 8,
               }}
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+              variants={fadeInVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

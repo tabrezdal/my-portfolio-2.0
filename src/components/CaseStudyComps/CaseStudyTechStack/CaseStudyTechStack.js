@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { fadeUpVariants, fadeLeftVariants, fadeRightVariants, fadeInVariants } from "../../../utils/animationVariants";
+import { scaleUp08Variants, fadeUpVariants, fadeLeftVariants, fadeRightVariants, fadeInVariants } from "../../../utils/animationVariants";
 import "./CaseStudyTechStack.css";
 
 /* ─────────────────────────────────────────
@@ -30,7 +30,7 @@ const TechStackPills = ({ groups, title, subtitle }) => {
               {group.items.map((item, ii) => (
                 <motion.div
                   key={ii}
-                  variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
+                  variants={scaleUp08Variants}
                   initial="hidden"
                   whileInView="visible"
                   transition={{ duration: 0.35, delay: ii * 0.06 }}
@@ -216,7 +216,7 @@ const CodeSnippetViewer = ({ snippets, title, subtitle }) => {
         </motion.div>
 
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
@@ -327,7 +327,7 @@ const PerformanceMetrics = ({ bars, stats, title, subtitle }) => {
               {stats.map((stat, i) => (
                 <motion.div
                   key={i}
-                  variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
+                  variants={fadeUpVariants}
                   initial="hidden"
                   whileInView="visible"
                   transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -366,7 +366,7 @@ const ProjectTimeline = ({ items, title, subtitle }) => {
             style={{ marginBottom: 40 }}
           >
             <motion.div
-              variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}
+              variants={fadeLeftVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
