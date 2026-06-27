@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
 
@@ -29,10 +30,7 @@ const CaseStudyPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (project) {
-      document.title = `${project.title} — Case Study | Tabrez Dal`;
-    }
-  }, [slug, project]);
+  }, [slug]);
 
   if (!project) {
     navigate("/");
@@ -48,6 +46,18 @@ const CaseStudyPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{project.title} — Case Study | Tabrez Dal</title>
+        <meta name="description" content={project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`} />
+        <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
+        <meta property="og:description" content={project.shortDescription || `Case study: ${project.title}`} />
+        <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
+        <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
+        <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
+      </Helmet>
       <Header />
 
       {/* 1. Hero — cinematic dark opener with metrics strip */}

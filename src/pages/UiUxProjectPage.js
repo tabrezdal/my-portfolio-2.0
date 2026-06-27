@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import FigmaFrame from "../layouts/FigmaFrame/FigmaFrame";
@@ -45,12 +46,23 @@ const UiUxProjectPage = () => {
 
   // console.log("+++++", pageContentProps?.FigmaDesignLink);
   useEffect(() => {
-    document.title = "Ui/Ux Project | Tabrez Dal";
     window.scrollTo(0, 0);
   }, [id]);
 
   return (
     <div style={{ color: "#777777" }}>
+      <Helmet>
+        <title>UI/UX Projects | Tabrez Dal</title>
+        <meta name="description" content="UI/UX design projects by Tabrez Dal — product design, design systems, user research, and end-to-end product experiences." />
+        <meta property="og:title" content="UI/UX Projects | Tabrez Dal" />
+        <meta property="og:description" content="UI/UX design projects — product design, design systems, and user research." />
+        <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
+        <meta property="og:url" content="https://tabrezdal.com/ui-ux-projects" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="UI/UX Projects | Tabrez Dal" />
+        <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
+      </Helmet>
       <Header />
       <Breadcrumb
         parentpageName="Home"
