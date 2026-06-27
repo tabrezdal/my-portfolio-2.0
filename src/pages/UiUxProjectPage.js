@@ -64,45 +64,47 @@ const UiUxProjectPage = () => {
         <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
       </Helmet>
       <Header />
-      <Breadcrumb
-        parentpageName="Home"
-        currentPageName="Ui/Ux Projects"
-        breadcrumbProps={breadcrumbProps}
-      />
-      <section className="services-area section-gap" id="FigmaPage">
-        <div>
-          <div className="row d-flex">
-            <div className="menu-content col-lg-12">
-              <div className="title">
-                <h1 className="mb-4">{pageContentProps?.pageName}</h1>
+      <main id="main-content">
+        <Breadcrumb
+          parentpageName="Home"
+          currentPageName="Ui/Ux Projects"
+          breadcrumbProps={breadcrumbProps}
+        />
+        <section className="services-area section-gap" id="FigmaPage">
+          <div>
+            <div className="row d-flex">
+              <div className="menu-content col-lg-12">
+                <div className="title">
+                  <h2 className="mb-4">{pageContentProps?.pageName}</h2>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-12 px-0">
-                <FigmaFrame url={pageContentProps?.FigmaDesignEmmbedLink} />
+              <div className="row">
+                <div className="col-sm-12 px-0">
+                  <FigmaFrame url={pageContentProps?.FigmaDesignEmmbedLink} />
+                </div>
               </div>
-            </div>
-            <div className="row py-4">
-              <div className="col-sm-12 col-md-9 description-section">
-                <UiUxDescription pageContentProps={pageContentProps} />
-              </div>
-              <div className="col-sm-12 col-md-3 details-section">
-                {pageContentProps?.buttonsGroup && (
-                  <ButtonsGroup pageContentProps={pageContentProps} />
-                )}
-                {pageContentProps?.socialShareUrl && (
-                  <ShareSocialButtonsGroup
-                    url={pageContentProps?.socialShareUrl}
-                  />
-                )}
-                {pageContentProps?.tags && (
-                  <TagBadges pageContentProps={pageContentProps} />
-                )}
+              <div className="row py-4">
+                <div className="col-sm-12 col-md-9 description-section">
+                  <UiUxDescription pageContentProps={pageContentProps} />
+                </div>
+                <div className="col-sm-12 col-md-3 details-section">
+                  {pageContentProps?.buttonsGroup && (
+                    <ButtonsGroup pageContentProps={pageContentProps} />
+                  )}
+                  {pageContentProps?.socialShareUrl && (
+                    <ShareSocialButtonsGroup
+                      url={pageContentProps?.socialShareUrl}
+                    />
+                  )}
+                  {pageContentProps?.tags && (
+                    <TagBadges pageContentProps={pageContentProps} />
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </div>
   );

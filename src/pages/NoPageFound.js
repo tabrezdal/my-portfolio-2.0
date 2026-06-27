@@ -26,7 +26,9 @@ const NoPageFound = () => {
         <meta name="robots" content="noindex" />
       </Helmet>
       <Header />
-      <Lottie style={{ height: 800, width: 800 }} animationData={PageNotFoundAnimation} />
+      <main id="main-content">
+        <Lottie style={{ height: 800, width: 800 }} animationData={PageNotFoundAnimation} />
+      </main>
       <Footer />
     </>
   );

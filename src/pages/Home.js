@@ -34,15 +34,17 @@ const Home = () => {
         <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
       </Helmet>
       <Header />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ToolsSection />
-      <TechnologiesSection />
-      <CtaSection />
-      <FeaturedProjectsSection />
-      <ProjectsSection />
-      <TestimonialSlider />
+      <main id="main-content">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ToolsSection />
+        <TechnologiesSection />
+        <CtaSection />
+        <FeaturedProjectsSection />
+        <ProjectsSection />
+        <TestimonialSlider />
+      </main>
       <Footer />
     </div>
   );

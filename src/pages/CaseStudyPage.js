@@ -59,50 +59,50 @@ const CaseStudyPage = () => {
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
       </Helmet>
       <Header />
+      <main id="main-content">
+        {/* 1. Hero — cinematic dark opener with metrics strip */}
+        <CaseStudyHero project={project} />
 
-      {/* 1. Hero — cinematic dark opener with metrics strip */}
-      <CaseStudyHero project={project} />
+        {/* 2. Context — project brief, mandate, identity card (replaces Overview) */}
+        <CaseStudyContext project={project} />
 
-      {/* 2. Context — project brief, mandate, identity card (replaces Overview) */}
-      <CaseStudyContext project={project} />
+        {/* 3. Platform Scope — multi-surface/portal architecture [CONDITIONAL] */}
+        {hasMultipleSurfaces && (
+          <CaseStudyPlatformScope project={project} />
+        )}
 
-      {/* 3. Platform Scope — multi-surface/portal architecture [CONDITIONAL] */}
-      {hasMultipleSurfaces && (
-        <CaseStudyPlatformScope project={project} />
-      )}
+        {/* 4. Problem Frame — pain points, UX audit, solution bridge */}
+        <CaseStudyProblemFrame project={project} />
 
-      {/* 4. Problem Frame — pain points, UX audit, solution bridge */}
-      <CaseStudyProblemFrame project={project} />
+        {/* 5. Process — research → IA → design → testing */}
+        <CaseStudyProcess project={project} />
 
-      {/* 5. Process — research → IA → design → testing */}
-      <CaseStudyProcess project={project} />
+        {/* 6. Design Principles — strategic thinking display (dark) */}
+        <CaseStudyDesignPrinciples project={project} />
 
-      {/* 6. Design Principles — strategic thinking display (dark) */}
-      <CaseStudyDesignPrinciples project={project} />
+        {/* 7. Complexity Signals — what made this uniquely hard [CONDITIONAL] */}
+        {hasComplexitySignals && (
+          <CaseStudyComplexitySignals project={project} />
+        )}
 
-      {/* 7. Complexity Signals — what made this uniquely hard [CONDITIONAL] */}
-      {hasComplexitySignals && (
-        <CaseStudyComplexitySignals project={project} />
-      )}
+        {/* 8. Visual Showcase — before/after, screens, features, design system, mobile, flow */}
+        <CaseStudyVisualShowcase project={project} />
 
-      {/* 8. Visual Showcase — before/after, screens, features, design system, mobile, flow */}
-      <CaseStudyVisualShowcase project={project} />
+        {/* 9. Tech Stack — pills, role breakdown, code viewer, perf metrics, timeline */}
+        <CaseStudyTechStack project={project} />
 
-      {/* 9. Tech Stack — pills, role breakdown, code viewer, perf metrics, timeline */}
-      <CaseStudyTechStack project={project} />
+        {/* 10. Outcome — giant metrics, outcome quote, learnings */}
+        <CaseStudyOutcome project={project} />
 
-      {/* 10. Outcome — giant metrics, outcome quote, learnings */}
-      <CaseStudyOutcome project={project} />
+        {/* 11. CTA — Schedule a call / Send email */}
+        <CaseStudyCTA />
 
-      {/* 11. CTA — Schedule a call / Send email */}
-      <CaseStudyCTA />
+        {/* 12. Figma embed + image gallery */}
+        <CaseStudyGallery project={project} />
 
-      {/* 12. Figma embed + image gallery */}
-      <CaseStudyGallery project={project} />
-
-      {/* 13. Prev / Next project navigation */}
-      <CaseStudyNav project={project} />
-
+        {/* 13. Prev / Next project navigation */}
+        <CaseStudyNav project={project} />
+      </main>
       <Footer />
     </div>
   );
