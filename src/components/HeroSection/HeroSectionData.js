@@ -4,7 +4,7 @@ export const HeroSectionData = {
   introStatingLine: "This is me",
   name: "Tabrez Dal",
   introLine:
-    "Senior Software Engineer with 5+ years of experience building scalable frontend systems and delivering product-driven user experiences.",
+    "Product Engineer — Software & UX with 5+ years of experience building scalable frontend systems and delivering product-driven user experiences.",
   location: "Dubai, UAE | Available for Regional & Global Opportunities",
   buttonData: {
     name: "Download CV",
