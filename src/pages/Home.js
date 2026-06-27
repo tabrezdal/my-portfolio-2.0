@@ -11,6 +11,7 @@ import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import CtaSection from "../components/CtaSection/CtaSection";
 import TestimonialSlider from "../components/TestimonialSlider/TestimonialSlider";
 import FeaturedProjectsSection from "../components/FeaturedProjectsSection/FeaturedProjectsSection";
+import StructuredData from "../components/StructuredData/StructuredData";
 
 const Home = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <div>
+      <StructuredData />
       <Helmet>
         <title>Tabrez Dal — Product Engineer, Software & UX</title>
         <meta name="description" content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years building scalable frontend systems and product-driven experiences." />
