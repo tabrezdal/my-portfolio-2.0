@@ -18,6 +18,7 @@ import CaseStudyProblemFrame from "../components/CaseStudyComps/CaseStudyProblem
 import CaseStudyContext     from "../components/CaseStudyComps/CaseStudyContext/CaseStudyContext";
 import CaseStudyPlatformScope from "../components/CaseStudyComps/CaseStudyPlatformScope/CaseStudyPlatformScope";
 import CaseStudyComplexitySignals from "../components/CaseStudyComps/CaseStudyComplexitySignals/CaseStudyComplexitySignals";
+import CaseStudyCTA from "../components/CaseStudyComps/CaseStudyCTA/CaseStudyCTA";
 
 import FeaturedProjectsData from "../Data/FeaturedProjectsData";
 
@@ -83,10 +84,13 @@ const CaseStudyPage = () => {
       {/* 10. Outcome — giant metrics, outcome quote, learnings */}
       <CaseStudyOutcome project={project} />
 
-      {/* 11. Figma embed + image gallery */}
+      {/* 11. CTA — Schedule a call / Send email */}
+      <CaseStudyCTA />
+
+      {/* 12. Figma embed + image gallery */}
       <CaseStudyGallery project={project} />
 
-      {/* 12. Prev / Next project navigation */}
+      {/* 13. Prev / Next project navigation */}
       <CaseStudyNav project={project} />
 
       <Footer />
