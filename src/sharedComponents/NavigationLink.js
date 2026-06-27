@@ -6,6 +6,7 @@ const NavigationLink = ({ linkTo, name, handleClose }) => {
     <li className="navlink">
       <Link
         to={linkTo}
+        href={`#${linkTo}`}
         smooth={true}
         offset={-70}
         duration={1000}
