@@ -27,7 +27,7 @@ const SkillsSection = () => {
             {SkillSectionData.skillsCategories.skills.map((item) => (
               <div className="single-skill" key={item.skill}>
                 <p>{item.skill}</p>
-                <SimpleProgressbar endValue={item.percetage} />
+                <SimpleProgressbar endValue={item.percetage} label={item.skill} />
               </div>
             ))}
           </motion.div>
@@ -45,7 +45,7 @@ const SkillsSection = () => {
             {SkillSectionData.skillsCategories.tech.map((item) => (
               <div className="single-skill" key={item.skill}>
                 <p>{item.skill}</p>
-                <SimpleProgressbar endValue={item.percetage} />
+                <SimpleProgressbar endValue={item.percetage} label={item.skill} />
               </div>
             ))}
           </motion.div>
