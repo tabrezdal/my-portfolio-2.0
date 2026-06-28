@@ -20,9 +20,9 @@ const SkillsSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="col-lg-6 skill-left"
           >
-            <h4 className="pt-30 text-align: left">
+            <h3 className="pt-30 text-align: left">
               {SkillSectionData?.skillsCategories?.categoryTitle1}
-            </h4>
+            </h3>
 
             {SkillSectionData.skillsCategories.skills.map((item) => (
               <div className="single-skill" key={item.skill}>
@@ -38,9 +38,9 @@ const SkillsSection = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="col-lg-6 skill-right"
           >
-            <h4 className="pt-30 text-rigth">
+            <h3 className="pt-30 text-rigth">
               {SkillSectionData?.skillsCategories?.categoryTitle2}
-            </h4>
+            </h3>
 
             {SkillSectionData.skillsCategories.tech.map((item) => (
               <div className="single-skill" key={item.skill}>

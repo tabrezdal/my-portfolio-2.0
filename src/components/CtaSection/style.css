@@ -7,7 +7,7 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-.ftco-hireme h2 {
+.ftco-hireme span {
     color: var(--color-surface);
     font-size: 34px;
     font-weight: 600;

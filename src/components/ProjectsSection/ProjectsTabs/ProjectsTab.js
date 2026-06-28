@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./ProjectsTab.css";
 
 // FramerMotion
 import { motion } from "framer-motion";
@@ -67,7 +68,7 @@ const ProjectsTab = (props) => {
           </div>
           {onlyPics === false && (
             <div className="p-inner">
-              <h4>{item.title}</h4>
+              <div className="project-title">{item.title}</div>
               <div className="cat">{item.caption}</div>
             </div>
           )}

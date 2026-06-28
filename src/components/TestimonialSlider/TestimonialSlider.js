@@ -55,7 +55,7 @@ const TestimonialSlider = () => {
       <div className="row d-flex justify-content-center title">
         <div className="menu-content col-lg-12">
           <div className="title text-center">
-            <h1 className="mb-10">{ConstantHelper.TestimonialSectionTitle}</h1>
+            <h2 className="mb-10">{ConstantHelper.TestimonialSectionTitle}</h2>
           </div>
         </div>
       </div>

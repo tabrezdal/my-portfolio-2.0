@@ -24,7 +24,7 @@ const SingleTechnologySection = ({ techName, techLogo, featured, index }) => {
         </span>
 
         <a href="#">
-          <h4>{techName}</h4>
+          <p>{techName}</p>
         </a>
       </div>
     </motion.div>

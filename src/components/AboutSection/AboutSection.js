@@ -36,9 +36,9 @@ const AboutSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="col-lg-7 col-md-7 home-about-right"
           >
-            <h1 className="text-uppercase mb-2">
+            <h2 className="text-uppercase mb-2">
               {AboutSectionData?.sectionTitle}
-            </h1>
+            </h2>
             {AboutSectionData?.description?.map((item) => (
               <p className="text-justify" key={item.id}>
                 {item.desc}

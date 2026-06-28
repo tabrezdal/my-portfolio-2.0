@@ -21,7 +21,7 @@
 .testimonial-main .title {
     z-index: 9;
 }
-.testimonial-main .title h1 {
+.testimonial-main .title h2 {
     color: var(--color-surface);
     width: 100%;
     font-size: 30px;

@@ -19,7 +19,7 @@ const CtaSection = () => {
             className="col-md-8 col-lg-8 d-flex align-items-center"
           >
             <div className="w-100 py-4">
-              <h2>Let's take the next step towards excellence!</h2>
+              <span>Let's take the next step towards excellence!</span>
               <p>
                 I'm excited to explore new opportunities and collaborate on
                 innovative projects. Whether you're interested in working with
