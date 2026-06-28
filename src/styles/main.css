@@ -4,6 +4,26 @@ html {
 
 }
 
+/* 404 Page Animation */
+.not-found-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-8);
+  height: calc(100vh - 60px);
+}
+
+.not-found-svg {
+  width: 220px;
+  height: 220px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
 /* Page Scrollbar style starts */
 html ::-webkit-scrollbar-track {
 

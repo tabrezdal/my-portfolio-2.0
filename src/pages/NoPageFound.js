@@ -1,21 +1,10 @@
 import React, { useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 
-import Lottie from "lottie-react";
-import PageNotFoundAnimation from "../Assets/LottieFiles/404-animation.json";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 
 const NoPageFound = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -27,7 +16,42 @@ const NoPageFound = () => {
       </Helmet>
       <Header />
       <main id="main-content">
-        <Lottie style={{ height: 800, width: 800 }} animationData={PageNotFoundAnimation} />
+        <div className="not-found-animation">
+          <svg
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            className="not-found-svg"
+            aria-hidden="true"
+          >
+            {/* Outer circle */}
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#0378b8" strokeWidth="3" opacity="0.2" />
+            {/* Inner circle */}
+            <circle cx="100" cy="100" r="55" fill="none" stroke="#0378b8" strokeWidth="2" opacity="0.4" />
+            {/* 404 text */}
+            <text
+              x="100"
+              y="95"
+              textAnchor="middle"
+              fontSize="36"
+              fontWeight="700"
+              fill="#0378b8"
+              fontFamily="sans-serif"
+            >
+              404
+            </text>
+            <text
+              x="100"
+              y="120"
+              textAnchor="middle"
+              fontSize="11"
+              fill="#888888"
+              fontFamily="sans-serif"
+              letterSpacing="2"
+            >
+              PAGE NOT FOUND
+            </text>
+          </svg>
+        </div>
       </main>
       <Footer />
     </>
