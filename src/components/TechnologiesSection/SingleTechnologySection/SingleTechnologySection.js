@@ -23,7 +23,7 @@ const SingleTechnologySection = ({ techName, techLogo, featured, index }) => {
           <img draggable="false" src={techLogo} alt={techName} width={50} height={50} loading="lazy" />
         </span>
 
-        <p>{techName}</p>
+        <p style={{ fontSize: "var(--text-3xl)" }}>{techName}</p>
       </div>
     </motion.div>
   );
