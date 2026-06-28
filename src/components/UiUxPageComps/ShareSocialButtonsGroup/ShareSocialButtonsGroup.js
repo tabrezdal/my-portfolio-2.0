@@ -11,7 +11,7 @@ const ShareSocialButtonsGroup = ({ url }) => {
 
   return (
     <div className="mb-4">
-      <h6 className="mb-2">Share with</h6>
+      <p className="mb-2" className="side-section-titles">Share with</p>
       <div className="d-flex gap-2 flex-wrap">
         <ShareSocialButton
           url={pinterestLink}

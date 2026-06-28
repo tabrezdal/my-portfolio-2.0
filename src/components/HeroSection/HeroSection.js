@@ -21,7 +21,7 @@ const HeroSection = () => {
           >
             <br />
             <br />
-            <h6>{HeroSectionData?.introStatingLine}</h6>
+            <p className="eyebrow-text">{HeroSectionData?.introStatingLine}</p>
             <h1>{HeroSectionData?.name}</h1>
             <p className="text-justify intro-line">
               {HeroSectionData?.introLine}

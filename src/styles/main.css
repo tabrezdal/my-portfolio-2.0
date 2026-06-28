@@ -835,11 +835,12 @@ h6 {
   padding: 80px 0px 40px;
 
 }
-.banner-left h6 {
+.banner-left .eyebrow-text {
 
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
+  color: var(--color-text-primary);
 
 }
 .banner-left h1 {
@@ -1760,4 +1761,15 @@ h6 {
     width: 100%;
     justify-content: center;
   }
+}
+
+
+.side-section-titles {
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-weight: var(--font-semibold);
+  line-height: 1.2em;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: var(--text-lg);
 }
