@@ -60,6 +60,7 @@ const HeroSection = () => {
               src={HeroSectionData?.heroImage}
               alt="Hero"
               loading="eager"
+              fetchPriority="high"
               width={400}
               height={500}
             />

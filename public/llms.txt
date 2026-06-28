@@ -1,0 +1,33 @@
+# Tabrez Dal — Product Designer & Frontend Engineer
+
+Senior Product Designer and Frontend Engineer based in Dubai with 5+ years of experience building SaaS platforms, enterprise dashboards, and mobile apps for clients in UAE, India, USA, Canada, and UK.
+
+## About
+
+Product Engineer who designs and builds end-to-end digital products. Sole designer and primary frontend engineer on multiple shipped production platforms across hospitality SaaS, healthcare enterprise, HR tech, food delivery, EdTech, and motorsports.
+
+## Case Studies
+
+- [MyCricle — White-Label Hospitality SaaS](https://tabrezdal.com/case-study/mycricle)
+- [JobzShala — 6-Portal HR Tech Platform](https://tabrezdal.com/case-study/jobzshala)
+- [EatExpress — UAE Food Delivery App](https://tabrezdal.com/case-study/eatexpress)
+- [IEHP Care Manager Dashboard](https://tabrezdal.com/case-study/iehp-cmm)
+- [IEHP Healthcare Scholarship Fund](https://tabrezdal.com/case-study/iehp-hsf)
+- [MyHabit — Habit Tracking App](https://tabrezdal.com/case-study/myhabit)
+- [MenuOnline — Restaurant SaaS](https://tabrezdal.com/case-study/menuonline)
+- [EdXplore Admin Panel](https://tabrezdal.com/case-study/edxplore)
+- [MECO Motorsports](https://tabrezdal.com/case-study/meco-motorsports)
+- [Hotel & Resort Management](https://tabrezdal.com/case-study/hotel-resort-management)
+- [ASIN Vault Chrome Extension](https://tabrezdal.com/case-study/asin-vault)
+- [Mobiotics OTT Website](https://tabrezdal.com/case-study/mobiotics)
+
+## Skills
+
+Design: Figma, Design Systems, Token Architecture, Prototyping, WCAG Accessibility
+Engineering: React 18, TypeScript, Angular, MUI, GraphQL, AG Grid, Firebase
+
+## Contact
+
+- Portfolio: https://tabrezdal.com/
+- LinkedIn: https://www.linkedin.com/in/tabrezdal/
+- Email: tabrez.dal@gmail.com
