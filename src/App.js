@@ -5,6 +5,7 @@ import "./styles/linearicons.css";
 import "./styles/main.css";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 const Home = lazy(() => import("./pages/Home"));
 const NoPageFound = lazy(() => import("./pages/NoPageFound"));
@@ -38,19 +39,21 @@ const PageLoader = () => (
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" exact element={<Home />}></Route>
-          <Route path="home" exact element={<Home />}></Route>
-          <Route
-            path="ui-ux-project/:id"
-            exact
-            element={<UiUxProjectPage />}
-          ></Route>
-          <Route path="case-study/:slug" exact element={<CaseStudyPage />}></Route>
-          <Route path="*" exact element={<NoPageFound />}></Route>
-        </Routes>
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" exact element={<Home />}></Route>
+            <Route path="home" exact element={<Home />}></Route>
+            <Route
+              path="ui-ux-project/:id"
+              exact
+              element={<UiUxProjectPage />}
+            ></Route>
+            <Route path="case-study/:slug" exact element={<CaseStudyPage />}></Route>
+            <Route path="*" exact element={<NoPageFound />}></Route>
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
