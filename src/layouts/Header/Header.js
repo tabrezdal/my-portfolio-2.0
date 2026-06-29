@@ -26,32 +26,19 @@ const Header = () => {
   const location = useLocation();
 
   const NavigationView = () => {
-    if (location.pathname === "/") {
-      return (
-        <nav id="nav-menu-container">
-          <ul className="nav-menu">
-            {NavLinkData?.map((item) => (
-              <NavigationLink
-                key={item.id}
-                linkTo={item.linkTo}
-                name={item.name}
-              />
-            ))}
-          </ul>
-        </nav>
-      );
-    } else {
-      return (
-        <nav id="nav-menu-container">
-          <ul className="nav-menu align-items-centre back-button">
-            <Link to="/">
-              <i className="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;
-              {SectionTitleHelper.backButton}
-            </Link>
-          </ul>
-        </nav>
-      );
-    }
+    return (
+      <nav id="nav-menu-container">
+        <ul className="nav-menu">
+          {NavLinkData?.map((item) => (
+            <NavigationLink
+              key={item.id}
+              linkTo={item.linkTo}
+              name={item.name}
+            />
+          ))}
+        </ul>
+      </nav>
+    );
   };
 
   useEffect(() => {
