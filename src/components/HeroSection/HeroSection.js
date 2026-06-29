@@ -58,7 +58,7 @@ const HeroSection = () => {
               draggable="false"
               className="img-fluid"
               src={HeroSectionData?.heroImage}
-              alt="Hero"
+              alt="Tabrez Dal — Product Engineer"
               loading="eager"
               fetchPriority="high"
               width={400}
