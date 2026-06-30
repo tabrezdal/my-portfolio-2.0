@@ -26,7 +26,10 @@ export const ExperienceData = [
       "Designed system used by 10,000+ users across enterprise healthcare platform",
     ],
     skills: ["Angular", "TypeScript", "Figma", "Design Systems", "WCAG"],
-    thumbnails: [denim1, denim2],
+    thumbnails: [
+      { src: denim1, featured: true },
+      { src: denim2, featured: false },
+    ],
   },
   {
     id: 2,
@@ -44,7 +47,10 @@ export const ExperienceData = [
       "Independently managed design and development driving customer acquisition by 35%",
     ],
     skills: ["React", "Next.js", "Figma", "UX Research", "Chrome Extension"],
-    thumbnails: [designer1, designer2],
+    thumbnails: [
+      { src: designer1, featured: true },
+      { src: designer2, featured: false },
+    ],
   },
   {
     id: 3,
@@ -62,7 +68,10 @@ export const ExperienceData = [
       "Conducted 15+ user research and usability tests enabling data-driven decisions",
     ],
     skills: ["React.js", "Figma", "UX Research", "Responsive Design"],
-    thumbnails: [smp1, smp2],
+    thumbnails: [
+      { src: smp1, featured: true },
+      { src: smp2, featured: false },
+    ],
   },
   {
     id: 4,
@@ -80,7 +89,10 @@ export const ExperienceData = [
       "Trained 3 junior developers reducing project timelines by 25%",
     ],
     skills: ["React.js", "TypeScript", "Redux", "GraphQL"],
-    thumbnails: [smp3, smp4],
+    thumbnails: [
+      { src: smp3, featured: true },
+      { src: smp4, featured: false },
+    ],
   },
   {
     id: 5,
@@ -98,7 +110,10 @@ export const ExperienceData = [
       "Designed marketing creatives, UI layouts, and branding systems",
     ],
     skills: ["Adobe Photoshop", "Illustrator", "Web Design", "Branding"],
-    thumbnails: [smp5, smp6],
+    thumbnails: [
+      { src: smp5, featured: true },
+      { src: smp6, featured: false },
+    ],
   },
 ];
 
