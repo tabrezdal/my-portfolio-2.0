@@ -1,303 +1,201 @@
-.experience-section {
-  padding: var(--space-20) 0;
-  background: var(--color-surface);
-}
-
-.experience-section__header {
-  margin-bottom: var(--space-12);
-  max-width: 580px;
-}
-
-.experience-section__title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  margin: var(--space-2) 0 var(--space-3);
-}
-
-.experience-section__subtitle {
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-}
-
-/* Layout grid */
-.exp-layout {
-  display: grid;
-  grid-template-columns: 24px 1fr 1fr;
-  gap: var(--space-8);
-  position: relative;
-}
-
-/* Progress rail */
-.exp-progress-rail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-6);
-  padding-top: var(--space-4);
-}
-
-.exp-progress-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background: var(--color-border);
-  transition: background var(--transition-base), transform var(--transition-base);
-  flex-shrink: 0;
-}
-
-.exp-progress-dot--active {
-  background: var(--color-brand);
-  transform: scale(1.3);
-}
-
-/* Sticky column */
-.exp-sticky-col {
-  position: relative;
-}
-
-.exp-sticky-panel {
-  position: sticky;
-  top: 100px;
-  border-radius: var(--radius-2xl);
-  overflow: hidden;
-  background: var(--exp-accent, var(--color-brand));
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background var(--transition-slow);
-}
-
-.exp-sticky-panel__inner {
-  position: relative;
+/* ─── Section ──────────────────────────────────────────────────────────── */
+.exp-section {
+  background: #0d0d0d;
+  padding: var(--space-20) 0 var(--space-16);
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-10);
 }
 
-/* Thumbnail stack */
-.exp-sticky-panel__thumbs {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  margin-bottom: var(--space-8);
+.exp-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
 }
 
-.exp-thumb-stack {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.exp-thumb-stack__item {
-  position: absolute;
-  width: 200px;
-  height: 140px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  border: 4px solid rgba(255, 255, 255, 0.15);
-  top: 50%;
-  left: calc(50% - 100px + (var(--thumb-index) - (var(--thumb-total) - 1) / 2) * 70px);
-  transform: translateY(-50%) rotate(calc((var(--thumb-index) - (var(--thumb-total) - 1) / 2) * 6deg));
-}
-
-.exp-thumb-stack__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Company mark */
-.exp-sticky-panel__mark {
-  text-align: center;
-}
-
-.exp-sticky-panel__initial {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-  color: var(--color-text-inverse);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  margin: 0 auto var(--space-3);
-}
-
-.exp-sticky-panel__company-name {
-  font-size: var(--text-md);
-  font-weight: var(--font-semibold);
-  color: var(--color-text-inverse);
-}
-
-/* Content column */
-.exp-content-col {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-16);
-  padding-top: var(--space-4);
-}
-
-.exp-role-block {
-  display: flex;
-  gap: var(--space-4);
-  min-height: 280px;
-}
-
-.exp-role-block__index {
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  color: var(--color-border-strong);
-  flex-shrink: 0;
-  padding-top: 2px;
-  font-variant-numeric: tabular-nums;
-}
-
-.exp-role-block__content {
-  flex: 1;
-}
-
-.exp-role-block__role {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-1);
-  line-height: var(--leading-tight);
-}
-
-.exp-role-block__company {
-  font-size: var(--text-base);
-  font-weight: var(--font-medium);
-  color: var(--color-brand);
-  margin-bottom: var(--space-3);
-}
-
-.exp-role-block__client {
-  color: var(--color-text-secondary);
-  font-weight: var(--font-regular);
-}
-
-.exp-role-block__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-5);
-}
-
-.exp-role-block__dot {
-  color: var(--color-border-strong);
-}
-
-.exp-role-block__type {
-  font-size: var(--text-xs);
-  padding: 2px var(--space-2);
-  background: var(--color-surface-alt);
-  border-radius: var(--radius-sm);
-}
-
-.exp-role-block__highlights {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-5);
-}
-
-.exp-role-block__highlights li {
-  position: relative;
-  padding-left: var(--space-5);
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-3);
-}
-
-.exp-role-block__highlights li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 5px;
-  height: 5px;
-  border-radius: var(--radius-full);
-  background: var(--color-brand);
-}
-
-.exp-role-block__skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.exp-role-block__skill-tag {
-  font-size: var(--text-xs);
-  padding: 5px 12px;
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  color: var(--color-text-secondary);
-}
-
-/* Education variant */
-.exp-role-block--education {
-  min-height: auto;
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--color-border);
-}
-
-.exp-role-block__edu-label {
-  font-size: 10px;
-  font-weight: var(--font-semibold);
-  letter-spacing: 0.1em;
-  color: var(--color-brand);
+/* ─── Heading ──────────────────────────────────────────────────────────── */
+.exp-section__eyebrow {
+  color: #555 !important;
   margin-bottom: var(--space-2);
 }
 
-/* Mobile — collapse to single column, no sticky panel */
-@media (max-width: 900px) {
-  .exp-layout {
-    grid-template-columns: 1fr;
-  }
+.exp-section__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: #ffffff;
+  margin: 0 0 var(--space-12);
+}
 
-  .exp-progress-rail {
-    flex-direction: row;
-    padding-top: 0;
-    margin-bottom: var(--space-6);
-    justify-content: center;
-  }
+/* ─── Photo strip ──────────────────────────────────────────────────────── */
+.exp-photo-strip {
+  width: 100%;
+  margin-bottom: var(--space-14);
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .exp-sticky-col {
-    display: none;
-  }
+.exp-photo-strip__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-4);
+}
 
-  .exp-content-col {
-    gap: var(--space-10);
-  }
+.exp-photo-frame {
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65);
+}
 
-  .exp-role-block {
+.exp-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Role list ────────────────────────────────────────────────────────── */
+.exp-list {
+  width: 100%;
+  border-top: 1px solid #222;
+}
+
+.exp-list__row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid #222;
+  cursor: default;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+  outline: none;
+}
+
+.exp-list__row:hover,
+.exp-list__row:focus,
+.exp-list__row--active {
+  opacity: 1;
+}
+
+.exp-list__row--edu {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.exp-list__row--edu:hover,
+.exp-list__row--edu:focus {
+  opacity: 0.5;
+}
+
+/* Date */
+.exp-list__period {
+  font-size: var(--text-sm);
+  color: #666;
+  padding-top: 3px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.exp-list__row--active .exp-list__period,
+.exp-list__row:hover .exp-list__period {
+  color: #999;
+}
+
+/* Role content */
+.exp-list__right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp-list__role {
+  font-size: var(--text-lg);
+  color: #aaaaaa;
+  margin: 0;
+  line-height: var(--leading-snug);
+  transition: color 0.2s ease;
+}
+
+.exp-list__row--active .exp-list__role,
+.exp-list__row:hover .exp-list__role {
+  color: #ffffff;
+}
+
+.exp-list__role strong {
+  font-weight: var(--font-semibold);
+}
+
+.exp-list__at {
+  font-weight: var(--font-regular);
+  color: #444;
+  font-size: var(--text-base);
+}
+
+.exp-list__company {
+  font-weight: var(--font-regular);
+  font-size: var(--text-base);
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.exp-list__row--active .exp-list__company,
+.exp-list__row:hover .exp-list__company {
+  color: #0378b8;
+}
+
+.exp-list__tags {
+  font-size: var(--text-sm);
+  color: #0378b8;
+  opacity: 0.65;
+  margin: 0;
+  transition: opacity 0.2s ease;
+}
+
+.exp-list__row--active .exp-list__tags,
+.exp-list__row:hover .exp-list__tags {
+  opacity: 1;
+}
+
+/* ─── Mobile ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .exp-photo-strip {
     min-height: auto;
+    margin-bottom: var(--space-10);
+    overflow: hidden;
   }
 
-  .exp-role-block__role {
-    font-size: var(--text-lg);
+  .exp-photo-strip__inner {
+    gap: var(--space-2);
+    transform: scale(0.65);
+    transform-origin: center center;
+  }
+
+  .exp-list__row {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .exp-list__role {
+    font-size: var(--text-base);
+  }
+
+  .exp-list__period {
+    font-size: var(--text-xs);
   }
 }
 
-/* Respect reduced motion */
+/* ─── Reduced motion ───────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .exp-thumb-stack__item {
-    transform: none !important;
+  .exp-list__row,
+  .exp-photo-frame,
+  .exp-list__role,
+  .exp-list__company,
+  .exp-list__tags,
+  .exp-list__period {
+    transition: none;
   }
 }
