@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeUpVariants } from '../../utils/animationVariants';
 import { ExperienceData } from '../../Data/ExperienceData';
@@ -6,6 +6,30 @@ import './ExperienceSection.css';
 
 const ExperienceSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [photoPosition, setPhotoPosition] = useState('above');
+  const rowRefs = useRef([]);
+
+  const toggleAccordion = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  const handleMouseEnter = (i) => {
+    setActiveIndex(i);
+
+    const rowEl = rowRefs.current[i];
+    if (rowEl) {
+      const rect = rowEl.getBoundingClientRect();
+      const spaceAbove = rect.top;
+
+      // If less than 220px above, show below
+      if (spaceAbove < 220) {
+        setPhotoPosition('below');
+      } else {
+        setPhotoPosition('above');
+      }
+    }
+  };
 
   return (
     <section className="exp-section" id="experience">
@@ -34,47 +58,87 @@ const ExperienceSection = () => {
             const rowPhotos = exp.thumbnails.map(t => t.src);
 
             return (
-              <div
-                key={exp.id}
-                className={`exp-list__row ${isActive ? 'exp-list__row--active' : ''}`}
-                onMouseEnter={() => setActiveIndex(i)}
-                role="listitem"
-                tabIndex={0}
-                onFocus={() => setActiveIndex(i)}
-              >
-                {/* Floating photos — position absolute above this row */}
+              <React.Fragment key={exp.id}>
+                <div
+                  ref={el => rowRefs.current[i] = el}
+                  className={`exp-list__row ${isActive ? 'exp-list__row--active' : ''} ${expandedIndex === i ? 'exp-list__row--expanded' : ''}`}
+                  onMouseEnter={() => handleMouseEnter(i)}
+                  role="listitem"
+                  tabIndex={0}
+                  onFocus={() => handleMouseEnter(i)}
+                >
+                  {/* Floating photos — position absolute above this row */}
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.div
+                        className="exp-row-photos"
+                        data-photo-pos={photoPosition}
+                        initial={{ opacity: 0, y: photoPosition === 'above' ? 12 : -12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: photoPosition === 'above' ? 8 : -8 }}
+                        transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        {rowPhotos.map((src, pi) => (
+                          <div
+                            key={pi}
+                            className="exp-row-photo"
+                            style={{ '--pi': pi, '--ptotal': rowPhotos.length }}
+                          >
+                            <img src={src} alt="" loading="lazy" width={160} height={110} />
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  {/* 1 — Role content (left, takes remaining space) */}
+                  <div className="exp-list__right">
+                    <p className="exp-list__role">
+                      <strong>{exp.role}</strong>
+                      <span className="exp-list__at"> at </span>
+                      <span className="exp-list__company">{exp.company}</span>
+                    </p>
+                    <p className="exp-list__tags">{exp.skills.join(' | ')}</p>
+                  </div>
+
+                  {/* 2 — Date (second from right) */}
+                  <span className="exp-list__period">{exp.period}</span>
+
+                  {/* 3 — Toggle button (far right) */}
+                  <button
+                    className={`exp-toggle-btn ${expandedIndex === i ? 'exp-toggle-btn--open' : ''}`}
+                    onClick={(e) => { e.stopPropagation(); toggleAccordion(i); }}
+                    aria-expanded={expandedIndex === i}
+                    aria-label={`${expandedIndex === i ? 'Collapse' : 'Expand'} ${exp.role} details`}
+                  >
+                    <span className="exp-toggle-btn__icon">{expandedIndex === i ? '−' : '+'}</span>
+                  </button>
+                </div>
+
+                {/* Accordion — directly attached below, no separator */}
                 <AnimatePresence>
-                  {isActive && (
+                  {expandedIndex === i && (
                     <motion.div
-                      className="exp-row-photos"
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
-                      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                      className="exp-accordion"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      {rowPhotos.map((src, pi) => (
-                        <div
-                          key={pi}
-                          className="exp-row-photo"
-                          style={{ '--pi': pi, '--ptotal': rowPhotos.length }}
-                        >
-                          <img src={src} alt="" loading="lazy" width={160} height={110} />
-                        </div>
-                      ))}
+                      <div className="exp-accordion__inner">
+                        <ul className="exp-accordion__bullets">
+                          {exp.highlights.map((point, pi) => (
+                            <li key={pi} className="exp-accordion__bullet">
+                              <span className="exp-accordion__bullet-icon">→</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
-
-                <span className="exp-list__period">{exp.period}</span>
-                <div className="exp-list__right">
-                  <p className="exp-list__role">
-                    <strong>{exp.role}</strong>
-                    <span className="exp-list__at"> at </span>
-                    <span className="exp-list__company">{exp.company}</span>
-                  </p>
-                  <p className="exp-list__tags">{exp.skills.join(' | ')}</p>
-                </div>
-              </div>
+              </React.Fragment>
             );
           })}
         </div>

@@ -32,18 +32,21 @@
 
 .exp-list__row {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: var(--space-8);
-  align-items: start;
-  padding: var(--space-6) 0;
-  border-bottom: 1px solid #2a2a2a;
+  grid-template-columns: 1fr 160px 44px;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid #222;
   cursor: default;
   position: relative;
-  transition: padding-left 0.2s ease;
 }
 
 .exp-list__row--active {
   padding-left: var(--space-3);
+}
+
+.exp-list__row--expanded {
+  border-bottom: none;
 }
 
 /* ─── Floating photos ───────────────────────────────────────────────────── */
@@ -57,6 +60,15 @@
   padding-bottom: var(--space-3);
   z-index: 10;
   pointer-events: none;
+}
+
+/* Flipped — photos below the row when not enough space above */
+.exp-row-photos[data-photo-pos="below"] {
+  bottom: auto;
+  top: 100%;
+  padding-bottom: 0;
+  padding-top: var(--space-3);
+  align-items: flex-start;
 }
 
 .exp-row-photo {
@@ -77,15 +89,12 @@
 
 /* ─── Date ──────────────────────────────────────────────────────────────── */
 .exp-list__period {
-  font-size: var(--text-base);
-  color: #666;
-  padding-top: 4px;
+  font-size: var(--text-sm);
+  color: #444;
+  text-align: right;
   white-space: nowrap;
-  transition: color 0.2s ease;
-}
-
-.exp-list__row--active .exp-list__period {
-  color: #999;
+  transition: color 0.25s ease;
+  padding-top: 2px;
 }
 
 /* ─── Role content ──────────────────────────────────────────────────────── */
@@ -96,49 +105,138 @@
 }
 
 .exp-list__role {
-  font-size: var(--text-xl);
-  color: #aaaaaa;
+  font-size: var(--text-lg);
+  color: #666;
   margin: 0;
   line-height: var(--leading-snug);
-  transition: color 0.2s ease, font-size 0.2s ease;
-}
-
-.exp-list__row--active .exp-list__role {
-  color: #ffffff;
-  font-size: var(--text-2xl);
+  transition: color 0.25s ease, font-size 0.25s ease;
 }
 
 .exp-list__role strong {
   font-weight: var(--font-semibold);
+  color: #888;
+  transition: color 0.25s ease;
 }
 
 .exp-list__at {
   font-weight: var(--font-regular);
-  color: #555;
-  font-size: 0.9em;
+  color: #444;
+  font-size: 0.85em;
 }
 
 .exp-list__company {
   font-weight: var(--font-regular);
-  font-size: 0.9em;
-  color: #888;
-  transition: color 0.2s ease;
+  font-size: 0.85em;
+  color: #555;
+  transition: color 0.25s ease;
 }
 
+.exp-list__tags {
+  font-size: var(--text-sm);
+  color: #0378b8;
+  opacity: 0.5;
+  margin: var(--space-1) 0 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover / active state — everything brightens and grows */
+.exp-list__row:hover .exp-list__role,
+.exp-list__row--active .exp-list__role {
+  font-size: var(--text-xl);
+  color: #dddddd;
+}
+
+.exp-list__row:hover .exp-list__role strong,
+.exp-list__row--active .exp-list__role strong {
+  color: #ffffff;
+}
+
+.exp-list__row:hover .exp-list__company,
 .exp-list__row--active .exp-list__company {
   color: #0378b8;
 }
 
-.exp-list__tags {
-  font-size: var(--text-base);
-  color: #0378b8;
-  opacity: 0.6;
-  margin: 0;
-  transition: opacity 0.2s ease;
-}
-
+.exp-list__row:hover .exp-list__tags,
 .exp-list__row--active .exp-list__tags {
   opacity: 1;
+}
+
+.exp-list__row:hover .exp-list__period,
+.exp-list__row--active .exp-list__period {
+  color: #888;
+}
+
+/* ─── Toggle button ─────────────────────────────────────────────────────── */
+.exp-toggle-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1px solid #333;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  outline: none;
+}
+
+.exp-toggle-btn:hover,
+.exp-toggle-btn--open {
+  border-color: #0378b8;
+  color: #0378b8;
+  background: rgba(3, 120, 184, 0.08);
+}
+
+.exp-toggle-btn__icon {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* ─── Accordion ─────────────────────────────────────────────────────────── */
+.exp-accordion {
+  overflow: hidden;
+  border-bottom: 1px solid #222;
+  background: #141414;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.exp-accordion__inner {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+}
+
+.exp-accordion__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.exp-accordion__bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: #888;
+  line-height: var(--leading-relaxed);
+}
+
+.exp-accordion__bullet-icon {
+  flex-shrink: 0;
+  color: #0378b8;
+  font-size: var(--text-base);
+  margin-top: 1px;
+  opacity: 0.7;
+}
+
+.exp-accordion__bullet:hover {
+  color: #bbbbbb;
 }
 
 /* ─── Mobile ───────────────────────────────────────────────────────────── */
