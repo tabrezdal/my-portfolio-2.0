@@ -12,14 +12,17 @@
 }
 
 .exp-section__eyebrow {
-  color: #555 !important;
   margin-bottom: var(--space-2);
+  color: var(--color-surface);
+  font-size: 30px;
+  font-weight: var(--font-semibold);
+  width: 100%;
 }
 
 .exp-section__title {
   font-size: var(--text-4xl);
-  font-weight: var(--font-bold);
-  color: #ffffff;
+  font-weight: var(--font-regular);
+  color: #555 !important;
   margin: 0 0 var(--space-12);
 }
 
@@ -89,6 +92,7 @@
 }
 
 /* ─── Date ──────────────────────────────────────────────────────────────── */
+/* Date — 16px, brighter default */
 .exp-list__period {
   font-size: 1rem;           /* 16px */
   color: #5a5a5a;            /* brighter than before */
@@ -106,7 +110,7 @@
 .exp-list__right {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 /* Job title — 36px default, grows on hover */
@@ -267,6 +271,7 @@
 
 /* ─── Reduced motion ───────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+
   .exp-list__row,
   .exp-list__role,
   .exp-list__company,
