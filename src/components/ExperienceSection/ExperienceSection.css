@@ -32,17 +32,18 @@
 
 .exp-list__row {
   display: grid;
-  grid-template-columns: 1fr 160px 44px;
-  gap: var(--space-6);
-  align-items: center;
-  padding: var(--space-5) 0;
+  grid-template-columns: 1fr 180px;   /* content | date only */
+  gap: var(--space-8);
+  align-items: start;
+  padding: var(--space-6) 0 var(--space-4);
   border-bottom: 1px solid #222;
-  cursor: default;
   position: relative;
+  transition: padding-left 0.25s ease;
 }
 
+.exp-list__row:hover,
 .exp-list__row--active {
-  padding-left: var(--space-3);
+  padding-left: var(--space-2);
 }
 
 .exp-list__row--expanded {
@@ -89,12 +90,16 @@
 
 /* ─── Date ──────────────────────────────────────────────────────────────── */
 .exp-list__period {
-  font-size: var(--text-sm);
-  color: #444;
+  font-size: 1rem;           /* 16px */
+  color: #5a5a5a;            /* brighter than before */
   text-align: right;
   white-space: nowrap;
   transition: color 0.25s ease;
-  padding-top: 2px;
+}
+
+.exp-list__row:hover .exp-list__period,
+.exp-list__row--active .exp-list__period {
+  color: #999999;
 }
 
 /* ─── Role content ──────────────────────────────────────────────────────── */
@@ -104,46 +109,25 @@
   gap: var(--space-2);
 }
 
+/* Job title — 36px default, grows on hover */
 .exp-list__role {
-  font-size: var(--text-lg);
-  color: #666;
-  margin: 0;
-  line-height: var(--leading-snug);
+  font-size: 2.25rem;        /* ~36px */
+  font-weight: var(--font-semibold);
+  color: #b0b0b0;            /* readable default, not washed out */
+  margin: 0 0 var(--space-1);
+  line-height: 1.2;
   transition: color 0.25s ease, font-size 0.25s ease;
 }
 
-.exp-list__role strong {
-  font-weight: var(--font-semibold);
-  color: #888;
-  transition: color 0.25s ease;
-}
-
-.exp-list__at {
-  font-weight: var(--font-regular);
-  color: #444;
-  font-size: 0.85em;
-}
-
-.exp-list__company {
-  font-weight: var(--font-regular);
-  font-size: 0.85em;
-  color: #555;
-  transition: color 0.25s ease;
-}
-
-.exp-list__tags {
-  font-size: var(--text-sm);
-  color: #0378b8;
-  opacity: 0.5;
-  margin: var(--space-1) 0 0;
-  transition: opacity 0.25s ease;
-}
-
-/* Hover / active state — everything brightens and grows */
 .exp-list__row:hover .exp-list__role,
 .exp-list__row--active .exp-list__role {
-  font-size: var(--text-xl);
-  color: #dddddd;
+  font-size: 2.625rem;       /* ~42px on hover */
+  color: #ffffff;
+}
+
+.exp-list__role strong {
+  font-weight: var(--font-bold);
+  color: #c8c8c8;            /* slightly brighter than role text */
 }
 
 .exp-list__row:hover .exp-list__role strong,
@@ -151,50 +135,68 @@
   color: #ffffff;
 }
 
+/* Company name — 22px */
+.exp-list__company {
+  font-size: 1.375rem;       /* ~22px */
+  font-weight: var(--font-regular);
+  color: #6a6a6a;
+  transition: color 0.25s ease;
+}
+
 .exp-list__row:hover .exp-list__company,
 .exp-list__row--active .exp-list__company {
   color: #0378b8;
 }
 
+/* "at" connector */
+.exp-list__at {
+  font-size: 1.375rem;
+  font-weight: var(--font-regular);
+  color: #4a4a4a;
+}
+
+/* Skills/tags — 18px */
+.exp-list__tags {
+  font-size: 1.125rem;       /* ~18px */
+  color: #2d8abf;            /* 15-20% brighter than before */
+  opacity: 0.85;
+  margin: var(--space-2) 0 0;
+  line-height: 1.5;
+  transition: opacity 0.25s ease;
+}
+
 .exp-list__row:hover .exp-list__tags,
 .exp-list__row--active .exp-list__tags {
   opacity: 1;
+  color: #62bdfc;
 }
 
-.exp-list__row:hover .exp-list__period,
-.exp-list__row--active .exp-list__period {
-  color: #888;
-}
-
-/* ─── Toggle button ─────────────────────────────────────────────────────── */
-.exp-toggle-btn {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  border: 1px solid #333;
-  background: transparent;
-  color: #555;
-  cursor: pointer;
-  display: flex;
+/* ─── Inline text CTA — below tags ──────────────────────────────────────── */
+.exp-cta-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  justify-self: center;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: #555;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
   outline: none;
 }
 
-.exp-toggle-btn:hover,
-.exp-toggle-btn--open {
-  border-color: #0378b8;
+.exp-cta-btn:hover,
+.exp-list__row:hover .exp-cta-btn {
   color: #0378b8;
-  background: rgba(3, 120, 184, 0.08);
+  letter-spacing: 0.05em;
 }
 
-.exp-toggle-btn__icon {
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 300;
+.exp-cta-btn--open {
+  color: #62bdfc;
 }
 
 /* ─── Accordion ─────────────────────────────────────────────────────────── */

@@ -99,20 +99,18 @@ const ExperienceSection = () => {
                       <span className="exp-list__company">{exp.company}</span>
                     </p>
                     <p className="exp-list__tags">{exp.skills.join(' | ')}</p>
+                    <button
+                      className={`exp-cta-btn ${expandedIndex === i ? 'exp-cta-btn--open' : ''}`}
+                      onClick={(e) => { e.stopPropagation(); toggleAccordion(i); }}
+                      aria-expanded={expandedIndex === i}
+                      aria-label={expandedIndex === i ? `Collapse ${exp.role} details` : exp.ctaLabel}
+                    >
+                      {expandedIndex === i ? 'Close ↑' : exp.ctaLabel}
+                    </button>
                   </div>
 
                   {/* 2 — Date (second from right) */}
                   <span className="exp-list__period">{exp.period}</span>
-
-                  {/* 3 — Toggle button (far right) */}
-                  <button
-                    className={`exp-toggle-btn ${expandedIndex === i ? 'exp-toggle-btn--open' : ''}`}
-                    onClick={(e) => { e.stopPropagation(); toggleAccordion(i); }}
-                    aria-expanded={expandedIndex === i}
-                    aria-label={`${expandedIndex === i ? 'Collapse' : 'Expand'} ${exp.role} details`}
-                  >
-                    <span className="exp-toggle-btn__icon">{expandedIndex === i ? '−' : '+'}</span>
-                  </button>
                 </div>
 
                 {/* Accordion — directly attached below, no separator */}
