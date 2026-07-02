@@ -129,6 +129,10 @@
   flex-shrink: 0;
 }
 
+.exp-row-photos[data-photo-pos="below"] .exp-row-photo {
+  transform: rotate(calc((var(--pi) - (var(--ptotal) - 1) / 2) * -5deg));
+}
+
 .exp-row-photo img {
   display: block;
   width: 160px;
