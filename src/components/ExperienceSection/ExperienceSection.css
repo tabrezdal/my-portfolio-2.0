@@ -54,11 +54,30 @@
 }
 
 /* ─── Hover dimming ───────────────────────────────────────────────────────── */
-.exp-list:hover .exp-list__row {
+/* Dim only the text content — not the whole row */
+.exp-list:hover .exp-list__right,
+.exp-list:hover .exp-list__period,
+.exp-list:hover .exp-cta-btn {
   opacity: 0.35;
+  transition: opacity 0.25s ease;
 }
 
-.exp-list:hover .exp-list__row:hover {
+/* Un-dim the hovered row's text */
+.exp-list:hover .exp-list__row:hover .exp-list__right,
+.exp-list:hover .exp-list__row:hover .exp-list__period,
+.exp-list:hover .exp-list__row:hover .exp-cta-btn {
+  opacity: 1;
+}
+
+/* Keep expanded accordion text always readable */
+.exp-list:hover .exp-accordion {
+  opacity: 1;
+}
+
+/* Keep expanded row fully visible when hovering accordion content */
+.exp-list:hover .exp-list__row--expanded .exp-list__right,
+.exp-list:hover .exp-list__row--expanded .exp-list__period,
+.exp-list:hover .exp-list__row--expanded .exp-cta-btn {
   opacity: 1;
 }
 
