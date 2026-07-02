@@ -15,7 +15,7 @@ const CaseStudyDesignPrinciples = ({ project }) => {
   } = dp;
 
   return (
-    <section className="cdp-root">
+    <section className="cdp-root" id="cs-design">
       <div className="container cdp-inner">
 
         {/* Header */}

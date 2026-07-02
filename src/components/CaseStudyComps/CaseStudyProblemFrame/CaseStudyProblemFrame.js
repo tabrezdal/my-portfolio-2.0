@@ -28,7 +28,7 @@ const CaseStudyProblemFrame = ({ project }) => {
   } = pf;
 
   return (
-    <section className="cpf-root">
+    <section className="cpf-root" id="cs-problem">
       <div className="container">
 
         {/* ── Top: Statement + Painpoints ── */}

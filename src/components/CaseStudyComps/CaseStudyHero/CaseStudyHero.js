@@ -29,7 +29,7 @@ const CaseStudyHero = ({ project }) => {
   const titleLast  = titleWords[titleWords.length - 1];
 
   return (
-    <section className="csh-root">
+    <section className="csh-root" id="cs-hero">
       {/* Decorative glow */}
       <div className="csh-glow" aria-hidden="true" />
 

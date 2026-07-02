@@ -152,7 +152,7 @@ const CaseStudyOutcome = ({ project }) => {
   const { outcome, metrics, learnings } = project;
 
   return (
-    <section style={styles.root}>
+    <section style={styles.root} id="cs-outcome">
       <div style={styles.glow} aria-hidden="true" />
       <div style={styles.glowRight} aria-hidden="true" />
 

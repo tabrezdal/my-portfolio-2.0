@@ -16,7 +16,7 @@ const CaseStudyComplexitySignals = ({ project }) => {
   if (!complexitySignals || complexitySignals.length === 0) return null;
 
   return (
-    <section className="ccmp-root">
+    <section className="ccmp-root" id="cs-complexity">
       <div className="container">
 
         {/* ── Header ── */}

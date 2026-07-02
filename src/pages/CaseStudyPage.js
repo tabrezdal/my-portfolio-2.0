@@ -20,6 +20,7 @@ import CaseStudyContext     from "../components/CaseStudyComps/CaseStudyContext/
 import CaseStudyPlatformScope from "../components/CaseStudyComps/CaseStudyPlatformScope/CaseStudyPlatformScope";
 import CaseStudyComplexitySignals from "../components/CaseStudyComps/CaseStudyComplexitySignals/CaseStudyComplexitySignals";
 import CaseStudyCTA from "../components/CaseStudyComps/CaseStudyCTA/CaseStudyCTA";
+import CaseStudyTOC from "../components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC";
 
 import FeaturedProjectsData from "../Data/FeaturedProjectsData";
 
@@ -60,6 +61,7 @@ const CaseStudyPage = () => {
       </Helmet>
       <Header />
       <main id="main-content">
+        <CaseStudyTOC />
         {/* 1. Hero — cinematic dark opener with metrics strip */}
         <CaseStudyHero project={project} />
 

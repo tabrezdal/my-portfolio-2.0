@@ -75,7 +75,7 @@ const CaseStudyPlatformScope = ({ project }) => {
     `${platformSurfaces.length} surfaces. One design system.`;
 
   return (
-    <section className="cplat-root">
+    <section className="cplat-root" id="cs-scope">
       <div className="cplat-inner">
         <div className="container">
 

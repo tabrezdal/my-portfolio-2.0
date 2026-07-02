@@ -4,7 +4,7 @@ import { fadeUpVariants, fadeUpLargeVariants } from "../../../utils/animationVar
 
 const CaseStudyProcess = ({ project }) => {
   return (
-    <section style={{ background: "#fff", padding: "80px 0" }}>
+    <section style={{ background: "#fff", padding: "80px 0" }} id="cs-process">
       <div className="container">
         {/* Section label */}
         <motion.div

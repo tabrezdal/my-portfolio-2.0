@@ -68,7 +68,7 @@ const CaseStudyContext = ({ project }) => {
   const extraToolCount = tools ? Math.max(0, tools.length - 6) : 0;
 
   return (
-    <section className="cctx-root">
+    <section className="cctx-root" id="cs-context">
       <div className="container">
         <div className="row align-items-start">
 
