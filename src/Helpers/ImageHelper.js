@@ -1,6 +1,3 @@
-// Hero Section
-import HeroImage from "../Assets/Images/me/portfolio_hero_image.webp";
-
 // //About Section
 import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
 
@@ -252,9 +249,6 @@ import Other12 from "../Assets/Images/Portfolio/Other/TZ Vouchers.webp";
 // // Service Portfolio Banner Images
 
 const ImageHelper = {
-  // Hero Section
-  HeroImage,
-
   // //About Section
   AboutImage,
   // locationMap,
