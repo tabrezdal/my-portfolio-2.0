@@ -96,7 +96,18 @@ const ExperienceSection = () => {
                     <p className="exp-list__role">
                       <strong>{exp.role}</strong>
                       <span className="exp-list__at"> at </span>
-                      <span className="exp-list__company">{exp.company}</span>
+                      {exp.companyUrl ? (
+                        <a
+                          href={exp.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="exp-list__company exp-list__company-link"
+                        >
+                          {exp.company}
+                        </a>
+                      ) : (
+                        <span className="exp-list__company">{exp.company}</span>
+                      )}
                     </p>
                     <p className="exp-list__tags">{exp.skills.join(' | ')}</p>
                     <button

@@ -298,3 +298,17 @@
     transition: none;
   }
 }
+
+/* ─── Company link styles ───────────────────────────────────────────────── */
+.exp-list__company-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.exp-list__company-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Inherit existing company color transitions — no separate color rules needed
+   since .exp-list__company color rules already cover this class */
