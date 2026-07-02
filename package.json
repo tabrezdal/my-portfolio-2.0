@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:prod": "react-scripts build && purgecss --config purgecss.config.js",
+    "build:prod": "react-scripts build && node scripts/purge-css.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
