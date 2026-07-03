@@ -43,8 +43,7 @@ const ProjectsTab = (props) => {
                     src={item.image}
                     alt={item.caption}
                     loading="lazy"
-                    width={600}
-                    height={400}
+                    decoding="async"
                   />
                 </div>
               ) : (

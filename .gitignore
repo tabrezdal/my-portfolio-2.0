@@ -24,3 +24,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Temporary pre-optimization image backups (Issue 1 remediation)
+.image-backup/
