@@ -38,7 +38,7 @@
   grid-template-columns: 1fr 180px;
   gap: var(--space-8);
   align-items: start;
-  padding: var(--space-6) 0 var(--space-4);
+  padding: var(--space-10) 0 var(--space-8);
   border-bottom: 1px solid #222;
   position: relative;
   transition: padding-left 0.25s ease, opacity 0.25s ease;
@@ -56,16 +56,14 @@
 /* ─── Hover dimming ───────────────────────────────────────────────────────── */
 /* Dim only the text content — not the whole row */
 .exp-list:hover .exp-list__right,
-.exp-list:hover .exp-list__period,
-.exp-list:hover .exp-cta-btn {
+.exp-list:hover .exp-list__period {
   opacity: 0.35;
   transition: opacity 0.25s ease;
 }
 
 /* Un-dim the hovered row's text */
 .exp-list:hover .exp-list__row:hover .exp-list__right,
-.exp-list:hover .exp-list__row:hover .exp-list__period,
-.exp-list:hover .exp-list__row:hover .exp-cta-btn {
+.exp-list:hover .exp-list__row:hover .exp-list__period {
   opacity: 1;
 }
 
@@ -76,8 +74,7 @@
 
 /* Keep expanded row fully visible when hovering accordion content */
 .exp-list:hover .exp-list__row--expanded .exp-list__right,
-.exp-list:hover .exp-list__row--expanded .exp-list__period,
-.exp-list:hover .exp-list__row--expanded .exp-cta-btn {
+.exp-list:hover .exp-list__row--expanded .exp-list__period {
   opacity: 1;
 }
 
@@ -94,9 +91,6 @@
   color: #aaaaaa;
 }
 
-.exp-list__row:hover .exp-cta-btn {
-  color: #0378b8;
-}
 
 /* ─── Floating photos ───────────────────────────────────────────────────── */
 .exp-row-photos {
@@ -148,6 +142,10 @@
   text-align: right;
   white-space: nowrap;
   transition: color 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
 }
 /* ─── Role content ──────────────────────────────────────────────────────── */
 .exp-list__right {
@@ -200,26 +198,20 @@
   transition: color 0.25s ease;
 }
 
-/* Inline text CTA — below tags */
-.exp-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-top: var(--space-3);
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  color: #868686;
-  letter-spacing: 0.02em;
-  transition: color 0.2s ease, letter-spacing 0.2s ease;
-  outline: none;
+/* Chevron icon */
+.exp-list__chevron {
+  font-size: 0.75rem;
+  color: #888;
+  transition: transform 0.3s ease, color 0.25s ease;
+  display: inline-block;
 }
 
-.exp-cta-btn--open {
-  color: #62bdfc;
+.exp-list__chevron--expanded {
+  transform: rotate(180deg);
+}
+
+.exp-list__row:hover .exp-list__chevron {
+  color: #0378b8;
 }
 
 /* ─── Accordion ─────────────────────────────────────────────────────────── */

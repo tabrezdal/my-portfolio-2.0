@@ -63,9 +63,16 @@ const ExperienceSection = () => {
                   ref={el => rowRefs.current[i] = el}
                   className={`exp-list__row ${isActive ? 'exp-list__row--active' : ''} ${expandedIndex === i ? 'exp-list__row--expanded' : ''}`}
                   onMouseEnter={() => handleMouseEnter(i)}
+                  onClick={() => toggleAccordion(i)}
                   role="listitem"
                   tabIndex={0}
                   onFocus={() => handleMouseEnter(i)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleAccordion(i);
+                    }
+                  }}
                 >
                   {/* Floating photos — position absolute above this row */}
                   <AnimatePresence>
@@ -102,6 +109,7 @@ const ExperienceSection = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="exp-list__company exp-list__company-link"
+                          onClick={(e) => e.stopPropagation()}
                         >
                           {exp.company}
                         </a>
@@ -110,18 +118,17 @@ const ExperienceSection = () => {
                       )}
                     </p>
                     <p className="exp-list__tags">{exp.skills.join(' | ')}</p>
-                    <button
-                      className={`exp-cta-btn ${expandedIndex === i ? 'exp-cta-btn--open' : ''}`}
-                      onClick={(e) => { e.stopPropagation(); toggleAccordion(i); }}
-                      aria-expanded={expandedIndex === i}
-                      aria-label={expandedIndex === i ? `Collapse ${exp.role} details` : exp.ctaLabel}
-                    >
-                      {expandedIndex === i ? 'Close ↑' : exp.ctaLabel}
-                    </button>
                   </div>
 
                   {/* 2 — Date (second from right) */}
-                  <span className="exp-list__period">{exp.period}</span>
+                  <span className="exp-list__period">
+                    {exp.period}
+                    <span className={`exp-list__chevron ${expandedIndex === i ? 'exp-list__chevron--expanded' : ''}`}>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </span>
                 </div>
 
                 {/* Accordion — directly attached below, no separator */}
