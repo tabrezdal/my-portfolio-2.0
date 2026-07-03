@@ -5,7 +5,7 @@ import FigmaFrame from "../../../layouts/FigmaFrame/FigmaFrame";
 
 const CaseStudyGallery = ({ project }) => {
   return (
-    <section style={{ background: "#f9f9ff", padding: "80px 0" }}>
+    <section style={{ background: "#f9f9ff", padding: "80px 0" }} id="cs-gallery">
       <div className="container">
         {/* Label */}
         <motion.div

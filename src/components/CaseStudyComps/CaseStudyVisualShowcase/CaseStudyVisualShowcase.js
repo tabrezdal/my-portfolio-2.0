@@ -106,7 +106,7 @@ const BeforeAfter = ({ items }) => {
 /* ─────────────────────────────────────────
    A2. Screen Gallery with Lightbox
 ───────────────────────────────────────── */
-const ScreenGallery = ({ screens, title, subtitle, id }) => {
+const ScreenGallery = ({ screens, title, subtitle }) => {
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
   if (!screens || screens.length === 0) return null;
@@ -138,7 +138,7 @@ const ScreenGallery = ({ screens, title, subtitle, id }) => {
         </div>
       )}
 
-      <div className="csv-section csv-section--light" id={id}>
+      <div className="csv-section csv-section--light">
         <div className="container">
           <motion.div
             variants={fadeUpVariants}
@@ -550,7 +550,6 @@ const CaseStudyVisualShowcase = ({ project }) => {
           screens={showcase.screens}
           title={showcase.screensTitle}
           subtitle={showcase.screensSubtitle}
-          id="cs-gallery"
         />
       )}
 

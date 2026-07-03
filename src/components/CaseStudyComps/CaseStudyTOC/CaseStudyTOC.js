@@ -1,51 +1,73 @@
 import React, { useState, useEffect } from 'react';
 import './CaseStudyTOC.css';
 
+// Only include sections that exist in the case study page
+// Order matches the visual order on the page
 const TOC_ITEMS = [
-  { id: 'cs-context', label: 'Context' },
-  { id: 'cs-scope', label: 'Platform Scope' },
-  { id: 'cs-problem', label: 'Problem' },
-  { id: 'cs-process', label: 'Process' },
-  { id: 'cs-design', label: 'Design' },
-  { id: 'cs-complexity', label: 'Complexity' },
-  { id: 'cs-gallery', label: 'Gallery' },
-  { id: 'cs-tech', label: 'Tech Stack' },
-  { id: 'cs-outcome', label: 'Outcome' },
+  { id: 'cs-overview',   label: 'Overview'    },
+  { id: 'cs-context',    label: 'Context'     },
+  { id: 'cs-problem',    label: 'Problem'     },
+  { id: 'cs-complexity', label: 'Complexity'  },
+  { id: 'cs-design',     label: 'Design'      },
+  { id: 'cs-scope',      label: 'Scope'       },
+  { id: 'cs-process',    label: 'Process'     },
+  { id: 'cs-gallery',    label: 'Gallery'     },
+  { id: 'cs-tech',       label: 'Tech Stack'  },
+  { id: 'cs-outcome',    label: 'Outcome'     },
 ];
 
 const CaseStudyTOC = () => {
-  const [activeId, setActiveId] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeId, setActiveId]     = useState('');
+  const [isVisible, setIsVisible]   = useState(false);
 
   useEffect(() => {
-    // Show TOC after hero section
-    const heroObserver = new IntersectionObserver(
-      ([entry]) => setIsVisible(!entry.isIntersecting),
-      { threshold: 0 }
+    // Filter to only sections that exist in the DOM
+    const existingItems = TOC_ITEMS.filter(
+      ({ id }) => !!document.getElementById(id)
     );
 
-    const hero = document.getElementById('cs-hero');
-    if (hero) heroObserver.observe(hero);
+    if (existingItems.length === 0) return;
 
-    // Track active section
+    // Show TOC after hero scrolls out of view
+    const hero = document.querySelector('.case-study-hero, [class*="hero"]');
+    let heroObserver;
+
+    if (hero) {
+      heroObserver = new IntersectionObserver(
+        ([entry]) => setIsVisible(!entry.isIntersecting),
+        { threshold: 0 }
+      );
+      heroObserver.observe(hero);
+    } else {
+      // No hero found — show immediately
+      setIsVisible(true);
+    }
+
+    // Track which section is in view
     const sectionObserver = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
+        // Find the topmost visible section
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        if (visible.length > 0) {
+          setActiveId(visible[0].target.id);
+        }
       },
-      { rootMargin: '-20% 0px -70% 0px' }
+      {
+        rootMargin: '-10% 0px -80% 0px',
+        threshold: 0,
+      }
     );
 
-    TOC_ITEMS.forEach(({ id }) => {
+    existingItems.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) sectionObserver.observe(el);
     });
 
     return () => {
-      heroObserver.disconnect();
+      heroObserver?.disconnect();
       sectionObserver.disconnect();
     };
   }, []);
@@ -53,31 +75,38 @@ const CaseStudyTOC = () => {
   const handleClick = (e, id) => {
     e.preventDefault();
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (!el) return;
+
+    // Account for fixed header height
+    const headerHeight = 70;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
   };
 
-  // Filter to only show items that exist on the page
-  const visibleItems = TOC_ITEMS.filter(({ id }) => document.getElementById(id));
+  // Only render items whose section exists in the DOM
+  const visibleItems = TOC_ITEMS.filter(
+    ({ id }) => !!document.getElementById(id)
+  );
 
   if (visibleItems.length === 0) return null;
 
   return (
     <nav
       className={`cs-toc ${isVisible ? 'cs-toc--visible' : ''}`}
-      aria-label="Case study sections"
+      aria-label="On this page"
     >
       <p className="cs-toc__label">ON THIS PAGE</p>
       <ul className="cs-toc__list">
         {visibleItems.map(({ id, label }) => (
-          <li key={id} className="cs-toc__item">
+          <li key={id}>
             <a
               href={`#${id}`}
               className={`cs-toc__link ${activeId === id ? 'cs-toc__link--active' : ''}`}
               onClick={(e) => handleClick(e, id)}
+              aria-current={activeId === id ? 'location' : undefined}
             >
-              {label}
+              <span className="cs-toc__dot" aria-hidden="true" />
+              <span className="cs-toc__text">{label}</span>
             </a>
           </li>
         ))}

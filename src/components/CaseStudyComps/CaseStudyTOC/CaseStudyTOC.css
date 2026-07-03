@@ -1,12 +1,14 @@
+/* ─── TOC wrapper ──────────────────────────────────────────────────────── */
 .cs-toc {
   position: fixed;
-  right: 24px;
+  right: 32px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: var(--z-raised);
+  z-index: var(--z-sticky, 200);
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--transition-base);
+  transition: opacity 0.2s ease;
+  max-width: 140px;
 }
 
 .cs-toc--visible {
@@ -14,67 +16,94 @@
   pointer-events: auto;
 }
 
+/* ─── Label ────────────────────────────────────────────────────────────── */
 .cs-toc__label {
   font-size: 10px;
-  font-weight: var(--font-semibold);
-  color: var(--color-text-secondary);
+  font-weight: 600;
+  color: #999;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: var(--space-3);
+  margin: 0 0 12px 20px;    /* indent to align with link text */
 }
 
+/* ─── List ─────────────────────────────────────────────────────────────── */
 .cs-toc__list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 4px;
 }
 
+/* ─── Link ─────────────────────────────────────────────────────────────── */
 .cs-toc__link {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
+  gap: 10px;
   text-decoration: none;
-  transition: color var(--transition-fast);
-  white-space: nowrap;
+  padding: 4px 0;           /* 4px vertical — total ~28px tap area */
+  min-height: 28px;
+  outline: none;
 }
 
-/* Dot indicator */
-.cs-toc__link::before {
-  content: '';
+.cs-toc__link:focus-visible {
+  outline: 2px solid #0378b8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─── Dot indicator ────────────────────────────────────────────────────── */
+.cs-toc__dot {
   flex-shrink: 0;
   width: 6px;
   height: 6px;
-  border-radius: var(--radius-full);
-  background: var(--color-border-strong);
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  border-radius: 50%;
+  background: #444;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.cs-toc__link:hover {
-  color: var(--color-brand);
+/* ─── Label text ───────────────────────────────────────────────────────── */
+.cs-toc__text {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.3;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  white-space: nowrap;
 }
 
-.cs-toc__link:hover::before {
-  background: var(--color-brand);
+/* ─── Hover state ──────────────────────────────────────────────────────── */
+.cs-toc__link:hover .cs-toc__dot {
+  background: #aaa;
 }
 
-.cs-toc__link--active {
-  color: var(--color-brand);
-  font-weight: var(--font-medium);
+.cs-toc__link:hover .cs-toc__text {
+  color: #ccc;
 }
 
-.cs-toc__link--active::before {
-  background: var(--color-brand);
-  transform: scale(1.4);
+/* ─── Active state ─────────────────────────────────────────────────────── */
+.cs-toc__link--active .cs-toc__dot {
+  background: #0378b8;
+  transform: scale(1.5);
 }
 
-/* Hide on mobile and tablet — not enough space */
-@media (max-width: 1200px) {
+.cs-toc__link--active .cs-toc__text {
+  color: #0378b8;
+  font-weight: 600;
+}
+
+/* ─── Hide below 1280px ────────────────────────────────────────────────── */
+@media (max-width: 1280px) {
   .cs-toc {
     display: none;
+  }
+}
+
+/* ─── Reduced motion ───────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .cs-toc,
+  .cs-toc__dot,
+  .cs-toc__text {
+    transition: none;
   }
 }

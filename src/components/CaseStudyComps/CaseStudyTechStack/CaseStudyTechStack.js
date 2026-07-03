@@ -6,11 +6,11 @@ import "./CaseStudyTechStack.css";
 /* ─────────────────────────────────────────
    B1. Tech Stack Pills
 ───────────────────────────────────────── */
-const TechStackPills = ({ groups, title, subtitle, id }) => {
+const TechStackPills = ({ groups, title, subtitle }) => {
   if (!groups || groups.length === 0) return null;
 
   return (
-    <div className="cts-section cts-section--white" id={id}>
+    <div className="cts-section cts-section--white">
       <div className="container">
         <motion.div
           variants={fadeUpVariants}
@@ -432,13 +432,12 @@ const CaseStudyTechStack = ({ project }) => {
   if (!tech) return null;
 
   return (
-    <>
+    <section id="cs-tech">
       {tech.stackGroups && (
         <TechStackPills
           groups={tech.stackGroups}
           title={tech.stackTitle}
           subtitle={tech.stackSubtitle}
-          id="cs-tech"
         />
       )}
 
@@ -474,7 +473,7 @@ const CaseStudyTechStack = ({ project }) => {
           subtitle={tech.timelineSubtitle}
         />
       )}
-    </>
+    </section>
   );
 };
 
