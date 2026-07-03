@@ -4,16 +4,17 @@ import './CaseStudyTOC.css';
 // Only include sections that exist in the case study page
 // Order matches the visual order on the page
 const TOC_ITEMS = [
-  { id: 'cs-overview',   label: 'Overview'    },
+  { id: 'cs-hero',       label: 'Hero'        },
   { id: 'cs-context',    label: 'Context'     },
-  { id: 'cs-problem',    label: 'Problem'     },
-  { id: 'cs-complexity', label: 'Complexity'  },
-  { id: 'cs-design',     label: 'Design'      },
   { id: 'cs-scope',      label: 'Scope'       },
+  { id: 'cs-problem',    label: 'Problem'     },
   { id: 'cs-process',    label: 'Process'     },
-  { id: 'cs-gallery',    label: 'Gallery'     },
+  { id: 'cs-design',     label: 'Design'      },
+  { id: 'cs-complexity', label: 'Complexity'  },
+  { id: 'cs-showcase',   label: 'Showcase'    },
   { id: 'cs-tech',       label: 'Tech Stack'  },
   { id: 'cs-outcome',    label: 'Outcome'     },
+  { id: 'cs-gallery',    label: 'Gallery'     },
 ];
 
 const CaseStudyTOC = () => {
@@ -29,7 +30,7 @@ const CaseStudyTOC = () => {
     if (existingItems.length === 0) return;
 
     // Show TOC after hero scrolls out of view
-    const hero = document.querySelector('.case-study-hero, [class*="hero"]');
+    const hero = document.querySelector('.csh-root, [id="cs-hero"]');
     let heroObserver;
 
     if (hero) {
@@ -96,9 +97,9 @@ const CaseStudyTOC = () => {
       aria-label="On this page"
     >
       <p className="cs-toc__label">ON THIS PAGE</p>
-      <ul className="cs-toc__list">
+      <ul className="cs-toc__list" role="list">
         {visibleItems.map(({ id, label }) => (
-          <li key={id}>
+          <li key={id} role="listitem">
             <a
               href={`#${id}`}
               className={`cs-toc__link ${activeId === id ? 'cs-toc__link--active' : ''}`}

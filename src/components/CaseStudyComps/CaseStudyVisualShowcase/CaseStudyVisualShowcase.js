@@ -540,7 +540,7 @@ const CaseStudyVisualShowcase = ({ project }) => {
   if (!showcase) return null;
 
   return (
-    <>
+    <section id="cs-showcase">
       {showcase.beforeAfter && (
         <BeforeAfter items={showcase.beforeAfter} />
       )}
@@ -580,7 +580,7 @@ const CaseStudyVisualShowcase = ({ project }) => {
           subtitle={showcase.userFlowSubtitle}
         />
       )}
-    </>
+    </section>
   );
 };
 
