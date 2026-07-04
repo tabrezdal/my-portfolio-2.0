@@ -6,6 +6,7 @@ import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
 import { MobileMenuModal } from "./MobileMenuModal/MobileMenuModal";
 import { NavLinkData, NavSocialMediaLinkData } from "./NavBarData";
+import AvailabilityBadge from "./AvailabilityBadge";
 
 const Header = () => {
   const [show, setShow] = useState(false);
@@ -69,6 +70,7 @@ const Header = () => {
               <i className="lnr lnr-menu"></i>
             </Button>
 
+                <AvailabilityBadge />
             <nav id="nav-menu-container">
               <ul className="nav-menu nav-menu-right">
                 {NavSocialMediaLinkData?.map((item) => (

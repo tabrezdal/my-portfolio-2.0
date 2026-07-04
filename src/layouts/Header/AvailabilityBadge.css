@@ -1,0 +1,68 @@
+/* ==========================================================================
+   AVAILABILITY BADGE
+   Status indicator for nav header
+   ========================================================================== */
+
+:root {
+  --availability-dot: var(--color-success, #22c55e);
+}
+
+.availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-text-muted, #aaaaaa);
+}
+
+.availability-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--availability-dot);
+}
+
+.availability-dot--green {
+  background-color: var(--availability-dot);
+}
+
+.availability-dot--amber {
+  background-color: var(--color-warning, #febc2e);
+}
+
+.availability-dot--red {
+  background-color: var(--color-error, #CB202D);
+}
+
+.availability-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: availabilityPulse 2s ease-out infinite;
+}
+
+@keyframes availabilityPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availability-dot::after {
+    animation: none;
+  }
+}

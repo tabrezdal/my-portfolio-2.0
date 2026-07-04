@@ -78,3 +78,10 @@ export const NavSocialMediaLinkData = [
     iconClass: "fa fa-linkedin fa-2x fa-fw",
   },
 ];
+
+export const availabilityConfig = {
+  isAvailable: true,
+  label: 'Available',
+  tooltip: 'Open to new projects',
+  dotColor: 'green',
+};
