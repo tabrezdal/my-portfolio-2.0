@@ -2020,6 +2020,11 @@ h6 {
     align-items: flex-start;
   }
 
+  .hero-cta-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
   .hero-cta-secondary {
     width: 100%;
     justify-content: center;

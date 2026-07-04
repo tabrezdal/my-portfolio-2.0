@@ -227,3 +227,40 @@ export const statsStagger = {
     }
   }
 };
+
+// ─── Hero Text Reveal ─────────────────────────────────────────────────────────
+// Staggered text reveal for hero section: role descriptor → headline → value statement → CTAs
+// Timing: 400ms per element, 100ms stagger delay between each
+// Easing: easeOut — elements arrive and settle, no bounce
+export const heroTextReveal = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
+// ─── Hero Text Stagger Container ───────────────────────────────────────────────
+// Parent container for hero text elements with staggered children
+export const heroTextStagger = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0,
+    },
+  },
+};
+
+// ─── Hero Image Float ─────────────────────────────────────────────────────────
+// Subtle floating animation for hero image (desktop only)
+export const heroImageFloat = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};

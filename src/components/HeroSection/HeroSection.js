@@ -1,68 +1,105 @@
 import React from "react";
-import PrimaryButton from "../../sharedComponents/PrimaryButton";
 import { HeroSectionData } from "./HeroSectionData";
+import "./HeroSection.css";
 
 // FramerMotion
 import { motion } from "framer-motion";
-import { fadeDownVariants, fadeLeftExtraLargeVariants } from "../../utils/animationVariants";
+import { heroTextReveal, heroTextStagger, heroImageFloat } from "../../utils/animationVariants";
 
 const HeroSection = () => {
+  const { roleDescriptor, headline, valueStatement, primaryCta, secondaryCta, proofPoint } = HeroSectionData;
+
   return (
-    <section className="banner-area pb-40" id="intro" style={{ paddingBottom: "0px"}}>
-      <div className="container">
-        <div className="row align-items-center justify-content-between">
-          <motion.div
-            variants={fadeLeftExtraLargeVariants}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="col-lg-6 col-md-6 banner-left"
-            style={{ textAlign: "left" }}
+    <section className="hero-section" id="intro">
+      <div className="hero-container">
+        <motion.div
+          className="hero-content"
+          variants={heroTextStagger}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Role Descriptor - small caps, muted */}
+          <motion.p
+            className="hero-role-descriptor"
+            variants={heroTextReveal}
           >
-            <br />
-            <br />
-            <p className="eyebrow-text">{HeroSectionData?.introStatingLine}</p>
-            <h1>{HeroSectionData?.name}</h1>
-            <p className="text-justify intro-line">
-              {HeroSectionData?.introLine}
-            </p>
-            <div className="hero-cta-group">
-              <PrimaryButton
-                name={HeroSectionData?.buttonData.name}
-                url={HeroSectionData?.buttonData.url}
-                iconClass="fa fa-download"
-              />
+            {roleDescriptor}
+          </motion.p>
+
+          {/* Headline - large, bold, split into lines */}
+          <motion.h1 className="hero-headline">
+            {headline.map((line, index) => (
+              <motion.span
+                key={index}
+                className="hero-headline-line"
+                variants={heroTextReveal}
+              >
+                {line}
+              </motion.span>
+            ))}
+          </motion.h1>
+
+          {/* Value Statement - body size, precise */}
+          <motion.p
+            className="hero-value-statement"
+            variants={heroTextReveal}
+          >
+            {valueStatement}
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            className="hero-cta-group"
+            variants={heroTextReveal}
+          >
+            <a
+              href={primaryCta.href}
+              className="hero-cta-primary"
+            >
+              {primaryCta.label}
+            </a>
+            {secondaryCta && (
               <a
-                href="https://calendly.com/tabrez-dal"
+                href={secondaryCta.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-cta-secondary"
               >
-                Schedule a Call
+                {secondaryCta.label}
               </a>
-            </div>
+            )}
           </motion.div>
-          <div className="col-lg-1 col-md-1"></div>
 
-          <motion.div
-            variants={fadeDownVariants}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="col-lg-5 col-md-5 banner-right d-flex align-self-end"
-          >
-            <img
-              draggable="false"
-              className="img-fluid"
-              src={HeroSectionData?.heroImage}
-              alt="Tabrez Dal — Product Engineer"
-              loading="eager"
-              fetchPriority="high"
-              width={400}
-              height={500}
-            />
-          </motion.div>
-        </div>
+          {/* Proof Point - stat type */}
+          {proofPoint && proofPoint.type === "stat" && (
+            <motion.div
+              className="hero-proof-point"
+              variants={heroTextReveal}
+            >
+              <span className="hero-proof-value">{proofPoint.value}</span>
+              <span className="hero-proof-label">{proofPoint.label}</span>
+            </motion.div>
+          )}
+        </motion.div>
+
+        {/* Hero Image - desktop only */}
+        <motion.div
+          className="hero-image-wrapper"
+          variants={heroImageFloat}
+          initial="hidden"
+          animate="visible"
+        >
+          <img
+            draggable="false"
+            className="hero-image"
+            src={HeroSectionData.heroImage}
+            alt="Tabrez Dal — Product Engineer"
+            loading="eager"
+            fetchPriority="high"
+            width={400}
+            height={500}
+          />
+        </motion.div>
       </div>
     </section>
   );

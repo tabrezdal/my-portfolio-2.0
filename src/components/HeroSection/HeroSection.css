@@ -1,0 +1,277 @@
+/* ==========================================================================
+   HERO SECTION — 2026 Upgrade
+   Editorial minimalism: bold typography as primary visual
+   ========================================================================== */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: var(--space-22) var(--space-9);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+/* ─── Hero Content ───────────────────────────────────────────────────────── */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+  z-index: var(--z-raised);
+  order: 2;
+}
+
+/* Role Descriptor - small caps, muted, letter-spaced */
+.hero-role-descriptor {
+  font-family: var(--font-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--leading-normal);
+}
+
+/* Headline - largest type on page, bold, editorial */
+.hero-headline {
+  font-family: var(--font-primary);
+  font-size: var(--text-14xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-heading);
+  margin: 0;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.hero-headline-line {
+  display: block;
+}
+
+/* Value Statement - body size, 60% max-width */
+.hero-value-statement {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-regular);
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+  max-width: 100%;
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-9) var(--space-19);
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-inverse);
+  background-color: var(--color-brand);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  transition: background-color var(--transition-base), transform var(--transition-fast);
+  border: none;
+  cursor: pointer;
+  min-height: 48px; /* Touch target */
+}
+
+.hero-cta-primary:hover {
+  background-color: var(--color-brand-hover);
+  transform: translateY(-2px);
+}
+
+.hero-cta-primary:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-9) var(--space-19);
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  transition: border-color var(--transition-base), color var(--transition-base), transform var(--transition-fast);
+  min-height: 48px; /* Touch target */
+}
+
+.hero-cta-secondary:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-heading);
+  transform: translateY(-2px);
+}
+
+.hero-cta-secondary:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* Proof Point - stat type */
+.hero-proof-point {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-top: var(--space-13);
+}
+
+.hero-proof-value {
+  font-family: var(--font-primary);
+  font-size: var(--text-10xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-brand);
+  line-height: var(--leading-none);
+}
+
+.hero-proof-label {
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* ─── Hero Image ─────────────────────────────────────────────────────────── */
+.hero-image-wrapper {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+}
+
+/* ─── Tablet (768px) ─────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: var(--space-25) var(--space-13);
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-25);
+  }
+
+  .hero-headline {
+    font-size: var(--text-17xl);
+  }
+
+  .hero-value-statement {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-cta-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-image-wrapper {
+    display: flex;
+    order: 2;
+  }
+}
+
+/* ─── Desktop (1280px) ──────────────────────────────────────────────────── */
+@media (min-width: 1280px) {
+  .hero-section {
+    padding: var(--space-26) var(--space-17);
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-26);
+  }
+
+  .hero-content {
+    gap: var(--space-11);
+    
+  }
+
+  .hero-role-descriptor {
+    font-size: var(--text-base);
+  }
+
+  .hero-headline {
+    font-size: var(--text-18xl);
+  }
+
+  .hero-value-statement {
+    font-size: var(--text-4xl);
+    max-width: 100%;
+  }
+
+  .hero-proof-value {
+    font-size: var(--text-13xl);
+  }
+
+  .hero-proof-label {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-image-wrapper {
+    justify-content: flex-end;
+    order: 2;
+  }
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Long Role Descriptor Handling ───────────────────────────────────────── */
+@media (max-width: 374px) {
+  .hero-role-descriptor {
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+  }
+
+  .hero-headline {
+    font-size: var(--text-12xl);
+  }
+
+  .hero-value-statement {
+    max-width: 100%;
+    font-size: var(--text-xl);
+  }
+
+    .hero-image-wrapper {
+    justify-content: center;
+    order: 1;
+  }
+}
