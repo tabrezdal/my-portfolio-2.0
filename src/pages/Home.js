@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
 import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
@@ -9,10 +9,11 @@ import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import CtaSection from "../components/CtaSection/CtaSection";
-import TestimonialSlider from "../components/TestimonialSlider/TestimonialSlider";
-import FeaturedProjectsSection from "../components/FeaturedProjectsSection/FeaturedProjectsSection";
 import StructuredData from "../components/StructuredData/StructuredData";
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
+
+const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
+const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
 
 const Home = () => {
   useEffect(() => {
@@ -45,9 +46,13 @@ const Home = () => {
         <ToolsSection />
         <TechnologiesSection />
         <CtaSection />
-        <FeaturedProjectsSection />
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <FeaturedProjectsSection />
+        </Suspense>
         <ProjectsSection />
-        <TestimonialSlider />
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <TestimonialSlider />
+        </Suspense>
       </main>
       <Footer />
     </div>
