@@ -19,11 +19,11 @@
      COLORS — Neutral / Text
   -------------------------------------------------------------------------- */
   --color-text-primary:    #222222;   /* Main body text */
-  --color-text-secondary:  #777777;   /* Muted / subtext */
+  --color-text-secondary:  #767676;   /* Muted / subtext */
   --color-text-tertiary:   #555555;   /* Medium gray text */
   --color-text-inverse:    #ffffff;   /* Text on dark backgrounds */
   --color-text-dark:       #000000;   /* Nearly black text */
-  --color-text-muted:      #aaaaaa;   /* Very light gray text */
+  --color-text-muted:      #767676;   /* Very light gray text */
   --color-text-border:     #bbbbbb;   /* Border text color */
   --color-text-heading:    #111111;   /* Very dark heading text */
   --color-text-body:       #333333;   /* Medium dark body text */
