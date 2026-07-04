@@ -2,6 +2,7 @@ import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
 import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
+import StatsBar from "../components/StatsBar/StatsBar";
 import SkillsSection from "../components/SkillsSection/SkillsSection";
 import TechnologiesSection from "../components/TechnologiesSection/TechnologiesSection";
 import ToolsSection from "../components/ToolsSection/ToolsSection";
@@ -40,6 +41,7 @@ const Home = () => {
       <Header />
       <main id="main-content">
         <HeroSection />
+        <StatsBar />
         <AboutSection />
         <ExperienceSection />
         <SkillsSection />

@@ -205,3 +205,25 @@ export const staggerContainerVariants = {
     },
   },
 };
+
+// ─── Stats Reveal ────────────────────────────────────────────────────────────
+// Used for individual stat items in StatsBar
+export const statsReveal = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+  }
+};
+
+// ─── Stats Stagger ────────────────────────────────────────────────────────────
+// Used for StatsBar container to stagger stat items
+export const statsStagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.05
+    }
+  }
+};
