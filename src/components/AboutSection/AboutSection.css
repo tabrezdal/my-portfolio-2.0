@@ -1,0 +1,181 @@
+/* ==========================================================================
+   AboutSection.css
+   Mobile-first. Scoped to .about-section and .about-* classes only.
+   Tokens reference: src/styles/tokens.css
+   ========================================================================== */
+
+/* ── Section wrapper ──────────────────────────────────────────────────────── */
+
+.about-section {
+  padding: var(--space-24) 0 var(--space-26); /* 72px 0 96px */
+}
+
+/* ── Full-width headline block ────────────────────────────────────────────── */
+
+.about-headline-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);           /* 10px */
+  margin-bottom: var(--space-21); /* 56px */
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);     /* 11px */
+  font-weight: var(--font-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+.about-headline {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--text-17xl);   /* 48px — desktop; scaled down on mobile */
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight); /* 1.1 */
+  letter-spacing: -0.025em;
+  color: var(--color-text-heading);
+  max-width: 820px;
+}
+
+@media (max-width: 767px) {
+  .about-headline {
+    font-size: var(--text-13xl);  /* 36px */
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-headline {
+    font-size: var(--text-18xl);  /* 60px */
+  }
+}
+
+/* ── Two-column grid ──────────────────────────────────────────────────────── */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-20); /* 48px */
+}
+
+@media (min-width: 880px) {
+  .about-grid {
+    grid-template-columns: 40% 1fr;
+    gap: var(--space-22); /* 64px */
+    align-items: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-grid {
+    grid-template-columns: 38% 1fr;
+    gap: var(--space-23); /* 70px */
+  }
+}
+
+/* ── Photo column ─────────────────────────────────────────────────────────── */
+
+.about-photo-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8); /* 14px */
+}
+
+.about-photo-frame {
+  border-radius: var(--radius-md); /* 3px */
+  overflow: hidden;
+}
+
+/* ⚠️  Critical fix: replaces the broken .aboutImage rule in main.css.
+      Do NOT add object-fit: cover — that crops the photo.
+      width: 100% + height: auto shows the full image naturally. */
+.about-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;    /* Full image — no cropping */
+}
+
+.about-photo-meta {
+  padding-top: var(--space-8); /* 14px */
+  border-top: 1px solid var(--color-border);
+}
+
+.about-photo-name {
+  margin: 0 0 var(--space-2); /* 0 0 4px */
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);  /* 15px */
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-heading);
+}
+
+.about-photo-role {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--text-md);  /* 13px */
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ── Content column ───────────────────────────────────────────────────────── */
+
+.about-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-11); /* 20px */
+  padding-top: var(--space-2); /* 4px — optical alignment with photo top */
+}
+
+.about-content-para {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--text-2xl);  /* 16px */
+  line-height: var(--leading-wide); /* 1.7 */
+  color: var(--color-text-body);
+  text-align: left; /* Override any global text-justify */
+}
+
+.about-content-para__bold {
+  font-weight: var(--font-bold);
+  color: var(--color-text-heading);
+}
+
+/* ── Signature ────────────────────────────────────────────────────────────── */
+
+.about-signature {
+  margin-top: var(--space-2); /* 4px */
+  color: var(--color-text-near-black);
+  line-height: 1;
+}
+
+.about-signature__svg {
+  display: block;
+  height: 68px;
+  width: auto;
+  max-width: 240px;
+}
+
+/* ── CTA row ──────────────────────────────────────────────────────────────── */
+
+/* Wrap the shared PrimaryButton + BoxedButton side-by-side */
+.about-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7); /* 12px */
+  margin-top: var(--space-4); /* 6px */
+}
+
+/* Remove the extra motion wrapper margin that PrimaryButton adds */
+.about-cta-row > div {
+  margin: 0;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-photo-img {
+    transition: none;
+  }
+}
