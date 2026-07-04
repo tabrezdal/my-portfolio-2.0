@@ -97,7 +97,11 @@ const CaseStudyPage = () => {
         <CaseStudyOutcome project={project} />
 
         {/* 11. CTA — Schedule a call / Send email */}
-        <CaseStudyCTA />
+        <CaseStudyCTA
+          liveUrl={project?.liveUrl}
+          figmaUrl={project?.figmaUrl}
+          loomUrl={project?.loomUrl}
+        />
 
         {/* 12. Figma embed + image gallery */}
         <CaseStudyGallery project={project} />

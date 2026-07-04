@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn, fadeUpLargeVariants } from "../../../utils/animationVariants";
+import CaseStudyLinks from "../CaseStudyLinks/CaseStudyLinks";
 import "./CaseStudyHero.css";
 
 /* ─────────────────────────────────────────
@@ -67,6 +68,13 @@ const CaseStudyHero = ({ project }) => {
               {shortDescription}
             </motion.p>
           )}
+
+          {/* Links */}
+          <CaseStudyLinks
+            liveUrl={project?.liveUrl}
+            figmaUrl={project?.figmaUrl}
+            loomUrl={project?.loomUrl}
+          />
 
           {/* Tag pills */}
           {tags && tags.length > 0 && (

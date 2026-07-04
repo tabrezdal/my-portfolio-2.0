@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeUpVariants } from '../../../utils/animationVariants';
 import './CaseStudyCTA.css';
 
-const CaseStudyCTA = () => {
+const CaseStudyCTA = ({ liveUrl, figmaUrl, loomUrl }) => {
   return (
     <motion.section
       className="case-study-cta"
