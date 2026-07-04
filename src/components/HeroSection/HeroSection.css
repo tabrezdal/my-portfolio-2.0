@@ -86,7 +86,7 @@
   font-size: var(--text-2xl);
   font-weight: var(--font-semibold);
   color: var(--color-text-inverse);
-  background-color: var(--color-brand);
+  background-color: var(--color-surface-dark);
   border-radius: var(--radius-base);
   text-decoration: none;
   transition: background-color var(--transition-base), transform var(--transition-fast);
@@ -96,7 +96,7 @@
 }
 
 .hero-cta-primary:hover {
-  background-color: var(--color-brand-hover);
+  background-color: var(--color-surface-darker);
   transform: translateY(-2px);
 }
 
@@ -145,7 +145,7 @@
   font-family: var(--font-primary);
   font-size: var(--text-10xl);
   font-weight: var(--font-extrabold);
-  color: var(--color-brand);
+  color: var(--color-text-heading);
   line-height: var(--leading-none);
 }
 
