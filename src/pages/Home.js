@@ -12,6 +12,7 @@ import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import CtaSection from "../components/CtaSection/CtaSection";
 import StructuredData from "../components/StructuredData/StructuredData";
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
+import ProcessSection from "../components/ProcessSection/ProcessSection";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
@@ -43,6 +44,7 @@ const Home = () => {
         <HeroSection />
         <StatsBar />
         <AboutSection />
+        <ProcessSection />
         <ExperienceSection />
         <SkillsSection />
         <ToolsSection />
