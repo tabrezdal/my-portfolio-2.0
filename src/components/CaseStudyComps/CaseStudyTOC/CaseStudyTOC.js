@@ -22,55 +22,54 @@ const CaseStudyTOC = () => {
   const [isVisible, setIsVisible]   = useState(false);
 
   useEffect(() => {
-    // Filter to only sections that exist in the DOM
-    const existingItems = TOC_ITEMS.filter(
-      ({ id }) => !!document.getElementById(id)
-    );
-
-    if (existingItems.length === 0) return;
-
-    // Show TOC after hero scrolls out of view
-    const hero = document.querySelector('.csh-root, [id="cs-hero"]');
-    let heroObserver;
-
-    if (hero) {
-      heroObserver = new IntersectionObserver(
-        ([entry]) => setIsVisible(!entry.isIntersecting),
-        { threshold: 0 }
+    // Wait 300ms for all sections to render before filtering
+    const timer = setTimeout(() => {
+      const existingItems = TOC_ITEMS.filter(
+        ({ id }) => !!document.getElementById(id)
       );
-      heroObserver.observe(hero);
-    } else {
-      // No hero found — show immediately
-      setIsVisible(true);
-    }
 
-    // Track which section is in view
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        // Find the topmost visible section
-        const visible = entries
-          .filter(e => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (existingItems.length === 0) return;
 
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
-        }
-      },
-      {
-        rootMargin: '-10% 0px -80% 0px',
-        threshold: 0,
+      // Hero visibility observer
+      const hero = document.querySelector('.case-study-hero, [class*="CaseStudyHero"], [class*="hero"]');
+      let heroObserver;
+
+      if (hero) {
+        heroObserver = new IntersectionObserver(
+          ([entry]) => setIsVisible(!entry.isIntersecting),
+          { threshold: 0 }
+        );
+        heroObserver.observe(hero);
+      } else {
+        setIsVisible(true);
       }
-    );
 
-    existingItems.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) sectionObserver.observe(el);
-    });
+      // Active section observer
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          if (visible.length > 0) {
+            setActiveId(visible[0].target.id);
+          }
+        },
+        { rootMargin: '-10% 0px -80% 0px', threshold: 0 }
+      );
 
-    return () => {
-      heroObserver?.disconnect();
-      sectionObserver.disconnect();
-    };
+      existingItems.forEach(({ id }) => {
+        const el = document.getElementById(id);
+        if (el) sectionObserver.observe(el);
+      });
+
+      // Store cleanup refs
+      return () => {
+        heroObserver?.disconnect();
+        sectionObserver.disconnect();
+      };
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClick = (e, id) => {

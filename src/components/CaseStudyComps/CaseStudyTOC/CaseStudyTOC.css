@@ -1,14 +1,14 @@
 /* ─── TOC wrapper ──────────────────────────────────────────────────────── */
 .cs-toc {
   position: fixed;
-  right: 32px;
+  right: 20px;          /* reduced from 32px to fit on smaller screens */
   top: 50%;
   transform: translateY(-50%);
-  z-index: var(--z-sticky, 200);
+  z-index: 200;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
-  max-width: 140px;
+  max-width: 130px;
 }
 
 .cs-toc--visible {
@@ -42,7 +42,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  padding: 4px 0;           /* 4px vertical — total ~28px tap area */
+  padding: 5px 0;
   min-height: 28px;
   outline: none;
 }
@@ -53,38 +53,40 @@
   border-radius: 2px;
 }
 
-/* ─── Dot indicator ────────────────────────────────────────────────────── */
+/* ─── Dot — hidden by default ──────────────────────────────────────────── */
 .cs-toc__dot {
   flex-shrink: 0;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #444;
+  background: transparent;       /* invisible by default */
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* ─── Label text ───────────────────────────────────────────────────────── */
+/* ─── Label text — grey by default ─────────────────────────────────────── */
 .cs-toc__text {
   font-size: 13px;
-  color: #888;
+  color: #999;
+  font-weight: 400;
   line-height: 1.3;
-  transition: color 0.2s ease, font-weight 0.2s ease;
+  transition: color 0.2s ease, font-weight 0.15s ease;
   white-space: nowrap;
 }
 
-/* ─── Hover state ──────────────────────────────────────────────────────── */
+/* ─── Hover state — small dot appears + text turns blue ────────────────── */
 .cs-toc__link:hover .cs-toc__dot {
-  background: #aaa;
+  background: #0378b8;
+  transform: scale(0.75);        /* small dot on hover */
 }
 
 .cs-toc__link:hover .cs-toc__text {
-  color: #ccc;
+  color: #0378b8;
 }
 
-/* ─── Active state ─────────────────────────────────────────────────────── */
+/* ─── Active state — large dot + bold blue text ─────────────────────────── */
 .cs-toc__link--active .cs-toc__dot {
   background: #0378b8;
-  transform: scale(1.5);
+  transform: scale(1.4);         /* large dot when active */
 }
 
 .cs-toc__link--active .cs-toc__text {
@@ -92,8 +94,14 @@
   font-weight: 600;
 }
 
-/* ─── Hide below 1280px ────────────────────────────────────────────────── */
-@media (max-width: 1280px) {
+/* ─── Active + hover on different item (Image 1 scenario) ──────────────── */
+/* Active item stays large blue, hovered other item gets small blue dot */
+.cs-toc__link--active:not(:hover) .cs-toc__dot {
+  transform: scale(1.4);
+}
+
+/* ─── Hide below 1100px instead of 1280px ─────────────────────────────── */
+@media (max-width: 1100px) {
   .cs-toc {
     display: none;
   }
