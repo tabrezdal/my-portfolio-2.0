@@ -13,6 +13,7 @@ import CtaSection from "../components/CtaSection/CtaSection";
 import StructuredData from "../components/StructuredData/StructuredData";
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
 import ProcessSection from "../components/ProcessSection/ProcessSection";
+import ContactSection from "../components/ContactSection/ContactSection";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
@@ -57,6 +58,7 @@ const Home = () => {
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <TestimonialSlider />
         </Suspense>
+        <ContactSection />
       </main>
       <Footer />
     </div>
