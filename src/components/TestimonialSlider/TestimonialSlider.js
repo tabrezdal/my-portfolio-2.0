@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-// import Swiper bundle with all modules installed
-import Swiper from "swiper/bundle";
-// import styles bundle
-import "swiper/css/bundle";
+import Swiper from "swiper";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import "./TestimonialSlider.css";
 import TestimonialData from "./TestimonialData";
 import ConstantHelper from "../../Helpers/ConstantHelper";
@@ -30,6 +31,7 @@ const TestimonialSlider = () => {
         clickable: true,
       },
       autoplay: { delay: 5000 },
+      modules: [EffectCoverflow, Pagination, Autoplay],
     });
 
     const queryResizer = () => {

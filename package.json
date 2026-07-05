@@ -22,10 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:prod": "react-scripts build && node scripts/purge-css.js",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "build:prod": "craco build && node scripts/purge-css.js",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "analyse": "source-map-explorer 'build/static/js/*.js'"
   },
@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "ajv": "^8.0.0",
     "react-scripts": "^5.0.1",
     "sharp": "^0.35.3",
