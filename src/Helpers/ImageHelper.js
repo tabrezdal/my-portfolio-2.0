@@ -1,5 +1,6 @@
 // //About Section
 import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
+import MySignature from "../Assets/Images/other/mySignature.webp";
 
 import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
 
@@ -251,6 +252,7 @@ import Other12 from "../Assets/Images/Portfolio/Other/TZ Vouchers.webp";
 const ImageHelper = {
   // //About Section
   AboutImage,
+  MySignature,
   // locationMap,
   TzInSuit,
 

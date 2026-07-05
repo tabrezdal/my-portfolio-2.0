@@ -12,41 +12,6 @@ import PrimaryButton from "../../sharedComponents/PrimaryButton";
 import BoxedButton from "../../sharedComponents/BoxedButton";
 import "./AboutSection.css";
 
-/**
- * SignatureSVG
- * Renders the cursive SVG signature from AboutSectionData.signatureText.
- *
- * To replace with a real signature image:
- *   <img
- *     src={ImageHelper.SignatureImage}
- *     alt="Signature"
- *     className="about-signature__svg"
- *     draggable="false"
- *     width={200}
- *     height={68}
- *   />
- */
-const SignatureSVG = ({ text }) => (
-  <div className="about-signature" aria-hidden="true">
-    <svg
-      viewBox="0 0 260 80"
-      xmlns="http://www.w3.org/2000/svg"
-      className="about-signature__svg"
-    >
-      <text
-        x="6"
-        y="62"
-        fontFamily="'Brush Script MT', 'Dancing Script', Palatino, 'Book Antiqua', Georgia, cursive"
-        fontSize="54"
-        fontWeight="400"
-        fill="currentColor"
-      >
-        {text}
-      </text>
-    </svg>
-  </div>
-);
-
 const AboutSection = () => {
   const shouldReduceMotion = useReducedMotion();
 
@@ -55,12 +20,12 @@ const AboutSection = () => {
     shouldReduceMotion
       ? {}
       : {
-          variants,
-          initial: "hidden",
-          whileInView: "visible",
-          viewport: { once: true, margin: "-80px" },
-          transition: { duration: 0.5, delay },
-        };
+        variants,
+        initial: "hidden",
+        whileInView: "visible",
+        viewport: { once: true, margin: "-80px" },
+        transition: { duration: 0.5, delay },
+      };
 
   return (
     <section className="about-section" id="about">
@@ -147,7 +112,14 @@ const AboutSection = () => {
 
             {/* Signature */}
             <motion.div variants={shouldReduceMotion ? {} : fadeUpLargeVariants}>
-              <SignatureSVG text={AboutSectionData.signatureText} />
+              <img
+                src={AboutSectionData.mySignature}
+                alt="Signature"
+                className="about-signature"
+                draggable="false"
+                width={300}
+                height={102}
+              />
             </motion.div>
 
             {/* CTA buttons — using existing shared components */}

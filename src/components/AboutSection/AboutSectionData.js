@@ -25,7 +25,7 @@ export const AboutSectionData = {
    * Signature text rendered in SVG cursive.
    * Update to your preferred name or initials.
    */
-  signatureText: "Tabrez",
+  mySignature: ImageHelper.MySignature,
 
   /**
    * Three narrative paragraphs.
