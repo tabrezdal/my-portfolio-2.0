@@ -5,18 +5,31 @@ import useCountUp from '../../hooks/useCountUp';
 import { statsReveal, statsStagger } from '../../utils/animationVariants';
 import './StatsBar.css';
 
-const StatItem = ({ value, suffix, label, shouldStart }) => {
+const StatItem = ({ value, suffix, label, description, shouldStart }) => {
   const count = useCountUp(value, 1500, shouldStart);
 
   return (
     <motion.div
-      className="stats-bar__item"
+      className="stat-item"
       variants={statsReveal}
     >
-      <div className="stats-bar__number">
-        {count}{suffix}
+      {/* Corner bracket decoration — top right of each cell */}
+      <span className="stat-bracket" aria-hidden="true" />
+
+      {/* Number */}
+      <div className="stat-number">
+        <span className="stat-count">{count}</span>
+        <span className="stat-suffix">{suffix}</span>
       </div>
-      <p className="stats-bar__label">{label}</p>
+
+      {/* Hairline separator */}
+      <div className="stat-separator" />
+
+      {/* Label + description */}
+      <div className="stat-text">
+        <p className="stat-label">{label}</p>
+        <p className="stat-description">{description}</p>
+      </div>
     </motion.div>
   );
 };
@@ -32,7 +45,7 @@ const StatsBar = () => {
       aria-label="Experience overview"
     >
       <motion.div
-        className="stats-bar__container"
+        className="stats-bar__inner"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={statsStagger}
@@ -43,6 +56,7 @@ const StatsBar = () => {
             value={stat.value}
             suffix={stat.suffix}
             label={stat.label}
+            description={stat.description}
             shouldStart={isInView}
           />
         ))}
