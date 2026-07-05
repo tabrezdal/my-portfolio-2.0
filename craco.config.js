@@ -31,43 +31,4 @@ module.exports = {
       ].filter(Boolean),  // removes the `false` when not in production
     },
   },
-
-  // ── NEW: webpack chunk splitting ─────────────────────────────────────────
-  webpack: {
-    configure: (webpackConfig) => {
-      // Skip all customisation in dev — only apply in production builds
-      if (process.env.NODE_ENV !== 'production') {
-        return webpackConfig;
-      }
-
-      webpackConfig.optimization.splitChunks = {
-        chunks: 'all',
-        maxInitialRequests: 6,
-        maxAsyncRequests: 8,
-        cacheGroups: {
-          react: {
-            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
-            name: 'vendor-react',
-            chunks: 'all',
-            priority: 40,
-          },
-          swiper: {
-            test: /[\\/]node_modules[\\/]swiper[\\/]/,
-            name: 'vendor-swiper',
-            chunks: 'async',
-            priority: 30,
-          },
-          vendors: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendor-misc',
-            chunks: 'all',
-            priority: 20,
-            minSize: 10000,
-          },
-        },
-      };
-
-      return webpackConfig;
-    },
-  },
 };
