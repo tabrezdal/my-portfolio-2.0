@@ -12,6 +12,7 @@ import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import CtaSection from "../components/CtaSection/CtaSection";
 import StructuredData from "../components/StructuredData/StructuredData";
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
+import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
 import ProcessSection from "../components/ProcessSection/ProcessSection";
 import ContactSection from "../components/ContactSection/ContactSection";
 
@@ -47,6 +48,7 @@ const Home = () => {
         <AboutSection />
         <ProcessSection />
         <ExperienceSection />
+        <CertificationsSection />
         <SkillsSection />
         <ToolsSection />
         <TechnologiesSection />

@@ -16,21 +16,26 @@ export const NavLinkData = [
   },
   {
     id: 4,
+    name: "Certs",
+    linkTo: "certifications",
+  },
+  {
+    id: 5,
     name: "Skills",
     linkTo: "skills",
   },
   {
-    id: 5,
+    id: 6,
     name: "Tools",
     linkTo: "tools",
   },
   {
-    id: 6,
+    id: 7,
     name: "Tech",
     linkTo: "technologies",
   },
   {
-    id: 7,
+    id: 8,
     name: "Projects",
     linkTo: "projects",
   },
