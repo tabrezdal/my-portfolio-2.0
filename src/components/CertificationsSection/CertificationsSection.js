@@ -37,8 +37,8 @@ const CertificationsSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <p className="eyebrow-label">CERTIFICATIONS</p>
-          <h2 className="cert-section__title">Continuous Learning</h2>
+          <p className="cert-section__title">Continuous Learning</p>
+          <h2 className="eyebrow-label">CERTIFICATIONS</h2>
           <p className="cert-section__subtitle">
             {TotalCertifications}+ certifications across AI, design, frontend engineering, and product management.
           </p>
