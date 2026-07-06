@@ -8,12 +8,18 @@
   <meta name="theme-color" content="#0378b8" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
+  <link rel="preload" as="style" href="%PUBLIC_URL%/font-awesome.min.css"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="%PUBLIC_URL%/font-awesome.min.css" />
+  </noscript>
+
   <!-- LCP hero image — preloaded as a stable public asset (not webpack-hashed) so Chrome's preload scanner discovers it before React hydrates -->
   <link rel="preload" as="image" href="%PUBLIC_URL%/hero-image.webp" fetchpriority="high" />
 
   <!-- Preload hints for critical JS chunks. Update the filenames after each build (they are content-hashed). -->
-  <link rel="modulepreload" href="%PUBLIC_URL%/static/js/vendor-react.7aa61416.js" />
-  <link rel="modulepreload" href="%PUBLIC_URL%/static/js/main.77081742.js" />
+  <!-- <link rel="modulepreload" href="%PUBLIC_URL%/static/js/vendor-react.7aa61416.js" />
+  <link rel="modulepreload" href="%PUBLIC_URL%/static/js/main.77081742.js" /> -->
 
   <!-- Author Meta -->
   <meta name="author" content="Tabrez Dal" />
