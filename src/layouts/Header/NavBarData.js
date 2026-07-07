@@ -36,6 +36,11 @@ export const NavLinkData = [
   },
   {
     id: 8,
+    name: "Work",
+    linkTo: "case-studies",
+  },
+  {
+    id: 9,
     name: "Projects",
     linkTo: "projects",
   },
