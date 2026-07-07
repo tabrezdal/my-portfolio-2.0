@@ -1,0 +1,160 @@
+/* Section container */
+.st-section {
+  padding: 96px 0;
+  background: var(--color-surface-alt);
+}
+
+.st-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section header */
+.st-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 12px 0;
+}
+
+.st-headline {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+/* Cursive sub-label — "my tech stack" */
+.st-cursive {
+  font-family: 'Dancing Script', 'Pacifico', cursive;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0 0 48px 0;
+  display: block;
+}
+
+/* Category block */
+.st-category {
+  margin-bottom: 56px;
+}
+
+.st-category:last-child {
+  margin-bottom: 0;
+}
+
+.st-category__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.st-category__title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.st-category__line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Icon grid */
+.st-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Icon tile — the core visual element */
+.st-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.st-tile__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.st-tile:hover .st-tile__icon {
+  border-color: var(--color-text-muted);
+  transform: translateY(-2px);
+}
+
+/* Icon image — IMPORTANT: filter to monochrome */
+.st-tile__icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  /* Monochrome treatment — converts any colored icon to B&W */
+  filter: grayscale(100%) brightness(0.15);
+  transition: filter 0.2s ease;
+}
+
+.st-tile:hover .st-tile__icon img {
+  filter: grayscale(100%) brightness(0);   /* slightly darker on hover */
+}
+
+/* Text fallback when no icon image exists */
+.st-tile__icon span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* Tool name label below tile */
+.st-tile__name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: center;
+  white-space: nowrap;
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .st-section { padding: 64px 0; }
+
+  .st-tile__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+
+  .st-tile__icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .st-grid {
+    gap: 10px;
+  }
+}
