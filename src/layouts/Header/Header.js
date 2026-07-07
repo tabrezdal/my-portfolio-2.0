@@ -52,7 +52,6 @@ const Header = () => {
       <header id="header" className={`${headerShadow ? "headerShadow" : ""}`}>
         <div className="container main-menu">
           <div className="align-items-center justify-content-between d-flex">
-            {NavigationView()}
 
             <div id="logo">
               <Link to="/">
@@ -60,6 +59,7 @@ const Header = () => {
                   {SectionTitleHelper.headerSectionTitle}
                 </h2>
               </Link>
+              <AvailabilityBadge />
             </div>
 
             <Button
@@ -70,7 +70,8 @@ const Header = () => {
               <i className="lnr lnr-menu"></i>
             </Button>
 
-                <AvailabilityBadge />
+            {NavigationView()}
+
             <nav id="nav-menu-container">
               <ul className="nav-menu nav-menu-right">
                 {NavSocialMediaLinkData?.map((item) => (
