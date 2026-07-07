@@ -3,7 +3,7 @@ import ImageHelper from "../../Helpers/ImageHelper";
 export const AboutSectionData = {
 
   /** Small uppercase eyebrow label above the headline */
-  eyebrow: "About",
+  eyebrow: "ABOUT ME",
 
   /**
    * Full-width headline — speaks to the dual Product Engineer identity.
@@ -36,20 +36,18 @@ export const AboutSectionData = {
   paragraphs: [
     {
       id: 1,
-      bold: "Most teams hire a designer and a developer separately. I'm both. ",
-      text: "As a Product Engineer, I close the gap between how a product looks and how it works — from blank Figma files to deployed React applications. I don't hand things off to myself; I own the full journey, and that changes what's possible in every project.",
+      bold: "Product Engineer with 5+ years bridging software engineering and UX/UI design to deliver scalable, accessible web applications. ",
+      text: "I've led end-to-end product development across healthcare SaaS, e-commerce, and enterprise platforms — owning the full cycle from user research and Figma design to React implementation and production deployment. Based in Dubai, UAE — open to senior product engineering, frontend engineering, and UX engineering roles across the UAE and globally.",
     },
     {
       id: 2,
-      bold: "I think in systems before I think in screens. ",
-      text: "Every component I design, I consider how it's built. Every line of code I write, I consider how it's experienced. Whether it's a design system that has to scale across multiple teams or an MVP that has to ship in six weeks, I work backwards from user outcomes and build forward from solid architecture.",
-    },
-    {
-      id: 3,
-      bold: "The details others skip are where I live. ",
-      text: "The 200ms that makes a hover feel intentional. The error message that builds trust instead of friction. The empty state that tells you exactly what to do next. These micro-decisions are invisible when they're right — and they're the difference between a product that merely works and one people actually enjoy.",
+      bold: "My edge is being equally fluent in design systems and frontend architecture — ",
+      text: "I reduce back-and-forth between design and engineering teams, accelerate delivery, and build products that are both performant and delightful to use.",
     },
   ],
+
+  /** Location tag */
+  location: "Dubai, UAE · Available for Regional & Global Roles",
 
   /** CTA buttons — using existing shared PrimaryButton + BoxedButton */
   buttonData: {

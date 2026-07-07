@@ -13,9 +13,9 @@ export const HeroSectionData = {
   heroImage: `${process.env.PUBLIC_URL}/hero-image.webp`,
 
   // New 2026 data structure
-  roleDescriptor: "Product Engineer",
+  roleDescriptor: "Product Engineer — Software & UX",
   headline: ["Building Products", "That Matter"],
-  valueStatement: "I help startups and enterprise teams build scalable React applications and intuitive product experiences that improve usability, performance, and business outcomes.",
+  valueStatement: "I bridge engineering and design to ship scalable React products and intuitive user experiences — from Figma to production, across SaaS, healthcare, and e-commerce.",
   primaryCta: {
     label: "View Work",
     href: "#projects",
@@ -24,9 +24,21 @@ export const HeroSectionData = {
     label: "Schedule a Call",
     href: "https://calendly.com/tabrez-dal",
   },
-  proofPoint: {
-    type: "stat",
-    value: "5+",
-    label: "Years Experience",
-  },
+  proofPoint: [
+    {
+      type: "stat",
+      value: "5+",
+      label: "Years Experience",
+    },
+    {
+      type: "stat",
+      value: "25+",
+      label: "Products Shipped",
+    },
+    {
+      type: "stat",
+      value: "10K+",
+      label: "Users Impacted",
+    },
+  ],
 };
