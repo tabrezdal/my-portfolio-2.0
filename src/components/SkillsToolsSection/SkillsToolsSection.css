@@ -30,7 +30,7 @@
 
 /* Cursive sub-label — "my tech stack" */
 .st-cursive {
-  font-family: 'Dancing Script', 'Pacifico', cursive;
+  font-family: var(--font-primary);
   font-size: 22px;
   font-weight: 400;
   color: var(--color-text-secondary);
