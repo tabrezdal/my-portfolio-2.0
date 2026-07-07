@@ -1,4 +1,5 @@
 const purgecss = require('@fullhuman/postcss-purgecss');
+const postcssFontDisplay = require('postcss-font-display');
 
 module.exports = {
   // ── existing PurgeCSS style config ──────────────────────────────────────
@@ -28,6 +29,7 @@ module.exports = {
             ],
           },
         }),
+        postcssFontDisplay({ display: 'optional', replace: false }),
       ].filter(Boolean),  // removes the `false` when not in production
     },
   },

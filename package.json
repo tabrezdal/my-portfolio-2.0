@@ -52,6 +52,7 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "ajv": "^8.0.0",
+    "postcss-font-display": "^0.3.0",
     "react-scripts": "^5.0.1",
     "sharp": "^0.35.3",
     "source-map-explorer": "^2.5.3",
