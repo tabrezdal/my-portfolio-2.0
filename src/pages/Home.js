@@ -15,6 +15,7 @@ import ExperienceSection from "../components/ExperienceSection/ExperienceSection
 import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
 import EducationSection from "../components/EducationSection/EducationSection";
 import ProcessSection from "../components/ProcessSection/ProcessSection";
+import WhatIBringSection from "../components/WhatIBringSection/WhatIBringSection";
 import ContactSection from "../components/ContactSection/ContactSection";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
@@ -48,6 +49,7 @@ const Home = () => {
         <StatsBar />
         <AboutSection />
         <ProcessSection />
+        <WhatIBringSection />
         <ExperienceSection />
         <EducationSection />
         <CertificationsSection />
