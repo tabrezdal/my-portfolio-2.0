@@ -3,9 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 import StatsBar from "../components/StatsBar/StatsBar";
-import SkillsSection from "../components/SkillsSection/SkillsSection";
-import TechnologiesSection from "../components/TechnologiesSection/TechnologiesSection";
-import ToolsSection from "../components/ToolsSection/ToolsSection";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
@@ -17,6 +14,7 @@ import EducationSection from "../components/EducationSection/EducationSection";
 import ProcessSection from "../components/ProcessSection/ProcessSection";
 import WhatIBringSection from "../components/WhatIBringSection/WhatIBringSection";
 import ContactSection from "../components/ContactSection/ContactSection";
+import SkillsToolsSection from "../components/SkillsToolsSection/SkillsToolsSection";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
@@ -49,13 +47,11 @@ const Home = () => {
         <StatsBar />
         <AboutSection />
         <ProcessSection />
+        <SkillsToolsSection />
         <WhatIBringSection />
         <ExperienceSection />
         <EducationSection />
         <CertificationsSection />
-        <SkillsSection />
-        <ToolsSection />
-        <TechnologiesSection />
         <CtaSection />
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <FeaturedProjectsSection />
