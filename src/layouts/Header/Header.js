@@ -30,13 +30,23 @@ const Header = () => {
     return (
       <nav id="nav-menu-container">
         <ul className="nav-menu">
-          {NavLinkData?.map((item) => (
-            <NavigationLink
-              key={item.id}
-              linkTo={item.linkTo}
-              name={item.name}
-            />
-          ))}
+          {NavLinkData?.map((item) => {
+            // Handle "Work" link as route navigation, others as scroll navigation
+            if (item.linkTo === 'case-studies') {
+              return (
+                <li key={item.id} className="navlink">
+                  <Link to="/case-studies">{item.name}</Link>
+                </li>
+              );
+            }
+            return (
+              <NavigationLink
+                key={item.id}
+                linkTo={item.linkTo}
+                name={item.name}
+              />
+            );
+          })}
         </ul>
       </nav>
     );
