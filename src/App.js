@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import "./styles/linearicons.css";
 import "./styles/main.css";
 import "./App.css";
