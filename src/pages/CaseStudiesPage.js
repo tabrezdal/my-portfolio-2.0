@@ -4,7 +4,74 @@ import { motion, useReducedMotion } from 'framer-motion';
 import FeaturedProjectsData from '../Data/FeaturedProjectsData';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
+import ImageHelper from '../Helpers/ImageHelper';
 import './CaseStudiesPage.css';
+
+// Tech icon mapping based on available icons in ImageHelper
+const TECH_ICON_MAP = {
+  'React': ImageHelper.ReactIcon,
+  'React 18': ImageHelper.ReactIcon,
+  'React.js': ImageHelper.ReactIcon,
+  'Redux': ImageHelper.ReduxIcon,
+  'GraphQL': ImageHelper.GraphQLIcon,
+  'Graph QL': ImageHelper.GraphQLIcon,
+  'Node.js': ImageHelper.NodeJsIcon,
+  'Node Js': ImageHelper.NodeJsIcon,
+  'TypeScript': ImageHelper.TypescriptIcon,
+  'Typescript': ImageHelper.TypescriptIcon,
+  'HTML5': ImageHelper.HtmlIcon,
+  'CSS3': ImageHelper.CssIcon,
+  'Sass': ImageHelper.SaasIcon,
+  'Material UI': ImageHelper.MuiIcon,
+  'MUI v5': ImageHelper.MuiIcon,
+  'Bootstrap': ImageHelper.BootstrapIcon,
+  'MySQL': ImageHelper.MySqlIcon,
+  'JSON': ImageHelper.JsonIcon,
+  'JavaScript': ImageHelper.JavaScriptIcon,
+  'Axios': ImageHelper.AxiosIcon,
+  'Axio': ImageHelper.AxiosIcon,
+  'jQuery': ImageHelper.JqueryIcon,
+  'Jquery': ImageHelper.JqueryIcon,
+  'ChatGPT': ImageHelper.ChatGPTIcon,
+  'Less': ImageHelper.LessIcon,
+  'Figma': ImageHelper.FigmaLogo,
+};
+
+// Default tech icons to show if no tech icons available
+const DEFAULT_TECH_ICONS = [
+  { name: 'React', icon: ImageHelper.ReactIcon },
+  { name: 'Redux', icon: ImageHelper.ReduxIcon },
+  { name: 'HTML5', icon: ImageHelper.HtmlIcon },
+  { name: 'CSS3', icon: ImageHelper.CssIcon },
+  { name: 'JavaScript', icon: ImageHelper.JavaScriptIcon },
+  { name: 'Figma', icon: ImageHelper.FigmaLogo },
+];
+
+// Helper to separate domain tags from tech tags
+const separateTags = (tags) => {
+  if (!tags) return { domainTags: [], techTags: [] };
+
+  const techKeywords = [
+    'React', 'Redux', 'GraphQL', 'Node', 'TypeScript', 'Typescript',
+    'HTML', 'CSS', 'Sass', 'Less', 'Bootstrap', 'Material UI', 'MUI',
+    'MySQL', 'JSON', 'JavaScript', 'Axios', 'jQuery', 'ChatGPT', 'Figma',
+    'Angular', 'Vue', 'Next.js', 'Chart.js', 'AG Grid', 'Flutter'
+  ];
+
+  const domainTags = [];
+  const techTags = [];
+
+  tags.forEach(tag => {
+    const isTech = techKeywords.some(keyword => tag.toLowerCase().includes(keyword.toLowerCase()));
+    if (isTech) {
+      techTags.push(tag);
+    } else {
+      domainTags.push(tag);
+    }
+  });
+
+  return { domainTags, techTags };
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -50,71 +117,108 @@ const CaseStudiesPage = () => {
             initial="hidden"
             animate="visible"
           >
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                variants={shouldReduceMotion ? {} : fadeUp}
-              >
-                <Link
-                  to={`/case-study/${project.slug}`}
-                  className="case-study-card"
-                  aria-label={`View case study: ${project.title}`}
+            {projects.map((project, index) => {
+              const { domainTags, techTags } = separateTags(project.tags);
+
+              // Get tech icons from actual tech tags, or use defaults if none
+              const techIconsToShow = techTags.length > 0
+                ? techTags
+                    .map((tag) => ({ tag, iconSrc: TECH_ICON_MAP[tag] }))
+                    .filter(({ iconSrc }) => iconSrc)
+                    .slice(0, 3)
+                : DEFAULT_TECH_ICONS.slice(0, 3);
+
+              // Tooltip shows only tech tags (no duplication with domain tags)
+              const tooltipTags = techTags.length > 0 ? techTags : DEFAULT_TECH_ICONS.map(t => t.name);
+
+              return (
+                <motion.div
+                  key={project.id}
+                  variants={shouldReduceMotion ? {} : fadeUp}
                 >
-                  {/* Image wrapper — position:relative is critical */}
-                  <div className="case-study-card__img-wrap">
-                    {project.coverImage ? (
-                      <img
-                        src={project.coverImage}
-                        alt={project.title}
-                        className="case-study-card__img"
-                        loading={index < 2 ? 'eager' : 'lazy'}
-                        width={800}
-                        height={340}
-                      />
-                    ) : (
-                      <div className="case-study-card__img-placeholder" />
-                    )}
-                  </div>
+                  <Link
+                    to={`/case-study/${project.slug}`}
+                    className="case-study-card"
+                    aria-label={`View case study: ${project.title}`}
+                  >
+                    {/* Image */}
+                    <div className="case-study-card__img-wrap">
+                      {project.coverImage ? (
+                        <img
+                          src={project.coverImage}
+                          alt={project.title}
+                          className="case-study-card__img"
+                          loading={index < 2 ? 'eager' : 'lazy'}
+                          width={800}
+                          height={300}
+                        />
+                      ) : (
+                        <div className="case-study-card__img-placeholder" />
+                      )}
+                    </div>
 
-                  {/* Card body */}
-                  <div className="case-study-card__body">
-
-                    {/* Category · Year */}
-                    {(project.role || project.year) && (
-                      <p className="case-study-card__meta">
-                        {[project.role, project.year]
-                          .filter(Boolean)
-                          .join('  ·  ')}
-                      </p>
-                    )}
-
-                    {/* Title */}
-                    <h2 className="case-study-card__title">
-                      {project.title}
-                    </h2>
-
-                    {/* Outcome metric */}
-                    {(project.outcome || project.shortDescription) && (
-                      <p className="case-study-card__outcome">
-                        {project.outcome || project.shortDescription}
-                      </p>
-                    )}
-
-                    {/* Tags — max 3 */}
-                    {project.tags && project.tags.length > 0 && (
-                      <div className="case-study-card__tags">
-                        {project.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="case-study-card__tag">
-                            {tag}
-                          </span>
-                        ))}
+                    {/* Body */}
+                    <div className="case-study-card__body">
+                      {/* Header with title, role, and year */}
+                      <div className="case-study-card__header">
+                        <div className="case-study-card__header-left">
+                          <h2 className="case-study-card__title">{project.title}</h2>
+                          {project.role && (
+                            <p className="case-study-card__subtitle">{project.role}</p>
+                          )}
+                        </div>
+                        {project.year && (
+                          <span className="case-study-card__year">{project.year}</span>
+                        )}
                       </div>
-                    )}
 
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                      {/* Divider */}
+                      {(project.role && project.shortDescription) && (
+                        <div className="case-study-card__divider" />
+                      )}
+
+                      {/* Description */}
+                      {project.shortDescription && (
+                        <p className="case-study-card__description">
+                          {project.shortDescription}
+                        </p>
+                      )}
+
+                      {/* Bottom bar */}
+                      <div className="case-study-card__bottom">
+                        {/* Domain tags — left */}
+                        {domainTags.length > 0 && (
+                          <div className="case-study-card__tags">
+                            {domainTags.slice(0, 3).map((tag) => (
+                              <span key={tag} className="case-study-card__tag">
+                                {tag}
+                              </span>
+                            ))}
+                            {domainTags.length > 3 && (
+                              <span className="case-study-card__tag">
+                                +{domainTags.length - 3}
+                              </span>
+                            )}
+                          </div>
+                        )}
+
+                        {/* Tech icons — right */}
+                        <div className="case-study-card__tech">
+                          {techIconsToShow.map(({ tag, iconSrc }) => (
+                            <div key={tag} className="case-study-card__tech-icon">
+                              <img src={iconSrc} alt={tag} />
+                            </div>
+                          ))}
+                          <div className="case-study-card__tech-tooltip">
+                            {tooltipTags.join('  ·  ')}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
           </motion.div>
         )}
 
