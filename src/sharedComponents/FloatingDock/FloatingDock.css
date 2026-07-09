@@ -1,0 +1,119 @@
+/* ─── Floating dock ──────────────────────────────────── */
+.floating-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  background: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  padding: 6px 6px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.25),
+    0 1px 4px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+/* Visible state — slides up from below */
+.floating-dock--visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* No motion override */
+.floating-dock--no-motion {
+  transition: none;
+}
+
+/* ─── Action button / link ───────────────────────────── */
+.floating-dock__action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 99px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.floating-dock__action:hover {
+  background: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+}
+
+.floating-dock__action:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* ─── Icon ───────────────────────────────────────────── */
+.floating-dock__icon {
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+.floating-dock__action:hover .floating-dock__icon {
+  opacity: 1;
+}
+
+/* ─── Separator ──────────────────────────────────────── */
+.floating-dock__separator {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  margin: 0 2px;
+}
+
+/* ─── Mobile ─────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .floating-dock {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: translateX(0) translateY(80px);
+    border-radius: 16px;
+  }
+
+  .floating-dock--visible {
+    transform: translateX(0) translateY(0);
+  }
+
+  .floating-dock__action {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 12px;
+  }
+
+  /* Hide text labels on very small screens — icons only */
+  @media (max-width: 360px) {
+    .floating-dock__label {
+      display: none;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
 import { MobileMenuModal } from "./MobileMenuModal/MobileMenuModal";
+import ProfilePic from '../../Assets/Images/me/ProfilePic.webp';
 import { NavLinkData, NavSocialMediaLinkData } from "./NavBarData";
 import AvailabilityBadge from "./AvailabilityBadge";
 
@@ -62,6 +63,14 @@ const Header = () => {
       <header id="header" className={`${headerShadow ? "headerShadow" : ""}`}>
         <div className="container main-menu">
           <div className="align-items-center justify-content-between d-flex">
+
+            <img
+              src={ProfilePic}
+              alt="Tabrez Dal"
+              className="availability-badge__photo"
+              width={40}
+              height={40}
+            />
 
             <div id="logo">
               <Link to="/">

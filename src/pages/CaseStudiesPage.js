@@ -5,6 +5,7 @@ import FeaturedProjectsData from '../Data/FeaturedProjectsData';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
 import ImageHelper from '../Helpers/ImageHelper';
+import FloatingDock from '../sharedComponents/FloatingDock/FloatingDock';
 import './CaseStudiesPage.css';
 
 // Tech icon mapping based on available icons in ImageHelper
@@ -224,6 +225,7 @@ const CaseStudiesPage = () => {
 
       </main>
       <Footer />
+      <FloatingDock />
     </>
   );
 };

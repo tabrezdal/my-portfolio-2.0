@@ -1705,6 +1705,19 @@ h6 {
 
 }
 
+/* Profile photo — circular avatar */
+.availability-badge__photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  flex-shrink: 0;
+  /* Subtle ring to separate from nav bg */
+  box-shadow: 0 0 0 1.5px var(--color-border);
+}
+
 #mobile-nav .navlink {
 
   display: flex;
