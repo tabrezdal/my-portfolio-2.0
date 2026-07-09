@@ -164,132 +164,50 @@
   }
 }
 
-/* ═══════════════════════════════════════════════════
-   OUTCOME CALLOUT — THREE VARIANTS
-   Active variant controlled by .featured-projects--variant-[a|b|c]
-   on the section container in FeaturedProjectsSection.js
-════════════════════════════════════════════════════ */
-
-/* ─── Default: hide all three ──────────────────── */
-.fp-outcome--a,
-.fp-outcome--b,
-.fp-outcome--c {
-  display: none;
-}
-
-/* ══════════════════════════════════════════════════
-   VARIANT A — Text line below title, above description
-   Clean, editorial, always visible
-══════════════════════════════════════════════════ */
-.featured-projects--variant-a .fp-outcome--a {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  line-height: 1.4;
-  margin: 0 0 10px 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
-.featured-projects--variant-a .fp-outcome--a .fp-outcome__arrow {
-  font-size: 12px;
-  flex-shrink: 0;
-  color: var(--color-text-muted);
-}
-
-/* ══════════════════════════════════════════════════
-   VARIANT B — Dark badge, bottom-left of image
-   Always visible, overlay on thumbnail
-══════════════════════════════════════════════════ */
-.featured-projects--variant-b .fp-outcome--b {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  /* Position: absolute inside image wrapper */
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  z-index: 2;
-
-  /* Badge styling */
-  background: rgba(10, 10, 10, 0.82);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 6px;
-  max-width: calc(100% - 24px);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.featured-projects--variant-b .fp-outcome--b .fp-outcome__arrow {
-  flex-shrink: 0;
-  opacity: 0.75;
-}
-
-/* ══════════════════════════════════════════════════
-   VARIANT C — Dark overlay revealed on card hover
-   Hidden by default, fades in on hover
-══════════════════════════════════════════════════ */
-.featured-projects--variant-c .fp-outcome--c {
+/* ─── Outcome hover overlay (permanent) ─────────── */
+.fp-outcome-overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 6px;
 
-  /* Full image overlay */
   position: absolute;
   inset: 0;
   z-index: 3;
 
-  /* Dark overlay */
   background: rgba(10, 10, 10, 0.75);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 
-  /* Text */
   color: #ffffff;
   text-align: center;
   padding: 24px;
 
-  /* Hidden by default */
   opacity: 0;
   transition: opacity 0.25s ease;
 }
 
 /* Reveal on card hover */
-.featured-projects--variant-c .fp-card:hover .fp-outcome--c {
+.fp-card:hover .fp-outcome-overlay {
   opacity: 1;
 }
 
-.featured-projects--variant-c .fp-outcome--c .fp-outcome__arrow {
+.fp-outcome-overlay__arrow {
   font-size: 24px;
   opacity: 0.7;
   line-height: 1;
 }
 
-.featured-projects--variant-c .fp-outcome--c .fp-outcome__text {
+.fp-outcome-overlay__text {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   max-width: 280px;
 }
 
-/* ─── Reduced motion: disable C hover transition ─ */
 @media (prefers-reduced-motion: reduce) {
-  .featured-projects--variant-c .fp-outcome--c {
+  .fp-outcome-overlay {
     transition: none;
   }
 }
