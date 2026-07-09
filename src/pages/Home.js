@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 import StatsBar from "../components/StatsBar/StatsBar";
+import LogoStrip from "../components/LogoStrip/LogoStrip";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
@@ -46,6 +47,7 @@ const Home = () => {
       <main id="main-content">
         <HeroSection />
         <StatsBar />
+        <LogoStrip />
         <AboutSection />
         <ProcessSection />
         <SkillsToolsSection />
