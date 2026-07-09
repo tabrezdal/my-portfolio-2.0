@@ -1,0 +1,119 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+}
+
+.not-found-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+/* The 404 number — dominant visual element */
+.not-found-code {
+  font-size: clamp(120px, 20vw, 220px);
+  font-weight: 800;
+  color: var(--color-text-heading);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 24px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.not-found-separator {
+  width: 64px;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0 auto 24px;
+}
+
+.not-found-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin: 0 0 12px 0;
+}
+
+.not-found-message {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0 0 40px 0;
+  max-width: 320px;
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary CTA — black, matches portfolio primary buttons */
+.not-found-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  min-height: 48px;
+  background: var(--color-text-heading);
+  color: var(--color-surface);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.not-found-btn-primary:hover {
+  opacity: 0.85;
+}
+
+/* Secondary CTA — outlined */
+.not-found-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  min-height: 48px;
+  background: transparent;
+  color: var(--color-text-heading);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.not-found-btn-secondary:hover {
+  border-color: var(--color-text-muted);
+}
+
+/* Focus rings */
+.not-found-btn-primary:focus-visible,
+.not-found-btn-secondary:focus-visible {
+  outline: 2px solid var(--color-text-heading);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .not-found-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-btn-primary,
+  .not-found-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
