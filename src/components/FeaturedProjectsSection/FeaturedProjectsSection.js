@@ -3,9 +3,12 @@ import SectionTitle from "../../sharedComponents/sectionTitle/SectionTitle";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 import FeaturedProjectsData from "../../Data/FeaturedProjectsData";
 
+// CHANGE THIS TO TEST DIFFERENT VARIANTS: 'A' | 'B' | 'C'
+const OUTCOME_VARIANT = 'C';
+
 const FeaturedProjectsSection = () => {
   return (
-    <section className="section-gap" id="featured-work">
+    <section className={`section-gap featured-projects-section featured-projects--variant-${OUTCOME_VARIANT.toLowerCase()}`} id="featured-work">
       <div className="container">
         <SectionTitle sectionTitleText="Featured Work" />
         <div className="row mt-30">

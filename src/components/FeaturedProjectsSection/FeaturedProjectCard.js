@@ -34,6 +34,20 @@ const FeaturedProjectCard = ({ project, index }) => {
             <p className="fp-card__overlay-role">{project.role}</p>
             <span className="fp-card__overlay-cta">View Case Study →</span>
           </div>
+          {/* ADD inside the image wrapper div, as the LAST child */}
+          {project.outcome && (
+            <div className="fp-outcome fp-outcome--b" aria-label={`Outcome: ${project.outcome}`}>
+              <span className="fp-outcome__arrow" aria-hidden="true">↑</span>
+              <span className="fp-outcome__text">{project.outcome}</span>
+            </div>
+          )}
+          {/* ADD inside the image wrapper div, as the LAST child — AFTER the badge */}
+          {project.outcome && (
+            <div className="fp-outcome fp-outcome--c" aria-hidden="true">
+              <span className="fp-outcome__arrow">↑</span>
+              <span className="fp-outcome__text">{project.outcome}</span>
+            </div>
+          )}
         </div>
 
         {/* Body */}
@@ -43,6 +57,13 @@ const FeaturedProjectCard = ({ project, index }) => {
             <span className="fp-card__year">{project.year}</span>
           </div>
           <p className="fp-card__title">{project.title}</p>
+          {/* ADD between the title element and the description element */}
+          {project.outcome && (
+            <p className="fp-outcome fp-outcome--a">
+              <span className="fp-outcome__arrow" aria-hidden="true">↑</span>
+              {project.outcome}
+            </p>
+          )}
           <p className="fp-card__desc">{project.shortDescription}</p>
           <div className="fp-card__tags">
             {project.tags.map((tag) => (
