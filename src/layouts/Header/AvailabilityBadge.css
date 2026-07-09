@@ -10,7 +10,7 @@
 .availability-badge {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: var(--font-primary, 'Poppins', sans-serif);
   font-size: 13px;
   font-weight: 400;

@@ -15,6 +15,7 @@ import ProcessSection from "../components/ProcessSection/ProcessSection";
 import WhatIBringSection from "../components/WhatIBringSection/WhatIBringSection";
 import ContactSection from "../components/ContactSection/ContactSection";
 import SkillsToolsSection from "../components/SkillsToolsSection/SkillsToolsSection";
+import FloatingDock from "../sharedComponents/FloatingDock/FloatingDock";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
@@ -63,6 +64,7 @@ const Home = () => {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingDock />
     </div>
   );
 };

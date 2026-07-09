@@ -77,7 +77,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <div className="contact-section__container">
         <motion.div
           className="contact-section__header"

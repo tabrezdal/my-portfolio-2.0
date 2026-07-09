@@ -91,7 +91,7 @@ export const NavSocialMediaLinkData = [
 
 export const availabilityConfig = {
   isAvailable: true,
-  label: 'Available',
+  label: 'Available for work',
   tooltip: 'Open to new projects',
   dotColor: 'green',
 };
