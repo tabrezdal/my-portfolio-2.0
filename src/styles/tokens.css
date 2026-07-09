@@ -49,6 +49,7 @@
   -------------------------------------------------------------------------- */
   --color-border:          #e0e0e0;   /* Border gray */
   --color-border-light:    #cccccc;   /* Light border */
+  --color-border-muted:    #767676;   /* Muted border */
 
   /* --------------------------------------------------------------------------
      COLORS — State
