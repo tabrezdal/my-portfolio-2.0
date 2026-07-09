@@ -4,7 +4,7 @@ import FeaturedProjectCard from "./FeaturedProjectCard";
 import FeaturedProjectsData from "../../Data/FeaturedProjectsData";
 
 // CHANGE THIS TO TEST DIFFERENT VARIANTS: 'A' | 'B' | 'C'
-const OUTCOME_VARIANT = 'A';
+const OUTCOME_VARIANT = 'C';
 
 const FeaturedProjectsSection = () => {
   return (
