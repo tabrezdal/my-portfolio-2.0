@@ -51,7 +51,7 @@ const WhatIBringSection = () => {
   const duplicatedIndustries = [...WhatIBringSectionData.industries, ...WhatIBringSectionData.industries];
 
   return (
-    <section className="wib-section" aria-label="What I Bring">
+    <section id="capabilities" className="wib-section" aria-label="What I Bring">
       <div className="wib-inner">
         {/* Section Header */}
         <motion.div

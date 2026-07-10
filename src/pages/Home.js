@@ -48,22 +48,22 @@ const Home = () => {
         <HeroSection />
         <StatsBar />
         <LogoStrip />
-        <AboutSection />
-        <ProcessSection />
-        <SkillsToolsSection />
-        <WhatIBringSection />
-        <ExperienceSection />
-        <EducationSection />
-        <CertificationsSection />
-        <CtaSection />
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <FeaturedProjectsSection />
         </Suspense>
+        <AboutSection />
+        <ProcessSection />
+        <WhatIBringSection />
+        <SkillsToolsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <CertificationsSection />
         <ProjectsSection />
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <TestimonialSlider />
         </Suspense>
         <ContactSection />
+        <CtaSection />
       </main>
       <Footer />
       <FloatingDock />
