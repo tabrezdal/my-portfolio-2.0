@@ -49,9 +49,12 @@ const CaseStudyPage = () => {
     <div>
       <Helmet>
         <title>{project.title} — Case Study | Tabrez Dal</title>
-        <meta name="description" content={project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`} />
+        <meta
+          name="description"
+          content={(project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`).slice(0, 155)}
+        />
         <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
-        <meta property="og:description" content={project.shortDescription || `Case study: ${project.title}`} />
+        <meta property="og:description" content={(project.shortDescription || `Case study: ${project.title}`).slice(0, 155)} />
         <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
         <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}`} />
         <meta property="og:type" content="article" />

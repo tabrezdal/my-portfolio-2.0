@@ -30,9 +30,9 @@ const Home = () => {
       <StructuredData />
       <Helmet>
         <title>Tabrez Dal — Product Engineer, Software & UX</title>
-        <meta name="description" content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years building scalable frontend systems and product-driven experiences." />
+        <meta name="description" content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years across SaaS, healthcare, and e-commerce." />
         <meta property="og:title" content="Tabrez Dal — Product Engineer, Software & UX" />
-        <meta property="og:description" content="6+ years building scalable frontend systems and product-driven experiences across SaaS, healthcare, and e-commerce." />
+        <meta property="og:description" content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years across SaaS, healthcare, and e-commerce." />
         <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
         <meta property="og:url" content="https://tabrezdal.com/" />
         <meta property="og:type" content="website" />
