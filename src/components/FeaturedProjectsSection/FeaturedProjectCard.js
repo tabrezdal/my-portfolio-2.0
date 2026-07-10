@@ -23,7 +23,13 @@ const FeaturedProjectCard = ({ project, index }) => {
         {/* Image + hover overlay */}
         <div className="fp-card__img-wrap">
           <img
-            src={project.coverImage}
+            src={project.coverImageGrid || project.coverImage}
+            srcSet={
+              project.coverImageGrid
+                ? `${project.coverImageGrid} 480w, ${project.coverImage} 1600w`
+                : undefined
+            }
+            sizes="(max-width: 767px) 100vw, 427px"
             alt={project.title}
             draggable="false"
             loading="lazy"

@@ -49,9 +49,12 @@ const CaseStudyPage = () => {
     <div>
       <Helmet>
         <title>{project.title} — Case Study | Tabrez Dal</title>
-        <meta name="description" content={project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`} />
+        <meta
+          name="description"
+          content={(project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`).slice(0, 155)}
+        />
         <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
-        <meta property="og:description" content={project.shortDescription || `Case study: ${project.title}`} />
+        <meta property="og:description" content={(project.shortDescription || `Case study: ${project.title}`).slice(0, 155)} />
         <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
         <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}`} />
         <meta property="og:type" content="article" />
@@ -59,6 +62,42 @@ const CaseStudyPage = () => {
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
         <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": project.title,
+            "description": project.shortDescription,
+            "image": project.coverImage,
+            "author": {
+              "@type": "Person",
+              "name": "Tabrez Dal",
+              "url": "https://tabrezdal.com"
+            },
+            "url": `https://tabrezdal.com/case-study/${project.slug}`,
+            "datePublished": `${project.year}-01-01`
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tabrezdal.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": project.title,
+                "item": `https://tabrezdal.com/case-study/${project.slug}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Header />
       <main id="main-content">
