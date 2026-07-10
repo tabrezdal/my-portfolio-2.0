@@ -1,7 +1,7 @@
 /* Section container */
 .logo-strip {
   padding: 28px 0;
-  background: var(--color-bg);
+  background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;

@@ -21,7 +21,7 @@ function SkillsToolsSection() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="st-section" aria-label="Skills and Tools">
+    <section id="skills-tools" className="st-section" aria-label="Skills and Tools">
       <div className="st-inner">
 
         {/* Section header */}

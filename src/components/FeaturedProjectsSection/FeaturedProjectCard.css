@@ -87,7 +87,7 @@
 
 .fp-card__overlay-cta:hover {
   background: var(--color-surface);
-  color: var(--color-brand);
+  color: var(--color-text-heading);
   text-decoration: none;
 }
 
@@ -111,7 +111,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--color-brand);
+  color: var(--color-text-muted);
 }
 
 .fp-card__year {
