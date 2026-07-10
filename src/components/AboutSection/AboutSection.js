@@ -72,7 +72,13 @@ const AboutSection = () => {
               <img
                 draggable="false"
                 className="about-photo-img"
-                src={AboutSectionData.sectionImage}
+                src={AboutSectionData.sectionImageGrid || AboutSectionData.sectionImage}
+                srcSet={
+                  AboutSectionData.sectionImageGrid
+                    ? `${AboutSectionData.sectionImageGrid} 480w, ${AboutSectionData.sectionImage} 900w`
+                    : undefined
+                }
+                sizes="(max-width: 767px) 100vw, 500px"
                 alt="Tabrez Dal — Product Engineer"
                 width={500}
                 height={700}

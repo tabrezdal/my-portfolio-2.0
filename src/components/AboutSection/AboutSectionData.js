@@ -20,6 +20,7 @@ export const AboutSectionData = {
    * Switch to ImageHelper.TzInSuit for the suit photo if preferred.
    */
   sectionImage: ImageHelper.AboutImage,
+  sectionImageGrid: ImageHelper.AboutImageGrid,
 
   /**
    * Signature text rendered in SVG cursive.

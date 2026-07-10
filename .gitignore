@@ -27,3 +27,6 @@ yarn-error.log*
 
 # Temporary pre-optimization image backups (Issue 1 remediation)
 .image-backup/
+
+# Temporary grid optimization folder
+.temp-grid-optimized/

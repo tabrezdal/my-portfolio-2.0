@@ -172,6 +172,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.TezHUBCover,
+    coverImageGrid: ImageHelper.TezHUBCoverGrid,
     gallery: [ImageHelper.TezHUBCover],
     tools: ["Figma", "React 18", "TypeScript", "Apollo GraphQL", "MUI v5", "Redux Toolkit", "AG Grid Enterprise"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F92E8ayZCG6pK6z0d5rVfNX%2FTezHUB-by-TZ%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DjlchnmRhNK7OpwWH-1",
@@ -489,6 +490,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.EatExpress,
+    coverImageGrid: ImageHelper.EatExpressGrid,
     gallery: [ImageHelper.EatExpress],
     tools: ["Figma", "FigJam", "Lexend Deca"],
     figmaEmbed: null,
@@ -928,6 +930,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.MyHabitAppUiDesignCover,
+    coverImageGrid: ImageHelper.MyHabitAppUiDesignCoverGrid,
     gallery: [ImageHelper.MyHabitAppUiDesignCover],
     tools: ["Figma"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9HMIWUKmHtSMvLxLszUto4%2FMyHabit-App-Ui-Design-by-Tabrez%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DwKtDUoJGhEdHoW9P-1",
@@ -1074,6 +1077,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.MenuOnline,
+    coverImageGrid: ImageHelper.MenuOnlineGrid,
     gallery: [ImageHelper.MenuOnline, ImageHelper.MenuOnlineFoundationCover],
     tools: ["Figma", "React", "TypeScript", "MUI v5", "GraphQL", "AG Grid"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Ffk5h0eLTzisiDKps17PweI%2FMenuOnline-by-TZ%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DRSOySh5J75YcPzlK-1",
@@ -1237,6 +1241,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.EdXploreAdminPanel,
+    coverImageGrid: ImageHelper.EdXploreAdminPanelGrid,
     gallery: [ImageHelper.EdXploreAdminPanel, ImageHelper.EdXploreAdminPanelMobileVersion],
     tools: ["Figma", "React 18", "TypeScript", "MUI v5", "styled-components"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSlofBkzRyGfy7lMBB0CaQc%2FEdXplore-Admin-Panel%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DvqoFr3c4I7uqGycb-1",
@@ -1389,6 +1394,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.MecoFinalWebUi,
+    coverImageGrid: ImageHelper.MecoFinalWebUiGrid,
     gallery: [ImageHelper.MecoWebUi, ImageHelper.MecoFinalWebUi],
     tools: ["Figma", "FigJam", "React.js", "Material UI"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FRhxolZEwe1bjcxfIXgnc7A%2FMeco-Web-UiUx-Final-Design-by-Tabrez-Dal%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D0uXfBHcLc4zqsbK3-1",
@@ -1524,6 +1530,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.HotelResortManagement,
+    coverImageGrid: ImageHelper.HotelResortManagementGrid,
     gallery: [ImageHelper.HotelResortManagement],
     tools: ["Figma"],
     figmaEmbed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fmnhx8mn78DZByk1jIVfdG9%2FHotel-%2526-Resort-Management%3Ftype%3Ddesign%26node-id%3D2%253A2%26mode%3Ddesign%26t%3DGwoNfQcYYcekQc6j-1",
