@@ -1,0 +1,120 @@
+/* Section container */
+.logo-strip {
+  padding: 28px 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.logo-strip__label {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+/* Marquee track */
+.logo-strip__track-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade masks — left and right edges */
+.logo-strip__track-wrap::before,
+.logo-strip__track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-strip__track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-surface) 0%, transparent 100%);
+}
+
+.logo-strip__track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-surface) 0%, transparent 100%);
+}
+
+/* The scrolling track */
+.logo-strip__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: logoScroll 50s linear infinite;
+}
+
+.logo-strip__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logoScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-strip__track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+}
+
+/* Company item */
+.logo-strip__item {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Dot separator between items */
+.logo-strip__item::after {
+  content: '·';
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  color: var(--color-border);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Text name — shown when logo is null */
+.logo-strip__name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+.logo-strip__track:hover .logo-strip__name {
+  color: var(--color-text-heading);
+}
+
+/* Logo image — shown when logo path is provided (future) */
+.logo-strip__logo {
+  height: 22px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) opacity(0.45);
+  transition: filter 0.2s ease;
+}
+
+.logo-strip__track:hover .logo-strip__logo {
+  filter: grayscale(100%) brightness(0) opacity(0.75);
+}

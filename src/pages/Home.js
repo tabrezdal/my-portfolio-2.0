@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 import StatsBar from "../components/StatsBar/StatsBar";
+import LogoStrip from "../components/LogoStrip/LogoStrip";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
@@ -15,6 +16,7 @@ import ProcessSection from "../components/ProcessSection/ProcessSection";
 import WhatIBringSection from "../components/WhatIBringSection/WhatIBringSection";
 import ContactSection from "../components/ContactSection/ContactSection";
 import SkillsToolsSection from "../components/SkillsToolsSection/SkillsToolsSection";
+import FloatingDock from "../sharedComponents/FloatingDock/FloatingDock";
 
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
@@ -45,24 +47,26 @@ const Home = () => {
       <main id="main-content">
         <HeroSection />
         <StatsBar />
-        <AboutSection />
-        <ProcessSection />
-        <SkillsToolsSection />
-        <WhatIBringSection />
-        <ExperienceSection />
-        <EducationSection />
-        <CertificationsSection />
-        <CtaSection />
+        <LogoStrip />
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <FeaturedProjectsSection />
         </Suspense>
+        <AboutSection />
+        <ProcessSection />
+        <WhatIBringSection />
+        <SkillsToolsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <CertificationsSection />
         <ProjectsSection />
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <TestimonialSlider />
         </Suspense>
         <ContactSection />
+        <CtaSection />
       </main>
       <Footer />
+      <FloatingDock />
     </div>
   );
 };

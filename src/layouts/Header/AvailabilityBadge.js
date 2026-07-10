@@ -11,6 +11,7 @@ function AvailabilityBadge() {
       role="status"
       aria-label={`Status: ${availabilityConfig.label}`}
     >
+
       <span
         className={`availability-dot availability-dot--${availabilityConfig.dotColor}`}
         aria-hidden="true"

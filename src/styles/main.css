@@ -4,26 +4,6 @@ html {
 
 }
 
-/* 404 Page Animation */
-.not-found-animation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: var(--space-8);
-  height: calc(100vh - 60px);
-}
-
-.not-found-svg {
-  width: 220px;
-  height: 220px;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-12px); }
-}
-
 /* Page Scrollbar style starts */
 html ::-webkit-scrollbar-track {
 
@@ -1703,6 +1683,19 @@ h6 {
   padding: 10px 12px;
   line-height: 1.2;
 
+}
+
+/* Profile photo — circular avatar */
+.availability-badge__photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  flex-shrink: 0;
+  /* Subtle ring to separate from nav bg */
+  box-shadow: 0 0 0 1.5px var(--color-border);
 }
 
 #mobile-nav .navlink {

@@ -5,6 +5,7 @@ import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
 import { MobileMenuModal } from "./MobileMenuModal/MobileMenuModal";
+import ProfilePic from '../../Assets/Images/me/ProfilePic.webp';
 import { NavLinkData, NavSocialMediaLinkData } from "./NavBarData";
 import AvailabilityBadge from "./AvailabilityBadge";
 
