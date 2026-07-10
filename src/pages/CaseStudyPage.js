@@ -62,6 +62,42 @@ const CaseStudyPage = () => {
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
         <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": project.title,
+            "description": project.shortDescription,
+            "image": project.coverImage,
+            "author": {
+              "@type": "Person",
+              "name": "Tabrez Dal",
+              "url": "https://tabrezdal.com"
+            },
+            "url": `https://tabrezdal.com/case-study/${project.slug}`,
+            "datePublished": `${project.year}-01-01`
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tabrezdal.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": project.title,
+                "item": `https://tabrezdal.com/case-study/${project.slug}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Header />
       <main id="main-content">
