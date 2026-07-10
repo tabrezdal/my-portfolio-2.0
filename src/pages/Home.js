@@ -41,6 +41,7 @@ const Home = () => {
         <meta name="twitter:title" content="Tabrez Dal — Product Engineer, Software & UX" />
         <meta name="twitter:description" content="6+ years building scalable frontend systems and product-driven experiences." />
         <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
+        <link rel="canonical" href="https://tabrezdal.com/" />
       </Helmet>
       <Header />
       <main id="main-content">

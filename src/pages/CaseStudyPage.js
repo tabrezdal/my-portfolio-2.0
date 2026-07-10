@@ -58,6 +58,7 @@ const CaseStudyPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
+        <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}`} />
       </Helmet>
       <Header />
       <main id="main-content">

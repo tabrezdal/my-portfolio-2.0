@@ -62,6 +62,7 @@ const UiUxProjectPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="UI/UX Projects | Tabrez Dal" />
         <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
+        <link rel="canonical" href={`https://tabrezdal.com/ui-ux-project/${id}`} />
       </Helmet>
       <Header />
       <main id="main-content">
