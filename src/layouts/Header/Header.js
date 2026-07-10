@@ -64,21 +64,24 @@ const Header = () => {
         <div className="container main-menu">
           <div className="align-items-center justify-content-between d-flex">
 
-            <img
+            
+
+            <div id="logo" className="d-flex align-items-center gap-2">
+              <img
               src={ProfilePic}
               alt="Tabrez Dal"
               className="availability-badge__photo"
               width={40}
               height={40}
             />
-
-            <div id="logo">
-              <Link to="/">
+              <div clasqsName="d-flex align-items-center">
+                <Link to="/">
                 <h2 style={{ color: "#04091e" }}>
                   {SectionTitleHelper.headerSectionTitle}
                 </h2>
               </Link>
               <AvailabilityBadge />
+              </div>
             </div>
 
             <Button
