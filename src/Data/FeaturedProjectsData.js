@@ -1821,6 +1821,7 @@ const FeaturedProjectsData = [
     },
 
     coverImage: ImageHelper.Web8,
+    coverImageGrid: ImageHelper.Web8Grid,
     gallery: [ImageHelper.Web8],
     tools: ["React 18", "MUI v5", "JavaScript", "EmailJS", "Tawk.to", "Lottie", "Formik"],
     figmaEmbed: null,

@@ -30,3 +30,10 @@ yarn-error.log*
 
 # Temporary grid optimization folder
 .temp-grid-optimized/
+
+# Additional temporary directories
+.temp-dual-size/
+.venv/
+
+# Build logs
+build.log

@@ -74,7 +74,9 @@ const AboutSection = () => {
                 className="about-photo-img"
                 src={AboutSectionData.sectionImageGrid || AboutSectionData.sectionImage}
                 srcSet={
-                  AboutSectionData.sectionImageGrid
+                  AboutSectionData.sectionImageGrid && AboutSectionData.sectionImage700w
+                    ? `${AboutSectionData.sectionImageGrid} 480w, ${AboutSectionData.sectionImage700w} 700w, ${AboutSectionData.sectionImage} 900w`
+                    : AboutSectionData.sectionImageGrid
                     ? `${AboutSectionData.sectionImageGrid} 480w, ${AboutSectionData.sectionImage} 900w`
                     : undefined
                 }
@@ -123,8 +125,8 @@ const AboutSection = () => {
                 alt="Signature"
                 className="about-signature"
                 draggable="false"
-                width={300}
-                height={102}
+                width={367}
+                height={134}
               />
             </motion.div>
 
