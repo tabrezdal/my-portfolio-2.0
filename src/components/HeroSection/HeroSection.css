@@ -77,62 +77,6 @@
   align-items: flex-start;
 }
 
-.hero-cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-9) var(--space-19);
-  font-family: var(--font-primary);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-semibold);
-  color: var(--color-text-inverse);
-  background-color: var(--color-surface-dark);
-  border-radius: var(--radius-base);
-  text-decoration: none;
-  transition: background-color var(--transition-base), transform var(--transition-fast);
-  border: none;
-  cursor: pointer;
-  min-height: 48px; /* Touch target */
-}
-
-.hero-cta-primary:hover {
-  background-color: var(--color-surface-darker);
-  transform: translateY(-2px);
-}
-
-.hero-cta-primary:focus {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
-}
-
-.hero-cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-9) var(--space-19);
-  font-family: var(--font-primary);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
-  background-color: transparent;
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-base);
-  text-decoration: none;
-  transition: border-color var(--transition-base), color var(--transition-base), transform var(--transition-fast);
-  min-height: 48px; /* Touch target */
-}
-
-.hero-cta-secondary:hover {
-  border-color: var(--color-text-primary);
-  color: var(--color-text-heading);
-  transform: translateY(-2px);
-}
-
-.hero-cta-secondary:focus {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
-}
-
 /* Proof Point - stat type */
 .hero-proof-point {
   display: flex;

@@ -32,53 +32,9 @@
   flex-wrap: wrap;
 }
 
-.case-study-cta__btn-primary {
-  display: inline-flex;
-  align-items: center;
-  padding: 14px 32px;
-  background: #0378b8;
-  color: #ffffff;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
-
-.case-study-cta__btn-primary:hover {
-  opacity: 0.88;
-  color: #ffffff;
-}
-
-.case-study-cta__btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  padding: 14px 32px;
-  border: 2px solid var(--color-border);
-  color: var(--color-text-secondary);
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.3s ease, color 0.3s ease;
-  white-space: nowrap;
-}
-
-.case-study-cta__btn-secondary:hover {
-  border-color: #0378b8;
-  color: #0378b8;
-}
-
 @media (max-width: 576px) {
   .case-study-cta__actions {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .case-study-cta__btn-primary,
-  .case-study-cta__btn-secondary {
-    justify-content: center;
-    width: 100%;
   }
 }

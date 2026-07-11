@@ -64,31 +64,6 @@
   margin-bottom: 28px;
 }
 
-/* Live URL link */
-.cctx-live-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--color-brand);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  padding: 10px 22px;
-  border: 1.5px solid #0378b8;
-  border-radius: 4px;
-  transition: background 0.22s ease, color 0.22s ease;
-  width: fit-content;
-  margin-top: 4px;
-}
-
-.cctx-live-link:hover {
-  background: #0378b8;
-  color: var(--color-surface);
-  text-decoration: none;
-}
-
 /* ── Right column — Identity Card ── */
 .cctx-card {
   border: 1px solid rgba(0, 0, 0, 0.09);

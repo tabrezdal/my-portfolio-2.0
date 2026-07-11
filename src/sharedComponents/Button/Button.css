@@ -1,0 +1,171 @@
+/* ==========================================================================
+   UNIVERSAL BUTTON
+   variant: filled | outlined
+   theme:   dark | light | brand
+   size:    sm (36px) | md (44px) | lg (52px)
+   ========================================================================== */
+
+/* ─── Base ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: var(--radius-base);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.btn:not(:disabled):not([aria-disabled="true"]):active {
+  transform: translateY(1px);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ─── Sizes ── */
+.btn--sm {
+  height: 36px;
+  padding: 0 16px;
+  font-size: var(--text-md);
+}
+
+.btn--md {
+  height: 44px;
+  padding: 0 24px;
+  font-size: var(--text-lg);
+}
+
+.btn--lg {
+  height: 52px;
+  padding: 0 32px;
+  font-size: var(--text-xl);
+}
+
+/* ─── Icon ── */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.btn--sm .btn__icon { font-size: 13px; }
+.btn--md .btn__icon { font-size: 14px; }
+.btn--lg .btn__icon { font-size: 16px; }
+
+/* ─── Icon-only — square at each size ── */
+.btn--icon-only { gap: 0; }
+.btn--icon-only.btn--sm { width: 36px; padding: 0; }
+.btn--icon-only.btn--md { width: 44px; padding: 0; }
+.btn--icon-only.btn--lg { width: 52px; padding: 0; }
+
+/* ─── Label ── */
+.btn__label { line-height: 1; }
+
+/* ==========================================================================
+   THEME × VARIANT — 6 combinations
+   ========================================================================== */
+
+/* ── dark + filled (portfolio sections — light bg) ── */
+.btn--dark.btn--filled {
+  background-color: var(--color-surface-darker);
+  border-color: var(--color-surface-darker);
+  color: var(--color-text-inverse);
+}
+.btn--dark.btn--filled:not(:disabled):not([aria-disabled="true"]):hover {
+  background-color: var(--color-text-heading);
+  border-color: var(--color-text-heading);
+  transform: translateY(-2px);
+}
+
+/* ── dark + outlined (portfolio sections — light bg) ── */
+.btn--dark.btn--outlined {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+.btn--dark.btn--outlined:not(:disabled):not([aria-disabled="true"]):hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-heading);
+  transform: translateY(-2px);
+}
+
+/* ── light + filled (dark bg sections — CTA, exp) ── */
+.btn--light.btn--filled {
+  background-color: var(--color-surface);
+  border-color: var(--color-surface);
+  color: var(--color-text-heading);
+}
+.btn--light.btn--filled:not(:disabled):not([aria-disabled="true"]):hover {
+  background-color: rgba(255, 255, 255, 0.88);
+  border-color: rgba(255, 255, 255, 0.88);
+  transform: translateY(-2px);
+}
+
+/* ── light + outlined (dark bg sections) ── */
+.btn--light.btn--outlined {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+  color: var(--color-text-inverse);
+}
+.btn--light.btn--outlined:not(:disabled):not([aria-disabled="true"]):hover {
+  border-color: var(--color-surface);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── brand + filled (case study pages ONLY) ── */
+.btn--brand.btn--filled {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+.btn--brand.btn--filled:not(:disabled):not([aria-disabled="true"]):hover {
+  background-color: var(--color-brand-hover);
+  border-color: var(--color-brand-hover);
+  transform: translateY(-2px);
+}
+
+/* ── brand + outlined (case study pages ONLY) ── */
+.btn--brand.btn--outlined {
+  background-color: transparent;
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+.btn--brand.btn--outlined:not(:disabled):not([aria-disabled="true"]):hover {
+  background-color: var(--color-brand);
+  color: var(--color-text-inverse);
+  transform: translateY(-2px);
+}
+
+/* ─── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:not(:disabled):not([aria-disabled="true"]):hover { transform: none; }
+}

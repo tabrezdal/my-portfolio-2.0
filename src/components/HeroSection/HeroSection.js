@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroSectionData } from "./HeroSectionData";
 import "./HeroSection.css";
+import Button from "../../sharedComponents/Button/Button";
 
 // FramerMotion
 import { motion } from "framer-motion";
@@ -52,21 +53,22 @@ const HeroSection = () => {
             className="hero-cta-group"
             variants={heroTextReveal}
           >
-            <a
+            <Button
               href={primaryCta.href}
-              className="hero-cta-primary"
-            >
-              {primaryCta.label}
-            </a>
+              label={primaryCta.label}
+              variant="filled"
+              theme="dark"
+              size="md"
+            />
             {secondaryCta && (
-              <a
+              <Button
                 href={secondaryCta.href}
+                label={secondaryCta.label}
+                variant="outlined"
+                theme="dark"
+                size="md"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-secondary"
-              >
-                {secondaryCta.label}
-              </a>
+              />
             )}
           </motion.div>
 
