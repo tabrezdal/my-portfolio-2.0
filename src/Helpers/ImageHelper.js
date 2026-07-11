@@ -249,6 +249,7 @@ import Other12 from "../Assets/Images/Portfolio/Other/TZ Vouchers.webp";
 
 // Grid variants for responsive images
 import MenuOnlineGrid from "../Assets/Images/project-grid-images/MenuOnline [Cover]-grid.webp";
+import MobioticsHomepageGrid from "../Assets/Images/project-grid-images/Mobiotics-Homepage-grid.webp";
 import MenuOnlineFoundationCoverGrid from "../Assets/Images/project-grid-images/MenuOnline-Foundation-Cover-grid.webp";
 import MyHabitAppUiDesignCoverGrid from "../Assets/Images/project-grid-images/MyHabit-App-Ui-Design-Cover-grid.webp";
 import TezHUBCoverGrid from "../Assets/Images/project-grid-images/TezHUB-Cover-grid.webp";
@@ -260,6 +261,7 @@ import HotelResortManagementGrid from "../Assets/Images/project-grid-images/Hote
 import MecoWebUiGrid from "../Assets/Images/project-grid-images/Meco-Cover-grid.webp";
 import MecoFinalWebUiGrid from "../Assets/Images/project-grid-images/Meco-Final-Cover-grid.webp";
 import AboutImageGrid from "../Assets/Images/project-grid-images/Tabrez-at-dubai-mall-grid.webp";
+import AboutImage700w from "../Assets/Images/project-grid-images/Tabrez-at-dubai-mall-700w.webp";
 
 // // Service Portfolio Banner Images
 
@@ -267,6 +269,7 @@ const ImageHelper = {
   // //About Section
   AboutImage,
   AboutImageGrid,
+  AboutImage700w,
   MySignature,
   // locationMap,
   TzInSuit,
@@ -313,6 +316,7 @@ const ImageHelper = {
   Web6,
   Web7,
   Web8,
+  Web8Grid: MobioticsHomepageGrid,
   Web9,
   Web10,
   Web11,

@@ -21,6 +21,7 @@ export const AboutSectionData = {
    */
   sectionImage: ImageHelper.AboutImage,
   sectionImageGrid: ImageHelper.AboutImageGrid,
+  sectionImage700w: ImageHelper.AboutImage700w,
 
   /**
    * Signature text rendered in SVG cursive.

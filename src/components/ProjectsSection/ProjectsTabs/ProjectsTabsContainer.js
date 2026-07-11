@@ -25,8 +25,6 @@ function ProjectsTabsContainer() {
         id="controlled-tab-example"
         activeKey={key}
         onSelect={(k) => setKey(k)}
-        mountOnEnter
-        unmountOnExit
         className="filters mb-3 justify-content-sm-center justify-content-md-space-between"
         style={{
           listStyle: "none",
