@@ -29,7 +29,7 @@ module.exports = {
             ],
           },
         }),
-        postcssFontDisplay({ display: 'optional', replace: false }),
+        postcssFontDisplay({ display: 'swap', replace: false }),
       ].filter(Boolean),  // removes the `false` when not in production
     },
   },
