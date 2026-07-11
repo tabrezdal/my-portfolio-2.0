@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import EmailJsConfig from '../../Helpers/EmailJsConfig';
 import ContactSectionData from './ContactSectionData';
 import './ContactSection.css';
+import Button from '../../sharedComponents/Button/Button';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -208,13 +209,15 @@ const ContactSection = () => {
                   )}
                 </div>
 
-                <button
+                <Button
                   type="submit"
-                  className="contact-section__submit-btn"
+                  label={status === 'submitting' ? ContactSectionData.submittingLabel : ContactSectionData.submitLabel}
+                  variant="filled"
+                  theme="dark"
+                  size="md"
+                  fullWidth
                   disabled={status === 'submitting'}
-                >
-                  {status === 'submitting' ? ContactSectionData.submittingLabel : ContactSectionData.submitLabel}
-                </button>
+                />
 
                 {status === 'error' && (
                   <p className="contact-section__error-message" role="alert">

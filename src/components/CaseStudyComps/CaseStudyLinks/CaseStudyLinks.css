@@ -6,72 +6,10 @@
   margin: var(--space-6) 0 var(--space-19);
 }
 
-/* Base button */
-.cs-links__btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 10px 20px;
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  text-decoration: none;
-  min-height: 44px;
-  transition: opacity var(--transition-base), transform var(--transition-fast);
-  white-space: nowrap;
-}
-
-.cs-links__btn:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
-}
-
-.cs-links__btn:focus-visible {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
-}
-
-/* Live — filled brand blue */
-.cs-links__btn--live {
-  background: var(--color-brand);
-  color: #ffffff;
-  border: 2px solid var(--color-brand);
-}
-
-/* Figma — outlined */
-.cs-links__btn--figma {
-  background: transparent;
-  color: var(--color-brand);
-  border: 2px solid var(--color-brand);
-}
-
-/* Loom/Video — dark outlined */
-.cs-links__btn--loom {
-  background: transparent;
-  color: var(--color-text-secondary);
-  border: 2px solid var(--color-border);
-}
-
-.cs-links__btn--loom:hover {
-  border-color: var(--color-brand);
-  color: var(--color-brand);
-  opacity: 1;
-}
-
-/* Icon */
-.cs-links__btn i {
-  font-size: 14px;
-}
-
 /* Mobile */
 @media (max-width: 576px) {
   .cs-links {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .cs-links__btn {
-    justify-content: center;
-    width: 100%;
   }
 }
