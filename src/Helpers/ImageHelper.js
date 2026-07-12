@@ -3,6 +3,7 @@ import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
 import MySignature from "../Assets/Images/other/mySignature.webp";
 
 import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
+import ContactPhoto from "../Assets/Images/me/tz-contact-cutout.webp";
 
 // Tools Section
 import PhotoshopLogo from "../Assets/Images/tools-icons/adobe-photoshop.svg";
@@ -273,6 +274,7 @@ const ImageHelper = {
   MySignature,
   // locationMap,
   TzInSuit,
+  ContactPhoto,
 
   PhotoshopLogo,
   IllustratorLogo,
