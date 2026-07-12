@@ -45,7 +45,7 @@ const StatsBar = () => {
       aria-label="Experience overview"
     >
       <motion.div
-        className="stats-bar__inner"
+        className="stats-bar__inner section-container"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={statsStagger}

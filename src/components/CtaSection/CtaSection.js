@@ -10,7 +10,7 @@ import { fadeLeftExtraLargeVariants, fadeUpExtraLargeVariants } from "../../util
 const CtaSection = () => {
   return (
     <section className="ftco-hireme">
-      <div className="container">
+      <div className="section-container">
         <div className="row justify-content-between">
           <motion.div
             variants={fadeLeftExtraLargeVariants}

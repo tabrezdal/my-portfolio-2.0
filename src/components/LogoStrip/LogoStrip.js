@@ -25,7 +25,7 @@ function LogoStrip() {
   const doubled = [...companies, ...companies];
 
   return (
-    <section className="logo-strip" aria-label={label}>
+    <section className="logo-strip section-container" aria-label={label}>
       <p className="logo-strip__label">{label}</p>
       <div className="logo-strip__track-wrap">
         <div className="logo-strip__track">

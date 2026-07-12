@@ -9,7 +9,7 @@ const EducationSection = () => {
 
   return (
     <section className="edu-section" id="education">
-      <div className="container">
+      <div className="section-container">
         <div className="edu-section__inner">
 
           {/* Left — label */}

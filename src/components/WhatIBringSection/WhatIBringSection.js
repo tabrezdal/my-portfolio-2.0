@@ -52,7 +52,7 @@ const WhatIBringSection = () => {
 
   return (
     <section id="capabilities" className="wib-section" aria-label="What I Bring">
-      <div className="wib-inner">
+      <div className="wib-inner section-container">
         {/* Section Header */}
         <motion.div
           className="wib-header"
@@ -94,7 +94,9 @@ const WhatIBringSection = () => {
 
         {/* Industry Ticker */}
         <div className="wib-ticker">
-          <span className="wib-ticker__label">MY INDUSTRIES</span>
+          <div className="section-container">
+            <span className="wib-ticker__label">MY INDUSTRIES</span>
+          </div>
           <div className="wib-ticker__track">
             {duplicatedIndustries.map((industry, index) => (
               <span key={`${industry}-${index}`} className="wib-ticker__item">

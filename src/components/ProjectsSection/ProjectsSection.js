@@ -7,7 +7,7 @@ const ProjectsSection = () => {
   return (
     <>
       <section className="portfolio-area section-gap" id="projects">
-        <div className="container">
+        <div className="section-container">
           <SectionTitle sectionTitleText={SectionTitleHelper.projects} />
           <ProjectsTabsContainer />
         </div>

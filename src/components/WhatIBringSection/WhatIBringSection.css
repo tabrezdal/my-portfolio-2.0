@@ -5,12 +5,6 @@
   background: var(--color-surface);
 }
 
-.wib-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .wib-label {
   font-size: 11px;
   font-weight: 500;
@@ -98,10 +92,10 @@
 }
 
 .wib-ticker__label {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  transform: none;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.1em;

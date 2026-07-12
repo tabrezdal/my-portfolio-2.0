@@ -29,7 +29,7 @@ const AboutSection = () => {
 
   return (
     <section className="about-section" id="about">
-      <div className="container">
+      <div className="section-container">
 
         {/* ── Full-width headline ──────────────────────────────────────── */}
         <motion.div

@@ -22,7 +22,7 @@ function SkillsToolsSection() {
 
   return (
     <section id="skills-tools" className="st-section" aria-label="Skills and Tools">
-      <div className="st-inner">
+      <div className="st-inner section-container">
 
         {/* Section header */}
         <motion.div

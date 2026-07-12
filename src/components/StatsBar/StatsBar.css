@@ -6,11 +6,9 @@
 }
 
 .stats-bar__inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  /* max-width, margin, padding now handled by .section-container */
 }
 
 .stat-item {

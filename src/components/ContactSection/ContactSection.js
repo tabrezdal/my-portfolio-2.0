@@ -79,7 +79,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-section__container">
+      <div className="contact-section__container section-container">
         <motion.div
           className="contact-section__header"
           variants={fadeUp}
