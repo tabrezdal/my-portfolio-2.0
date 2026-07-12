@@ -8,7 +8,7 @@ function IconTile({ item }) {
     <div className="st-tile">
       <div className="st-tile__icon">
         {item.icon
-          ? <img src={item.icon} alt={item.name} loading="lazy" draggable="false" style={{ width: '36px', height: '36px', objectFit: 'contain' }} />
+          ? <img src={item.icon} alt={item.name} loading="lazy" draggable="false" />
           : <span>{item.name.slice(0, 2).toUpperCase()}</span>
         }
       </div>

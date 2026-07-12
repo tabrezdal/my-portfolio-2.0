@@ -4,7 +4,11 @@
   background: var(--color-surface-alt);
 }
 
-/* .st-inner removed - sizing now handled by .section-container */
+.st-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
 /* Section header */
 .st-label {
@@ -24,7 +28,6 @@
   margin: 0 0 8px 0;
 }
 
-/* Cursive sub-label — "my tech stack" */
 .st-cursive {
   font-family: var(--font-primary);
   font-size: 22px;
@@ -38,7 +41,6 @@
 .st-category {
   margin-bottom: 56px;
 }
-
 .st-category:last-child {
   margin-bottom: 0;
 }
@@ -52,10 +54,10 @@
 
 .st-category__title {
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-tertiary);
+  color: var(--color-text-heading);
   white-space: nowrap;
 }
 
@@ -65,53 +67,57 @@
   background: var(--color-border);
 }
 
-/* Icon grid */
+/* Icon grid — uniform columns instead of ragged flex-wrap */
 .st-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 16px;
+  max-width: 100%;
 }
 
-/* Icon tile — the core visual element */
+/* Icon tile */
 .st-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   cursor: default;
 }
 
 .st-tile__icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
   overflow: hidden;
 }
 
 .st-tile:hover .st-tile__icon {
-  border-color: var(--color-text-muted);
-  transform: translateY(-2px);
+  border-color: var(--color-border-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }
 
-/* Icon image — IMPORTANT: filter to monochrome */
+/* Icon image — full brand color, no filter */
 .st-tile__icon img {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   display: block;
-  /* Monochrome treatment — converts any colored icon to B&W */
-  filter: grayscale(100%) brightness(0.15);
-  transition: filter 0.2s ease;
+  transition: transform 200ms ease;
 }
 
 .st-tile:hover .st-tile__icon img {
-  filter: grayscale(100%) brightness(0);   /* slightly darker on hover */
+  transform: scale(1.08);
 }
 
 /* Text fallback when no icon image exists */
@@ -125,32 +131,54 @@
 
 /* Tool name label below tile */
 .st-tile__name {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--color-text-tertiary);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
   text-align: center;
   white-space: nowrap;
-  max-width: 80px;
+  max-width: 84px;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color 200ms ease;
+}
+
+.st-tile:hover .st-tile__name {
+  color: var(--color-text-heading);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .st-section { padding: 64px 0; }
 
+  .st-grid {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 12px;
+  }
+
   .st-tile__icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
   }
 
   .st-tile__icon img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
 
-  .st-grid {
-    gap: 10px;
+  .st-tile__name {
+    font-size: 11px;
+    max-width: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-tile__icon,
+  .st-tile__icon img,
+  .st-tile__name {
+    transition: none;
+  }
+  .st-tile:hover .st-tile__icon {
+    transform: none;
   }
 }
