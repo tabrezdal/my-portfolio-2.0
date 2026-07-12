@@ -31,35 +31,6 @@ const AboutSection = () => {
     <section className="about-section" id="about">
       <div className="section-container">
 
-        {/* ── Full-width headline ──────────────────────────────────────── */}
-        <motion.div
-          className="about-headline-block"
-          variants={shouldReduceMotion ? {} : staggerContainerVariants}
-          initial={shouldReduceMotion ? false : "hidden"}
-          whileInView={shouldReduceMotion ? undefined : "visible"}
-          viewport={{ once: true, margin: "-80px" }}
-        >
-          <motion.span
-            className="about-eyebrow"
-            variants={shouldReduceMotion ? {} : fadeUpLargeVariants}
-          >
-            {AboutSectionData.eyebrow}
-          </motion.span>
-
-          <motion.h2
-            className="about-headline"
-            variants={shouldReduceMotion ? {} : fadeUpLargeVariants}
-          >
-            {/* Split on \n so the line break is content-controlled */}
-            {AboutSectionData.headline.split("\n").map((line, i, arr) => (
-              <React.Fragment key={i}>
-                {line}
-                {i < arr.length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </motion.h2>
-        </motion.div>
-
         {/* ── Two-column grid ──────────────────────────────────────────── */}
         <div className="about-grid">
 
@@ -87,11 +58,6 @@ const AboutSection = () => {
                 loading="lazy"
               />
             </div>
-
-            <div className="about-photo-meta">
-              <p className="about-photo-name">{AboutSectionData.name}</p>
-              <p className="about-photo-role">{AboutSectionData.role}</p>
-            </div>
           </motion.div>
 
           {/* Right — Content */}
@@ -102,6 +68,35 @@ const AboutSection = () => {
             whileInView={shouldReduceMotion ? undefined : "visible"}
             viewport={{ once: true, margin: "-60px" }}
           >
+            {/* ── Headline block ──────────────────────────────────────── */}
+            <motion.div
+              className="about-headline-block"
+              variants={shouldReduceMotion ? {} : staggerContainerVariants}
+              initial={shouldReduceMotion ? false : "hidden"}
+              whileInView={shouldReduceMotion ? undefined : "visible"}
+              viewport={{ once: true, margin: "-80px" }}
+            >
+              <motion.span
+                className="about-eyebrow"
+                variants={shouldReduceMotion ? {} : fadeUpLargeVariants}
+              >
+                {AboutSectionData.eyebrow}
+              </motion.span>
+
+              <motion.h2
+                className="about-headline"
+                variants={shouldReduceMotion ? {} : fadeUpLargeVariants}
+              >
+                {/* Split on \n so the line break is content-controlled */}
+                {AboutSectionData.headline.split("\n").map((line, i, arr) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    {i < arr.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </motion.h2>
+            </motion.div>
+
             {/* Narrative paragraphs */}
             {AboutSectionData.paragraphs.map((para) => (
               <motion.p
