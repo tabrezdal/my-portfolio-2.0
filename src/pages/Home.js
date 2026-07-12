@@ -43,6 +43,7 @@ const Home = () => {
         <meta name="twitter:description" content="6+ years building scalable frontend systems and product-driven experiences." />
         <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
         <link rel="canonical" href="https://tabrezdal.com/" />
+        <link rel="preload" href="/hero-image-optimized.webp" as="image" fetchpriority="high" />
       </Helmet>
       <Header />
       <main id="main-content">
