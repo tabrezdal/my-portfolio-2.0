@@ -5,10 +5,7 @@
   width: 100%;
 }
 
-.exp-section__inner {
-  max-width: 100%;
-  padding: 0 var(--space-6);
-}
+/* .exp-section__inner removed — sizing now handled by .section-container */
 
 .exp-section__eyebrow {
   margin-bottom: var(--space-2);

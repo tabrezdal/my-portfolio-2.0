@@ -33,7 +33,7 @@ const ExperienceSection = () => {
 
   return (
     <section className="exp-section" id="experience">
-      <div className="exp-section__inner section-container">
+      <div className="section-container">
 
         <motion.div
           className="exp-section__heading"

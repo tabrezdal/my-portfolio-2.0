@@ -208,7 +208,11 @@
 /* ==========================================================================
    LAYOUT — Section Container
    Canonical container for full-width homepage sections.
-   Replaces all ad hoc container systems (Bootstrap .container, custom margins).
+   IMPORTANT: When applying this class to a component's existing wrapper element,
+   remove any local max-width / padding-left / padding-right / margin declarations
+   for that same element's class — do not stack this class alongside a legacy
+   rule that sets the same properties. Same-specificity collisions are resolved
+   by import order and will silently override this class in unpredictable ways.
    ========================================================================== */
 .section-container {
   max-width: 1280px;
