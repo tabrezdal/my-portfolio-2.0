@@ -68,7 +68,7 @@ const CaseStudyPage = () => {
             "@type": "CreativeWork",
             "name": project.title,
             "description": project.shortDescription,
-            "image": project.coverImage,
+            "image": project.coverImage || 'https://tabrezdal.com/og-image.webp',
             "author": {
               "@type": "Person",
               "name": "Tabrez Dal",
