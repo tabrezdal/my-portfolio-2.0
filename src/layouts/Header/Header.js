@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import { Link, useLocation } from "react-router-dom";
 import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
@@ -16,14 +16,26 @@ const Header = () => {
   const handleShow = () => setShow(true);
 
   const [headerShadow, setHeaderShadow] = useState(false);
+  const tickingRef = useRef(false);
+
+  const handleScroll = useCallback(() => {
+    if (!tickingRef.current) {
+      window.requestAnimationFrame(() => {
+        setHeaderShadow(window.pageYOffset > 200);
+        tickingRef.current = false;
+      });
+      tickingRef.current = true;
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setHeaderShadow(window.pageYOffset > 200)
-      );
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
     }
-  }, []);
+  }, [handleScroll]);
 
   const location = useLocation();
 
