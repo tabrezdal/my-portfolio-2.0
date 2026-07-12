@@ -6,7 +6,7 @@ const Breadcrumb = (props) => {
   return (
     <section className="relative about-banner">
       <div className="overlay overlay-bg"></div>
-      <div className="container">
+      <div className="section-container">
         <div className="row d-flex align-items-center justify-content-center">
           <div className="about-content col-lg-12">
             <h1 className="text-white">{currentPageName}</h1>

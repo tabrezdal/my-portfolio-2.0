@@ -6,7 +6,7 @@ import FeaturedProjectsData from "../../Data/FeaturedProjectsData";
 const FeaturedProjectsSection = () => {
   return (
     <section className="section-gap featured-projects-section" id="featured-work">
-      <div className="container">
+      <div className="section-container">
         <SectionTitle sectionTitleText="Featured Work" />
         <div className="row mt-30">
           {FeaturedProjectsData.map((project, index) => (

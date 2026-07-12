@@ -28,7 +28,7 @@ const CertificationsSection = () => {
 
   return (
     <section className="cert-section" id="certifications">
-      <div className="container">
+      <div className="section-container">
 
         <motion.div
           className="cert-section__header"
