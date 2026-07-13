@@ -1,0 +1,968 @@
+{
+  "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 95,
+      "selector": ".cctx-status-dot--live",
+      "classTokens": [
+        "cctx-status-dot--live"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--live",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "live",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 106,
+      "selector": ".cctx-status-dot--production",
+      "classTokens": [
+        "cctx-status-dot--production"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--production",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "production",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 107,
+      "selector": ".cctx-status-dot--concept",
+      "classTokens": [
+        "cctx-status-dot--concept"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--concept",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "concept",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 108,
+      "selector": ".cctx-status-dot--prototype",
+      "classTokens": [
+        "cctx-status-dot--prototype"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--prototype",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "prototype",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 109,
+      "selector": ".cctx-status-dot--archived",
+      "classTokens": [
+        "cctx-status-dot--archived"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--archived",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "archived",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 110,
+      "selector": ".cctx-status-dot--delivered",
+      "classTokens": [
+        "cctx-status-dot--delivered"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--delivered",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "delivered",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 111,
+      "selector": ".cctx-status-dot--milestone",
+      "classTokens": [
+        "cctx-status-dot--milestone"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-status-dot--milestone",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-status-dot",
+        "modifier": "milestone",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 204,
+      "selector": ".cctx-tool-pill--more",
+      "classTokens": [
+        "cctx-tool-pill--more"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cctx-tool-pill--more",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cctx-tool-pill",
+        "modifier": "more",
+        "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.js"
+      }
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css",
+      "line": 245,
+      "selector": ".csh-metric__value--accent",
+      "classTokens": [
+        "csh-metric__value--accent"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csh-metric__value--accent",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csh-metric__value",
+        "modifier": "accent",
+        "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.js"
+      }
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 9,
+      "selector": ".cts-section--white",
+      "classTokens": [
+        "cts-section--white"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-section--white",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-section",
+        "modifier": "white",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 10,
+      "selector": ".cts-section--light",
+      "classTokens": [
+        "cts-section--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-section--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-section",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 11,
+      "selector": ".cts-section--dark",
+      "classTokens": [
+        "cts-section--dark"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-section--dark",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-section",
+        "modifier": "dark",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 21,
+      "selector": ".cts-eyebrow--light",
+      "classTokens": [
+        "cts-eyebrow--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-eyebrow--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-eyebrow",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 30,
+      "selector": ".cts-heading--light",
+      "classTokens": [
+        "cts-heading--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-heading--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-heading",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 39,
+      "selector": ".cts-subtext--light",
+      "classTokens": [
+        "cts-subtext--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-subtext--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-subtext",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 77,
+      "selector": ".cts-pill__icon--fa",
+      "classTokens": [
+        "cts-pill__icon--fa"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-pill__icon--fa",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-pill__icon",
+        "modifier": "fa",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 199,
+      "selector": ".cts-code-header__dot--red",
+      "classTokens": [
+        "cts-code-header__dot--red"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-code-header__dot--red",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-code-header__dot",
+        "modifier": "red",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 200,
+      "selector": ".cts-code-header__dot--yellow",
+      "classTokens": [
+        "cts-code-header__dot--yellow"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-code-header__dot--yellow",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-code-header__dot",
+        "modifier": "yellow",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 201,
+      "selector": ".cts-code-header__dot--green",
+      "classTokens": [
+        "cts-code-header__dot--green"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-code-header__dot--green",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-code-header__dot",
+        "modifier": "green",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 283,
+      "selector": ".cts-perf-grid--stats-only",
+      "classTokens": [
+        "cts-perf-grid--stats-only"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cts-perf-grid--stats-only",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cts-perf-grid",
+        "modifier": "stats-only",
+        "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.js"
+      }
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 14,
+      "selector": ".cs-toc--visible",
+      "classTokens": [
+        "cs-toc--visible"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: cs-toc--visible",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "cs-toc",
+        "modifier": "visible",
+        "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.js"
+      }
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 9,
+      "selector": ".csv-section--dark",
+      "classTokens": [
+        "csv-section--dark"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-section--dark",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-section",
+        "modifier": "dark",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 12,
+      "selector": ".csv-section--light",
+      "classTokens": [
+        "csv-section--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-section--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-section",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 15,
+      "selector": ".csv-section--white",
+      "classTokens": [
+        "csv-section--white"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-section--white",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-section",
+        "modifier": "white",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 27,
+      "selector": ".csv-eyebrow--light",
+      "classTokens": [
+        "csv-eyebrow--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-eyebrow--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-eyebrow",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 38,
+      "selector": ".csv-heading--light",
+      "classTokens": [
+        "csv-heading--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-heading--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-heading",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 49,
+      "selector": ".csv-subtext--light",
+      "classTokens": [
+        "csv-subtext--light"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-subtext--light",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-subtext",
+        "modifier": "light",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 298,
+      "selector": ".csv-ds-header__dot--red",
+      "classTokens": [
+        "csv-ds-header__dot--red"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-ds-header__dot--red",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-ds-header__dot",
+        "modifier": "red",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 299,
+      "selector": ".csv-ds-header__dot--yellow",
+      "classTokens": [
+        "csv-ds-header__dot--yellow"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-ds-header__dot--yellow",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-ds-header__dot",
+        "modifier": "yellow",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 300,
+      "selector": ".csv-ds-header__dot--green",
+      "classTokens": [
+        "csv-ds-header__dot--green"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-ds-header__dot--green",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-ds-header__dot",
+        "modifier": "green",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 529,
+      "selector": ".csv-phone-frame--large",
+      "classTokens": [
+        "csv-phone-frame--large"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-phone-frame--large",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-phone-frame",
+        "modifier": "large",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 530,
+      "selector": ".csv-phone-frame--medium",
+      "classTokens": [
+        "csv-phone-frame--medium"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-phone-frame--medium",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-phone-frame",
+        "modifier": "medium",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 531,
+      "selector": ".csv-phone-frame--small",
+      "classTokens": [
+        "csv-phone-frame--small"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-phone-frame--small",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-phone-frame",
+        "modifier": "small",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 614,
+      "selector": ".csv-flow-step__circle--pain",
+      "classTokens": [
+        "csv-flow-step__circle--pain"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-flow-step__circle--pain",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-flow-step__circle",
+        "modifier": "pain",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 702,
+      "selector": ".csv-phone-frame--medium",
+      "classTokens": [
+        "csv-phone-frame--medium"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-phone-frame--medium",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-phone-frame",
+        "modifier": "medium",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 702,
+      "selector": ".csv-phone-frame--small",
+      "classTokens": [
+        "csv-phone-frame--small"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-phone-frame--small",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-phone-frame",
+        "modifier": "small",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    }
+  ],
+  "src/components/ExperienceSection/ExperienceSection.css": [
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 48,
+      "selector": ".exp-list__row--expanded",
+      "classTokens": [
+        "exp-list__row--expanded"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: exp-list__row--expanded",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "exp-list__row",
+        "modifier": "expanded",
+        "file": "src/components/ExperienceSection/ExperienceSection.js"
+      }
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 72,
+      "selector": ".exp-list:hover .exp-list__row--expanded .exp-list__right",
+      "classTokens": [
+        "exp-list",
+        "exp-list__row--expanded",
+        "exp-list__right"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: exp-list__row--expanded",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "exp-list__row",
+        "modifier": "expanded",
+        "file": "src/components/ExperienceSection/ExperienceSection.js"
+      }
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 72,
+      "selector": ".exp-list:hover .exp-list__row--expanded .exp-list__period",
+      "classTokens": [
+        "exp-list",
+        "exp-list__row--expanded",
+        "exp-list__period"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: exp-list__row--expanded",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "exp-list__row",
+        "modifier": "expanded",
+        "file": "src/components/ExperienceSection/ExperienceSection.js"
+      }
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 205,
+      "selector": ".exp-list__chevron--expanded",
+      "classTokens": [
+        "exp-list__chevron--expanded"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: exp-list__chevron--expanded",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "exp-list__chevron",
+        "modifier": "expanded",
+        "file": "src/components/ExperienceSection/ExperienceSection.js"
+      }
+    }
+  ],
+  "src/layouts/Header/AvailabilityBadge.css": [
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 29,
+      "selector": ".availability-dot--green",
+      "classTokens": [
+        "availability-dot--green"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: availability-dot--green",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "availability-dot",
+        "modifier": "green",
+        "file": "src/layouts/Header/AvailabilityBadge.js"
+      }
+    },
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 33,
+      "selector": ".availability-dot--amber",
+      "classTokens": [
+        "availability-dot--amber"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: availability-dot--amber",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "availability-dot",
+        "modifier": "amber",
+        "file": "src/layouts/Header/AvailabilityBadge.js"
+      }
+    },
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 37,
+      "selector": ".availability-dot--red",
+      "classTokens": [
+        "availability-dot--red"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: availability-dot--red",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "availability-dot",
+        "modifier": "red",
+        "file": "src/layouts/Header/AvailabilityBadge.js"
+      }
+    }
+  ],
+  "src/sharedComponents/FloatingDock/FloatingDock.css": [
+    {
+      "file": "src/sharedComponents/FloatingDock/FloatingDock.css",
+      "line": 32,
+      "selector": ".floating-dock--visible",
+      "classTokens": [
+        "floating-dock--visible"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: floating-dock--visible",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "floating-dock",
+        "modifier": "visible",
+        "file": "src/sharedComponents/FloatingDock/FloatingDock.js"
+      }
+    },
+    {
+      "file": "src/sharedComponents/FloatingDock/FloatingDock.css",
+      "line": 39,
+      "selector": ".floating-dock--no-motion",
+      "classTokens": [
+        "floating-dock--no-motion"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: floating-dock--no-motion",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "floating-dock",
+        "modifier": "no-motion",
+        "file": "src/sharedComponents/FloatingDock/FloatingDock.js"
+      }
+    },
+    {
+      "file": "src/sharedComponents/FloatingDock/FloatingDock.css",
+      "line": 103,
+      "selector": ".floating-dock--visible",
+      "classTokens": [
+        "floating-dock--visible"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 480px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: floating-dock--visible",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "floating-dock",
+        "modifier": "visible",
+        "file": "src/sharedComponents/FloatingDock/FloatingDock.js"
+      }
+    }
+  ],
+  "src/styles/main.css": [
+    {
+      "file": "src/styles/main.css",
+      "line": 1900,
+      "selector": ".csv-flow-step__circle--pain",
+      "classTokens": [
+        "csv-flow-step__circle--pain"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "UNCERTAIN_DYNAMIC_BEM",
+      "classificationReason": "Dynamic BEM modifier: csv-flow-step__circle--pain",
+      "bemInfo": {
+        "isDynamic": true,
+        "base": "csv-flow-step__circle",
+        "modifier": "pain",
+        "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.js"
+      }
+    }
+  ]
+}
