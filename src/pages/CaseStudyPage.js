@@ -5,18 +5,18 @@ import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
 
 // ── Existing sections ──────────────────────
-import CaseStudyHero       from "../components/CaseStudyComps/CaseStudyHero/CaseStudyHero";
-import CaseStudyProcess    from "../components/CaseStudyComps/CaseStudyProcess/CaseStudyProcess";
+import CaseStudyHero from "../components/CaseStudyComps/CaseStudyHero/CaseStudyHero";
+import CaseStudyProcess from "../components/CaseStudyComps/CaseStudyProcess/CaseStudyProcess";
 import CaseStudyDesignPrinciples from "../components/CaseStudyComps/CaseStudyDesignPrinciples/CaseStudyDesignPrinciples";
-import CaseStudyVisualShowcase   from "../components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase";
-import CaseStudyTechStack  from "../components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack";
-import CaseStudyOutcome    from "../components/CaseStudyComps/CaseStudyOutcome/CaseStudyOutcome";
-import CaseStudyGallery    from "../components/CaseStudyComps/CaseStudyGallery/CaseStudyGallery";
-import CaseStudyNav        from "../components/CaseStudyComps/CaseStudyNav/CaseStudyNav";
+import CaseStudyVisualShowcase from "../components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase";
+import CaseStudyTechStack from "../components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack";
+import CaseStudyOutcome from "../components/CaseStudyComps/CaseStudyOutcome/CaseStudyOutcome";
+import CaseStudyGallery from "../components/CaseStudyComps/CaseStudyGallery/CaseStudyGallery";
+import CaseStudyNav from "../components/CaseStudyComps/CaseStudyNav/CaseStudyNav";
 import CaseStudyProblemFrame from "../components/CaseStudyComps/CaseStudyProblemFrame/CaseStudyProblemFrame";
 
 // ── NEW sections ───────────────────────────
-import CaseStudyContext     from "../components/CaseStudyComps/CaseStudyContext/CaseStudyContext";
+import CaseStudyContext from "../components/CaseStudyComps/CaseStudyContext/CaseStudyContext";
 import CaseStudyPlatformScope from "../components/CaseStudyComps/CaseStudyPlatformScope/CaseStudyPlatformScope";
 import CaseStudyComplexitySignals from "../components/CaseStudyComps/CaseStudyComplexitySignals/CaseStudyComplexitySignals";
 import CaseStudyCTA from "../components/CaseStudyComps/CaseStudyCTA/CaseStudyCTA";
@@ -25,9 +25,9 @@ import CaseStudyTOC from "../components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC
 import FeaturedProjectsData from "../Data/FeaturedProjectsData";
 
 const CaseStudyPage = () => {
-  const { slug }   = useParams();
-  const navigate   = useNavigate();
-  const project    = FeaturedProjectsData.find((p) => p.slug === slug);
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const project = FeaturedProjectsData.find((p) => p.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -68,7 +68,11 @@ const CaseStudyPage = () => {
             "@type": "CreativeWork",
             "name": project.title,
             "description": project.shortDescription,
-            "image": project.coverImage || 'https://tabrezdal.com/og-image.webp',
+            "image": project.coverImage
+              ? (project.coverImage.startsWith('http')
+                ? project.coverImage
+                : `https://tabrezdal.com${project.coverImage}`)
+              : 'https://tabrezdal.com/og-image.webp',
             "author": {
               "@type": "Person",
               "name": "Tabrez Dal",
