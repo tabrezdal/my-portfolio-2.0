@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeUpLargeVariants } from "../../utils/animationVariants";
+import ImageHelper from "../../Helpers/ImageHelper";
 import "./FeaturedProjectCard.css";
 
 const FeaturedProjectCard = ({ project, index }) => {
@@ -23,14 +24,14 @@ const FeaturedProjectCard = ({ project, index }) => {
         {/* Image + hover overlay */}
         <div className="fp-card__img-wrap">
           <img
-            src={project.coverImageGrid || project.coverImage}
+            src={project.coverImageGrid || project.coverImage || ImageHelper.CaseStudyPlaceholder}
             srcSet={
               project.coverImageGrid
                 ? `${project.coverImageGrid} 480w, ${project.coverImage} 1600w`
                 : undefined
             }
             sizes="(max-width: 767px) 100vw, 427px"
-            alt={project.title}
+            alt={project.coverImage ? project.title : `${project.title} — cover image coming soon`}
             draggable="false"
             loading="lazy"
             width={800}

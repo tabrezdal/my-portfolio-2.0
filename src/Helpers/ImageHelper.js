@@ -5,6 +5,9 @@ import MySignature from "../Assets/Images/other/mySignature.webp";
 import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
 import ContactPhoto from "../Assets/Images/me/tz-contact-cutout.webp";
 
+// Case Study Fallback
+import CaseStudyPlaceholder from "../Assets/Images/placeholders/case_study_placeholder.webp";
+
 // Tools Section
 import PhotoshopLogo from "../Assets/Images/tools-icons/adobe-photoshop.svg";
 import IllustratorLogo from "../Assets/Images/tools-icons/adobe-illustrator.svg";
@@ -275,6 +278,7 @@ const ImageHelper = {
   // locationMap,
   TzInSuit,
   ContactPhoto,
+  CaseStudyPlaceholder,
 
   PhotoshopLogo,
   IllustratorLogo,

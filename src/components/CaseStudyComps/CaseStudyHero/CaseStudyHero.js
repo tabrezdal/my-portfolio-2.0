@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn, fadeUpLargeVariants } from "../../../utils/animationVariants";
 import CaseStudyLinks from "../CaseStudyLinks/CaseStudyLinks";
+import ImageHelper from "../../../Helpers/ImageHelper";
 import "./CaseStudyHero.css";
 
 /* ─────────────────────────────────────────
@@ -139,25 +140,23 @@ const CaseStudyHero = ({ project }) => {
       </div>
 
       {/* ── Cover image ── */}
-      {coverImage && (
-        <motion.div
-          className="csh-cover-wrap"
-          variants={fadeUpLargeVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-        >
-          <img
-            src={coverImage}
-            alt={`${title} — cover`}
-            className="csh-cover-img"
-            draggable="false"
-            width={1200}
-            height={675}
-            loading="lazy"
-          />
-        </motion.div>
-      )}
+      <motion.div
+        className="csh-cover-wrap"
+        variants={fadeUpLargeVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+      >
+        <img
+          src={coverImage || ImageHelper.CaseStudyPlaceholder}
+          alt={coverImage ? `${title} — cover` : `${title} — cover image coming soon`}
+          className="csh-cover-img"
+          draggable="false"
+          width={1200}
+          height={675}
+          loading="lazy"
+        />
+      </motion.div>
 
       {/* Scroll cue */}
       <div className="csh-scroll-cue" aria-hidden="true">
