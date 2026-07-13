@@ -122,12 +122,6 @@
   transition: transform 0.4s ease;
 }
 
-.case-study-card__img-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--color-surface-alt);
-}
-
 /* --------------------------------------------------------------------------
    Card Body
    -------------------------------------------------------------------------- */

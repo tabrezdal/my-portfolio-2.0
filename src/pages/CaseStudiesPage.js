@@ -144,18 +144,14 @@ const CaseStudiesPage = () => {
                   >
                     {/* Image */}
                     <div className="case-study-card__img-wrap">
-                      {project.coverImage ? (
-                        <img
-                          src={project.coverImage}
-                          alt={project.title}
-                          className="case-study-card__img"
-                          loading={index < 2 ? 'eager' : 'lazy'}
-                          width={800}
-                          height={300}
-                        />
-                      ) : (
-                        <div className="case-study-card__img-placeholder" />
-                      )}
+                      <img
+                        src={project.coverImage || ImageHelper.CaseStudyPlaceholder}
+                        alt={project.coverImage ? project.title : `${project.title} — cover image coming soon`}
+                        className="case-study-card__img"
+                        loading={index < 2 ? 'eager' : 'lazy'}
+                        width={800}
+                        height={300}
+                      />
                     </div>
 
                     {/* Body */}
