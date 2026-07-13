@@ -230,14 +230,6 @@
 }
 
 /* Syntax tokens */
-.cts-tok-kw     { color: #cba6f7; } /* keyword   */
-.cts-tok-fn     { color: #89b4fa; } /* function  */
-.cts-tok-str    { color: #a6e3a1; } /* string    */
-.cts-tok-num    { color: #fab387; } /* number    */
-.cts-tok-cmt    { color: #585b70; font-style: italic; } /* comment */
-.cts-tok-tag    { color: #f38ba8; } /* JSX tag   */
-.cts-tok-attr   { color: #89dceb; } /* attribute */
-.cts-tok-punct  { color: #94e2d5; } /* punctuation */
 
 /* Tab switcher for multiple snippets */
 .cts-code-tabs {

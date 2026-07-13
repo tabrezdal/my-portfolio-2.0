@@ -97,26 +97,6 @@
   height: auto;    /* Full image — no cropping */
 }
 
-.about-photo-meta {
-  padding-top: var(--space-8); /* 14px */
-}
-
-.about-photo-name {
-  margin: 0 0 var(--space-2); /* 0 0 4px */
-  font-family: var(--font-primary);
-  font-size: var(--text-xl);  /* 15px */
-  font-weight: var(--font-semibold);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-heading);
-}
-
-.about-photo-role {
-  margin: 0;
-  font-family: var(--font-primary);
-  font-size: var(--text-md);  /* 13px */
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-secondary);
-}
 
 /* ── Content column ───────────────────────────────────────────────────────── */
 
@@ -147,13 +127,6 @@
   margin-top: var(--space-2); /* 4px */
   color: var(--color-text-near-black);
   line-height: 1;
-}
-
-.about-signature__svg {
-  display: block;
-  height: 68px;
-  width: auto;
-  max-width: 240px;
 }
 
 /* ── CTA row ──────────────────────────────────────────────────────────────── */

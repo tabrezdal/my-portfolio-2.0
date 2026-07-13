@@ -27,11 +27,6 @@
     font-size: 30px;
 }
 
-@media screen and(max-width: 768px) {
-    .testimonial-main .title h1 {
-        font-size: 18px;
-    }
-}
 
 .reviewer-name-text{
     margin-bottom: -8px;
@@ -91,17 +86,6 @@
 .ContentHolder p {
     text-align: center;
 }
-.swiper-pagination-bullet {
-    background-color: var(--color-surface);
-    opacity: 1;
-    border: 1px solid #191919;
-}
-.swiper-pagination-bullet-active {
-    background-color: #191919;
-}
-.swiper-button {
-    border: 1px solid var(--color-surface);
-}
 .swiper-slide img {
     width: 100px;
     height: 100px;
@@ -143,12 +127,6 @@
     .ContentHolder {
         border-radius: 0;
     }
-}
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, -10px);
 }
 
 
