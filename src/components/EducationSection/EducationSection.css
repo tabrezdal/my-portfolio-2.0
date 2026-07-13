@@ -1,5 +1,5 @@
 .edu-section {
-  padding: var(--space-12) 0;
+  padding: var(--space-25) 0;
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -7,40 +7,100 @@
 
 /* ─── Two-column layout ─────────────────────────────────────────────────── */
 .edu-section__inner {
-  display: block;
-  grid-template-columns: 160px 1fr;
-  gap: var(--space-8);
-  align-items: center;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--space-21);
+  align-items: start;
 }
 
 .edu-section__label {
   padding-top: 2px;
+  position: sticky;
+  top: 100px;
+}
+
+.edu-section__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-4xl);
+  background: rgba(3, 120, 184, 0.08);
+  color: var(--color-brand);
+  margin-bottom: var(--space-9);
+}
+
+.edu-eyebrow {
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.edu-section__title {
+  font-size: var(--text-9xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-heading);
+  letter-spacing: -0.02em;
+  line-height: var(--leading-tight);
+  margin: 0;
 }
 
 /* ─── Card ──────────────────────────────────────────────────────────────── */
 .edu-card {
+  position: relative;
   width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-6xl);
+  padding: var(--space-20) var(--space-21);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+}
+
+.edu-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: rgba(3, 120, 184, 0.22);
+}
+
+.edu-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-brand) 0%, var(--color-brand-light) 100%);
 }
 
 .edu-card__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: var(--space-8);
+  gap: var(--space-13);
   flex-wrap: wrap;
+  padding-bottom: var(--space-13);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-13);
 }
 
 /* Degree + institution */
 .edu-card__title-block {
   flex: 1;
+  min-width: 240px;
 }
 
 .edu-card__degree {
-  font-size: var(--text-xl);
+  font-size: var(--text-9xl);
   font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  margin: 0 0 var(--space-1);
+  color: var(--color-text-heading);
+  margin: 0 0 var(--space-3);
   line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
 }
 
 .edu-card__field {
@@ -49,63 +109,137 @@
 }
 
 .edu-card__institution {
-  font-size: var(--text-base);
-  color: var(--color-brand);
-  font-weight: var(--font-medium);
-  margin: 0;
-}
-
-/* CGPA + period */
-.edu-card__meta-block {
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.edu-card__cgpa {
-  margin-bottom: var(--space-1);
-}
-
-.edu-card__cgpa-value {
   font-size: var(--text-2xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-}
-
-.edu-card__cgpa-max {
-  font-size: var(--text-base);
-  color: var(--color-text-secondary);
-}
-
-.edu-card__cgpa-label {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  margin-left: var(--space-1);
+  color: var(--color-brand);
+  font-weight: var(--font-semibold);
+  margin: 0 0 var(--space-3);
 }
 
 .edu-card__period {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.edu-card__dot {
+  color: var(--color-border-light);
+}
+
+/* CGPA — stat callout */
+.edu-card__cgpa {
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-8) var(--space-13);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-5xl);
+  white-space: nowrap;
+}
+
+.edu-card__cgpa-value {
+  font-size: var(--text-13xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-text-heading);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.edu-card__cgpa-max {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+}
+
+.edu-card__cgpa-label {
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+  align-self: flex-end;
+  margin-left: var(--space-1);
+  margin-bottom: 3px;
+}
+
+/* Highlights */
+.edu-card__highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-8) var(--space-13);
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
+.edu-card__highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  font-size: var(--text-md);
+  color: var(--color-text-body);
+  line-height: var(--leading-relaxed);
+}
+
+.edu-card__highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  border-radius: var(--radius-full);
+  background: rgba(3, 120, 184, 0.08);
+  color: var(--color-brand);
+}
+
 /* ─── Mobile ───────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .edu-section__inner {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: var(--space-11);
+  }
+
+  .edu-section__label {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .edu-section__icon { margin-bottom: 0; }
+
+  .edu-eyebrow { display: none; }
+}
+
+@media (max-width: 768px) {
+  .edu-section { padding: var(--space-20) 0; }
+
+  .edu-card {
+    padding: var(--space-13);
   }
 
   .edu-card__header {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-4);
+    gap: var(--space-8);
   }
 
-  .edu-card__meta-block {
-    text-align: left;
+  .edu-card__cgpa {
+    width: 100%;
   }
 
   .edu-card__degree {
-    font-size: var(--text-lg);
+    font-size: var(--text-6xl);
+  }
+
+  .edu-card__highlights {
+    grid-template-columns: 1fr;
   }
 }
