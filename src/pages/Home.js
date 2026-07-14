@@ -1,23 +1,24 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
-import AboutSection from "../components/AboutSection/AboutSection";
 import HeroSection from "../components/HeroSection/HeroSection";
 import StatsBar from "../components/StatsBar/StatsBar";
 import LogoStrip from "../components/LogoStrip/LogoStrip";
 import Footer from "../layouts/Footer/Footer";
 import Header from "../layouts/Header/Header";
-import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import CtaSection from "../components/CtaSection/CtaSection";
 import StructuredData from "../components/StructuredData/StructuredData";
-import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
-import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
-import EducationSection from "../components/EducationSection/EducationSection";
-import ProcessSection from "../components/ProcessSection/ProcessSection";
-import WhatIBringSection from "../components/WhatIBringSection/WhatIBringSection";
-import ContactSection from "../components/ContactSection/ContactSection";
-import SkillsToolsSection from "../components/SkillsToolsSection/SkillsToolsSection";
 import FloatingDock from "../sharedComponents/FloatingDock/FloatingDock";
 
+// Lazy-load below-fold and non-critical sections to reduce bundle size
+const AboutSection = lazy(() => import("../components/AboutSection/AboutSection"));
+const ProjectsSection = lazy(() => import("../components/ProjectsSection/ProjectsSection"));
+const ExperienceSection = lazy(() => import("../components/ExperienceSection/ExperienceSection"));
+const CertificationsSection = lazy(() => import("../components/CertificationsSection/CertificationsSection"));
+const EducationSection = lazy(() => import("../components/EducationSection/EducationSection"));
+const ProcessSection = lazy(() => import("../components/ProcessSection/ProcessSection"));
+const WhatIBringSection = lazy(() => import("../components/WhatIBringSection/WhatIBringSection"));
+const ContactSection = lazy(() => import("../components/ContactSection/ContactSection"));
+const SkillsToolsSection = lazy(() => import("../components/SkillsToolsSection/SkillsToolsSection"));
 const TestimonialSlider = lazy(() => import("../components/TestimonialSlider/TestimonialSlider"));
 const FeaturedProjectsSection = lazy(() => import("../components/FeaturedProjectsSection/FeaturedProjectsSection"));
 
@@ -53,18 +54,36 @@ const Home = () => {
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <FeaturedProjectsSection />
         </Suspense>
-        <AboutSection />
-        <ProcessSection />
-        <WhatIBringSection />
-        <SkillsToolsSection />
-        <ExperienceSection />
-        <EducationSection />
-        <CertificationsSection />
-        <ProjectsSection />
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <AboutSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <ProcessSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <WhatIBringSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <SkillsToolsSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <ExperienceSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <EducationSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <CertificationsSection />
+        </Suspense>
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <ProjectsSection />
+        </Suspense>
         <Suspense fallback={<div style={{ minHeight: 200 }} />}>
           <TestimonialSlider />
         </Suspense>
-        <ContactSection />
+        <Suspense fallback={<div style={{ minHeight: 200 }} />}>
+          <ContactSection />
+        </Suspense>
         <CtaSection />
       </main>
       <Footer />
