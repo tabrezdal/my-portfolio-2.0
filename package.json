@@ -26,6 +26,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build:prod": "craco build && node scripts/purge-css.js && firebase deploy",
     "test": "craco test",
     "eject": "react-scripts eject",
