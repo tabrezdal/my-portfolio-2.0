@@ -38,3 +38,14 @@
     align-items: stretch;
   }
 }
+
+/* ── Scoped fix: make "Send an Email" border clearly visible on white ── */
+.case-study-cta .btn--dark.btn--outlined {
+  border-color: var(--color-text-heading);
+}
+
+.case-study-cta .btn--dark.btn--outlined:not(:disabled):not([aria-disabled="true"]):hover {
+  border-color: var(--color-text-heading);
+  background-color: rgba(17, 17, 17, 0.04);
+  color: var(--color-text-heading);
+}

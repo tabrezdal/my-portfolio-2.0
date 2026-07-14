@@ -26,7 +26,7 @@ const CaseStudyCTA = ({ liveUrl, figmaUrl, loomUrl }) => {
               href="https://calendly.com/tabrez-dal"
               label="Schedule a Call"
               variant="filled"
-              theme="brand"
+              theme="dark"
               size="md"
               target="_blank"
             />

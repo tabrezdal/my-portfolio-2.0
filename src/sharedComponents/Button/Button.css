@@ -131,7 +131,7 @@
 /* ── light + outlined (dark bg sections) ── */
 .btn--light.btn--outlined {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.85);
   color: var(--color-text-inverse);
 }
 .btn--light.btn--outlined:not(:disabled):not([aria-disabled="true"]):hover {
