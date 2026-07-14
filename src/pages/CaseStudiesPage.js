@@ -209,15 +209,17 @@ const CaseStudiesPage = () => {
                   <Link
                     to={`/case-study/${project.slug}`}
                     className="case-study-card"
-                    aria-label={`View case study: ${project.title}`}
                   >
                     {/* Image */}
                     <div className="case-study-card__img-wrap">
                       <img
                         src={project.coverImage || ImageHelper.CaseStudyPlaceholder}
+                        srcSet={project.coverImageGrid ? `${project.coverImageGrid} 640w, ${project.coverImage} 1200w` : undefined}
+                        sizes="(max-width: 640px) 100vw, 602px"
                         alt={project.coverImage ? project.title : `${project.title} — cover image coming soon`}
                         className="case-study-card__img"
-                        loading={index < 2 ? 'eager' : 'lazy'}
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : undefined}
                         width={800}
                         height={300}
                       />
@@ -272,9 +274,9 @@ const CaseStudiesPage = () => {
                         <div className="case-study-card__tech">
                           {techIconsToShow.map(({ tag, iconSrc }) => (
                             <div key={tag} className="case-study-card__tech-icon">
-                              <img src={iconSrc} alt={tag} />
+                              <img src={iconSrc} alt={tag || 'Technology icon'} />
                             </div>
-                          ))}
+          ))}
                           <div className="case-study-card__tech-tooltip">
                             {tooltipTags.join('  ·  ')}
                           </div>
