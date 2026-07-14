@@ -49,9 +49,57 @@ const UiUxProjectPage = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
+  // Fallback to ensure meta tags are set for lazy-loaded routes
+  useEffect(() => {
+    if (pageContentProps?.pageName) {
+      const pageTitle = `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal`;
+      const description = pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || "UI/UX design projects by Tabrez Dal — product design, design systems, and user research.";
+      const canonicalUrl = `https://tabrezdal.com/ui-ux-project/${id}`;
+      
+      document.title = pageTitle;
+      
+      const setDescription = (content) => {
+        let meta = document.querySelector('meta[name="description"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'description';
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      const setCanonical = (href) => {
+        let link = document.querySelector('link[rel="canonical"]');
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'canonical';
+          document.head.appendChild(link);
+        }
+        link.setAttribute('href', href);
+      };
+
+      const setOGMeta = (property, content) => {
+        let meta = document.querySelector(`meta[property="${property}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('property', property);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      setDescription(description);
+      setCanonical(canonicalUrl);
+      setOGMeta('og:title', `${pageContentProps.pageName} | Tabrez Dal`);
+      setOGMeta('og:description', description);
+      setOGMeta('og:url', canonicalUrl);
+      setOGMeta('og:type', 'article');
+    }
+  }, [id, pageContentProps]);
+
   return (
     <div style={{ color: "#777777" }}>
-      <Helmet>
+      <Helmet defer={false}>
         <title>
           {pageContentProps?.pageName
             ? `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal` 
