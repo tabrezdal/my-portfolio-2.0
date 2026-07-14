@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import FeaturedProjectsData from '../Data/FeaturedProjectsData';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
@@ -88,8 +89,76 @@ const CaseStudiesPage = () => {
   const shouldReduceMotion = useReducedMotion();
   const projects = FeaturedProjectsData;
 
+  // Fallback to ensure meta tags are set for lazy-loaded routes
+  React.useEffect(() => {
+    document.title = 'Case Studies | Product & UX Engineering — Tabrez Dal';
+    
+    const setDescription = (content) => {
+      let meta = document.querySelector('meta[name="description"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'description';
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    const setCanonical = (href) => {
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'canonical';
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', href);
+    };
+
+    const setOGMeta = (property, content) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    setDescription('Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer.');
+    setCanonical('https://tabrezdal.com/case-studies');
+    setOGMeta('og:title', 'Case Studies | Tabrez Dal');
+    setOGMeta('og:description', 'Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer.');
+    setOGMeta('og:url', 'https://tabrezdal.com/case-studies');
+    setOGMeta('og:type', 'website');
+    setOGMeta('og:image', 'https://tabrezdal.com/og-image.webp');
+  }, []);
+
   return (
     <>
+      <Helmet defer={false}>
+        <title>Case Studies | Product & UX Engineering — Tabrez Dal</title>
+        <meta
+          name="description"
+          content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
+        />
+        <link rel="canonical" href="https://tabrezdal.com/case-studies" />
+
+        <meta property="og:title" content="Case Studies | Tabrez Dal" />
+        <meta
+          property="og:description"
+          content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
+        />
+        <meta property="og:url" content="https://tabrezdal.com/case-studies" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Case Studies | Tabrez Dal" />
+        <meta
+          name="twitter:description"
+          content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
+        />
+        <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
+      </Helmet>
       <Header />
       <main className="case-studies-page">
 
