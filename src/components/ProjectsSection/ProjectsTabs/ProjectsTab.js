@@ -6,6 +6,9 @@ import "./ProjectsTab.css";
 import { motion } from "framer-motion";
 import { fadeUpMassiveVariants } from "../../../utils/animationVariants";
 
+// Image Fallback
+import ImageHelper from "../../../Helpers/ImageHelper";
+
 const ProjectsTab = (props) => {
   const navigate = useNavigate();
   const redirectToUiUxProjectPage = (urlSuffix) => {
@@ -40,8 +43,8 @@ const ProjectsTab = (props) => {
                 <div className="screen">
                   <img
                     className="image-prop img-fluid"
-                    src={item.image}
-                    alt={item.caption}
+                    src={item.image || ImageHelper.ProjectPlaceholder}
+                    alt={item.image ? item.caption : `${item.title} — image coming soon`}
                     loading="lazy"
                     decoding="async"
                   />
@@ -49,8 +52,8 @@ const ProjectsTab = (props) => {
               ) : (
                 <img
                   className=" image-prop img-fluid"
-                  src={item.image}
-                  alt={item.caption}
+                  src={item.image || ImageHelper.ProjectPlaceholder}
+                  alt={item.image ? item.caption : `${item.title} — image coming soon`}
                   loading="lazy"
                   decoding="async"
                 />
