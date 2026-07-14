@@ -43,7 +43,7 @@ const CaseStudyLinks = ({ liveUrl, figmaUrl, loomUrl }) => {
           icon="fa fa-play-circle"
           iconPosition="before"
           variant="outlined"
-          theme="dark"
+          theme="light"
           size="sm"
           target="_blank"
           aria-label="Watch walkthrough video"

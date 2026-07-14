@@ -28,33 +28,22 @@ const CaseStudyNav = ({ project }) => {
             gap: "20px",
           }}
         >
-          {/* Back to homepage */}
+          {/* Back to homepage — use Button component, no inline styles */}
           <motion.div
             variants={fadeLeftVariants}
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.4, delay: 0.1 }}
           >
-            <button
+            <Button
+              label="Back to homepage"
+              icon="fa fa-arrow-left"
+              iconPosition="before"
+              variant="outlined"
+              theme="dark"
+              size="sm"
               onClick={() => navigate("/")}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "#777",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                padding: 0,
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <i className="fa fa-arrow-left" aria-hidden="true"></i>
-              Back to homepage
-            </button>
+            />
           </motion.div>
 
           {/* Prev / Next project */}
@@ -77,7 +66,7 @@ const CaseStudyNav = ({ project }) => {
                 icon="fa fa-arrow-right"
                 iconPosition="after"
                 variant="filled"
-                theme="brand"
+                theme="dark"
                 size="sm"
                 onClick={() => navigate(`/case-study/${nextProject.slug}`)}
               />
