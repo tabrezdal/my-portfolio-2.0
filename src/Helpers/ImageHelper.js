@@ -8,6 +8,9 @@ import ContactPhoto from "../Assets/Images/me/tz-contact-cutout.webp";
 // Case Study Fallback
 import CaseStudyPlaceholder from "../Assets/Images/placeholders/case_study_placeholder.webp";
 
+// Project Fallback
+import ProjectPlaceholder from "../Assets/Images/placeholders/project_placeholder.webp";
+
 // Tools Section
 import PhotoshopLogo from "../Assets/Images/tools-icons/adobe-photoshop.svg";
 import IllustratorLogo from "../Assets/Images/tools-icons/adobe-illustrator.svg";
@@ -279,6 +282,7 @@ const ImageHelper = {
   TzInSuit,
   ContactPhoto,
   CaseStudyPlaceholder,
+  ProjectPlaceholder,
 
   PhotoshopLogo,
   IllustratorLogo,
