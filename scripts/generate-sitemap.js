@@ -27,6 +27,7 @@ const caseStudySlugs = [
 
 // UI/UX project URL suffixes from PortfolioDataUiUx
 const uiuxSuffixes = [
+  'uiux01', 'uiux02', 'uiux03', 'uiux04', 'uiux05', 'uiux06',
   'uiux07', 'uiux08', 'uiux09', 'uiux10', 'uiux11', 'uiux12', 'uiux13', 'uiux14',
   'uiux15', 'uiux16', 'uiux17', 'uiux18', 'uiux19', 'uiux20', 'uiux21', 'uiux22',
   'uiux23', 'uiux24', 'uiux25', 'uiux26', 'uiux27', 'uiux28', 'uiux29', 'uiux30',

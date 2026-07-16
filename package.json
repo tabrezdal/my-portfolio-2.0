@@ -28,7 +28,7 @@
     "build": "craco build",
     "postbuild": "react-snap",
     "prebuild": "node scripts/generate-sitemap.js",
-    "build:prod": "craco build && node scripts/purge-css.js && firebase deploy",
+    "build:prod": "npm run build && node scripts/purge-css.js && firebase deploy",
     "test": "craco test",
     "eject": "react-scripts eject",
     "analyse": "source-map-explorer 'build/static/js/*.js'"
