@@ -27,7 +27,7 @@ const FeaturedProjectCard = ({ project, index }) => {
             src={project.coverImageGrid || project.coverImage || ImageHelper.CaseStudyPlaceholder}
             srcSet={
               project.coverImageGrid
-                ? `${project.coverImageGrid} 480w, ${project.coverImage} 1600w`
+                ? `${encodeURI(project.coverImageGrid)} 480w, ${encodeURI(project.coverImage)} 1600w`
                 : undefined
             }
             sizes="(max-width: 767px) 100vw, 427px"
