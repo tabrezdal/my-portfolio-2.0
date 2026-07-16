@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
 import { fadeUp } from '../utils/animationVariants';
@@ -10,6 +11,11 @@ function NoPageFound() {
 
   return (
     <>
+      <Helmet defer={false}>
+        <title>404 — Page Not Found | Tabrez Dal</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to the homepage or browse case studies." />
+        <link rel="canonical" href="https://tabrezdal.com/404.html" />
+      </Helmet>
       <Header />
       <main className="not-found-page">
         <motion.div
