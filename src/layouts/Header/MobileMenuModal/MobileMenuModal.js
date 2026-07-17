@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { TransitionGroup } from "react-transition-group";
+import { Link } from "react-router-dom";
 import NavigationLink from "../../../sharedComponents/NavigationLink";
 import { NavLinkData } from "../NavBarData";
 
@@ -27,14 +28,24 @@ export const MobileMenuModal = (props) => {
           }}
         >
           <ul className="" style={{ touchAction: "pan-y" }} id="">
-            {NavLinkData?.map((item) => (
-              <NavigationLink
-                key={item.id}
-                linkTo={item.linkTo}
-                name={item.name}
-                handleClose={handleClose}
-              />
-            ))}
+            {NavLinkData?.map((item) => {
+              // Handle "Work" link as route navigation, others as scroll navigation
+              if (item.linkTo === 'case-studies') {
+                return (
+                  <li key={item.id} className="navlink">
+                    <Link to="/case-studies" onClick={handleClose}>{item.name}</Link>
+                  </li>
+                );
+              }
+              return (
+                <NavigationLink
+                  key={item.id}
+                  linkTo={item.linkTo}
+                  name={item.name}
+                  handleClose={handleClose}
+                />
+              );
+            })}
           </ul>
         </nav>
       </Modal>

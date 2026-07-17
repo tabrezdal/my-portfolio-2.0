@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/font-awesome.min.css";
+import 'font-awesome/css/font-awesome.min.css';
 import "./styles/linearicons.css";
 import "./styles/main.css";
 import "./App.css";
@@ -11,9 +11,10 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import Home from "./pages/Home";
 
 // Secondary routes stay lazy — users navigate to these after Home loads
-const NoPageFound     = lazy(() => import("./pages/NoPageFound"));
-const UiUxProjectPage = lazy(() => import("./pages/UiUxProjectPage"));
-const CaseStudyPage   = lazy(() => import("./pages/CaseStudyPage"));
+const NoPageFound        = lazy(() => import("./pages/NoPageFound"));
+const UiUxProjectPage    = lazy(() => import("./pages/UiUxProjectPage"));
+const CaseStudyPage      = lazy(() => import("./pages/CaseStudyPage"));
+const CaseStudiesPage    = lazy(() => import("./pages/CaseStudiesPage"));
 
 const PageLoader = () => (
   <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", background: "#fff" }}>
@@ -40,6 +41,11 @@ function App() {
           <Route path="case-study/:slug" element={
             <Suspense fallback={<PageLoader />}>
               <CaseStudyPage />
+            </Suspense>
+          } />
+          <Route path="case-studies" element={
+            <Suspense fallback={<PageLoader />}>
+              <CaseStudiesPage />
             </Suspense>
           } />
           <Route path="*" element={

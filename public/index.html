@@ -8,14 +8,17 @@
   <meta name="theme-color" content="#0378b8" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-  <link rel="preload" as="style" href="%PUBLIC_URL%/font-awesome.min.css"
+  <!-- Google Fonts — non-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
-    <link rel="stylesheet" href="%PUBLIC_URL%/font-awesome.min.css" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" />
   </noscript>
 
-  <!-- LCP hero image — preloaded as a stable public asset (not webpack-hashed) so Chrome's preload scanner discovers it before React hydrates -->
-  <link rel="preload" as="image" href="%PUBLIC_URL%/hero-image.webp" fetchpriority="high" />
 
   <!-- Preload hints for critical JS chunks. Update the filenames after each build (they are content-hashed). -->
   <!-- <link rel="modulepreload" href="%PUBLIC_URL%/static/js/vendor-react.7aa61416.js" />
@@ -23,24 +26,25 @@
 
   <!-- Author Meta -->
   <meta name="author" content="Tabrez Dal" />
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://tabrezdal.com/" />
   <!-- Meta Description -->
   <meta name="description"
-    content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years building scalable frontend systems and product-driven experiences across SaaS, healthcare, and e-commerce." />
+    content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years across SaaS, healthcare, and e-commerce." />
   <!-- Meta Keyword -->
   <meta name="keywords"
     content="Product Engineer, Software Developer, UI/UX Designer, React Js Developer, Engineer, Front-End Development, Freelance Work, Branding, Web Design, UI/UX, Entrepreneurship, Startups" />
   <meta property="og:title" content="Tabrez Dal - Product Engineer" />
-  <meta property="og:type" content="Profile" />
+  <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://tabrezdal.com/" />
-  <meta property="og:image" content="https://tabrezdal.com/TZ.webp" />
+  <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
   <meta property="og:site_name" content="Tabrez Dal Portfolio" />
   <meta property="og:description"
-    content="A dynamic and imaginative Product Engineer with over 5 years of experience. Holding a Bachelor's Degree in Computer Science and Engineering, dedicated to crafting inventive solutions that captivate and foster enduring connections between brands and their customers." />
+    content="Portfolio of Tabrez Dal — Product Engineer specialising in Software Engineering and UX/UI Design. 6+ years across SaaS, healthcare, and e-commerce." />
   <!-- meta character set -->
 
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!-- Dancing Script Font for cursive labels -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet" />
+
   <!-- Site Title -->
   <title>Tabrez Dal — Product Engineer, Software & UX</title>
 </head>
@@ -48,33 +52,6 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script> -->
-
-  <!-- Disabled Ispect Element -->
-  <!-- <script>
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-      });
-
-      document.onkeydown = (e) => {
-        if (e.key == 123) {
-          e.preventDefault();
-        }
-        if (e.ctrlKey && e.shiftKey && e.key == "I") {
-          e.preventDefault();
-        }
-        if (e.ctrlKey && e.shiftKey && e.key == "C") {
-          e.preventDefault();
-        }
-        if (e.ctrlKey && e.shiftKey && e.key == "J") {
-          e.preventDefault();
-        }
-        if (e.ctrlKey && e.key == "U") {
-          e.preventDefault();
-        }
-      };
-    </script> -->
 
   <!-- Google tag (gtag.js) — deferred until after page load -->
   <script>

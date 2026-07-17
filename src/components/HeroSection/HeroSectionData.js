@@ -10,7 +10,7 @@ export const HeroSectionData = {
     name: "Download CV",
     url: "https://drive.google.com/file/d/1BTrwtxWpF9m3OyaFJdjhcZIKaQxSzWGX/view?usp=drive_link",
   },
-  heroImage: `${process.env.PUBLIC_URL}/hero-image.webp`,
+  heroImage: `${process.env.PUBLIC_URL}/hero-image-optimized.webp`,
 
   // New 2026 data structure
   roleDescriptor: "Product Engineer — Software & UX",

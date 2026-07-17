@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 import BackToTopButton from "../../sharedComponents/BackToTopButton";
 import SocialMediaLinks from "../../sharedComponents/SocialMediaLinks";
 import { FooterSocialMediaLinksData } from "./FooterSocialMediaLinksData";

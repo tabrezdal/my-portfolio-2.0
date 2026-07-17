@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Button from "../../../sharedComponents/Button/Button";
 import "./CaseStudyContext.css";
 
 /* ─────────────────────────────────────────
@@ -107,16 +108,16 @@ const CaseStudyContext = ({ project }) => {
 
             {/* Live URL */}
             {liveUrl && (
-              <a
+              <Button
                 href={liveUrl}
-                className="cctx-live-link"
+                label="View Live Project"
+                icon="fa fa-external-link"
+                iconPosition="after"
+                variant="outlined"
+                theme="brand"
+                size="sm"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Live Project
-                &nbsp;
-                <i className="fa fa-external-link" aria-hidden="true" />
-              </a>
+              />
             )}
           </motion.div>
 

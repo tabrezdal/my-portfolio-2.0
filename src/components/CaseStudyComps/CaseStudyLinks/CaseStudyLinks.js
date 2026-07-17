@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../../sharedComponents/Button/Button';
 import './CaseStudyLinks.css';
 
 const CaseStudyLinks = ({ liveUrl, figmaUrl, loomUrl }) => {
@@ -8,42 +9,45 @@ const CaseStudyLinks = ({ liveUrl, figmaUrl, loomUrl }) => {
   return (
     <div className="cs-links">
       {liveUrl && (
-        <a
+        <Button
           href={liveUrl}
+          label="Live Project"
+          icon="fa fa-external-link"
+          iconPosition="before"
+          variant="filled"
+          theme="brand"
+          size="sm"
           target="_blank"
-          rel="noopener noreferrer"
-          className="cs-links__btn cs-links__btn--live"
           aria-label="View live project"
-        >
-          <i className="fa fa-external-link" aria-hidden="true" />
-          <span>Live Project</span>
-        </a>
+        />
       )}
 
       {figmaUrl && (
-        <a
+        <Button
           href={figmaUrl}
+          label="View in Figma"
+          icon="fa fa-pencil-square-o"
+          iconPosition="before"
+          variant="outlined"
+          theme="brand"
+          size="sm"
           target="_blank"
-          rel="noopener noreferrer"
-          className="cs-links__btn cs-links__btn--figma"
           aria-label="View Figma design"
-        >
-          <i className="fa fa-pencil-square-o" aria-hidden="true" />
-          <span>View in Figma</span>
-        </a>
+        />
       )}
 
       {loomUrl && (
-        <a
+        <Button
           href={loomUrl}
+          label="Watch Walkthrough"
+          icon="fa fa-play-circle"
+          iconPosition="before"
+          variant="outlined"
+          theme="light"
+          size="sm"
           target="_blank"
-          rel="noopener noreferrer"
-          className="cs-links__btn cs-links__btn--loom"
           aria-label="Watch walkthrough video"
-        >
-          <i className="fa fa-play-circle" aria-hidden="true" />
-          <span>Watch Walkthrough</span>
-        </a>
+        />
       )}
     </div>
   );

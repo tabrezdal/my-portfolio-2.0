@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeUpLargeVariants } from "../../utils/animationVariants";
+import ImageHelper from "../../Helpers/ImageHelper";
 import "./FeaturedProjectCard.css";
 
 const FeaturedProjectCard = ({ project, index }) => {
@@ -23,8 +24,14 @@ const FeaturedProjectCard = ({ project, index }) => {
         {/* Image + hover overlay */}
         <div className="fp-card__img-wrap">
           <img
-            src={project.coverImage}
-            alt={project.title}
+            src={project.coverImageGrid || project.coverImage || ImageHelper.CaseStudyPlaceholder}
+            srcSet={
+              project.coverImageGrid
+                ? `${encodeURI(project.coverImageGrid)} 480w, ${encodeURI(project.coverImage)} 1600w`
+                : undefined
+            }
+            sizes="(max-width: 767px) 100vw, 427px"
+            alt={project.coverImage ? project.title : `${project.title} — cover image coming soon`}
             draggable="false"
             loading="lazy"
             width={800}
@@ -34,6 +41,12 @@ const FeaturedProjectCard = ({ project, index }) => {
             <p className="fp-card__overlay-role">{project.role}</p>
             <span className="fp-card__overlay-cta">View Case Study →</span>
           </div>
+          {project.outcome && (
+            <div className="fp-outcome-overlay" aria-hidden="true">
+              <span className="fp-outcome-overlay__arrow">↑</span>
+              <span className="fp-outcome-overlay__text">{project.outcome}</span>
+            </div>
+          )}
         </div>
 
         {/* Body */}

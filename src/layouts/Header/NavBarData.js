@@ -21,21 +21,16 @@ export const NavLinkData = [
   },
   {
     id: 5,
-    name: "Skills",
-    linkTo: "skills",
+    name: "Capabilities",
+    linkTo: "skills-tools",
   },
   {
     id: 6,
-    name: "Tools",
-    linkTo: "tools",
+    name: "Work",
+    linkTo: "case-studies",
   },
   {
     id: 7,
-    name: "Tech",
-    linkTo: "technologies",
-  },
-  {
-    id: 8,
     name: "Projects",
     linkTo: "projects",
   },
@@ -86,7 +81,7 @@ export const NavSocialMediaLinkData = [
 
 export const availabilityConfig = {
   isAvailable: true,
-  label: 'Available',
+  label: 'Available for work',
   tooltip: 'Open to new projects',
   dotColor: 'green',
 };

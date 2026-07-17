@@ -1,0 +1,184 @@
+/* Section container */
+.st-section {
+  padding: 96px 0;
+  background: var(--color-surface-alt);
+}
+
+.st-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section header */
+.st-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  margin: 0 0 12px 0;
+}
+
+.st-headline {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--color-text-heading);
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+.st-cursive {
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-text-tertiary);
+  margin: 0 0 48px 0;
+  display: block;
+}
+
+/* Category block */
+.st-category {
+  margin-bottom: 56px;
+}
+.st-category:last-child {
+  margin-bottom: 0;
+}
+
+.st-category__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.st-category__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.st-category__line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Icon grid — uniform columns instead of ragged flex-wrap */
+.st-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* Icon tile */
+.st-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+}
+
+.st-tile__icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  overflow: hidden;
+}
+
+.st-tile:hover .st-tile__icon {
+  border-color: var(--color-border-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Icon image — full brand color, no filter */
+.st-tile__icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  transition: transform 200ms ease;
+}
+
+.st-tile:hover .st-tile__icon img {
+  transform: scale(1.08);
+}
+
+/* Text fallback when no icon image exists */
+.st-tile__icon span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* Tool name label below tile */
+.st-tile__name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-align: center;
+  white-space: nowrap;
+  max-width: 84px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 200ms ease;
+}
+
+.st-tile:hover .st-tile__name {
+  color: var(--color-text-heading);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .st-section { padding: 64px 0; }
+
+  .st-grid {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 12px;
+  }
+
+  .st-tile__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+  }
+
+  .st-tile__icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .st-tile__name {
+    font-size: 11px;
+    max-width: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-tile__icon,
+  .st-tile__icon img,
+  .st-tile__name {
+    transition: none;
+  }
+  .st-tile:hover .st-tile__icon {
+    transform: none;
+  }
+}

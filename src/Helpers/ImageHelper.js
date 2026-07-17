@@ -3,6 +3,13 @@ import AboutImage from "../Assets/Images/me/Tabrez-at-dubai-mall.webp";
 import MySignature from "../Assets/Images/other/mySignature.webp";
 
 import TzInSuit from "../Assets/Images/me/TZ-in-suit.webp";
+import ContactPhoto from "../Assets/Images/me/tz-contact-cutout.webp";
+
+// Case Study Fallback
+import CaseStudyPlaceholder from "../Assets/Images/placeholders/case_study_placeholder.webp";
+
+// Project Fallback
+import ProjectPlaceholder from "../Assets/Images/placeholders/project_placeholder.webp";
 
 // Tools Section
 import PhotoshopLogo from "../Assets/Images/tools-icons/adobe-photoshop.svg";
@@ -247,14 +254,35 @@ import Other10 from "../Assets/Images/Portfolio/Other/TZ Certi 1.webp";
 import Other11 from "../Assets/Images/Portfolio/Other/TZ Certi 2.webp";
 import Other12 from "../Assets/Images/Portfolio/Other/TZ Vouchers.webp";
 
+// Grid variants for responsive images
+import MenuOnlineGrid from "../Assets/Images/project-grid-images/MenuOnline [Cover]-grid.webp";
+import MobioticsHomepageGrid from "../Assets/Images/project-grid-images/Mobiotics-Homepage-grid.webp";
+import MenuOnlineFoundationCoverGrid from "../Assets/Images/project-grid-images/MenuOnline-Foundation-Cover-grid.webp";
+import MyHabitAppUiDesignCoverGrid from "../Assets/Images/project-grid-images/MyHabit-App-Ui-Design-Cover-grid.webp";
+import TezHUBCoverGrid from "../Assets/Images/project-grid-images/TezHUB-Cover-grid.webp";
+import EatExpressGrid from "../Assets/Images/project-grid-images/EatExpress-grid.webp";
+import EdXploreAdminPanelMobileVersionGrid from "../Assets/Images/project-grid-images/EdXplore-Admin-Panel-_Mobile-Version-Cover-grid.webp";
+import EdXploreAdminPanelGrid from "../Assets/Images/project-grid-images/EdXplore-Admin-Panel-Cover-grid.webp";
+import EdXploreHeaderRevampGrid from "../Assets/Images/project-grid-images/EdXplore-Header-Revamp-Cover-grid.webp";
+import HotelResortManagementGrid from "../Assets/Images/project-grid-images/Hotel-Resort-Management-Cover-grid.webp";
+import MecoWebUiGrid from "../Assets/Images/project-grid-images/Meco-Cover-grid.webp";
+import MecoFinalWebUiGrid from "../Assets/Images/project-grid-images/Meco-Final-Cover-grid.webp";
+import AboutImageGrid from "../Assets/Images/project-grid-images/Tabrez-at-dubai-mall-grid.webp";
+import AboutImage700w from "../Assets/Images/project-grid-images/Tabrez-at-dubai-mall-700w.webp";
+
 // // Service Portfolio Banner Images
 
 const ImageHelper = {
   // //About Section
   AboutImage,
+  AboutImageGrid,
+  AboutImage700w,
   MySignature,
   // locationMap,
   TzInSuit,
+  ContactPhoto,
+  CaseStudyPlaceholder,
+  ProjectPlaceholder,
 
   PhotoshopLogo,
   IllustratorLogo,
@@ -298,6 +326,7 @@ const ImageHelper = {
   Web6,
   Web7,
   Web8,
+  Web8Grid: MobioticsHomepageGrid,
   Web9,
   Web10,
   Web11,
@@ -444,24 +473,33 @@ const ImageHelper = {
   LevelNextWeb,
   LinkedupAppUiDesign,
   MenuOnline,
+  MenuOnlineGrid,
   MenuOnlineFoundationCover,
+  MenuOnlineFoundationCoverGrid,
   MyHabitAppUiDesignCover,
+  MyHabitAppUiDesignCoverGrid,
   PropertyZoneLandingPageCover,
   RushInvoiceAppCover,
   SOSEmergencyAppCover,
   TabrezDalExpertProductDesignerCover,
   TezHUBCover,
+  TezHUBCoverGrid,
   EatExpress,
+  EatExpressGrid,
   CasualChic,
   A1VIsasPassportServicesLandingPage,
   Artyss,
   EdXploreAdminPanelMobileVersion,
+  EdXploreAdminPanelMobileVersionGrid,
   EdXploreAdminPanel,
+  EdXploreAdminPanelGrid,
   EdXploreHeaderRevamp,
+  EdXploreHeaderRevampGrid,
   FamilyOffice360,
   FMSCIHomepageRevamp,
   GRM,
   HotelResortManagement,
+  HotelResortManagementGrid,
   SaishHF,
   SkillMineIndia,
   SkillMineKsa,
@@ -472,7 +510,9 @@ const ImageHelper = {
   UpStreamLife,
   ZeroZillaProfile,
   MecoWebUi,
+  MecoWebUiGrid,
   MecoFinalWebUi,
+  MecoFinalWebUiGrid,
 
   // Poster
   CricBuzzBanner,

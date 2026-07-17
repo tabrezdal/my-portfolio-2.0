@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import Swiper from "swiper";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -13,8 +13,25 @@ import { motion } from "framer-motion";
 import { scaleUpNoOpacityVariants } from "../../utils/animationVariants";
 
 const TestimonialSlider = () => {
+  const swiperRef = useRef(null);
+  const tickingRef = useRef(false);
+
+  const handleResize = useCallback(() => {
+    if (!tickingRef.current && swiperRef.current) {
+      window.requestAnimationFrame(() => {
+        if (window.innerWidth < 724) swiperRef.current.params.slidesPerView = 2;
+        if (window.innerWidth > 501) swiperRef.current.params.slidesPerView = 2;
+        if (window.innerWidth > 724) swiperRef.current.params.slidesPerView = 2.3;
+        if (window.innerWidth < 501) swiperRef.current.params.slidesPerView = 1.5;
+        swiperRef.current.update();
+        tickingRef.current = false;
+      });
+      tickingRef.current = true;
+    }
+  }, []);
+
   useEffect(() => {
-    const swiper = new Swiper(".swiper-container", {
+    swiperRef.current = new Swiper(".swiper-container", {
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 2.3,
@@ -34,17 +51,16 @@ const TestimonialSlider = () => {
       modules: [EffectCoverflow, Pagination, Autoplay],
     });
 
-    const queryResizer = () => {
-      if (window.innerWidth < 724) swiper.params.slidesPerView = 2;
-      if (window.innerWidth > 501) swiper.params.slidesPerView = 2;
-      if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3;
-      if (window.innerWidth < 501) swiper.params.slidesPerView = 1.5;
-      swiper.update();
-    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
 
-    window.onresize = queryResizer;
-    queryResizer();
-  }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (swiperRef.current) {
+        swiperRef.current.destroy();
+      }
+    };
+  }, [handleResize]);
 
   return (
     <motion.div

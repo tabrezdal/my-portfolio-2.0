@@ -49,25 +49,89 @@ const UiUxProjectPage = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
+  // Fallback to ensure meta tags are set for lazy-loaded routes
+  useEffect(() => {
+    if (pageContentProps?.pageName) {
+      const pageTitle = `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal`;
+      const description = pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || "UI/UX design projects by Tabrez Dal — product design, design systems, and user research.";
+      const canonicalUrl = `https://tabrezdal.com/ui-ux-project/${id}`;
+      
+      document.title = pageTitle;
+      
+      const setDescription = (content) => {
+        let meta = document.querySelector('meta[name="description"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'description';
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      const setCanonical = (href) => {
+        let link = document.querySelector('link[rel="canonical"]');
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'canonical';
+          document.head.appendChild(link);
+        }
+        link.setAttribute('href', href);
+      };
+
+      const setOGMeta = (property, content) => {
+        let meta = document.querySelector(`meta[property="${property}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('property', property);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      setDescription(description);
+      setCanonical(canonicalUrl);
+      setOGMeta('og:title', `${pageContentProps.pageName} | Tabrez Dal`);
+      setOGMeta('og:description', description);
+      setOGMeta('og:url', canonicalUrl);
+      setOGMeta('og:type', 'article');
+    }
+  }, [id, pageContentProps]);
+
   return (
     <div style={{ color: "#777777" }}>
-      <Helmet>
-        <title>UI/UX Projects | Tabrez Dal</title>
-        <meta name="description" content="UI/UX design projects by Tabrez Dal — product design, design systems, user research, and end-to-end product experiences." />
-        <meta property="og:title" content="UI/UX Projects | Tabrez Dal" />
-        <meta property="og:description" content="UI/UX design projects — product design, design systems, and user research." />
-        <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
-        <meta property="og:url" content="https://tabrezdal.com/ui-ux-projects" />
-        <meta property="og:type" content="website" />
+      <Helmet defer={false}>
+        <title>
+          {pageContentProps?.pageName
+            ? `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal` 
+            : "UI/UX Projects | Tabrez Dal"}
+        </title>
+        <meta
+          name="description"
+          content={
+            pageContentProps?.description?.[0]?.descriptionContent
+              ? pageContentProps.description[0].descriptionContent.slice(0, 155)
+              : "UI/UX design projects by Tabrez Dal — product design, design systems, and user research."
+          }
+        />
+        <meta
+          property="og:title"
+          content={pageContentProps?.pageName ? `${pageContentProps.pageName} | Tabrez Dal` : "UI/UX Projects | Tabrez Dal"}
+        />
+        <meta
+          property="og:description"
+          content={pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || ""}
+        />
+        <meta property="og:url" content={`https://tabrezdal.com/ui-ux-project/${id}`} />
+        <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UI/UX Projects | Tabrez Dal" />
-        <meta name="twitter:image" content="https://tabrezdal.com/og-image.webp" />
+        <meta name="twitter:title" content={pageContentProps?.pageName || "UI/UX Projects"} />
+        <link rel="canonical" href={`https://tabrezdal.com/ui-ux-project/${id}`} />
       </Helmet>
       <Header />
       <main id="main-content">
         <Breadcrumb
           parentpageName="Home"
-          currentPageName="Ui/Ux Projects"
+          currentPageName={pageContentProps?.pageName || "UI/UX Project"}
           breadcrumbProps={breadcrumbProps}
         />
         <section className="services-area section-gap" id="FigmaPage">

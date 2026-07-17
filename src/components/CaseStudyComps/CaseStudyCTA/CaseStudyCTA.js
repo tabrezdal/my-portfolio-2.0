@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeUpVariants } from '../../../utils/animationVariants';
+import Button from '../../../sharedComponents/Button/Button';
 import './CaseStudyCTA.css';
 
 const CaseStudyCTA = ({ liveUrl, figmaUrl, loomUrl }) => {
@@ -21,20 +22,21 @@ const CaseStudyCTA = ({ liveUrl, figmaUrl, loomUrl }) => {
             Let's talk about your project or open role.
           </p>
           <div className="case-study-cta__actions">
-            <a
+            <Button
               href="https://calendly.com/tabrez-dal"
+              label="Schedule a Call"
+              variant="filled"
+              theme="dark"
+              size="md"
               target="_blank"
-              rel="noopener noreferrer"
-              className="case-study-cta__btn-primary"
-            >
-              Schedule a Call
-            </a>
-            <a
+            />
+            <Button
               href="mailto:tabrez.dal@gmail.com"
-              className="case-study-cta__btn-secondary"
-            >
-              Send an Email
-            </a>
+              label="Send an Email"
+              variant="outlined"
+              theme="dark"
+              size="md"
+            />
           </div>
         </div>
       </div>

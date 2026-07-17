@@ -87,7 +87,7 @@
 
 .fp-card__overlay-cta:hover {
   background: var(--color-surface);
-  color: var(--color-brand);
+  color: var(--color-text-heading);
   text-decoration: none;
 }
 
@@ -111,7 +111,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--color-brand);
+  color: var(--color-text-muted);
 }
 
 .fp-card__year {
@@ -161,5 +161,53 @@
 @media (max-width: 767px) {
   .fp-card__img-wrap {
     height: 200px;
+  }
+}
+
+/* ─── Outcome hover overlay (permanent) ─────────── */
+.fp-outcome-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  color: #ffffff;
+  text-align: center;
+  padding: 24px;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Reveal on card hover */
+.fp-card:hover .fp-outcome-overlay {
+  opacity: 1;
+}
+
+.fp-outcome-overlay__arrow {
+  font-size: 24px;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.fp-outcome-overlay__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp-outcome-overlay {
+    transition: none;
   }
 }

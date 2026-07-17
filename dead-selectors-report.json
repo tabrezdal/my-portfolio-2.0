@@ -1,0 +1,2271 @@
+{
+  "src/components/AboutSection/AboutSection.css": [
+    {
+      "file": "src/components/AboutSection/AboutSection.css",
+      "line": 100,
+      "selector": ".about-photo-meta",
+      "classTokens": [
+        "about-photo-meta"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/AboutSection/AboutSection.css",
+      "line": 104,
+      "selector": ".about-photo-name",
+      "classTokens": [
+        "about-photo-name"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/AboutSection/AboutSection.css",
+      "line": 113,
+      "selector": ".about-photo-role",
+      "classTokens": [
+        "about-photo-role"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/AboutSection/AboutSection.css",
+      "line": 152,
+      "selector": ".about-signature__svg",
+      "classTokens": [
+        "about-signature__svg"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 87,
+      "selector": ".cctx-status-dot",
+      "classTokens": [
+        "cctx-status-dot"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 101,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes cctx-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 102,
+      "selector": "65%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes cctx-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyContext/CaseStudyContext.css",
+      "line": 103,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes cctx-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyDesignPrinciples/CaseStudyDesignPrinciples.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyDesignPrinciples/CaseStudyDesignPrinciples.css",
+      "line": 41,
+      "selector": ".cdp-inner",
+      "classTokens": [
+        "cdp-inner"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css",
+      "line": 237,
+      "selector": ".csh-metric__value",
+      "classTokens": [
+        "csh-metric__value"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css",
+      "line": 313,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csh-bounce",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css",
+      "line": 313,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csh-bounce",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyHero/CaseStudyHero.css",
+      "line": 314,
+      "selector": "50%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csh-bounce",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyProblemFrame/CaseStudyProblemFrame.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyProblemFrame/CaseStudyProblemFrame.css",
+      "line": 198,
+      "selector": ".cpf-audit-item__icon",
+      "classTokens": [
+        "cpf-audit-item__icon"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 233,
+      "selector": ".cts-tok-kw",
+      "classTokens": [
+        "cts-tok-kw"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 234,
+      "selector": ".cts-tok-fn",
+      "classTokens": [
+        "cts-tok-fn"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 235,
+      "selector": ".cts-tok-str",
+      "classTokens": [
+        "cts-tok-str"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 236,
+      "selector": ".cts-tok-num",
+      "classTokens": [
+        "cts-tok-num"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 237,
+      "selector": ".cts-tok-cmt",
+      "classTokens": [
+        "cts-tok-cmt"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 238,
+      "selector": ".cts-tok-tag",
+      "classTokens": [
+        "cts-tok-tag"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 239,
+      "selector": ".cts-tok-attr",
+      "classTokens": [
+        "cts-tok-attr"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 240,
+      "selector": ".cts-tok-punct",
+      "classTokens": [
+        "cts-tok-punct"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 276,
+      "selector": ".cts-perf-grid",
+      "classTokens": [
+        "cts-perf-grid"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack.css",
+      "line": 287,
+      "selector": ".cts-perf-grid",
+      "classTokens": [
+        "cts-perf-grid"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 2,
+      "selector": ".cs-toc",
+      "classTokens": [
+        "cs-toc"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 40,
+      "selector": ".cs-toc__link",
+      "classTokens": [
+        "cs-toc__link"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 50,
+      "selector": ".cs-toc__link:focus-visible",
+      "classTokens": [
+        "cs-toc__link"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 105,
+      "selector": ".cs-toc",
+      "classTokens": [
+        "cs-toc"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 1100px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC.css",
+      "line": 112,
+      "selector": ".cs-toc",
+      "classTokens": [
+        "cs-toc"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (prefers-reduced-motion: reduce)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css": [
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 325,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csv-ds-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 326,
+      "selector": "65%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csv-ds-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 327,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes csv-ds-pulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 520,
+      "selector": ".csv-phone-frame",
+      "classTokens": [
+        "csv-phone-frame"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 583,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 599,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 605,
+      "selector": ".csv-flow-step__circle:hover",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 656,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 661,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 680,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 684,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 709,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase.css",
+      "line": 714,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/ContactSection/ContactSection.css": [
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 153,
+      "selector": ".contact-section__input",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 153,
+      "selector": ".contact-section__textarea",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 170,
+      "selector": ".contact-section__textarea",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 186,
+      "selector": ".contact-section__input:focus",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 186,
+      "selector": ".contact-section__textarea:focus",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__input:-webkit-autofill",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__input:-webkit-autofill:hover",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__input:-webkit-autofill:focus",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__textarea:-webkit-autofill",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__textarea:-webkit-autofill:hover",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 239,
+      "selector": ".contact-section__textarea:-webkit-autofill:focus",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 252,
+      "selector": ".contact-section__input",
+      "classTokens": [
+        "contact-section__input"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (prefers-reduced-motion: reduce)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ContactSection/ContactSection.css",
+      "line": 252,
+      "selector": ".contact-section__textarea",
+      "classTokens": [
+        "contact-section__textarea"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (prefers-reduced-motion: reduce)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/ExperienceSection/ExperienceSection.css": [
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 10,
+      "selector": ".exp-section__eyebrow",
+      "classTokens": [
+        "exp-section__eyebrow"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 32,
+      "selector": ".exp-list__row",
+      "classTokens": [
+        "exp-list__row"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 43,
+      "selector": ".exp-list__row:hover",
+      "classTokens": [
+        "exp-list__row"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 198,
+      "selector": ".exp-list__chevron",
+      "classTokens": [
+        "exp-list__chevron"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 209,
+      "selector": ".exp-list__row:hover .exp-list__chevron",
+      "classTokens": [
+        "exp-list__row",
+        "exp-list__chevron"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 256,
+      "selector": ".exp-list__row",
+      "classTokens": [
+        "exp-list__row"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 768px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 281,
+      "selector": ".exp-list__row",
+      "classTokens": [
+        "exp-list__row"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (prefers-reduced-motion: reduce)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 291,
+      "selector": ".exp-list__company-link",
+      "classTokens": [
+        "exp-list__company-link"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/ExperienceSection/ExperienceSection.css",
+      "line": 296,
+      "selector": ".exp-list__company-link:hover",
+      "classTokens": [
+        "exp-list__company-link"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/LogoStrip/LogoStrip.css": [
+    {
+      "file": "src/components/LogoStrip/LogoStrip.css",
+      "line": 62,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes logoScroll",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/LogoStrip/LogoStrip.css",
+      "line": 63,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes logoScroll",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/components/WhatIBringSection/WhatIBringSection.css": [
+    {
+      "file": "src/components/WhatIBringSection/WhatIBringSection.css",
+      "line": 159,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes tickerScroll",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/components/WhatIBringSection/WhatIBringSection.css",
+      "line": 160,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes tickerScroll",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/index.css": [
+    {
+      "file": "src/index.css",
+      "line": 3,
+      "selector": "*",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/index.css",
+      "line": 10,
+      "selector": "*",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/layouts/Header/AvailabilityBadge.css": [
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 21,
+      "selector": ".availability-dot",
+      "classTokens": [
+        "availability-dot"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 51,
+      "selector": "0%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes availabilityPulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 55,
+      "selector": "50%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes availabilityPulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/layouts/Header/AvailabilityBadge.css",
+      "line": 59,
+      "selector": "100%",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "keyframes availabilityPulse",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/sharedComponents/FloatingDock/FloatingDock.css": [
+    {
+      "file": "src/sharedComponents/FloatingDock/FloatingDock.css",
+      "line": 2,
+      "selector": ".floating-dock",
+      "classTokens": [
+        "floating-dock"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/sharedComponents/FloatingDock/FloatingDock.css",
+      "line": 95,
+      "selector": ".floating-dock",
+      "classTokens": [
+        "floating-dock"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 480px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ],
+  "src/styles/main.css": [
+    {
+      "file": "src/styles/main.css",
+      "line": 8,
+      "selector": "html ::-webkit-scrollbar-track",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 16,
+      "selector": "html ::-moz-scrollbar-track",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 24,
+      "selector": "html ::-o-scrollbar-track",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 32,
+      "selector": "html ::-ms-scrollbar-track",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 40,
+      "selector": "html ::-webkit-scrollbar",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 40,
+      "selector": "html ::-moz-scrollbar",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 40,
+      "selector": "html ::-o-scrollbar",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 40,
+      "selector": "html ::-ms-scrollbar",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 50,
+      "selector": "html ::-webkit-scrollbar-thumb",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 50,
+      "selector": "html ::-moz-scrollbar-thumb",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 50,
+      "selector": "html ::-o-scrollbar-thumb",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 50,
+      "selector": "html ::-ms-scrollbar-thumb",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "html"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 62,
+      "selector": "::-moz-selection",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 85,
+      "selector": ":-moz-placeholder",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 94,
+      "selector": "::-moz-placeholder",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 103,
+      "selector": ":-ms-input-placeholder",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 111,
+      "selector": "::-ms-input-placeholder",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 166,
+      "selector": "a:focus",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "a",
+        "focus"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 166,
+      "selector": "a:hover",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [
+        "a",
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 264,
+      "selector": ".mt-30",
+      "classTokens": [
+        "mt-30"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 276,
+      "selector": ".pt-30",
+      "classTokens": [
+        "pt-30"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 282,
+      "selector": ".pt-70",
+      "classTokens": [
+        "pt-70"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 288,
+      "selector": ".pb-40",
+      "classTokens": [
+        "pb-40"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 294,
+      "selector": ".float-left",
+      "classTokens": [
+        "float-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 300,
+      "selector": ".float-right",
+      "classTokens": [
+        "float-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 306,
+      "selector": ".text-italic",
+      "classTokens": [
+        "text-italic"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 318,
+      "selector": ".text-black",
+      "classTokens": [
+        "text-black"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 330,
+      "selector": ".text-center",
+      "classTokens": [
+        "text-center"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 336,
+      "selector": ".text-left",
+      "classTokens": [
+        "text-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 342,
+      "selector": ".text-rigth",
+      "classTokens": [
+        "text-rigth"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 348,
+      "selector": ".flex-grow",
+      "classTokens": [
+        "flex-grow"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 358,
+      "selector": ".flex-wrap",
+      "classTokens": [
+        "flex-wrap"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 367,
+      "selector": ".flex-left",
+      "classTokens": [
+        "flex-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 377,
+      "selector": ".flex-middle",
+      "classTokens": [
+        "flex-middle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 387,
+      "selector": ".flex-right",
+      "classTokens": [
+        "flex-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 397,
+      "selector": ".flex-top",
+      "classTokens": [
+        "flex-top"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 406,
+      "selector": ".flex-center",
+      "classTokens": [
+        "flex-center"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 416,
+      "selector": ".flex-bottom",
+      "classTokens": [
+        "flex-bottom"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 435,
+      "selector": ".flex-column",
+      "classTokens": [
+        "flex-column"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 446,
+      "selector": ".flex-cell",
+      "classTokens": [
+        "flex-cell"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 467,
+      "selector": ".overflow-hidden",
+      "classTokens": [
+        "overflow-hidden"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 516,
+      "selector": ".main-menu",
+      "classTokens": [
+        "main-menu"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 856,
+      "selector": ".about-banner",
+      "classTokens": [
+        "about-banner"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 966,
+      "selector": ".banner-area",
+      "classTokens": [
+        "banner-area"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 973,
+      "selector": ".banner-left .eyebrow-text",
+      "classTokens": [
+        "banner-left",
+        "eyebrow-text"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 982,
+      "selector": ".banner-left h1",
+      "classTokens": [
+        "banner-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "h1"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 991,
+      "selector": ".banner-left h1",
+      "classTokens": [
+        "banner-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "h1"
+      ],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 997,
+      "selector": ".banner-area",
+      "classTokens": [
+        "banner-area"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1011,
+      "selector": ".banner-area",
+      "classTokens": [
+        "banner-area"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1017,
+      "selector": ".banner-left",
+      "classTokens": [
+        "banner-left"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1026,
+      "selector": ".banner-right",
+      "classTokens": [
+        "banner-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1034,
+      "selector": ".banner-right",
+      "classTokens": [
+        "banner-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1042,
+      "selector": ".banner-right",
+      "classTokens": [
+        "banner-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1058,
+      "selector": ".home-about-right",
+      "classTokens": [
+        "home-about-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 767px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1065,
+      "selector": ".home-about-right h6",
+      "classTokens": [
+        "home-about-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "h6"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1073,
+      "selector": ".home-about-right h1",
+      "classTokens": [
+        "home-about-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "h1"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1080,
+      "selector": ".home-about-right h1",
+      "classTokens": [
+        "home-about-right"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "h1"
+      ],
+      "insideAtRule": "media (max-width: 991px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1103,
+      "selector": ".single-services",
+      "classTokens": [
+        "single-services"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1147,
+      "selector": ".single-services:hover h4",
+      "classTokens": [
+        "single-services"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover",
+        "h4"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1227,
+      "selector": ".single-portfolio",
+      "classTokens": [
+        "single-portfolio"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1253,
+      "selector": ".text-decoration-none",
+      "classTokens": [
+        "text-decoration-none"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1357,
+      "selector": ".top-category-widget-area",
+      "classTokens": [
+        "top-category-widget-area"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1401,
+      "selector": "*",
+      "classTokens": [],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1527,
+      "selector": "#technologies .single-services h4",
+      "classTokens": [
+        "single-services"
+      ],
+      "idTokens": [
+        "technologies"
+      ],
+      "tagTokens": [
+        "h4"
+      ],
+      "insideAtRule": "media screen and (max-width: 280px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1614,
+      "selector": ".description-section",
+      "classTokens": [
+        "description-section"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1621,
+      "selector": ".details-section",
+      "classTokens": [
+        "details-section"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1640,
+      "selector": ".description-section",
+      "classTokens": [
+        "description-section"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media screen and (max-width: 768px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1766,
+      "selector": ".aboutImage",
+      "classTokens": [
+        "aboutImage"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1779,
+      "selector": ".aboutImage",
+      "classTokens": [
+        "aboutImage"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (min-width: 912px) and (max-width: 1280px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1787,
+      "selector": ".aboutImage",
+      "classTokens": [
+        "aboutImage"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (min-width: 768px) and (max-width: 912px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1795,
+      "selector": ".aboutImage",
+      "classTokens": [
+        "aboutImage"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (min-width: 460px) and (max-width: 768px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1803,
+      "selector": ".aboutImage",
+      "classTokens": [
+        "aboutImage"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media screen and (min-width: 1280px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1811,
+      "selector": ".intro-line",
+      "classTokens": [
+        "intro-line"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1821,
+      "selector": ".intro-line",
+      "classTokens": [
+        "intro-line"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media screen and (min-width: 768px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1864,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1886,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1893,
+      "selector": ".csv-flow-step__circle:hover",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1976,
+      "selector": ".csv-flow-step__circle",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 1983,
+      "selector": ".csv-flow-step__circle i",
+      "classTokens": [
+        "csv-flow-step__circle"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "i"
+      ],
+      "insideAtRule": "media (max-width: 575px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 2014,
+      "selector": ".hero-cta-secondary",
+      "classTokens": [
+        "hero-cta-secondary"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 2028,
+      "selector": ".hero-cta-secondary:hover",
+      "classTokens": [
+        "hero-cta-secondary"
+      ],
+      "idTokens": [],
+      "tagTokens": [
+        "hover"
+      ],
+      "insideAtRule": null,
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 2040,
+      "selector": ".hero-cta-primary",
+      "classTokens": [
+        "hero-cta-primary"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 576px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    },
+    {
+      "file": "src/styles/main.css",
+      "line": 2045,
+      "selector": ".hero-cta-secondary",
+      "classTokens": [
+        "hero-cta-secondary"
+      ],
+      "idTokens": [],
+      "tagTokens": [],
+      "insideAtRule": "media (max-width: 576px)",
+      "purgecssStatus": "kept_with_safelist",
+      "classification": "DEAD_NO_MATCHING_MARKUP",
+      "classificationReason": "No literal match found in source files"
+    }
+  ]
+}

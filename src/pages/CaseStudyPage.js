@@ -5,18 +5,18 @@ import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
 
 // ── Existing sections ──────────────────────
-import CaseStudyHero       from "../components/CaseStudyComps/CaseStudyHero/CaseStudyHero";
-import CaseStudyProcess    from "../components/CaseStudyComps/CaseStudyProcess/CaseStudyProcess";
+import CaseStudyHero from "../components/CaseStudyComps/CaseStudyHero/CaseStudyHero";
+import CaseStudyProcess from "../components/CaseStudyComps/CaseStudyProcess/CaseStudyProcess";
 import CaseStudyDesignPrinciples from "../components/CaseStudyComps/CaseStudyDesignPrinciples/CaseStudyDesignPrinciples";
-import CaseStudyVisualShowcase   from "../components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase";
-import CaseStudyTechStack  from "../components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack";
-import CaseStudyOutcome    from "../components/CaseStudyComps/CaseStudyOutcome/CaseStudyOutcome";
-import CaseStudyGallery    from "../components/CaseStudyComps/CaseStudyGallery/CaseStudyGallery";
-import CaseStudyNav        from "../components/CaseStudyComps/CaseStudyNav/CaseStudyNav";
+import CaseStudyVisualShowcase from "../components/CaseStudyComps/CaseStudyVisualShowcase/CaseStudyVisualShowcase";
+import CaseStudyTechStack from "../components/CaseStudyComps/CaseStudyTechStack/CaseStudyTechStack";
+import CaseStudyOutcome from "../components/CaseStudyComps/CaseStudyOutcome/CaseStudyOutcome";
+import CaseStudyGallery from "../components/CaseStudyComps/CaseStudyGallery/CaseStudyGallery";
+import CaseStudyNav from "../components/CaseStudyComps/CaseStudyNav/CaseStudyNav";
 import CaseStudyProblemFrame from "../components/CaseStudyComps/CaseStudyProblemFrame/CaseStudyProblemFrame";
 
 // ── NEW sections ───────────────────────────
-import CaseStudyContext     from "../components/CaseStudyComps/CaseStudyContext/CaseStudyContext";
+import CaseStudyContext from "../components/CaseStudyComps/CaseStudyContext/CaseStudyContext";
 import CaseStudyPlatformScope from "../components/CaseStudyComps/CaseStudyPlatformScope/CaseStudyPlatformScope";
 import CaseStudyComplexitySignals from "../components/CaseStudyComps/CaseStudyComplexitySignals/CaseStudyComplexitySignals";
 import CaseStudyCTA from "../components/CaseStudyComps/CaseStudyCTA/CaseStudyCTA";
@@ -25,9 +25,9 @@ import CaseStudyTOC from "../components/CaseStudyComps/CaseStudyTOC/CaseStudyTOC
 import FeaturedProjectsData from "../Data/FeaturedProjectsData";
 
 const CaseStudyPage = () => {
-  const { slug }   = useParams();
-  const navigate   = useNavigate();
-  const project    = FeaturedProjectsData.find((p) => p.slug === slug);
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const project = FeaturedProjectsData.find((p) => p.slug === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,15 +49,59 @@ const CaseStudyPage = () => {
     <div>
       <Helmet>
         <title>{project.title} — Case Study | Tabrez Dal</title>
-        <meta name="description" content={project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`} />
+        <meta
+          name="description"
+          content={(project.shortDescription || `Case study: ${project.title} — designed and developed by Tabrez Dal.`).slice(0, 155)}
+        />
         <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
-        <meta property="og:description" content={project.shortDescription || `Case study: ${project.title}`} />
+        <meta property="og:description" content={(project.shortDescription || `Case study: ${project.title}`).slice(0, 155)} />
         <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
         <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
+        <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": project.title,
+            "description": project.shortDescription,
+            "image": project.coverImage
+              ? (project.coverImage.startsWith('http')
+                ? project.coverImage
+                : `https://tabrezdal.com${project.coverImage}`)
+              : 'https://tabrezdal.com/og-image.webp',
+            "author": {
+              "@type": "Person",
+              "name": "Tabrez Dal",
+              "url": "https://tabrezdal.com"
+            },
+            "url": `https://tabrezdal.com/case-study/${project.slug}`,
+            "datePublished": `${project.year}-01-01`
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tabrezdal.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": project.title,
+                "item": `https://tabrezdal.com/case-study/${project.slug}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       <Header />
       <main id="main-content">

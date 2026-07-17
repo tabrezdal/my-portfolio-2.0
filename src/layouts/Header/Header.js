@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import { Link, useLocation } from "react-router-dom";
 import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
 import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
 import { MobileMenuModal } from "./MobileMenuModal/MobileMenuModal";
+import ProfilePic from '../../Assets/Images/project-grid-images/ProfilePic-grid.webp';
 import { NavLinkData, NavSocialMediaLinkData } from "./NavBarData";
 import AvailabilityBadge from "./AvailabilityBadge";
 
@@ -15,14 +16,26 @@ const Header = () => {
   const handleShow = () => setShow(true);
 
   const [headerShadow, setHeaderShadow] = useState(false);
+  const tickingRef = useRef(false);
+
+  const handleScroll = useCallback(() => {
+    if (!tickingRef.current) {
+      window.requestAnimationFrame(() => {
+        setHeaderShadow(window.pageYOffset > 200);
+        tickingRef.current = false;
+      });
+      tickingRef.current = true;
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setHeaderShadow(window.pageYOffset > 200)
-      );
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
     }
-  }, []);
+  }, [handleScroll]);
 
   const location = useLocation();
 
@@ -30,13 +43,23 @@ const Header = () => {
     return (
       <nav id="nav-menu-container">
         <ul className="nav-menu">
-          {NavLinkData?.map((item) => (
-            <NavigationLink
-              key={item.id}
-              linkTo={item.linkTo}
-              name={item.name}
-            />
-          ))}
+          {NavLinkData?.map((item) => {
+            // Handle "Work" link as route navigation, others as scroll navigation
+            if (item.linkTo === 'case-studies') {
+              return (
+                <li key={item.id} className="navlink">
+                  <Link to="/case-studies">{item.name}</Link>
+                </li>
+              );
+            }
+            return (
+              <NavigationLink
+                key={item.id}
+                linkTo={item.linkTo}
+                name={item.name}
+              />
+            );
+          })}
         </ul>
       </nav>
     );
@@ -52,14 +75,25 @@ const Header = () => {
       <header id="header" className={`${headerShadow ? "headerShadow" : ""}`}>
         <div className="container main-menu">
           <div className="align-items-center justify-content-between d-flex">
-            {NavigationView()}
 
-            <div id="logo">
-              <Link to="/">
+            
+
+            <div id="logo" className="d-flex align-items-center gap-2">
+              <img
+              src={ProfilePic}
+              alt="Tabrez Dal"
+              className="availability-badge__photo"
+              width={40}
+              height={40}
+            />
+              <div clasqsName="d-flex align-items-center">
+                <Link to="/">
                 <h2 style={{ color: "#04091e" }}>
                   {SectionTitleHelper.headerSectionTitle}
                 </h2>
               </Link>
+              <AvailabilityBadge />
+              </div>
             </div>
 
             <Button
@@ -70,7 +104,8 @@ const Header = () => {
               <i className="lnr lnr-menu"></i>
             </Button>
 
-                <AvailabilityBadge />
+            {NavigationView()}
+
             <nav id="nav-menu-container">
               <ul className="nav-menu nav-menu-right">
                 {NavSocialMediaLinkData?.map((item) => (

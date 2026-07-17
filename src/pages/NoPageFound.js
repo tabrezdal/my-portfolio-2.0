@@ -1,61 +1,52 @@
-import React, { useEffect } from "react";
+import { motion, useReducedMotion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Header from '../layouts/Header/Header';
+import Footer from '../layouts/Footer/Footer';
+import { fadeUp } from '../utils/animationVariants';
+import './NoPageFound.css';
 
-import Footer from "../layouts/Footer/Footer";
-import Header from "../layouts/Header/Header";
+function NoPageFound() {
+  const shouldReduceMotion = useReducedMotion();
 
-const NoPageFound = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
-      <Helmet>
-        <title>Page Not Found | Tabrez Dal</title>
-        <meta name="robots" content="noindex" />
+      <Helmet defer={false}>
+        <title>404 — Page Not Found | Tabrez Dal</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to the homepage or browse case studies." />
+        <link rel="canonical" href="https://tabrezdal.com/404.html" />
       </Helmet>
       <Header />
-      <main id="main-content">
-        <div className="not-found-animation">
-          <svg
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-            className="not-found-svg"
-            aria-hidden="true"
-          >
-            {/* Outer circle */}
-            <circle cx="100" cy="100" r="80" fill="none" stroke="#0378b8" strokeWidth="3" opacity="0.2" />
-            {/* Inner circle */}
-            <circle cx="100" cy="100" r="55" fill="none" stroke="#0378b8" strokeWidth="2" opacity="0.4" />
-            {/* 404 text */}
-            <text
-              x="100"
-              y="95"
-              textAnchor="middle"
-              fontSize="36"
-              fontWeight="700"
-              fill="#0378b8"
-              fontFamily="sans-serif"
-            >
-              404
-            </text>
-            <text
-              x="100"
-              y="120"
-              textAnchor="middle"
-              fontSize="11"
-              fill="#888888"
-              fontFamily="sans-serif"
-              letterSpacing="2"
-            >
-              PAGE NOT FOUND
-            </text>
-          </svg>
-        </div>
+      <main className="not-found-page">
+        <motion.div
+          className="not-found-content"
+          variants={shouldReduceMotion ? {} : fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
+          <p className="not-found-code" aria-label="Error 404">404</p>
+
+          <div className="not-found-separator" aria-hidden="true" />
+
+          <h1 className="not-found-title">Page not found.</h1>
+
+          <p className="not-found-message">
+            You followed a broken link or typed a URL that doesn't exist here.
+          </p>
+
+          <div className="not-found-actions">
+            <Link to="/" className="not-found-btn-primary">
+              Go Home
+            </Link>
+            <Link to="/case-studies" className="not-found-btn-secondary">
+              View Work
+            </Link>
+          </div>
+        </motion.div>
       </main>
       <Footer />
     </>
   );
-};
+}
 
 export default NoPageFound;

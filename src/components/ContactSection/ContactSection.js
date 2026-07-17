@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import EmailJsConfig from '../../Helpers/EmailJsConfig';
 import ContactSectionData from './ContactSectionData';
+import ImageHelper from '../../Helpers/ImageHelper';
+import { fadeUpVariants, fadeUpLargeVariants } from '../../utils/animationVariants';
 import './ContactSection.css';
+import Button from '../../sharedComponents/Button/Button';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -14,11 +17,6 @@ const ContactSection = () => {
   });
   const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState({});
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
 
   const validate = (data) => {
     const errs = {};
@@ -77,34 +75,64 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="contact-section">
-      <div className="contact-section__container">
-        <motion.div
-          className="contact-section__header"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-        >
+    <section id="contact" className="contact-section">
+      <motion.div
+        className="contact-section__container-outer section-container"
+        variants={fadeUpLargeVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-80px' }}
+      >
+        {/* Hero copy */}
+        <div className="contact-section__hero-copy">
           <span className="contact-section__label">{ContactSectionData.label}</span>
-          <h2 className="contact-section__headline">{ContactSectionData.headline}</h2>
+          <h2 className="contact-section__big-headline">{ContactSectionData.headline}</h2>
           <p className="contact-section__subtext">{ContactSectionData.subtext}</p>
-        </motion.div>
+        </div>
 
+        {/* Info column */}
         <motion.div
-          className="contact-section__form-column"
-          variants={fadeUp}
+          className="contact-section__info-col"
+          variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ delay: 0.15 }}
+          transition={{ delay: 0.1 }}
+        >
+          {ContactSectionData.quickLinks.map((item) => (
+            <div key={item.label} className="contact-section__info-group">
+              <p className="contact-section__info-group-label">{item.label}</p>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  className="contact-section__info-group-value"
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {item.value}
+                </a>
+              ) : (
+                <p className="contact-section__info-group-value">{item.value}</p>
+              )}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Form column */}
+        <motion.div
+          className="contact-section__form-column"
+          variants={fadeUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ delay: 0.2 }}
         >
           <AnimatePresence mode="wait">
             {status === 'success' ? (
               <motion.div
                 key="success"
                 className="contact-section__success"
-                variants={fadeUp}
+                variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0 }}
@@ -120,7 +148,7 @@ const ContactSection = () => {
                 key="form"
                 className="contact-section__form"
                 onSubmit={handleSubmit}
-                variants={fadeUp}
+                variants={fadeUpVariants}
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0 }}
@@ -208,13 +236,15 @@ const ContactSection = () => {
                   )}
                 </div>
 
-                <button
+                <Button
                   type="submit"
-                  className="contact-section__submit-btn"
+                  label={status === 'submitting' ? ContactSectionData.submittingLabel : ContactSectionData.submitLabel}
+                  variant="filled"
+                  theme="dark"
+                  size="md"
+                  fullWidth
                   disabled={status === 'submitting'}
-                >
-                  {status === 'submitting' ? ContactSectionData.submittingLabel : ContactSectionData.submitLabel}
-                </button>
+                />
 
                 {status === 'error' && (
                   <p className="contact-section__error-message" role="alert">
@@ -225,7 +255,20 @@ const ContactSection = () => {
             )}
           </AnimatePresence>
         </motion.div>
-      </div>
+
+        {/* Photo wrap - spans both rows */}
+        <div className="contact-section__photo-wrap">
+          <img
+            src={ImageHelper.ContactPhoto}
+            alt={ContactSectionData.photoAlt}
+            className="contact-section__photo"
+            draggable="false"
+            loading="lazy"
+            width={1806}
+            height={5449}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };

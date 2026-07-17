@@ -1,6 +1,7 @@
 import React from "react";
 import ImageHelper from "../../Helpers/ImageHelper";
 import "./style.css";
+import Button from "../../sharedComponents/Button/Button";
 
 // FramerMotion
 import { motion } from "framer-motion";
@@ -9,7 +10,7 @@ import { fadeLeftExtraLargeVariants, fadeUpExtraLargeVariants } from "../../util
 const CtaSection = () => {
   return (
     <section className="ftco-hireme">
-      <div className="container">
+      <div className="section-container">
         <div className="row justify-content-between">
           <motion.div
             variants={fadeLeftExtraLargeVariants}
@@ -27,9 +28,15 @@ const CtaSection = () => {
                 connect, I'd love to hear from you.
               </p>
 
-              <a href="mailto:tabrez.dal@gmail.com" className="boxed-btn-02 blank">
-                Contact me &nbsp;<i className="fa fa-envelope"></i>
-              </a>
+              <Button
+                href="mailto:tabrez.dal@gmail.com"
+                label="Contact me"
+                icon="fa fa-envelope"
+                iconPosition="after"
+                variant="outlined"
+                theme="light"
+                size="md"
+              />
             </div>
           </motion.div>
           <motion.div

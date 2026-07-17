@@ -6,9 +6,9 @@
 .hero-section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: var(--color-surface);
-  padding: var(--space-22) var(--space-9);
+  padding: var(--space-22) var(--space-9) 0px;
   position: relative;
   overflow: hidden;
 }
@@ -29,6 +29,7 @@
   gap: var(--space-9);
   z-index: var(--z-raised);
   order: 2;
+  margin-bottom: var(--space-17);
 }
 
 /* Role Descriptor - small caps, muted, letter-spaced */
@@ -77,62 +78,6 @@
   align-items: flex-start;
 }
 
-.hero-cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-9) var(--space-19);
-  font-family: var(--font-primary);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-semibold);
-  color: var(--color-text-inverse);
-  background-color: var(--color-surface-dark);
-  border-radius: var(--radius-base);
-  text-decoration: none;
-  transition: background-color var(--transition-base), transform var(--transition-fast);
-  border: none;
-  cursor: pointer;
-  min-height: 48px; /* Touch target */
-}
-
-.hero-cta-primary:hover {
-  background-color: var(--color-surface-darker);
-  transform: translateY(-2px);
-}
-
-.hero-cta-primary:focus {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
-}
-
-.hero-cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-9) var(--space-19);
-  font-family: var(--font-primary);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-medium);
-  color: var(--color-text-primary);
-  background-color: transparent;
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-base);
-  text-decoration: none;
-  transition: border-color var(--transition-base), color var(--transition-base), transform var(--transition-fast);
-  min-height: 48px; /* Touch target */
-}
-
-.hero-cta-secondary:hover {
-  border-color: var(--color-text-primary);
-  color: var(--color-text-heading);
-  transform: translateY(-2px);
-}
-
-.hero-cta-secondary:focus {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
-}
-
 /* Proof Point - stat type */
 .hero-proof-point {
   display: flex;
@@ -169,7 +114,6 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: var(--radius-2xl);
 }
 
 /* ─── Tablet (768px) ─────────────────────────────────────────────────────── */
@@ -205,7 +149,7 @@
 /* ─── Desktop (1280px) ──────────────────────────────────────────────────── */
 @media (min-width: 1280px) {
   .hero-section {
-    padding: var(--space-26) var(--space-17);
+    padding: var(--space-26) var(--space-17) 0px;
   }
 
   .hero-container {
