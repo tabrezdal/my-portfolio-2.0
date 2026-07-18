@@ -11,6 +11,7 @@ import ButtonsGroup from "../components/UiUxPageComps/ButtonsGroup/ButtonsGroup"
 import UiUxDescription from "../components/UiUxPageComps/UiUxDescription/UiUxDescription";
 import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
+import ConstantHelper from "../Helpers/ConstantHelper";
 
 const UiUxProjectPage = () => {
   const { id } = useParams();
@@ -54,7 +55,7 @@ const UiUxProjectPage = () => {
     if (pageContentProps?.pageName) {
       const pageTitle = `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal`;
       const description = pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || "UI/UX design projects by Tabrez Dal — product design, design systems, and user research.";
-      const canonicalUrl = `https://tabrezdal.com/ui-ux-project/${id}/`;
+      const canonicalUrl = ConstantHelper.buildAbsoluteUiUxProjectUrl(id);
       
       document.title = pageTitle;
       
@@ -121,11 +122,11 @@ const UiUxProjectPage = () => {
           property="og:description"
           content={pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || ""}
         />
-        <meta property="og:url" content={`https://tabrezdal.com/ui-ux-project/${id}/`} />
+        <meta property="og:url" content={ConstantHelper.buildAbsoluteUiUxProjectUrl(id)} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageContentProps?.pageName || "UI/UX Projects"} />
-        <link rel="canonical" href={`https://tabrezdal.com/ui-ux-project/${id}/`} />
+        <link rel="canonical" href={ConstantHelper.buildAbsoluteUiUxProjectUrl(id)} />
       </Helmet>
       <Header />
       <main id="main-content">

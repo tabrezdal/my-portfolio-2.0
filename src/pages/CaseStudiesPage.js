@@ -6,6 +6,7 @@ import FeaturedProjectsData from '../Data/FeaturedProjectsData';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
 import ImageHelper from '../Helpers/ImageHelper';
+import ConstantHelper from '../Helpers/ConstantHelper';
 import FloatingDock from '../sharedComponents/FloatingDock/FloatingDock';
 import './CaseStudiesPage.css';
 
@@ -97,14 +98,14 @@ const CaseStudiesPage = () => {
           name="description"
           content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
         />
-        <link rel="canonical" href="https://tabrezdal.com/case-studies/" />
+        <link rel="canonical" href={ConstantHelper.buildAbsoluteCaseStudiesUrl()} />
 
         <meta property="og:title" content="Case Studies | Tabrez Dal" />
         <meta
           property="og:description"
           content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
         />
-        <meta property="og:url" content="https://tabrezdal.com/case-studies/" />
+        <meta property="og:url" content={ConstantHelper.buildAbsoluteCaseStudiesUrl()} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
 
@@ -164,7 +165,7 @@ const CaseStudiesPage = () => {
                   variants={shouldReduceMotion ? {} : fadeUp}
                 >
                   <Link
-                    to={`/case-study/${project.slug}`}
+                    to={ConstantHelper.buildCaseStudyUrl(project.slug)}
                     className="case-study-card"
                   >
                     {/* Image */}

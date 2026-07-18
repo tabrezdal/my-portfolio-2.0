@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeLeftVariants, fadeInVariants } from "../../../utils/animationVariants";
 import Button from "../../../sharedComponents/Button/Button";
 import FeaturedProjectsData from "../../../Data/FeaturedProjectsData";
+import ConstantHelper from "../../../Helpers/ConstantHelper";
 
 const CaseStudyNav = ({ project }) => {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ const CaseStudyNav = ({ project }) => {
                 variant="outlined"
                 theme="dark"
                 size="sm"
-                onClick={() => navigate(`/case-study/${prevProject.slug}`)}
+                onClick={() => navigate(ConstantHelper.buildCaseStudyUrl(prevProject.slug))}
               />
             )}
 
@@ -68,7 +69,7 @@ const CaseStudyNav = ({ project }) => {
                 variant="filled"
                 theme="dark"
                 size="sm"
-                onClick={() => navigate(`/case-study/${nextProject.slug}`)}
+                onClick={() => navigate(ConstantHelper.buildCaseStudyUrl(nextProject.slug))}
               />
             )}
           </div>

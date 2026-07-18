@@ -62,7 +62,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux07",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/07",
     tags: [
       { tag: "E-commerce" },
       { tag: "Auctions" },
@@ -114,7 +114,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux08",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/08",
     tags: [
       { tag: "Food Delivery" },
       { tag: "Food" },
@@ -157,7 +157,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux09",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/09",
     tags: [
       { tag: "Platform Integration" },
       { tag: "Multiservice Hub" },
@@ -253,7 +253,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux10",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/10",
     tags: [
       { tag: "E Commerce" },
       { tag: "Online Store" },
@@ -296,7 +296,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux11",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/11",
     tags: [
       { tag: "Real Estate" },
       { tag: "Landing Page" },
@@ -339,7 +339,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux12",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/12",
     tags: [
       { tag: "IT Company Website" },
       { tag: "Homepage" },
@@ -382,7 +382,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux13",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/13",
     tags: [
       { tag: "Habit Tracking" },
       { tag: "User Interface Design" },
@@ -436,7 +436,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux14",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/14",
     tags: [
       { tag: "Social Networking" },
       { tag: "Innovation" },
@@ -479,7 +479,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux15",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/15",
     tags: [
       { tag: "Invoice Management" },
       { tag: "Financial Efficiency" },
@@ -522,7 +522,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux16",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/16",
     tags: [
       { tag: "Registration Flow" },
       { tag: "User Onboarding" },
@@ -565,7 +565,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux17",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/17",
     tags: [
       { tag: "UI Concepts" },
       { tag: "Habit Tracking" },
@@ -608,7 +608,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux18",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/18",
     tags: [
       { tag: "Emergency App" },
       { tag: "SOS Manager" },
@@ -662,7 +662,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux19",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/19",
     tags: [
       { tag: "SAAS Product" },
       { tag: "Restaurant Industry" },
@@ -705,7 +705,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux20",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/20",
     tags: [
       { tag: "Web Platform" },
       { tag: "Mentorship" },
@@ -754,7 +754,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux21",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/21",
     tags: [
       { tag: "SAAS Product" },
       { tag: "Restaurant Industry" },
@@ -797,7 +797,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux22",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/22",
     tags: [
       { tag: "Financial Platform" },
       { tag: "Collaboration" },
@@ -834,7 +834,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux23",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/23",
     tags: [
       { tag: "Web Design" },
       { tag: "Financial Services" },
@@ -877,7 +877,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux24",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/24",
     tags: [
       { tag: "Website Revamp" },
       { tag: "Homepage Design" },
@@ -920,7 +920,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux25",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/25",
     tags: [
       { tag: "Passport Photos" },
       { tag: "User-Centric Design" },
@@ -963,7 +963,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux26",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/26",
     tags: [
       { tag: "Commercial Interior Design" },
       { tag: "Website Design" },
@@ -1006,7 +1006,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux27",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/27",
     tags: [
       { tag: "Educational Website" },
       { tag: "Student Enrollment" },
@@ -1049,7 +1049,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux28",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/28",
     tags: [
       { tag: "Fitness Equipment" },
       { tag: "E-commerce Website" },
@@ -1092,7 +1092,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux29",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/29",
     tags: [
       { tag: "Business Podcast" },
       { tag: "User Experience" },
@@ -1135,7 +1135,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux30",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/30",
     tags: [
       { tag: "Educational Excellence" },
       { tag: "Training Website" },
@@ -1172,7 +1172,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux31",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/31",
     tags: [
       { tag: "Homepage Revamp" },
       { tag: "Road Safety" },
@@ -1214,7 +1214,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux32",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/32",
     tags: [
       { tag: "Motorsports" },
       { tag: "Racing Events" },
@@ -1256,7 +1256,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux33",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/33",
     tags: [
       { tag: "Motorsports" },
       { tag: "Racing Events" },
@@ -1298,7 +1298,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux34",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/34",
     tags: [
       { tag: "Admin Panel" },
       { tag: "Admin Panel Design" },
@@ -1340,7 +1340,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux35",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/35",
     tags: [
       { tag: "Admin Panel" },
       { tag: "Admin Panel Design" },
@@ -1382,7 +1382,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux36",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/36",
     tags: [
       { tag: "Header Revamp" },
       { tag: "Revamp Design" },
@@ -1424,7 +1424,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux37",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/37",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1465,7 +1465,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux38",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/38",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1507,7 +1507,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux39",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/39",
     tags: [
       { tag: "IT Services" },
       { tag: "IT Company" },
@@ -1549,7 +1549,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux39",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/39",
     tags: [
       { tag: "Unified Authenticator Platform" },
       { tag: "Digital Security" },
@@ -1592,7 +1592,7 @@ const UiUxProjectPageData = {
       Download: false,
       Buy: false,
     },
-    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux41",
+    socialShareUrl: "https://tabrezdal.com/ui-ux-project/uiux/41",
     tags: [
       { tag: "Hotel Booking" },
       { tag: "Leisure Management" },
