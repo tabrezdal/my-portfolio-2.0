@@ -54,7 +54,7 @@ const UiUxProjectPage = () => {
     if (pageContentProps?.pageName) {
       const pageTitle = `${pageContentProps.pageName} | UI/UX Design | Tabrez Dal`;
       const description = pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || "UI/UX design projects by Tabrez Dal — product design, design systems, and user research.";
-      const canonicalUrl = `https://tabrezdal.com/ui-ux-project/${id}`;
+      const canonicalUrl = `https://tabrezdal.com/ui-ux-project/${id}/`;
       
       document.title = pageTitle;
       
@@ -121,11 +121,11 @@ const UiUxProjectPage = () => {
           property="og:description"
           content={pageContentProps?.description?.[0]?.descriptionContent?.slice(0, 155) || ""}
         />
-        <meta property="og:url" content={`https://tabrezdal.com/ui-ux-project/${id}`} />
+        <meta property="og:url" content={`https://tabrezdal.com/ui-ux-project/${id}/`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageContentProps?.pageName || "UI/UX Projects"} />
-        <link rel="canonical" href={`https://tabrezdal.com/ui-ux-project/${id}`} />
+        <link rel="canonical" href={`https://tabrezdal.com/ui-ux-project/${id}/`} />
       </Helmet>
       <Header />
       <main id="main-content">
