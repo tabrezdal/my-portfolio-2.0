@@ -4,6 +4,7 @@ import { TransitionGroup } from "react-transition-group";
 import { Link } from "react-router-dom";
 import NavigationLink from "../../../sharedComponents/NavigationLink";
 import { NavLinkData } from "../NavBarData";
+import ConstantHelper from "../../../Helpers/ConstantHelper";
 
 export const MobileMenuModal = (props) => {
   const { show, handleClose } = props;
@@ -33,7 +34,7 @@ export const MobileMenuModal = (props) => {
               if (item.linkTo === 'case-studies') {
                 return (
                   <li key={item.id} className="navlink">
-                    <Link to="/case-studies" onClick={handleClose}>{item.name}</Link>
+                    <Link to={ConstantHelper.buildCaseStudiesUrl()} onClick={handleClose}>{item.name}</Link>
                   </li>
                 );
               }

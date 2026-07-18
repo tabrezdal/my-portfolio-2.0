@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import { Link, useLocation } from "react-router-dom";
 import { SectionTitleHelper } from "../../Helpers/SectionTitleHelper";
+import ConstantHelper from "../../Helpers/ConstantHelper";
 import NavigationLink from "../../sharedComponents/NavigationLink";
 import NavSocialMediaLink from "../../sharedComponents/NavSocialMediaLink";
 import { MobileMenuModal } from "./MobileMenuModal/MobileMenuModal";
@@ -48,7 +49,7 @@ const Header = () => {
             if (item.linkTo === 'case-studies') {
               return (
                 <li key={item.id} className="navlink">
-                  <Link to="/case-studies">{item.name}</Link>
+                  <Link to={ConstantHelper.buildCaseStudiesUrl()}>{item.name}</Link>
                 </li>
               );
             }

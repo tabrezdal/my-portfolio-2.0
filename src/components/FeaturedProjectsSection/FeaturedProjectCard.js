@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeUpLargeVariants } from "../../utils/animationVariants";
 import ImageHelper from "../../Helpers/ImageHelper";
+import ConstantHelper from "../../Helpers/ConstantHelper";
 import "./FeaturedProjectCard.css";
 
 const FeaturedProjectCard = ({ project, index }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/case-study/${project.slug}`);
+    navigate(ConstantHelper.buildCaseStudyUrl(project.slug));
   };
 
   return (

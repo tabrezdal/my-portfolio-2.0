@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import Header from "../layouts/Header/Header";
 import Footer from "../layouts/Footer/Footer";
+import ConstantHelper from "../Helpers/ConstantHelper";
 
 // ── Existing sections ──────────────────────
 import CaseStudyHero from "../components/CaseStudyComps/CaseStudyHero/CaseStudyHero";
@@ -56,12 +57,12 @@ const CaseStudyPage = () => {
         <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta property="og:description" content={(project.shortDescription || `Case study: ${project.title}`).slice(0, 155)} />
         <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
-        <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}/`} />
+        <meta property="og:url" content={ConstantHelper.buildAbsoluteCaseStudyUrl(project.slug)} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
-        <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}/`} />
+        <link rel="canonical" href={ConstantHelper.buildAbsoluteCaseStudyUrl(project.slug)} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -78,7 +79,7 @@ const CaseStudyPage = () => {
               "name": "Tabrez Dal",
               "url": "https://tabrezdal.com"
             },
-            "url": `https://tabrezdal.com/case-study/${project.slug}/`,
+            "url": ConstantHelper.buildAbsoluteCaseStudyUrl(project.slug),
             "datePublished": `${project.year}-01-01`
           })}
         </script>
@@ -97,7 +98,7 @@ const CaseStudyPage = () => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": project.title,
-                "item": `https://tabrezdal.com/case-study/${project.slug}/`
+                "item": ConstantHelper.buildAbsoluteCaseStudyUrl(project.slug)
               }
             ]
           })}

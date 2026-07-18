@@ -8,11 +8,12 @@ import { fadeUpMassiveVariants } from "../../../utils/animationVariants";
 
 // Image Fallback
 import ImageHelper from "../../../Helpers/ImageHelper";
+import ConstantHelper from "../../../Helpers/ConstantHelper";
 
 const ProjectsTab = (props) => {
   const navigate = useNavigate();
   const redirectToUiUxProjectPage = (urlSuffix) => {
-    navigate(`/ui-ux-project/${urlSuffix}`);
+    navigate(ConstantHelper.buildUiUxProjectUrl(urlSuffix));
   };
 
   const { data, onlyPics } = props;

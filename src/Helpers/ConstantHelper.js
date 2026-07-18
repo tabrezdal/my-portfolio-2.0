@@ -17,6 +17,14 @@ const ConstantHelper = {
   TestimonialSectionTitle: "What my clients says",
   WriteReviewButton: "Write your review",
   goolgeReviewUrl: "https://g.page/r/CU2hmjyiPOGXEBM/review",
+
+  // URL builders for internal routes with trailing slash
+  buildCaseStudiesUrl: () => "/case-studies/",
+  buildCaseStudyUrl: (slug) => `/case-study/${slug}/`,
+  buildUiUxProjectUrl: (id) => `/ui-ux-project/${id}/`,
+  buildAbsoluteCaseStudiesUrl: () => "https://tabrezdal.com/case-studies/",
+  buildAbsoluteCaseStudyUrl: (slug) => `https://tabrezdal.com/case-study/${slug}/`,
+  buildAbsoluteUiUxProjectUrl: (id) => `https://tabrezdal.com/ui-ux-project/${id}/`,
 };
 
 export default ConstantHelper;

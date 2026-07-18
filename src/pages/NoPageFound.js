@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../layouts/Header/Header';
 import Footer from '../layouts/Footer/Footer';
 import { fadeUp } from '../utils/animationVariants';
+import ConstantHelper from '../Helpers/ConstantHelper';
 import './NoPageFound.css';
 
 function NoPageFound() {
@@ -38,7 +39,7 @@ function NoPageFound() {
             <Link to="/" className="not-found-btn-primary">
               Go Home
             </Link>
-            <Link to="/case-studies" className="not-found-btn-secondary">
+            <Link to={ConstantHelper.buildCaseStudiesUrl()} className="not-found-btn-secondary">
               View Work
             </Link>
           </div>

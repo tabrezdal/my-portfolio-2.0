@@ -3,10 +3,15 @@ const path = require('path');
 
 const BASE = 'https://tabrezdal.com';
 
+// URL builders matching ConstantHelper
+const buildAbsoluteCaseStudiesUrl = () => `${BASE}/case-studies/`;
+const buildAbsoluteCaseStudyUrl = (slug) => `${BASE}/case-study/${slug}/`;
+const buildAbsoluteUiUxProjectUrl = (id) => `${BASE}/ui-ux-project/${id}/`;
+
 // Static URLs
 const staticUrls = [
   { loc: `${BASE}/`, changefreq: 'monthly', priority: '1.0' },
-  { loc: `${BASE}/case-studies/`, changefreq: 'monthly', priority: '0.9' },
+  { loc: buildAbsoluteCaseStudiesUrl(), changefreq: 'monthly', priority: '0.9' },
 ];
 
 // Case study slugs from FeaturedProjectsData
@@ -36,13 +41,13 @@ const uiuxSuffixes = [
 ];
 
 const caseStudyUrls = caseStudySlugs.map((slug) => ({
-  loc: `${BASE}/case-study/${slug}/`,
+  loc: buildAbsoluteCaseStudyUrl(slug),
   changefreq: 'yearly',
   priority: '0.8',
 }));
 
 const uiuxUrls = uiuxSuffixes.map((suffix) => ({
-  loc: `${BASE}/ui-ux-project/${suffix}/`,
+  loc: buildAbsoluteUiUxProjectUrl(suffix),
   changefreq: 'yearly',
   priority: '0.7',
 }));
