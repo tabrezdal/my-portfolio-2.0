@@ -56,12 +56,12 @@ const CaseStudyPage = () => {
         <meta property="og:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta property="og:description" content={(project.shortDescription || `Case study: ${project.title}`).slice(0, 155)} />
         <meta property="og:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
-        <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <meta property="og:url" content={`https://tabrezdal.com/case-study/${project.slug}/`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${project.title} — Case Study | Tabrez Dal`} />
         <meta name="twitter:image" content={project.coverImage || 'https://tabrezdal.com/og-image.webp'} />
-        <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}`} />
+        <link rel="canonical" href={`https://tabrezdal.com/case-study/${project.slug}/`} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -78,7 +78,7 @@ const CaseStudyPage = () => {
               "name": "Tabrez Dal",
               "url": "https://tabrezdal.com"
             },
-            "url": `https://tabrezdal.com/case-study/${project.slug}`,
+            "url": `https://tabrezdal.com/case-study/${project.slug}/`,
             "datePublished": `${project.year}-01-01`
           })}
         </script>
@@ -97,7 +97,7 @@ const CaseStudyPage = () => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": project.title,
-                "item": `https://tabrezdal.com/case-study/${project.slug}`
+                "item": `https://tabrezdal.com/case-study/${project.slug}/`
               }
             ]
           })}

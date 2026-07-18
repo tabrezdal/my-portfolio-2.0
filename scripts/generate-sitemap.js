@@ -6,7 +6,7 @@ const BASE = 'https://tabrezdal.com';
 // Static URLs
 const staticUrls = [
   { loc: `${BASE}/`, changefreq: 'monthly', priority: '1.0' },
-  { loc: `${BASE}/case-studies`, changefreq: 'monthly', priority: '0.9' },
+  { loc: `${BASE}/case-studies/`, changefreq: 'monthly', priority: '0.9' },
 ];
 
 // Case study slugs from FeaturedProjectsData
@@ -36,13 +36,13 @@ const uiuxSuffixes = [
 ];
 
 const caseStudyUrls = caseStudySlugs.map((slug) => ({
-  loc: `${BASE}/case-study/${slug}`,
+  loc: `${BASE}/case-study/${slug}/`,
   changefreq: 'yearly',
   priority: '0.8',
 }));
 
 const uiuxUrls = uiuxSuffixes.map((suffix) => ({
-  loc: `${BASE}/ui-ux-project/${suffix}`,
+  loc: `${BASE}/ui-ux-project/${suffix}/`,
   changefreq: 'yearly',
   priority: '0.7',
 }));

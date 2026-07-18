@@ -97,14 +97,14 @@ const CaseStudiesPage = () => {
           name="description"
           content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
         />
-        <link rel="canonical" href="https://tabrezdal.com/case-studies" />
+        <link rel="canonical" href="https://tabrezdal.com/case-studies/" />
 
         <meta property="og:title" content="Case Studies | Tabrez Dal" />
         <meta
           property="og:description"
           content="Explore 12 case studies in product design and front-end engineering — SaaS, healthcare, and e-commerce work by Tabrez Dal, Product Engineer."
         />
-        <meta property="og:url" content="https://tabrezdal.com/case-studies" />
+        <meta property="og:url" content="https://tabrezdal.com/case-studies/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://tabrezdal.com/og-image.webp" />
 
