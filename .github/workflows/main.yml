@@ -17,9 +17,9 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
       - name: Build
+        run: npm run build
         env:
           CI: false
-        run: npm run build
       - name: Verify Build Directory
         run: ls -la || echo "Build directory not found"
       - name: Upload Build Artifact
