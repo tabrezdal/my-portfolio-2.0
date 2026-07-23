@@ -150,6 +150,7 @@
 @media (min-width: 1280px) {
   .hero-section {
     padding: var(--space-26) var(--space-17) 0px;
+    min-height: 600px;
   }
 
   .hero-container {
